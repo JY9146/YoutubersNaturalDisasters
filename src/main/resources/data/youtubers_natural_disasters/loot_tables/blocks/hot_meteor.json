@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "youtubers_natural_disasters:blocks/hot_meteor",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "youtubers_natural_disasters:hot_meteor"
+        }
+      ]
+    }
+  ]
+}

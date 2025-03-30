@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="Not specified"
+
+[[mods]]
+modId="youtubers_natural_disasters"
+version="1.1.0"
+displayName="100 Youtubers VS Natural Disasters"
+displayURL="https://mcreator.net, "
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="JY9146, MCreator"
+description="A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan, helped me a lot. "
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.youtubers_natural_disasters]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration
