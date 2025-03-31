@@ -33,9 +33,4 @@ public class AppleOfWisdomItem extends Item {
 		AppleOfWisdomPlayerFinishesUsingItemProcedure.execute(world, x, y, z, entity);
 		return retval;
 	}
-
-	@Override
-	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-		AppleOfWisdomPlayerFinishesUsingItemProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
 }
