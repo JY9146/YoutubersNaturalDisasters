@@ -125,7 +125,7 @@ public class EndOfWorldMeteorMeteorEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure.execute();
+		EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

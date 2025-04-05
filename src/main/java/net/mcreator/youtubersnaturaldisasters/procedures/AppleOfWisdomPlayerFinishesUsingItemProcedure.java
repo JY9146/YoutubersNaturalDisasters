@@ -17,14 +17,14 @@ public class AppleOfWisdomPlayerFinishesUsingItemProcedure {
 		if (entity == null)
 			return;
 		if (Math.random() < 0.5) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 3000, 25));
-			for (int index0 = 0; index0 < 5; index0++) {
+			for (int index0 = 0; index0 < 100; index0++) {
 				if (world instanceof ServerLevel _level) {
 					LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 					entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
 					_level.addFreshEntity(entityToSpawn);
 				}
+			}
+			for (int index1 = 0; index1 < 10; index1++) {
 				if (world instanceof Level _level && !_level.isClientSide())
 					_level.explode(null, x, y, z, 9, Level.ExplosionInteraction.TNT);
 			}
@@ -38,6 +38,20 @@ public class AppleOfWisdomPlayerFinishesUsingItemProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 25));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 3000, 25));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 3));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 3000, 3));
 		}
 	}
 }

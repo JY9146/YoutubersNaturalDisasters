@@ -34,6 +34,11 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.SOLID_LAVA_BUCKET.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.APPLE_OF_WISDOM.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.THROW_METEOR.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.THROW_LIGHTNING.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TNT.get());
 			}).build());
 
 	@SubscribeEvent
@@ -43,6 +48,8 @@ public class YoutubersNaturalDisastersModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(YoutubersNaturalDisastersModItems.TECHNOBLADE_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.CRAG_DYNA_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
 		}
 	}
 }

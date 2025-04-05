@@ -58,12 +58,12 @@
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "spear",
-    "isMusicDisc": false,
+    "isMusicDisc": true,
     "musicDiscMusic": {
-      "value": ""
+      "value": "CUSTOM:defnotarickrollatall"
     },
-    "musicDiscDescription": "",
-    "musicDiscLengthInTicks": 100,
+    "musicDiscDescription": "THE END IS NIGH",
+    "musicDiscLengthInTicks": 4260,
     "musicDiscAnalogOutput": 0
   }
 }

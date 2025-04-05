@@ -23,5 +23,22 @@
         "stream": false
       }
     ]
+  },
+  "cavemanfilmswhateveryouwant": {
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:cavemanfilmscoolaudio",
+        "stream": false
+      }
+    ]
+  },
+  "defnotarickrollatall": {
+    "subtitle": "subtitles.defnotarickrollatall",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:defnotrickroll",
+        "stream": false
+      }
+    ]
   }
 }

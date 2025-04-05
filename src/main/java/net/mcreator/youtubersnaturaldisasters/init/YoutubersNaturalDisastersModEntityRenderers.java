@@ -13,9 +13,11 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class YoutubersNaturalDisastersModEntityRenderers {
@@ -27,5 +29,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SPLASH_POTION_OF_GAS_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.METEOR.get(), MeteorRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.END_OF_WORLD_METEOR_METEOR.get(), EndOfWorldMeteorMeteorRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.CAVEMAN_FILMS.get(), CavemanFilmsRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.INSANE_FLAME.get(), InsaneFlameRenderer::new);
 	}
 }

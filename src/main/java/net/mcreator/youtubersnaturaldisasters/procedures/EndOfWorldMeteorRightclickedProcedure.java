@@ -11,7 +11,7 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModE
 public class EndOfWorldMeteorRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.END_OF_WORLD_METEOR_METEOR.get().spawn(_level, BlockPos.containing(x, y + 10, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.END_OF_WORLD_METEOR_METEOR.get().spawn(_level, BlockPos.containing(x, y + 30, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 			}
 		}

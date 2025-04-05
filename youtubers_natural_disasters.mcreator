@@ -467,7 +467,28 @@
         "files": [
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -576,6 +597,236 @@
           }
         ]
       }
+    },
+    {
+      "name": "SmokeEmitterRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_emitter_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SmokeEmitterRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SmokeEmitter",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_emitter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/smoke_emitter.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/SmokeEmitterItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteorRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowMeteorRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_meteor.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowMeteorItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CavemanFilms",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caveman_films",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/CavemanFilmsRenderer.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/caveman_films_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/CavemanFilmsEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "InsaneFlame",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insane_flame",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/insane_flame_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/InsaneFlameRenderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/InsaneFlameEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "InsaneFlameOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insane_flame_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/InsaneFlameOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowLightningRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_lightning_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowLightningRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowLightning",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowLightningItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_lightning.json"
+        ]
+      }
+    },
+    {
+      "name": "ThrowTNT",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_tnt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_tnt.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowTNTItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ThrowTNTRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_tnt_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTNTRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -603,6 +854,22 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "cavemanfilmswhateveryouwant",
+      "files": [
+        "cavemanfilmscoolaudio"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "defnotarickrollatall",
+      "files": [
+        "defnotrickroll"
+      ],
+      "category": "neutral",
+      "subtitle": "Definently not a rickroll..."
     }
   ],
   "tag_elements": {
@@ -610,6 +877,7 @@
       "~CUSTOM:SolidLava"
     ],
     "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:EndOfWorldMeteor",
       "~CUSTOM:MusicDisc"
     ]
   },
@@ -619,28 +887,40 @@
       "item.youtubers_natural_disasters.saturation_filler": "Saturation Filler",
       "entity.youtubers_natural_disasters.technoblade": "Technoblade",
       "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
+      "subtitles.cavemanfilmswhateveryouwant": "",
+      "subtitles.defnotarickrollatall": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
       "death.attack.inhaled_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
       "fluid.youtubers_natural_disasters.solid_lava": "Solid Lava",
+      "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "subtitles.cragdynasubscribe": "",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
       "subtitles.cragdynadeath": "",
+      "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
+      "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
+      "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
+      "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
       "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "entity.youtubers_natural_disasters.meteor": "Meteor",
       "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
       "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "entity.youtubers_natural_disasters.crag_dyna": "CragDyna",
+      "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
+      "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
+      "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
+      "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
       "item.youtubers_natural_disasters.solid_lava_bucket": "Solid Lava Bucket",
+      "item.youtubers_natural_disasters.throw_tnt": "Throw TNT",
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver"
     }
   },
@@ -652,8 +932,8 @@
     "modid": "youtubers_natural_disasters",
     "modName": "100 Youtubers VS Natural Disasters",
     "version": "1.1.0",
-    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan, helped me a lot. ",
-    "author": "JY9146, MCreator",
+    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @Crafterman3867-2 (on Discord), ",
+    "author": "JY9146, A5969, Mr_J_The_Destroyer, MCreator",
     "websiteURL": "https://mcreator.net, ",
     "license": "Not specified",
     "serverSideOnly": false,
@@ -662,7 +942,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Special thanks to Vini2003 and CorgiTaco for creating the mods this mod is based off of, their amazing and you should check out their work! Thanks to Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.youtubersnaturaldisasters"
   },
   "mcreatorVersion": 202400452410

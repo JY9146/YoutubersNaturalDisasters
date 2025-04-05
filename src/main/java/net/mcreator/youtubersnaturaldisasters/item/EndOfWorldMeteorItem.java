@@ -1,9 +1,12 @@
 
 package net.mcreator.youtubersnaturaldisasters.item;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -11,12 +14,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.EndOfWorldMeteorRightclickedProcedure;
 
-public class EndOfWorldMeteorItem extends Item {
+public class EndOfWorldMeteorItem extends RecordItem {
 	public EndOfWorldMeteorItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:defnotarickrollatall")), new Item.Properties().stacksTo(64).rarity(Rarity.COMMON), 4260);
 	}
 
 	@Override

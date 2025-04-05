@@ -19,9 +19,11 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -43,6 +45,14 @@ public class YoutubersNaturalDisastersModEntities {
 	public static final RegistryObject<EntityType<EndOfWorldMeteorMeteorEntity>> END_OF_WORLD_METEOR_METEOR = register("end_of_world_meteor_meteor",
 			EntityType.Builder.<EndOfWorldMeteorMeteorEntity>of(EndOfWorldMeteorMeteorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(EndOfWorldMeteorMeteorEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CavemanFilmsEntity>> CAVEMAN_FILMS = register("caveman_films",
+			EntityType.Builder.<CavemanFilmsEntity>of(CavemanFilmsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CavemanFilmsEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<InsaneFlameEntity>> INSANE_FLAME = register("insane_flame",
+			EntityType.Builder.<InsaneFlameEntity>of(InsaneFlameEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InsaneFlameEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -58,6 +68,8 @@ public class YoutubersNaturalDisastersModEntities {
 			GasPersonEntity.init();
 			MeteorEntity.init();
 			EndOfWorldMeteorMeteorEntity.init();
+			CavemanFilmsEntity.init();
+			InsaneFlameEntity.init();
 		});
 	}
 
@@ -68,5 +80,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(GAS_PERSON.get(), GasPersonEntity.createAttributes().build());
 		event.put(METEOR.get(), MeteorEntity.createAttributes().build());
 		event.put(END_OF_WORLD_METEOR_METEOR.get(), EndOfWorldMeteorMeteorEntity.createAttributes().build());
+		event.put(CAVEMAN_FILMS.get(), CavemanFilmsEntity.createAttributes().build());
+		event.put(INSANE_FLAME.get(), InsaneFlameEntity.createAttributes().build());
 	}
 }

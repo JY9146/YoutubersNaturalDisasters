@@ -18,6 +18,6 @@ public class CragDynaRenderer extends HumanoidMobRenderer<CragDynaEntity, Humano
 
 	@Override
 	public ResourceLocation getTextureLocation(CragDynaEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/2020_06_01_diamond-armor-layer-1-14493856_1.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/cragdynaskin.png");
 	}
 }

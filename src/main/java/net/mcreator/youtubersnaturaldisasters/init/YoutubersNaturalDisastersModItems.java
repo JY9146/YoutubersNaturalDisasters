@@ -13,7 +13,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
+import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
+import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
 import net.mcreator.youtubersnaturaldisasters.item.SolidLavaItem;
+import net.mcreator.youtubersnaturaldisasters.item.SmokeEmitterItem;
 import net.mcreator.youtubersnaturaldisasters.item.SaturationFillerItem;
 import net.mcreator.youtubersnaturaldisasters.item.PotionOfGasItem;
 import net.mcreator.youtubersnaturaldisasters.item.MusicDiscItem;
@@ -35,6 +39,12 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SOLID_LAVA_BUCKET = REGISTRY.register("solid_lava_bucket", () -> new SolidLavaItem());
 	public static final RegistryObject<Item> SPLASH_POTION_OF_GAS = REGISTRY.register("splash_potion_of_gas", () -> new PotionOfGasItem());
 	public static final RegistryObject<Item> APPLE_OF_WISDOM = REGISTRY.register("apple_of_wisdom", () -> new AppleOfWisdomItem());
+	public static final RegistryObject<Item> SMOKE_EMITTER = REGISTRY.register("smoke_emitter", () -> new SmokeEmitterItem());
+	public static final RegistryObject<Item> THROW_METEOR = REGISTRY.register("throw_meteor", () -> new ThrowMeteorItem());
+	public static final RegistryObject<Item> CAVEMAN_FILMS_SPAWN_EGG = REGISTRY.register("caveman_films_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.CAVEMAN_FILMS, -16777216, -14127104, new Item.Properties()));
+	public static final RegistryObject<Item> INSANE_FLAME_SPAWN_EGG = REGISTRY.register("insane_flame_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.INSANE_FLAME, -65536, -39424, new Item.Properties()));
+	public static final RegistryObject<Item> THROW_LIGHTNING = REGISTRY.register("throw_lightning", () -> new ThrowLightningItem());
+	public static final RegistryObject<Item> THROW_TNT = REGISTRY.register("throw_tnt", () -> new ThrowTNTItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

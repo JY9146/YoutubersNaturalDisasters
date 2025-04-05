@@ -18,6 +18,6 @@ public class TechnobladeRenderer extends HumanoidMobRenderer<TechnobladeEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(TechnobladeEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/techno-biped.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/2025_03_06_technoblade-23101128.png");
 	}
 }
