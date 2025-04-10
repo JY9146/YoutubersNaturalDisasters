@@ -36,6 +36,34 @@ public class EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure {
 						if (distanceSq <= 1.0) {
 							if (Math.random() <= 0.5) {
 								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 2, z + zi);
+									BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
+									BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
 									BlockState _bso = world.getBlockState(_bp);
@@ -93,6 +121,48 @@ public class EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure {
 								}
 							} else if (Math.random() <= 0.4) {
 								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 2, z + zi);
+									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
+									BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 0, z + zi);
+									BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
 									BlockState _bso = world.getBlockState(_bp);
@@ -149,6 +219,48 @@ public class EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure {
 									world.setBlock(_bp, _bs, 3);
 								}
 							} else if (Math.random() <= 0.4) {
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 2, z + zi);
+									BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 0, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = Blocks.LAVA.defaultBlockState();
@@ -207,6 +319,48 @@ public class EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure {
 								}
 							} else if (Math.random() <= 0.2) {
 								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 2, z + zi);
+									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
+									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 0, z + zi);
+									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
 									BlockState _bso = world.getBlockState(_bp);
@@ -263,6 +417,48 @@ public class EndOfWorldMeteorMeteorOnEntityTickUpdateProcedure {
 									world.setBlock(_bp, _bs, 3);
 								}
 							} else {
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 2, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi + 0, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = Blocks.LAVA.defaultBlockState();
