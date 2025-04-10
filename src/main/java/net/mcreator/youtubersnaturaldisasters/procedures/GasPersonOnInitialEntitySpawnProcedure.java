@@ -14,8 +14,8 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		particleAmount = 8;
-		particleRadius = 2;
+		particleAmount = 5000;
+		particleRadius = 10;
 		for (int index0 = 0; index0 < (int) particleAmount; index0++) {
 			world.addParticle((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.GAS.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 					(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),

@@ -39,6 +39,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_LIGHTNING.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TNT.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.EARTHQUAKE_SUMMONER.get());
 			}).build());
 
 	@SubscribeEvent

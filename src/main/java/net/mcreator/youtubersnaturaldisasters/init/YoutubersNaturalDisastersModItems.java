@@ -23,6 +23,7 @@ import net.mcreator.youtubersnaturaldisasters.item.PotionOfGasItem;
 import net.mcreator.youtubersnaturaldisasters.item.MusicDiscItem;
 import net.mcreator.youtubersnaturaldisasters.item.GoldenAppleGiverItem;
 import net.mcreator.youtubersnaturaldisasters.item.EndOfWorldMeteorItem;
+import net.mcreator.youtubersnaturaldisasters.item.EarthquakeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.AppleOfWisdomItem;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -45,6 +46,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> INSANE_FLAME_SPAWN_EGG = REGISTRY.register("insane_flame_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.INSANE_FLAME, -65536, -39424, new Item.Properties()));
 	public static final RegistryObject<Item> THROW_LIGHTNING = REGISTRY.register("throw_lightning", () -> new ThrowLightningItem());
 	public static final RegistryObject<Item> THROW_TNT = REGISTRY.register("throw_tnt", () -> new ThrowTNTItem());
+	public static final RegistryObject<Item> EARTHQUAKE_SUMMONER = REGISTRY.register("earthquake_summoner", () -> new EarthquakeSummonerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

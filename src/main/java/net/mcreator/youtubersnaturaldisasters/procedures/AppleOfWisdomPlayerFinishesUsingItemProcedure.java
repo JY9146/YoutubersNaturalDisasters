@@ -17,7 +17,7 @@ public class AppleOfWisdomPlayerFinishesUsingItemProcedure {
 		if (entity == null)
 			return;
 		if (Math.random() < 0.5) {
-			for (int index0 = 0; index0 < 100; index0++) {
+			for (int index0 = 0; index0 < 15; index0++) {
 				if (world instanceof ServerLevel _level) {
 					LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 					entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;

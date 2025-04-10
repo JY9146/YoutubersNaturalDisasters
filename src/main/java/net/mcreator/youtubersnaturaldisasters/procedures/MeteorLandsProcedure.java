@@ -22,7 +22,6 @@ public class MeteorLandsProcedure {
 			return;
 		double r = 0;
 		if (entity.onGround()) {
-			r = Math.random();
 			int horizontalRadiusHemiTop = (int) 5 - 1;
 			int verticalRadiusHemiTop = (int) 1;
 			int yIterationsHemiTop = verticalRadiusHemiTop;
@@ -35,7 +34,7 @@ public class MeteorLandsProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 								+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 						if (distanceSq <= 1.0) {
-							if (r >= 0.8) {
+							if (Math.random() <= 0.5) {
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
@@ -50,7 +49,7 @@ public class MeteorLandsProcedure {
 									}
 									world.setBlock(_bp, _bs, 3);
 								}
-							} else if (r <= 0.2) {
+							} else if (Math.random() <= 0.4) {
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
@@ -65,7 +64,7 @@ public class MeteorLandsProcedure {
 									}
 									world.setBlock(_bp, _bs, 3);
 								}
-							} else if (r <= 0.4) {
+							} else if (Math.random() <= 0.4) {
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = Blocks.LAVA.defaultBlockState();
@@ -80,10 +79,25 @@ public class MeteorLandsProcedure {
 									}
 									world.setBlock(_bp, _bs, 3);
 								}
-							} else {
+							} else if (Math.random() <= 0.2) {
 								{
 									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 									BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
+							} else {
+								{
+									BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
+									BlockState _bs = Blocks.LAVA.defaultBlockState();
 									BlockState _bso = world.getBlockState(_bp);
 									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());

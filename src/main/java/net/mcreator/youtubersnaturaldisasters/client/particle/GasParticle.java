@@ -36,6 +36,7 @@ public class GasParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
+		this.quadSize *= 10f;
 		this.lifetime = 7;
 		this.gravity = 0f;
 		this.hasPhysics = true;
@@ -47,7 +48,7 @@ public class GasParticle extends TextureSheetParticle {
 
 	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
+		return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
 	}
 
 	@Override

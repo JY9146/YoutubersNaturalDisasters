@@ -827,6 +827,93 @@
           }
         ]
       }
+    },
+    {
+      "name": "Earthquake",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earthquake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/EarthquakeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EarthquakeSummoner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earthquake_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/EarthquakeSummonerItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/earthquake_summoner.json"
+        ]
+      }
+    },
+    {
+      "name": "EarthquakeCustomelement",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "earthquake_customelement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/EarthquakeCustomelement.java"
+        ]
+      }
+    },
+    {
+      "name": "PotionOfGasRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_of_gas_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/PotionOfGasRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PotionOfGasPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potion_of_gas_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/PotionOfGasPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -886,12 +973,13 @@
     "en_us": {
       "item.youtubers_natural_disasters.saturation_filler": "Saturation Filler",
       "entity.youtubers_natural_disasters.technoblade": "Technoblade",
-      "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "subtitles.cavemanfilmswhateveryouwant": "",
+      "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "subtitles.defnotarickrollatall": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
       "death.attack.inhaled_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
+      "item.youtubers_natural_disasters.earthquake_summoner": "Earthquake Summoner",
       "fluid.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
