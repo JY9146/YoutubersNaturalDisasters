@@ -6,6 +6,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
@@ -29,13 +30,50 @@ public class MeteorSpawningProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
-		if (Math.random() < 0.001) {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
-				if (entityToSpawn != null) {
-					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+		if (world instanceof ServerLevel _origLevel) {
+			LevelAccessor _worldorig = world;
+			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
+			if (world != null) {
+				if (Math.random() < 0.001) {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+					}
 				}
 			}
+			world = _worldorig;
+		}
+		if (world instanceof ServerLevel _origLevel) {
+			LevelAccessor _worldorig = world;
+			world = _origLevel.getServer().getLevel(Level.NETHER);
+			if (world != null) {
+				if (Math.random() < 0.001) {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+					}
+				}
+			}
+			world = _worldorig;
+		}
+		if (world instanceof ServerLevel _origLevel) {
+			LevelAccessor _worldorig = world;
+			world = _origLevel.getServer().getLevel(Level.END);
+			if (world != null) {
+				if (Math.random() < 0.001) {
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						}
+					}
+				}
+			}
+			world = _worldorig;
 		}
 	}
 }
