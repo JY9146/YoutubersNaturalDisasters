@@ -47,6 +47,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> THROW_LIGHTNING = REGISTRY.register("throw_lightning", () -> new ThrowLightningItem());
 	public static final RegistryObject<Item> THROW_TNT = REGISTRY.register("throw_tnt", () -> new ThrowTNTItem());
 	public static final RegistryObject<Item> EARTHQUAKE_SUMMONER = REGISTRY.register("earthquake_summoner", () -> new EarthquakeSummonerItem());
+	public static final RegistryObject<Item> MR_COOSH_SPAWN_EGG = REGISTRY.register("mr_coosh_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MR_COOSH, -16777216, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

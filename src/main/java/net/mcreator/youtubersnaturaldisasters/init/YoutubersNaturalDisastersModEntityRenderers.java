@@ -12,6 +12,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
@@ -31,5 +33,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.END_OF_WORLD_METEOR_METEOR.get(), EndOfWorldMeteorMeteorRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.CAVEMAN_FILMS.get(), CavemanFilmsRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.INSANE_FLAME.get(), InsaneFlameRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MR_COOSH.get(), MrCooshRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get(), SinkholeEntityRenderer::new);
 	}
 }

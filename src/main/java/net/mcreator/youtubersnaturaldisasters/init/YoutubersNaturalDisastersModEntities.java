@@ -18,6 +18,8 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
@@ -53,6 +55,12 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<InsaneFlameEntity>of(InsaneFlameEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InsaneFlameEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MrCooshEntity>> MR_COOSH = register("mr_coosh",
+			EntityType.Builder.<MrCooshEntity>of(MrCooshEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MrCooshEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SinkholeEntityEntity>> SINKHOLE_ENTITY = register("sinkhole_entity", EntityType.Builder.<SinkholeEntityEntity>of(SinkholeEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -70,6 +78,8 @@ public class YoutubersNaturalDisastersModEntities {
 			EndOfWorldMeteorMeteorEntity.init();
 			CavemanFilmsEntity.init();
 			InsaneFlameEntity.init();
+			MrCooshEntity.init();
+			SinkholeEntityEntity.init();
 		});
 	}
 
@@ -82,5 +92,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(END_OF_WORLD_METEOR_METEOR.get(), EndOfWorldMeteorMeteorEntity.createAttributes().build());
 		event.put(CAVEMAN_FILMS.get(), CavemanFilmsEntity.createAttributes().build());
 		event.put(INSANE_FLAME.get(), InsaneFlameEntity.createAttributes().build());
+		event.put(MR_COOSH.get(), MrCooshEntity.createAttributes().build());
+		event.put(SINKHOLE_ENTITY.get(), SinkholeEntityEntity.createAttributes().build());
 	}
 }

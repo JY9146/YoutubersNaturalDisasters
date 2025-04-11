@@ -1,5 +1,6 @@
 {
   "item.youtubers_natural_disasters.saturation_filler": "Saturation Filler",
+  "entity.youtubers_natural_disasters.sinkhole_entity": "Sinkhole Entity",
   "entity.youtubers_natural_disasters.technoblade": "Technoblade",
   "subtitles.cavemanfilmswhateveryouwant": "",
   "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
@@ -25,6 +26,7 @@
   "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
   "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
   "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
+  "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
   "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
   "entity.youtubers_natural_disasters.meteor": "Meteor",
   "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
@@ -34,6 +36,7 @@
   "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
   "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
   "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
+  "entity.youtubers_natural_disasters.mr_coosh": "Mr_Coosh",
   "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
   "item.youtubers_natural_disasters.solid_lava_bucket": "Solid Lava Bucket",
   "item.youtubers_natural_disasters.throw_tnt": "Throw TNT",
