@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
@@ -50,6 +51,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> MR_COOSH_SPAWN_EGG = REGISTRY.register("mr_coosh_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MR_COOSH, -16777216, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ZACHARY_95_SPAWN_EGG = REGISTRY.register("zachary_95_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.ZACHARY_95, -6750208, -6737152, new Item.Properties()));
 	public static final RegistryObject<Item> COSMIC_SPAWN_EGG = REGISTRY.register("cosmic_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.COSMIC, -13297295, -15202245, new Item.Properties()));
+	public static final RegistryObject<Item> TORNADO_SUMMONER = REGISTRY.register("tornado_summoner", () -> new TornadoSummonerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

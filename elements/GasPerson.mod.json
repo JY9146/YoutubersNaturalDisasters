@@ -104,10 +104,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": ""
+      "value": "intentionally_empty"
     },
     "deathSound": {
-      "value": ""
+      "value": "intentionally_empty"
     },
     "stepSound": {
       "value": "intentionally_empty"

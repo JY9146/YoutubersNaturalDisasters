@@ -834,7 +834,20 @@
         "files": [
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/EarthquakeProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "pitch",
+            "type": "number"
+          },
+          {
+            "name": "roll",
+            "type": "number"
+          },
+          {
+            "name": "yaw",
+            "type": "number"
+          }
+        ]
       }
     },
     {
@@ -1012,6 +1025,49 @@
           "src/main/resources/assets/youtubers_natural_disasters/models/item/cosmic_spawn_egg.json"
         ]
       }
+    },
+    {
+      "name": "TornadoSummonerRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_summoner_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TornadoSummonerRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TornadoSummoner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/TornadoSummonerItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/tornado_summoner.json"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1092,6 +1148,7 @@
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+      "item.youtubers_natural_disasters.tornado_summoner": "Tornado Summoner",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
       "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
@@ -1133,7 +1190,10 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "ldlib_api",
+      "photon_api"
+    ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Special thanks to Vini2003 and CorgiTaco for creating the mods this mod is based off of, their amazing and you should check out their work! Thanks to Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.youtubersnaturaldisasters"

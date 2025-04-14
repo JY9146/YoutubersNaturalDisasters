@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "particle",
   "definition": {
-    "texture": "nouveau_projet_4",
+    "texture": "gassygas",
     "animate": false,
     "frameDuration": 1,
     "width": 0.2,

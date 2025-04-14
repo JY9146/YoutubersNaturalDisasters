@@ -22,6 +22,18 @@ description="A faithful recreation of the Natural Disasters mod in 100 Youtubers
     side="BOTH"
 
 
+[[dependencies.youtubers_natural_disasters]]
+    modId="ldlib_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.youtubers_natural_disasters]]
+    modId="photon_api"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

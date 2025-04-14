@@ -24,45 +24,49 @@ public class SinkholeGeneratorProcedure {
 			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
 			if (world != null) {
 				if (entity.onGround()) {
-					int horizontalRadiusHemiBot = (int) 100 - 1;
-					int verticalRadiusHemiBot = (int) 5;
-					int yIterationsHemiBot = verticalRadiusHemiBot;
-					for (int yi = -yIterationsHemiBot; yi <= 0; yi++) {
-						if (yi == -verticalRadiusHemiBot) {
-							continue;
-						}
-						for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-							for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-								double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (yi * yi) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-										+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-								if (distanceSq <= 1.0) {
-									world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
-									if (world instanceof Level _level) {
-										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 2, 1);
-										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 2, 1, false);
-										}
-									}
-									if (y < -30) {
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.LAVA.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+					entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
+					if (entity.getPersistentData().getDouble("tagName") >= 80) {
+						entity.getPersistentData().putDouble("tagName", 0);
+						int horizontalRadiusHemiBot = (int) 150 - 1;
+						int verticalRadiusHemiBot = (int) 10;
+						int yIterationsHemiBot = verticalRadiusHemiBot;
+						for (int yi = -yIterationsHemiBot; yi <= 0; yi++) {
+							if (yi == -verticalRadiusHemiBot) {
+								continue;
+							}
+							for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
+								for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
+									double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (yi * yi) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
+											+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
+									if (distanceSq <= 1.0) {
+										world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
+										if (world instanceof Level _level) {
+											if (!_level.isClientSide()) {
+												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.MUSIC, 1, 1);
+											} else {
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.MUSIC, 1, 1, false);
 											}
-											world.setBlock(_bp, _bs, 3);
 										}
-									}
-									if (y < -60) {
-										if (!entity.level().isClientSide())
-											entity.discard();
+										if (y < -10) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.LAVA.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
+											}
+										}
+										if (y < -20) {
+											if (!entity.level().isClientSide())
+												entity.discard();
+										}
 									}
 								}
 							}
