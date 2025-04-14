@@ -1,34 +1,19 @@
 package net.mcreator.youtubersnaturaldisasters.procedures;
 
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 
 public class PotionOfGasPlayerFinishesUsingItemProcedure {
-	public static void execute(LevelAccessor world, ItemStack itemstack) {
+	public static void execute(Entity entity, ItemStack itemstack) {
+		if (entity == null)
+			return;
 		if (itemstack.getItem() == YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get()) {
-			{
-				ItemStack _isc = itemstack;
-				final ItemStack _setstack = new ItemStack(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get()).copy();
-				final int _sltid = 0;
-				_setstack.setCount(1);
-				_isc.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-					if (capability instanceof IItemHandlerModifiable itemHandlerModifiable) {
-						itemHandlerModifiable.setStackInSlot(_sltid, _setstack);
-					}
-				});
-			}
-			{
-				ItemStack _ist = itemstack;
-				if (_ist.hurt(1, RandomSource.create(), null)) {
-					_ist.shrink(1);
-					_ist.setDamageValue(0);
-				}
+			if (entity instanceof Player _player) {
+				ItemStack _stktoremove = new ItemStack(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}
 	}

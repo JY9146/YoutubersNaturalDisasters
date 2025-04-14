@@ -13,6 +13,8 @@ import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
+import expr.Variable;
+
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class EarthquakeProcedure {
 	public static ViewportEvent.ComputeCameraAngles provider = null;
@@ -30,21 +32,30 @@ public class EarthquakeProcedure {
 		Entity entity = provider.getCamera().getEntity();
 		if (level != null && entity != null) {
 			Vec3 entPos = entity.getPosition((float) provider.getPartialTick());
-			execute(provider, provider.getPitch(), provider.getRoll(), provider.getYaw());
+			execute(provider, entity, provider.getPitch(), provider.getRoll(), provider.getYaw());
 		}
 	}
 
-	public static void execute(double pitch, double roll, double yaw) {
-		execute(null, pitch, roll, yaw);
+	public static void execute(Entity entity, double pitch, double roll, double yaw) {
+		execute(null, entity, pitch, roll, yaw);
 	}
 
-	private static void execute(@Nullable Event event, double pitch, double roll, double yaw) {
-		if (Math.random() < 0.015) {
+	private static void execute(@Nullable Event event, Entity entity, double pitch, double roll, double yaw) {
+		if (entity == null)
+			return;
+		double Variable = 0;
+		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
+		if (Math.random() < 0.0005) {
 			if (Math.random() < 0.5) {
-				setAngles((float) (yaw + 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
+				if (entity.getPersistentData().getDouble("tagName") >= 10) {
+					setAngles((float) (yaw + 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
+				}
 			} else {
-				setAngles((float) (yaw - 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
+				if (entity.getPersistentData().getDouble("tagName") >= 10) {
+					setAngles((float) (yaw - 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
+				}
 			}
+			entity.getPersistentData().putDouble("tagName", 0);
 		}
 	}
 }

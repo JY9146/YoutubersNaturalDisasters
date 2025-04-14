@@ -836,6 +836,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "pitch",
             "type": "number"
           },
@@ -897,12 +901,12 @@
         ],
         "dependencies": [
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "entity",
+            "type": "entity"
           },
           {
-            "name": "world",
-            "type": "world"
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -1070,7 +1074,14 @@
       }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Earthquake_rightclick",
+      "type": "blockstate",
+      "scope": "map",
+      "value": "Blocks.AIR.defaultBlockState()"
+    }
+  ],
   "sound_elements": [
     {
       "name": "thatswhatilike",

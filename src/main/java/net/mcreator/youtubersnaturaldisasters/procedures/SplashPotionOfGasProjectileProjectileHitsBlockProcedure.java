@@ -11,7 +11,7 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModE
 public class SplashPotionOfGasProjectileProjectileHitsBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.GAS_PERSON.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.GAS_PERSON.get().spawn(_level, BlockPos.containing(x, y + 3, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 				entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 			}

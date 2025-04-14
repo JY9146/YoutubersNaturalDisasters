@@ -18,7 +18,7 @@ import net.mcreator.youtubersnaturaldisasters.procedures.PotionOfGasPlayerFinish
 
 public class PotionOfGasItem extends Item {
 	public PotionOfGasItem() {
-		super(new Item.Properties().durability(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -45,7 +45,7 @@ public class PotionOfGasItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		PotionOfGasPlayerFinishesUsingItemProcedure.execute(world, itemstack);
+		PotionOfGasPlayerFinishesUsingItemProcedure.execute(entity, itemstack);
 		return retval;
 	}
 
@@ -58,6 +58,6 @@ public class PotionOfGasItem extends Item {
 
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-		PotionOfGasPlayerFinishesUsingItemProcedure.execute(world, itemstack);
+		PotionOfGasPlayerFinishesUsingItemProcedure.execute(entity, itemstack);
 	}
 }
