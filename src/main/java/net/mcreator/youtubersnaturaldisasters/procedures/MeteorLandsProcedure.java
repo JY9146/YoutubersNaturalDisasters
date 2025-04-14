@@ -84,7 +84,7 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-									} else if (Math.random() <= 0.2) {
+									} else if (Math.random() <= 0.3) {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 											BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
@@ -194,7 +194,7 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-									} else if (Math.random() <= 0.2) {
+									} else if (Math.random() <= 0.3) {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 											BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
@@ -304,7 +304,7 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-									} else if (Math.random() <= 0.2) {
+									} else if (Math.random() <= 0.3) {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
 											BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();

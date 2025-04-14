@@ -196,10 +196,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -838,12 +834,7 @@
         "files": [
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/EarthquakeProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -856,18 +847,6 @@
         "files": [
           "src/main/java/net/mcreator/youtubersnaturaldisasters/item/EarthquakeSummonerItem.java",
           "src/main/resources/assets/youtubers_natural_disasters/models/item/earthquake_summoner.json"
-        ]
-      }
-    },
-    {
-      "name": "EarthquakeCustomelement",
-      "type": "code",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "earthquake_customelement",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/EarthquakeCustomelement.java"
         ]
       }
     },
@@ -975,8 +954,8 @@
     {
       "name": "SinkholeGenerator",
       "type": "procedure",
-      "compiles": false,
-      "locked_code": true,
+      "compiles": true,
+      "locked_code": false,
       "registry_name": "sinkhole_generator",
       "metadata": {
         "files": [
@@ -1003,6 +982,34 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "Zachary95",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zachary_95",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/Zachary95Renderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/Zachary95Entity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/zachary_95_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "Cosmic",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/CosmicEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/CosmicRenderer.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/cosmic_spawn_egg.json"
         ]
       }
     }
@@ -1075,16 +1082,20 @@
       "fluid.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
+      "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "subtitles.cragdynasubscribe": "",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
+      "entity.youtubers_natural_disasters.cosmic": "Cosmic",
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
       "subtitles.cragdynadeath": "",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
+      "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
       "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
+      "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
       "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",

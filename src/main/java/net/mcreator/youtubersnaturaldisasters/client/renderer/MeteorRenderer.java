@@ -13,7 +13,7 @@ import net.mcreator.youtubersnaturaldisasters.client.model.ModelMeteor;
 
 public class MeteorRenderer extends MobRenderer<MeteorEntity, ModelMeteor<MeteorEntity>> {
 	public MeteorRenderer(EntityRendererProvider.Context context) {
-		super(context, new AnimatedModel(context.bakeLayer(ModelMeteor.LAYER_LOCATION)), 0.5f);
+		super(context, new AnimatedModel(context.bakeLayer(ModelMeteor.LAYER_LOCATION)), 0f);
 	}
 
 	@Override

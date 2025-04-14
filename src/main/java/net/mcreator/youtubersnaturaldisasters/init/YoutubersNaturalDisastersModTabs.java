@@ -41,6 +41,8 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TNT.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.EARTHQUAKE_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.MR_COOSH_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.ZACHARY_95_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -53,6 +55,8 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.MR_COOSH_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.ZACHARY_95_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 		}
 	}
 }

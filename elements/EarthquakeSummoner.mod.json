@@ -36,12 +36,6 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "Earthquake"
-    },
-    "onRightClickedOnBlock": {
-      "name": "Earthquake"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

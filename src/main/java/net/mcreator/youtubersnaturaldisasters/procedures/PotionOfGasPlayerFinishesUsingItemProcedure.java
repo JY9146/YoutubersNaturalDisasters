@@ -11,22 +11,24 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModI
 
 public class PotionOfGasPlayerFinishesUsingItemProcedure {
 	public static void execute(LevelAccessor world, ItemStack itemstack) {
-		{
-			ItemStack _isc = itemstack;
-			final ItemStack _setstack = new ItemStack(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get()).copy();
-			final int _sltid = 0;
-			_setstack.setCount(1);
-			_isc.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-				if (capability instanceof IItemHandlerModifiable itemHandlerModifiable) {
-					itemHandlerModifiable.setStackInSlot(_sltid, _setstack);
+		if (itemstack.getItem() == YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get()) {
+			{
+				ItemStack _isc = itemstack;
+				final ItemStack _setstack = new ItemStack(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get()).copy();
+				final int _sltid = 0;
+				_setstack.setCount(1);
+				_isc.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+					if (capability instanceof IItemHandlerModifiable itemHandlerModifiable) {
+						itemHandlerModifiable.setStackInSlot(_sltid, _setstack);
+					}
+				});
+			}
+			{
+				ItemStack _ist = itemstack;
+				if (_ist.hurt(1, RandomSource.create(), null)) {
+					_ist.shrink(1);
+					_ist.setDamageValue(0);
 				}
-			});
-		}
-		{
-			ItemStack _ist = itemstack;
-			if (_ist.hurt(1, RandomSource.create(), null)) {
-				_ist.shrink(1);
-				_ist.setDamageValue(0);
 			}
 		}
 	}

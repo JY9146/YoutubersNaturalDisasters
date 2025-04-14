@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
@@ -25,6 +26,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -61,6 +63,14 @@ public class YoutubersNaturalDisastersModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SinkholeEntityEntity>> SINKHOLE_ENTITY = register("sinkhole_entity", EntityType.Builder.<SinkholeEntityEntity>of(SinkholeEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<Zachary95Entity>> ZACHARY_95 = register("zachary_95",
+			EntityType.Builder.<Zachary95Entity>of(Zachary95Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(Zachary95Entity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CosmicEntity>> COSMIC = register("cosmic",
+			EntityType.Builder.<CosmicEntity>of(CosmicEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CosmicEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -80,6 +90,8 @@ public class YoutubersNaturalDisastersModEntities {
 			InsaneFlameEntity.init();
 			MrCooshEntity.init();
 			SinkholeEntityEntity.init();
+			Zachary95Entity.init();
+			CosmicEntity.init();
 		});
 	}
 
@@ -94,5 +106,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(INSANE_FLAME.get(), InsaneFlameEntity.createAttributes().build());
 		event.put(MR_COOSH.get(), MrCooshEntity.createAttributes().build());
 		event.put(SINKHOLE_ENTITY.get(), SinkholeEntityEntity.createAttributes().build());
+		event.put(ZACHARY_95.get(), Zachary95Entity.createAttributes().build());
+		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
 	}
 }

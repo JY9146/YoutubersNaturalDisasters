@@ -19,7 +19,7 @@ public class GoldenAppleGiverItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		GoldenAppleGiverRightclickedProcedure.execute(world, entity);
+		GoldenAppleGiverRightclickedProcedure.execute(world);
 		return ar;
 	}
 }

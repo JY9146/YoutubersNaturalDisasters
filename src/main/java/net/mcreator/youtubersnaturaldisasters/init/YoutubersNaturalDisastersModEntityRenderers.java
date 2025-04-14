@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
@@ -19,6 +20,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.CosmicRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -35,5 +37,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.INSANE_FLAME.get(), InsaneFlameRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MR_COOSH.get(), MrCooshRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get(), SinkholeEntityRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ZACHARY_95.get(), Zachary95Renderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.COSMIC.get(), CosmicRenderer::new);
 	}
 }

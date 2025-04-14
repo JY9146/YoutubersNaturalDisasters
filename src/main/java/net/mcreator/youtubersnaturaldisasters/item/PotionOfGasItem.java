@@ -18,7 +18,7 @@ import net.mcreator.youtubersnaturaldisasters.procedures.PotionOfGasPlayerFinish
 
 public class PotionOfGasItem extends Item {
 	public PotionOfGasItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
