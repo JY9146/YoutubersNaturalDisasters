@@ -19,6 +19,7 @@ import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
 import net.mcreator.youtubersnaturaldisasters.item.SolidLavaItem;
 import net.mcreator.youtubersnaturaldisasters.item.SmokeEmitterItem;
+import net.mcreator.youtubersnaturaldisasters.item.SinkholeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.SaturationFillerItem;
 import net.mcreator.youtubersnaturaldisasters.item.PotionOfGasItem;
 import net.mcreator.youtubersnaturaldisasters.item.MusicDiscItem;
@@ -52,6 +53,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> ZACHARY_95_SPAWN_EGG = REGISTRY.register("zachary_95_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.ZACHARY_95, -6750208, -6737152, new Item.Properties()));
 	public static final RegistryObject<Item> COSMIC_SPAWN_EGG = REGISTRY.register("cosmic_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.COSMIC, -13297295, -15202245, new Item.Properties()));
 	public static final RegistryObject<Item> TORNADO_SUMMONER = REGISTRY.register("tornado_summoner", () -> new TornadoSummonerItem());
+	public static final RegistryObject<Item> SINKHOLE_SUMMONER = REGISTRY.register("sinkhole_summoner", () -> new SinkholeSummonerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

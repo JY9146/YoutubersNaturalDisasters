@@ -25,10 +25,10 @@ public class SinkholeGeneratorProcedure {
 			if (world != null) {
 				if (entity.onGround()) {
 					entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-					if (entity.getPersistentData().getDouble("tagName") >= 40) {
+					if (entity.getPersistentData().getDouble("tagName") > 20) {
 						entity.getPersistentData().putDouble("tagName", 0);
 						int horizontalRadiusHemiBot = (int) 150 - 1;
-						int verticalRadiusHemiBot = (int) 15;
+						int verticalRadiusHemiBot = (int) 25;
 						int yIterationsHemiBot = verticalRadiusHemiBot;
 						for (int yi = -yIterationsHemiBot; yi <= 0; yi++) {
 							if (yi == -verticalRadiusHemiBot) {
@@ -47,7 +47,7 @@ public class SinkholeGeneratorProcedure {
 												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.MUSIC, 1, 1, false);
 											}
 										}
-										if (y < -5) {
+										if (y < 5) {
 											{
 												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
 												BlockState _bs = Blocks.LAVA.defaultBlockState();
@@ -63,7 +63,7 @@ public class SinkholeGeneratorProcedure {
 												world.setBlock(_bp, _bs, 3);
 											}
 										}
-										if (y < -10) {
+										if (y < 0) {
 											if (!entity.level().isClientSide())
 												entity.discard();
 										}

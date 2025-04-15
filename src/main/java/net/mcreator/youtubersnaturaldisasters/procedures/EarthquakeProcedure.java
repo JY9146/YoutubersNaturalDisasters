@@ -7,9 +7,12 @@ import net.minecraftforge.client.event.ViewportEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
+
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -44,18 +47,12 @@ public class EarthquakeProcedure {
 		if (entity == null)
 			return;
 		double Variable = 0;
-		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-		if (Math.random() < 0.0005) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(YoutubersNaturalDisastersModMobEffects.EARTHQUAKEEFFECT.get())) {
 			if (Math.random() < 0.5) {
-				if (entity.getPersistentData().getDouble("tagName") >= 10) {
-					setAngles((float) (yaw + 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
-				}
+				setAngles((float) (yaw + 4), (float) (pitch - (Math.random() * 4) / 4), (float) roll);
 			} else {
-				if (entity.getPersistentData().getDouble("tagName") >= 10) {
-					setAngles((float) (yaw - 8), (float) (pitch - (Math.random() * 8) / 8), (float) roll);
-				}
+				setAngles((float) (yaw - 4), (float) (pitch - (Math.random() * 4) / 4), (float) roll);
 			}
-			entity.getPersistentData().putDouble("tagName", 0);
 		}
 	}
 }

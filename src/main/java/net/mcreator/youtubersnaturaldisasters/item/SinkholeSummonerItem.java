@@ -11,24 +11,24 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.EarthquakeSummonerRightclickedOnBlockProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.SinkholeSummonerRightclickedOnBlockProcedure;
 
-public class EarthquakeSummonerItem extends Item {
-	public EarthquakeSummonerItem() {
+public class SinkholeSummonerItem extends Item {
+	public SinkholeSummonerItem() {
 		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		EarthquakeSummonerRightclickedOnBlockProcedure.execute(world);
+		SinkholeSummonerRightclickedOnBlockProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 		return ar;
 	}
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		EarthquakeSummonerRightclickedOnBlockProcedure.execute(context.getLevel());
+		SinkholeSummonerRightclickedOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ());
 		return InteractionResult.SUCCESS;
 	}
 }

@@ -20,6 +20,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModTabs;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModSounds;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModParticleTypes;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModMobEffects;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModFluids;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModFluidTypes;
@@ -52,6 +53,8 @@ public class YoutubersNaturalDisastersMod {
 		YoutubersNaturalDisastersModEntities.REGISTRY.register(bus);
 
 		YoutubersNaturalDisastersModTabs.REGISTRY.register(bus);
+
+		YoutubersNaturalDisastersModMobEffects.REGISTRY.register(bus);
 
 		YoutubersNaturalDisastersModParticleTypes.REGISTRY.register(bus);
 

@@ -19,6 +19,7 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -28,11 +29,16 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(27 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				entityiterator
 						.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:inhaled_too_much_gas")))), 1);
 			}
+		}
+		if (entity.getPersistentData().getDouble("tagName") >= 1200) {
+			if (!entity.level().isClientSide())
+				entity.discard();
+			entity.getPersistentData().putDouble("tagName", 0);
 		}
 	}
 }

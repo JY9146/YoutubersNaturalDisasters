@@ -1,0 +1,20 @@
+{
+  "_fv": 73,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Earthquakeeffect",
+    "icon": "super-invisible",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
+    "isCuredbyHoney": false,
+    "modifiers": []
+  }
+}

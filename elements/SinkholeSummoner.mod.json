@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "earthquakebutton",
+    "texture": "sinkholetexture",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Earthquake Summoner",
+    "name": "Sinkhole Summoner",
     "rarity": "COMMON",
     "creativeTabs": [
       {
@@ -37,10 +37,10 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "EarthquakeSummonerRightclickedOnBlock"
+      "name": "SinkholeSummonerRightclickedOnBlock"
     },
     "onRightClickedOnBlock": {
-      "name": "EarthquakeSummonerRightclickedOnBlock"
+      "name": "SinkholeSummonerRightclickedOnBlock"
     },
     "enableRanged": false,
     "shootConstantly": false,
