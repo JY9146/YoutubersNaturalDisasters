@@ -1181,6 +1181,19 @@
           }
         ]
       }
+    },
+    {
+      "name": "VolcanoSummoner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "volcano_summoner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/volcano_summoner.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/VolcanoSummonerItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1270,6 +1283,7 @@
       "subtitles.cragdynasubscribe": "",
       "subtitles.cragdynadeath": "",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
+      "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",

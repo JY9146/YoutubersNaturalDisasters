@@ -45,6 +45,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TORNADO_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SINKHOLE_SUMMONER.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.VOLCANO_SUMMONER.get());
 			}).build());
 
 	@SubscribeEvent
