@@ -19,6 +19,7 @@ public class SinkholeGeneratorProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double yy = 0;
 		if (world instanceof ServerLevel _origLevel) {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
@@ -27,8 +28,8 @@ public class SinkholeGeneratorProcedure {
 					entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
 					if (entity.getPersistentData().getDouble("tagName") > 20) {
 						entity.getPersistentData().putDouble("tagName", 0);
-						int horizontalRadiusHemiBot = (int) 150 - 1;
-						int verticalRadiusHemiBot = (int) 25;
+						int horizontalRadiusHemiBot = (int) 100 - 1;
+						int verticalRadiusHemiBot = (int) 5;
 						int yIterationsHemiBot = verticalRadiusHemiBot;
 						for (int yi = -yIterationsHemiBot; yi <= 0; yi++) {
 							if (yi == -verticalRadiusHemiBot) {

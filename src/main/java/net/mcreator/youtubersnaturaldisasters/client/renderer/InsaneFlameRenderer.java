@@ -20,4 +20,9 @@ public class InsaneFlameRenderer extends HumanoidMobRenderer<InsaneFlameEntity, 
 	public ResourceLocation getTextureLocation(InsaneFlameEntity entity) {
 		return new ResourceLocation("youtubers_natural_disasters:textures/entities/insaneflame6skin.png");
 	}
+
+	@Override
+	protected boolean isShaking(InsaneFlameEntity entity) {
+		return true;
+	}
 }
