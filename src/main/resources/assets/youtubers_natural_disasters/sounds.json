@@ -1,13 +1,4 @@
 {
-  "thatswhatilike": {
-    "subtitle": "subtitles.thatswhatilike",
-    "sounds": [
-      {
-        "name": "youtubers_natural_disasters:bruno_mars_-_thats_what_i_like__official_music_video_",
-        "stream": true
-      }
-    ]
-  },
   "cragdynasubscribe": {
     "sounds": [
       {
@@ -37,6 +28,15 @@
     "sounds": [
       {
         "name": "youtubers_natural_disasters:defnotrickroll",
+        "stream": false
+      }
+    ]
+  },
+  "thatswhatiliketommy": {
+    "subtitle": "subtitles.thatswhatiliketommy",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:thatswhatiliketommy",
         "stream": false
       }
     ]

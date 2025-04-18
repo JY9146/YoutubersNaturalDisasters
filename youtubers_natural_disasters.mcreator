@@ -1199,14 +1199,6 @@
   "variable_elements": [],
   "sound_elements": [
     {
-      "name": "thatswhatilike",
-      "files": [
-        "bruno_mars_-_thats_what_i_like__official_music_video_"
-      ],
-      "category": "music",
-      "subtitle": "JUMP IN THE CADILLAC"
-    },
-    {
       "name": "cragdynasubscribe",
       "files": [
         "on-my-way-_112"
@@ -1237,6 +1229,14 @@
       ],
       "category": "neutral",
       "subtitle": "Definently not a rickroll..."
+    },
+    {
+      "name": "thatswhatiliketommy",
+      "files": [
+        "thatswhatiliketommy"
+      ],
+      "category": "neutral",
+      "subtitle": "JUMP IN THE CADILLAC"
     }
   ],
   "tag_elements": {
@@ -1294,6 +1294,7 @@
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
       "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
       "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
+      "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
       "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "entity.youtubers_natural_disasters.meteor": "Meteor",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
@@ -1311,7 +1312,7 @@
     "modid": "youtubers_natural_disasters",
     "modName": "100 Youtubers VS Natural Disasters",
     "version": "1.1.0",
-    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), ",
+    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), @blaackknight (on Discord),  ",
     "author": "JY9146, A5969, Mr_J_The_Destroyer, MCreator",
     "websiteURL": "https://mcreator.net, ",
     "license": "Not specified",

@@ -10,6 +10,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class MusicDiscItem extends RecordItem {
 	public MusicDiscItem() {
-		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:thatswhatilike")), new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON), 6000);
+		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:thatswhatiliketommy")), new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.COMMON), 6000);
 	}
 }
