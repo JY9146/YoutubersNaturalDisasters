@@ -46,6 +46,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.TORNADO_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SINKHOLE_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.VOLCANO_SUMMONER.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.DAPPER_MR_TOM_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -60,6 +61,7 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.MR_COOSH_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.ZACHARY_95_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.DAPPER_MR_TOM_SPAWN_EGG.get());
 		}
 	}
 }

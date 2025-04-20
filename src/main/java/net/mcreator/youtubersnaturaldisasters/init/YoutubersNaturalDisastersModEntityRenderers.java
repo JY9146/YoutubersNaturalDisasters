@@ -19,6 +19,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.DapperMrTomRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CosmicRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
@@ -39,5 +40,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get(), SinkholeEntityRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ZACHARY_95.get(), Zachary95Renderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.COSMIC.get(), CosmicRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM.get(), DapperMrTomRenderer::new);
 	}
 }

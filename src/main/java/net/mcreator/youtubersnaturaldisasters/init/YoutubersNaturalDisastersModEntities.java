@@ -25,6 +25,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
@@ -71,6 +72,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<CosmicEntity>of(CosmicEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CosmicEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DapperMrTomEntity>> DAPPER_MR_TOM = register("dapper_mr_tom",
+			EntityType.Builder.<DapperMrTomEntity>of(DapperMrTomEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DapperMrTomEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -92,6 +97,7 @@ public class YoutubersNaturalDisastersModEntities {
 			SinkholeEntityEntity.init();
 			Zachary95Entity.init();
 			CosmicEntity.init();
+			DapperMrTomEntity.init();
 		});
 	}
 
@@ -108,5 +114,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(SINKHOLE_ENTITY.get(), SinkholeEntityEntity.createAttributes().build());
 		event.put(ZACHARY_95.get(), Zachary95Entity.createAttributes().build());
 		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
+		event.put(DAPPER_MR_TOM.get(), DapperMrTomEntity.createAttributes().build());
 	}
 }

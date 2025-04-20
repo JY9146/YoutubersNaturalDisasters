@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.youtubersnaturaldisasters.client.model.Modeltechnoblade_model;
 import net.mcreator.youtubersnaturaldisasters.client.model.Modelmeteor2;
+import net.mcreator.youtubersnaturaldisasters.client.model.Modeldappertom;
 import net.mcreator.youtubersnaturaldisasters.client.model.ModelMeteor;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -20,5 +21,6 @@ public class YoutubersNaturalDisastersModModels {
 		event.registerLayerDefinition(Modelmeteor2.LAYER_LOCATION, Modelmeteor2::createBodyLayer);
 		event.registerLayerDefinition(ModelMeteor.LAYER_LOCATION, ModelMeteor::createBodyLayer);
 		event.registerLayerDefinition(Modeltechnoblade_model.LAYER_LOCATION, Modeltechnoblade_model::createBodyLayer);
+		event.registerLayerDefinition(Modeldappertom.LAYER_LOCATION, Modeldappertom::createBodyLayer);
 	}
 }

@@ -2,10 +2,10 @@
   "_fv": 73,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Sinkhole Entity",
+    "mobName": "Dapper Mr Tom",
     "mobLabel": "",
-    "mobModelName": "Biped",
-    "mobModelTexture": "super-invisible.png",
+    "mobModelName": "Modeldappertom",
+    "mobModelTexture": "dappermrtom.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -25,18 +25,25 @@
     "animations": [],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
-    "modelShadowSize": 0.0,
+    "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": false,
+    "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -16777216,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -256,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      },
+      {
+        "value": "CUSTOM:NaturalDisasters"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -47,16 +54,16 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "Items.IRON_HELMET"
     },
     "equipmentBody": {
-      "value": ""
+      "value": "Items.IRON_CHESTPLATE"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "Items.IRON_LEGGINGS"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.IRON_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
@@ -68,8 +75,8 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 10,
-    "xpAmount": 0,
+    "health": 20,
+    "xpAmount": 5,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": false
@@ -84,19 +91,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
     "immuneToCactus": false,
-    "immuneToDrowning": true,
-    "immuneToLightning": true,
-    "immuneToPotions": true,
-    "immuneToPlayer": true,
-    "immuneToExplosion": true,
-    "immuneToTrident": true,
-    "immuneToAnvil": true,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -104,10 +111,10 @@
       "value": ""
     },
     "hurtSound": {
-      "value": ""
+      "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": ""
+      "value": "entity.generic.death"
     },
     "stepSound": {
       "value": ""
@@ -116,15 +123,9 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onMobTickUpdate": {
-      "name": "SinkholeGenerator"
-    },
-    "onInitialSpawn": {
-      "name": "SinkholeEntityOnInitialEntitySpawn"
-    },
-    "hasAI": false,
+    "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -136,7 +137,7 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": false,
-    "doesDespawnWhenIdle": false,
+    "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 4,

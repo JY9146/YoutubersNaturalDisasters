@@ -1194,6 +1194,38 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/item/VolcanoSummonerItem.java"
         ]
       }
+    },
+    {
+      "name": "DapperMrTom",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dapper_mr_tom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/DapperMrTomEntity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/dapper_mr_tom_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/DapperMrTomRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "SinkholeEntityOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sinkhole_entity_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SinkholeEntityOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1286,6 +1318,7 @@
       "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+      "entity.youtubers_natural_disasters.dapper_mr_tom": "Dapper Mr Tom",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
       "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
@@ -1300,6 +1333,7 @@
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
       "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
+      "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
       "item.youtubers_natural_disasters.solid_lava_bucket": "Solid Lava Bucket",
       "item.youtubers_natural_disasters.throw_tnt": "Throw TNT"
     }
@@ -1312,7 +1346,7 @@
     "modid": "youtubers_natural_disasters",
     "modName": "100 Youtubers VS Natural Disasters",
     "version": "1.1.0",
-    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), @blaackknight (on Discord),  ",
+    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), @blaackknight (on Discord), @terrariandyy (on Discord),  ",
     "author": "JY9146, A5969, Mr_J_The_Destroyer, MCreator",
     "websiteURL": "https://mcreator.net, ",
     "license": "Not specified",

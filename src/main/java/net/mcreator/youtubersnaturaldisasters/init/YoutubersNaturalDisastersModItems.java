@@ -56,6 +56,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> TORNADO_SUMMONER = REGISTRY.register("tornado_summoner", () -> new TornadoSummonerItem());
 	public static final RegistryObject<Item> SINKHOLE_SUMMONER = REGISTRY.register("sinkhole_summoner", () -> new SinkholeSummonerItem());
 	public static final RegistryObject<Item> VOLCANO_SUMMONER = REGISTRY.register("volcano_summoner", () -> new VolcanoSummonerItem());
+	public static final RegistryObject<Item> DAPPER_MR_TOM_SPAWN_EGG = REGISTRY.register("dapper_mr_tom_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM, -16777216, -256, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

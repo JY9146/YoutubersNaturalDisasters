@@ -34,6 +34,7 @@
   "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
   "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
   "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+  "entity.youtubers_natural_disasters.dapper_mr_tom": "Dapper Mr Tom",
   "entity.youtubers_natural_disasters.gas_person": "Gas Person",
   "item.youtubers_natural_disasters.music_disc": "Music Disc",
   "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
@@ -48,6 +49,7 @@
   "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
   "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
   "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
+  "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
   "item.youtubers_natural_disasters.solid_lava_bucket": "Solid Lava Bucket",
   "item.youtubers_natural_disasters.throw_tnt": "Throw TNT"
 }

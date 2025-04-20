@@ -11,7 +11,7 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModE
 public class SinkholeSummonerRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get().spawn(_level, BlockPos.containing(x, y + 3, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 			}
 		}
