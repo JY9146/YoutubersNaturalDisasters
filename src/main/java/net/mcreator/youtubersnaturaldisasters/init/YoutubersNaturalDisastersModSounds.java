@@ -21,4 +21,5 @@ public class YoutubersNaturalDisastersModSounds {
 			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "cavemanfilmswhateveryouwant")));
 	public static final RegistryObject<SoundEvent> DEFNOTARICKROLLATALL = REGISTRY.register("defnotarickrollatall", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "defnotarickrollatall")));
 	public static final RegistryObject<SoundEvent> THATSWHATILIKETOMMY = REGISTRY.register("thatswhatiliketommy", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "thatswhatiliketommy")));
+	public static final RegistryObject<SoundEvent> TECHNOBLADENEVERDIES = REGISTRY.register("technobladeneverdies", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "technobladeneverdies")));
 }

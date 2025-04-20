@@ -123,6 +123,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "TechnobladeEntityDies"
+    },
     "whenThisMobKillsAnother": {
       "name": "TechnobladeThisEntityKillsAnotherOne"
     },

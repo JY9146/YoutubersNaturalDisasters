@@ -33,6 +33,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKillsAnotherOneProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityDiesProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
@@ -141,6 +142,12 @@ public class TechnobladeEntity extends Monster {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TechnobladeEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

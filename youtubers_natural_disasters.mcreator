@@ -1226,6 +1226,126 @@
           }
         ]
       }
+    },
+    {
+      "name": "TechnobladeEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technoblade_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnobladeEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CavemanFilmsOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "caveman_films_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CavemanFilmsOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CragDynaEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crag_dyna_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CragDynaEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CragDynaOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crag_dyna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CragDynaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -1269,6 +1389,14 @@
       ],
       "category": "neutral",
       "subtitle": "JUMP IN THE CADILLAC"
+    },
+    {
+      "name": "technobladeneverdies",
+      "files": [
+        "technoblade-never-dies"
+      ],
+      "category": "neutral",
+      "subtitle": "Technoblade Never Dies"
     }
   ],
   "tag_elements": {
@@ -1318,6 +1446,7 @@
       "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+      "subtitles.technobladeneverdies": "Technoblade Never Dies",
       "entity.youtubers_natural_disasters.dapper_mr_tom": "Dapper Mr Tom",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",

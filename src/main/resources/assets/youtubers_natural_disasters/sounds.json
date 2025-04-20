@@ -40,5 +40,14 @@
         "stream": false
       }
     ]
+  },
+  "technobladeneverdies": {
+    "subtitle": "subtitles.technobladeneverdies",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:technoblade-never-dies",
+        "stream": false
+      }
+    ]
   }
 }
