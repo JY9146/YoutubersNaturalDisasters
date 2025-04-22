@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -25,6 +26,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerBossEvent;
@@ -33,7 +36,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKillsAnotherOneProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityDiesProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeRightClickedOnEntityProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
@@ -145,9 +148,18 @@ public class TechnobladeEntity extends Monster {
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		TechnobladeEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		TechnobladeRightClickedOnEntityProcedure.execute(world);
+		return retval;
 	}
 
 	@Override

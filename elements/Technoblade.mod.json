@@ -123,8 +123,8 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "whenMobDies": {
-      "name": "TechnobladeEntityDies"
+    "onRightClickedOn": {
+      "name": "TechnobladeRightClickedOnEntity"
     },
     "whenThisMobKillsAnother": {
       "name": "TechnobladeThisEntityKillsAnotherOne"

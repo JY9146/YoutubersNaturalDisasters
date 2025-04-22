@@ -94,7 +94,7 @@ public class SinkholeGeneratorProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator instanceof Player) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1, false, false));
+									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2000, 3, false, false));
 							}
 						}
 					}
