@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "youtubers_natural_disasters:item/1uda5lx"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "youtubers_natural_disasters:coin_heads": 0
+      },
+      "model": "youtubers_natural_disasters:item/coin_0"
+    },
+    {
+      "predicate": {
+        "youtubers_natural_disasters:coin_heads": 1
+      },
+      "model": "youtubers_natural_disasters:item/coin_1"
+    }
+  ]
+}

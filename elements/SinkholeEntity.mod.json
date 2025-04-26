@@ -69,7 +69,7 @@
     "trackingRange": 64,
     "followRange": 16,
     "health": 10,
-    "xpAmount": 0,
+    "xpAmount": 100000,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": false

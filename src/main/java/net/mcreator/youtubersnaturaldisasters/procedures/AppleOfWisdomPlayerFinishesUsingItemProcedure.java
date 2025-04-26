@@ -39,31 +39,31 @@ public class AppleOfWisdomPlayerFinishesUsingItemProcedure {
 					});
 				} else {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 3000, 255));
+						_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 3000, 1000));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 3));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

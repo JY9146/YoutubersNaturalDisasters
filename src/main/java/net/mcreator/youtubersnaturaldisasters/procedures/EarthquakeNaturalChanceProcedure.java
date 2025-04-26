@@ -33,7 +33,7 @@ public class EarthquakeNaturalChanceProcedure {
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
 			if (Math.random() < 0.0005) {
 				if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(YoutubersNaturalDisastersModMobEffects.EARTHQUAKEEFFECT.get(), 100, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(YoutubersNaturalDisastersModMobEffects.EARTHQUAKEEFFECT.get(), 100, 0, false, false));
 			}
 		}
 	}

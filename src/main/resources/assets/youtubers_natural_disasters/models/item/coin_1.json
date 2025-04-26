@@ -1,0 +1,7 @@
+{
+  "parent": "youtubers_natural_disasters:custom/coinheads",
+  "textures": {
+    "0": "youtubers_natural_disasters:block/1uda5lx",
+    "particle": "youtubers_natural_disasters:item/1uda5lx"
+  }
+}

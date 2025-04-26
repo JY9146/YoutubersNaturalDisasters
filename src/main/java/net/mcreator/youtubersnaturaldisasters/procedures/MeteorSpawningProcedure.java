@@ -34,7 +34,7 @@ public class MeteorSpawningProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
 			if (world != null) {
-				if (Math.random() < 0.001) {
+				if (Math.random() < 0.0001) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -49,7 +49,7 @@ public class MeteorSpawningProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.NETHER);
 			if (world != null) {
-				if (Math.random() < 0.001) {
+				if (Math.random() < 0.0001) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {
@@ -64,7 +64,7 @@ public class MeteorSpawningProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.END);
 			if (world != null) {
-				if (Math.random() < 0.001) {
+				if (Math.random() < 0.0001) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {

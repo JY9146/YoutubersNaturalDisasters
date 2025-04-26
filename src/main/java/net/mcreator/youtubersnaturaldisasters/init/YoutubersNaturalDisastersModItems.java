@@ -7,12 +7,19 @@ package net.mcreator.youtubersnaturaldisasters.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
@@ -27,9 +34,11 @@ import net.mcreator.youtubersnaturaldisasters.item.MusicDiscItem;
 import net.mcreator.youtubersnaturaldisasters.item.GoldenAppleGiverItem;
 import net.mcreator.youtubersnaturaldisasters.item.EndOfWorldMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.EarthquakeSummonerItem;
+import net.mcreator.youtubersnaturaldisasters.item.CoinItem;
 import net.mcreator.youtubersnaturaldisasters.item.AppleOfWisdomItem;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class YoutubersNaturalDisastersModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, YoutubersNaturalDisastersMod.MODID);
 	public static final RegistryObject<Item> MUSIC_DISC = REGISTRY.register("music_disc", () -> new MusicDiscItem());
@@ -57,10 +66,18 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SINKHOLE_SUMMONER = REGISTRY.register("sinkhole_summoner", () -> new SinkholeSummonerItem());
 	public static final RegistryObject<Item> VOLCANO_SUMMONER = REGISTRY.register("volcano_summoner", () -> new VolcanoSummonerItem());
 	public static final RegistryObject<Item> DAPPER_MR_TOM_SPAWN_EGG = REGISTRY.register("dapper_mr_tom_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM, -16777216, -256, new Item.Properties()));
+	public static final RegistryObject<Item> COIN = REGISTRY.register("coin", () -> new CoinItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	@SubscribeEvent
+	public static void clientLoad(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> {
+			ItemProperties.register(COIN.get(), new ResourceLocation("youtubers_natural_disasters:coin_heads"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) CoinPropertyValueProviderProcedure.execute(itemStackToRender));
+		});
 	}
 }

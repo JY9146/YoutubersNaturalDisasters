@@ -39,7 +39,7 @@ public class SinkholeEntityEntity extends Monster {
 	public SinkholeEntityEntity(EntityType<SinkholeEntityEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
-		xpReward = 0;
+		xpReward = 100000;
 		setNoAi(true);
 		setPersistenceRequired();
 	}

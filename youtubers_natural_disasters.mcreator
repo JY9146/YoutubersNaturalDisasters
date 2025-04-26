@@ -1435,9 +1435,103 @@
           }
         ]
       }
+    },
+    {
+      "name": "MeteorHit",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteor_hit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/damage_type/meteor_hit.json"
+        ]
+      }
+    },
+    {
+      "name": "CoinPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coin_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CoinPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Coin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/CoinItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/coin_0.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/coin.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/coin_1.json"
+        ]
+      }
+    },
+    {
+      "name": "CoinRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coin_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CoinRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoinSpecialInformation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coin_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CoinSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Logic_Variable",
+      "type": "logic",
+      "scope": "world",
+      "value": "true"
+    }
+  ],
   "sound_elements": [
     {
       "name": "cragdynasubscribe",
@@ -1504,6 +1598,8 @@
       "entity.youtubers_natural_disasters.sinkhole_entity": "Sinkhole Entity",
       "entity.youtubers_natural_disasters.technoblade": "Technoblade",
       "subtitles.defnotarickrollatall": "Definently not a rickroll...",
+      "item.youtubers_natural_disasters.coin": "Coin",
+      "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
@@ -1514,6 +1610,7 @@
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
       "item.youtubers_natural_disasters.tornado_summoner": "Tornado Summoner",
       "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
+      "death.attack.meteor_hit": "%1$s had a meteor hit their head",
       "item.youtubers_natural_disasters.sinkhole_summoner": "Sinkhole Summoner",
       "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
       "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
@@ -1551,6 +1648,7 @@
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
       "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
+      "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",
       "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
       "item.youtubers_natural_disasters.solid_lava_bucket": "Solid Lava Bucket",
       "item.youtubers_natural_disasters.throw_tnt": "Throw TNT"

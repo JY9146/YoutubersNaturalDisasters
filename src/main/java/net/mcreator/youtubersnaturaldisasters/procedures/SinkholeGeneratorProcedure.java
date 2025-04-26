@@ -21,6 +21,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -33,7 +35,12 @@ public class SinkholeGeneratorProcedure {
 		double Block_DstroyChance = 0;
 		double Every__PerUptdate = 0;
 		double Fall_Chance = 0;
-		world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		double Random_Number = 0;
+		Entity Entity_Variable = null;
+		entity.setInvulnerable(true);
+		if (world.getBlockState(BlockPos.containing(x, y, z)).canOcclude()) {
+			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+		}
 		if (entity.getPersistentData().getDouble("BlockCount") < 20) {
 			Every__PerUptdate = 8;
 			if (entity.getPersistentData().getDouble("digtick") == 0) {
@@ -93,8 +100,19 @@ public class SinkholeGeneratorProcedure {
 								.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator instanceof Player) {
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2000, 3, false, false));
+								if (YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable == true) {
+									if (Math.random() < 0.5) {
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2000, 5, false, false));
+										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
+										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
+									} else {
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2000, 20, false, false));
+										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
+										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
+									}
+								}
 							}
 						}
 					}
@@ -104,6 +122,8 @@ public class SinkholeGeneratorProcedure {
 							("kill @e[type=item,distance=.." + entity.getPersistentData().getDouble("SizeWidth") + "]"));
 			}
 		} else {
+			YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = true;
+			YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
 			if (!entity.level().isClientSide())
 				entity.discard();
 		}
