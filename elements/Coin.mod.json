@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "item",
   "definition": {
-    "renderType": 0,
+    "renderType": 1,
     "texture": "1uda5lx",
-    "customModelName": "Normal",
+    "customModelName": "coinheads:default",
     "customProperties": {
       "heads": {
         "name": "CoinPropertyValueProvider"

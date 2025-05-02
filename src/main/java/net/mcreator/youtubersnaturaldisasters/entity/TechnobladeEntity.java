@@ -32,15 +32,22 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKillsAnotherOneProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeRightClickedOnEntityProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeOnEntityTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnoTrade2Procedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 public class TechnobladeEntity extends Monster {
+	public static final EntityDataAccessor<Boolean> DATA_Hostilty = SynchedEntityData.defineId(TechnobladeEntity.class, EntityDataSerializers.BOOLEAN);
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PINK, ServerBossEvent.BossBarOverlay.PROGRESS);
 
 	public TechnobladeEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -66,6 +73,12 @@ public class TechnobladeEntity extends Monster {
 	}
 
 	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_Hostilty, true);
+	}
+
+	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5, true) {
@@ -73,9 +86,50 @@ public class TechnobladeEntity extends Monster {
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return 4;
 			}
+
+			@Override
+			public boolean canUse() {
+				double x = TechnobladeEntity.this.getX();
+				double y = TechnobladeEntity.this.getY();
+				double z = TechnobladeEntity.this.getZ();
+				Entity entity = TechnobladeEntity.this;
+				Level world = TechnobladeEntity.this.level();
+				return super.canUse() && TechnoTrade2Procedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = TechnobladeEntity.this.getX();
+				double y = TechnobladeEntity.this.getY();
+				double z = TechnobladeEntity.this.getZ();
+				Entity entity = TechnobladeEntity.this;
+				Level world = TechnobladeEntity.this.level();
+				return super.canContinueToUse() && TechnoTrade2Procedure.execute(entity);
+			}
+
 		});
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this) {
+			@Override
+			public boolean canUse() {
+				double x = TechnobladeEntity.this.getX();
+				double y = TechnobladeEntity.this.getY();
+				double z = TechnobladeEntity.this.getZ();
+				Entity entity = TechnobladeEntity.this;
+				Level world = TechnobladeEntity.this.level();
+				return super.canUse() && TechnoTrade2Procedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = TechnobladeEntity.this.getX();
+				double y = TechnobladeEntity.this.getY();
+				double z = TechnobladeEntity.this.getZ();
+				Entity entity = TechnobladeEntity.this;
+				Level world = TechnobladeEntity.this.level();
+				return super.canContinueToUse() && TechnoTrade2Procedure.execute(entity);
+			}
+		}.setAlertOthers());
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
@@ -148,6 +202,19 @@ public class TechnobladeEntity extends Monster {
 	}
 
 	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putBoolean("DataHostilty", this.entityData.get(DATA_Hostilty));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataHostilty"))
+			this.entityData.set(DATA_Hostilty, compound.getBoolean("DataHostilty"));
+	}
+
+	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -166,6 +233,12 @@ public class TechnobladeEntity extends Monster {
 	public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
 		super.awardKillScore(entity, score, damageSource);
 		TechnobladeThisEntityKillsAnotherOneProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		TechnobladeOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

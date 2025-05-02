@@ -159,5 +159,13 @@ public class TechnobladeRightClickedOnEntityProcedure {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("GG."), false);
 		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Well I just killed a small child."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("If Hypixel has taught me something, it's that if you have a problem, the answer is slavery."), false);
+		}
 	}
 }

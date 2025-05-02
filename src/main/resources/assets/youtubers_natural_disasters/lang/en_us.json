@@ -51,6 +51,7 @@
   "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
   "entity.youtubers_natural_disasters.meteor": "Meteor",
   "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
+  "entity.youtubers_natural_disasters.test_sinkhole_entity": "Sinkhole Entity",
   "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
   "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
   "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",

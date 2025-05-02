@@ -1244,19 +1244,6 @@
       }
     },
     {
-      "name": "TechnobladeEntityDies",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "technoblade_entity_dies",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnobladeEntityDiesProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "CavemanFilmsOnInitialEntitySpawn",
       "type": "procedure",
       "compiles": true,
@@ -1522,6 +1509,106 @@
           }
         ]
       }
+    },
+    {
+      "name": "TechnoTrade2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_trade_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnoTrade2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestingTesting",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "testing_testing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TestingTestingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestTestTest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_test_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TestTestTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestSinkholeEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_sinkhole_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TestSinkholeEntityEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TestSinkholeEntityRenderer.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1646,6 +1733,7 @@
       "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "entity.youtubers_natural_disasters.meteor": "Meteor",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
+      "entity.youtubers_natural_disasters.test_sinkhole_entity": "Sinkhole Entity",
       "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
       "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
       "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",
