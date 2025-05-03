@@ -1,8 +1,11 @@
 package net.mcreator.youtubersnaturaldisasters.procedures;
 
+import net.minecraftforge.common.ForgeMod;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
@@ -68,6 +71,12 @@ public class AppleOfWisdomPlayerFinishesUsingItemProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 3));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 3000, 3));
+					if (entity instanceof LivingEntity _livingEntity19 && _livingEntity19.getAttributes().hasAttribute(Attributes.FLYING_SPEED))
+						_livingEntity19.getAttribute(Attributes.FLYING_SPEED).setBaseValue(3);
+					if (entity instanceof LivingEntity _livingEntity20 && _livingEntity20.getAttributes().hasAttribute(ForgeMod.ENTITY_REACH.get()))
+						_livingEntity20.getAttribute(ForgeMod.ENTITY_REACH.get()).setBaseValue(3);
+					if (entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+						_livingEntity21.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(3);
 				}
 			}
 			world = _worldorig;
