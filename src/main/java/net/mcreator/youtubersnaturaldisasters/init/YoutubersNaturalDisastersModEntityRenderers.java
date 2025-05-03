@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
-import net.mcreator.youtubersnaturaldisasters.client.renderer.TestSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
@@ -42,6 +41,5 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ZACHARY_95.get(), Zachary95Renderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.COSMIC.get(), CosmicRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM.get(), DapperMrTomRenderer::new);
-		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TEST_SINKHOLE_ENTITY.get(), TestSinkholeEntityRenderer::new);
 	}
 }

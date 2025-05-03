@@ -129,6 +129,9 @@
         "value": true
       }
     ],
+    "whenMobIsHurt": {
+      "name": "TechnobladeEntityIsHurt"
+    },
     "onRightClickedOn": {
       "name": "TechnobladeRightClickedOnEntity"
     },

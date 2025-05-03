@@ -17,7 +17,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
-import net.mcreator.youtubersnaturaldisasters.entity.TestSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
@@ -77,8 +76,6 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<DapperMrTomEntity>of(DapperMrTomEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DapperMrTomEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<TestSinkholeEntityEntity>> TEST_SINKHOLE_ENTITY = register("test_sinkhole_entity", EntityType.Builder.<TestSinkholeEntityEntity>of(TestSinkholeEntityEntity::new, MobCategory.MONSTER)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TestSinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -101,7 +98,6 @@ public class YoutubersNaturalDisastersModEntities {
 			Zachary95Entity.init();
 			CosmicEntity.init();
 			DapperMrTomEntity.init();
-			TestSinkholeEntityEntity.init();
 		});
 	}
 
@@ -119,6 +115,5 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(ZACHARY_95.get(), Zachary95Entity.createAttributes().build());
 		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
 		event.put(DAPPER_MR_TOM.get(), DapperMrTomEntity.createAttributes().build());
-		event.put(TEST_SINKHOLE_ENTITY.get(), TestSinkholeEntityEntity.createAttributes().build());
 	}
 }

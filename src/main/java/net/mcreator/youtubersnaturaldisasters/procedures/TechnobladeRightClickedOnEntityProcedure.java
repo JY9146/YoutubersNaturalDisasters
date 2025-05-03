@@ -47,7 +47,7 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		}
 		if (Math.random() < 0.05) {
 			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Your Honor in our defense it's hilarious."), false);
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Your Honor in my defense it's hilarious."), false);
 		}
 		if (Math.random() < 0.05) {
 			if (!world.isClientSide() && world.getServer() != null)
@@ -166,6 +166,95 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		if (Math.random() < 0.05) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("If Hypixel has taught me something, it's that if you have a problem, the answer is slavery."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Dream. That homeless teletubby that helped me overthrow a government."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Give me content."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("After consulting countless theologians, philosophers, and a therapist, I have finally discovered the cure to being introverted. Watch my YouTube videos."),
+						false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Tommyinnit. The Theseus of the Dream SMP. Videos with him got me a lot of confetti. "), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I have decided that pumpkins are my least favorite vegietable. What do you mean it's a fruit?"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Your telling me I got in a movie? What do you mean I was only in it for two seconds?! Cringe."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Cringe"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("100%. DON'T YOU DARE SNEEZE ON IT"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Nearly 20 million people have hit a button."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Donate to the Sarcoma Foundation. This is a threat"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("What do you mean you don't believe me? I'm a trustworthy man."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You will never defeat the Techno army!"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Floof"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("The Antarctic Empire shall rise again..."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("YOOOOOOOOOOOOO!"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Shhhhhh. I need cobblestone..."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I need carrot! Give me carrots."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Ehehehehehehehe"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Yoink."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Kill steal!!!"), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I've been working on a hobby. Just a small one..."), false);
+		}
+		if (Math.random() < 0.05) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Officer I dropkicked that child in SELF DEFENSE!"), false);
 		}
 	}
 }

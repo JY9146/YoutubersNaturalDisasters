@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "hurt",
+    "normalDeathMessage": "The Axe of Peace wasn't peaceful to %1$s ",
+    "itemDeathMessage": "%1$s was killed by Techno with the Axe Of Peace and %2$s using %3$s",
+    "playerDeathMessage": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s"
+  }
+}

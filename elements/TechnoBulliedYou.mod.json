@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s got bullied by Technoblade in Skywars",
+    "itemDeathMessage": "%1$s was killed by Techno with %2$s using %3$s",
+    "playerDeathMessage": "%1$s died whilst trying to escape Techno and %2$s"
+  }
+}

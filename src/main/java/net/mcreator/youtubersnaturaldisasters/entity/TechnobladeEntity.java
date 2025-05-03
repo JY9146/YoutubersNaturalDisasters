@@ -42,6 +42,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKillsAnotherOneProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeRightClickedOnEntityProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeOnEntityTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityIsHurtProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnoTrade2Procedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
@@ -166,6 +167,15 @@ public class TechnobladeEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		Entity sourceentity = damagesource.getEntity();
+		Entity immediatesourceentity = damagesource.getDirectEntity();
+
+		TechnobladeEntityIsHurtProcedure.execute(world, entity);
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
