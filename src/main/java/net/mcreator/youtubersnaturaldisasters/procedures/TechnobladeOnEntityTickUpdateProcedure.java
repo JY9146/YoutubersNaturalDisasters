@@ -135,7 +135,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						TechnoTradeProcedure.execute(world, x, y, z);
 					});
 					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buismess with you."), false);
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
 				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 0) {
 					if (entity instanceof LivingEntity _entity) {

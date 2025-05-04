@@ -14,6 +14,8 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
@@ -36,10 +38,24 @@ public class TechnoDoesntDieProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity) {
 		if (damagesource == null || entity == null)
 			return;
-		if (Math.random() < 0.5) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < 10) {
-				if (entity instanceof TechnobladeEntity) {
-					if (!damagesource.is(DamageTypes.GENERIC_KILL)) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < 20) {
+			if (entity instanceof TechnobladeEntity) {
+				if (!damagesource.is(DamageTypes.GENERIC_KILL)) {
+					entity.setInvulnerable(true);
+					if (event != null && event.isCancelable()) {
+						event.setCanceled(true);
+					} else if (event != null && event.hasResult()) {
+						event.setResult(Event.Result.DENY);
+					}
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technobladeneverdies")), SoundSource.AMBIENT, 10, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technobladeneverdies")), SoundSource.AMBIENT, 10, 1, false);
+						}
+					}
+					if (!damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:techno_killing_dmg_type")))) {
+						entity.setInvulnerable(true);
 						if (event != null && event.isCancelable()) {
 							event.setCanceled(true);
 						} else if (event != null && event.hasResult()) {

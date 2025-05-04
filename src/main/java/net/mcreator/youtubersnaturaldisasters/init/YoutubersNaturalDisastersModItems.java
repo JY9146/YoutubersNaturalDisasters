@@ -25,6 +25,8 @@ import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
+import net.mcreator.youtubersnaturaldisasters.item.TechnosEndOfWorldMeteorItem;
+import net.mcreator.youtubersnaturaldisasters.item.TechnoItemDefeatingItem;
 import net.mcreator.youtubersnaturaldisasters.item.SolidLavaItem;
 import net.mcreator.youtubersnaturaldisasters.item.SmokeEmitterItem;
 import net.mcreator.youtubersnaturaldisasters.item.SinkholeSummonerItem;
@@ -67,6 +69,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> VOLCANO_SUMMONER = REGISTRY.register("volcano_summoner", () -> new VolcanoSummonerItem());
 	public static final RegistryObject<Item> DAPPER_MR_TOM_SPAWN_EGG = REGISTRY.register("dapper_mr_tom_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM, -16777216, -256, new Item.Properties()));
 	public static final RegistryObject<Item> COIN = REGISTRY.register("coin", () -> new CoinItem());
+	public static final RegistryObject<Item> TECHNOS_END_OF_WORLD_METEOR = REGISTRY.register("technos_end_of_world_meteor", () -> new TechnosEndOfWorldMeteorItem());
+	public static final RegistryObject<Item> TECHNO_ITEM_DEFEATING = REGISTRY.register("techno_item_defeating", () -> new TechnoItemDefeatingItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

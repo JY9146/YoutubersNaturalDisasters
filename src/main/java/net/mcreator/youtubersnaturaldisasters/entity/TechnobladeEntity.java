@@ -43,6 +43,7 @@ import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKi
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeRightClickedOnEntityProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeOnEntityTickUpdateProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityIsHurtProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityDiesProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnoTrade2Procedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
@@ -147,7 +148,7 @@ public class TechnobladeEntity extends Monster {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(YoutubersNaturalDisastersModItems.END_OF_WORLD_METEOR.get()));
+		this.spawnAtLocation(new ItemStack(YoutubersNaturalDisastersModItems.TECHNOS_END_OF_WORLD_METEOR.get()));
 	}
 
 	@Override
@@ -175,7 +176,7 @@ public class TechnobladeEntity extends Monster {
 		Entity sourceentity = damagesource.getEntity();
 		Entity immediatesourceentity = damagesource.getDirectEntity();
 
-		TechnobladeEntityIsHurtProcedure.execute(world, entity);
+		TechnobladeEntityIsHurtProcedure.execute(world, sourceentity);
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -209,6 +210,12 @@ public class TechnobladeEntity extends Monster {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TechnobladeEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

@@ -105,7 +105,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:EndOfWorldMeteor"
+      "value": "CUSTOM:TechnosEndOfWorldMeteor"
     },
     "livingSound": {
       "value": "entity.pig.ambient"
@@ -129,6 +129,9 @@
         "value": true
       }
     ],
+    "whenMobDies": {
+      "name": "TechnobladeEntityDies"
+    },
     "whenMobIsHurt": {
       "name": "TechnobladeEntityIsHurt"
     },
