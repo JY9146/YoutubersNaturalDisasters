@@ -1747,7 +1747,7 @@
         "on-my-way-_112"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Crag says... SUBSCRIBE!"
     },
     {
       "name": "cragdynadeath",
@@ -1755,7 +1755,7 @@
         "new_recording_2"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "RIP Crag"
     },
     {
       "name": "cavemanfilmswhateveryouwant",
@@ -1763,7 +1763,7 @@
         "cavemanfilmscoolaudio"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Whatever you want!"
     },
     {
       "name": "defnotarickrollatall",
@@ -1815,8 +1815,8 @@
       "death.attack.tooth_pick_cleaning_teeth.player": "%1$s died whilst trying to escape Techno using Toothpick and %2$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
-      "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
+      "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
       "entity.youtubers_natural_disasters.cosmic": "Cosmic",
@@ -1840,7 +1840,7 @@
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
       "death.attack.techno_bullied_you.item": "%1$s was killed by Techno with %2$s using %3$s",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
-      "subtitles.cavemanfilmswhateveryouwant": "",
+      "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
       "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
@@ -1849,9 +1849,9 @@
       "item.youtubers_natural_disasters.earthquake_summoner": "Earthquake Summoner",
       "fluid.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "death.attack.blood_god_kill.item": "%1$s was killed by the Blood God with %2$s using %3$s",
-      "subtitles.cragdynasubscribe": "",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "death.attack.orphan_obliterator_damage.item": "%1$s was killed by Techno with the Orphan Obliterator with  %2$s using %3$s",
-      "subtitles.cragdynadeath": "",
+      "subtitles.cragdynadeath": "RIP Crag",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",

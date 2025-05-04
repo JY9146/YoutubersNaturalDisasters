@@ -1,5 +1,6 @@
 {
   "cragdynasubscribe": {
+    "subtitle": "subtitles.cragdynasubscribe",
     "sounds": [
       {
         "name": "youtubers_natural_disasters:on-my-way-_112",
@@ -8,6 +9,7 @@
     ]
   },
   "cragdynadeath": {
+    "subtitle": "subtitles.cragdynadeath",
     "sounds": [
       {
         "name": "youtubers_natural_disasters:new_recording_2",
@@ -16,6 +18,7 @@
     ]
   },
   "cavemanfilmswhateveryouwant": {
+    "subtitle": "subtitles.cavemanfilmswhateveryouwant",
     "sounds": [
       {
         "name": "youtubers_natural_disasters:cavemanfilmscoolaudio",
