@@ -49,6 +49,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.DAPPER_MR_TOM_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.COIN.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TECHNO_ITEM_DEFEATING.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.TEST_SINKHOLE_SUMMONER.get());
 			}).build());
 
 	@SubscribeEvent

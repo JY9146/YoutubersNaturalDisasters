@@ -18,16 +18,16 @@
     "canMultiply": false,
     "flowRate": 100000,
     "levelDecrease": 1,
-    "slopeFindDistance": 4,
+    "slopeFindDistance": 1,
     "spawnParticles": false,
     "dripParticle": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "DRIPPING_DRIPSTONE_LAVA"
     },
     "flowStrength": 1.0,
     "luminosity": 0,
     "density": 1000,
-    "viscosity": 1000,
-    "temperature": 300,
+    "viscosity": 99999,
+    "temperature": 900,
     "type": "LAVA",
     "generateBucket": true,
     "textureBucket": "",
@@ -44,13 +44,16 @@
       "fixedValue": []
     },
     "resistance": 100.0,
-    "luminance": 0,
+    "luminance": 15,
     "lightOpacity": 1,
     "emissiveRendering": false,
     "tickRate": 0,
     "flammability": 0,
-    "fireSpreadSpeed": 0,
+    "fireSpreadSpeed": 12,
     "colorOnMap": "DEFAULT",
+    "onTickUpdate": {
+      "name": "SolidLavaOnTickUpdate"
+    },
     "onEntityCollides": {
       "name": "SolidLavaMobplayerCollidesBlock"
     }

@@ -54,6 +54,7 @@ public class YoutubersNaturalDisastersModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "youtubers_natural_disasters_worldvars";
 		public boolean Logic_Variable = true;
+		public boolean V1 = false;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -63,11 +64,13 @@ public class YoutubersNaturalDisastersModVariables {
 
 		public void read(CompoundTag nbt) {
 			Logic_Variable = nbt.getBoolean("Logic_Variable");
+			V1 = nbt.getBoolean("V1");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("Logic_Variable", Logic_Variable);
+			nbt.putBoolean("V1", V1);
 			return nbt;
 		}
 

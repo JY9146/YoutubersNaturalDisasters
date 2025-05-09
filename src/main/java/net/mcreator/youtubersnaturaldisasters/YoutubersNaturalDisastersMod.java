@@ -26,6 +26,7 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModF
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModFluidTypes;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlocks;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -48,7 +49,7 @@ public class YoutubersNaturalDisastersMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		YoutubersNaturalDisastersModSounds.REGISTRY.register(bus);
 		YoutubersNaturalDisastersModBlocks.REGISTRY.register(bus);
-
+		YoutubersNaturalDisastersModBlockEntities.REGISTRY.register(bus);
 		YoutubersNaturalDisastersModItems.REGISTRY.register(bus);
 		YoutubersNaturalDisastersModEntities.REGISTRY.register(bus);
 

@@ -15,7 +15,7 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModB
 
 public abstract class SolidLavaFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> YoutubersNaturalDisastersModFluidTypes.SOLID_LAVA_TYPE.get(), () -> YoutubersNaturalDisastersModFluids.SOLID_LAVA.get(),
-			() -> YoutubersNaturalDisastersModFluids.FLOWING_SOLID_LAVA.get()).explosionResistance(100f).tickRate(100000).bucket(() -> YoutubersNaturalDisastersModItems.SOLID_LAVA_BUCKET.get())
+			() -> YoutubersNaturalDisastersModFluids.FLOWING_SOLID_LAVA.get()).explosionResistance(100f).tickRate(100000).slopeFindDistance(1).bucket(() -> YoutubersNaturalDisastersModItems.SOLID_LAVA_BUCKET.get())
 			.block(() -> (LiquidBlock) YoutubersNaturalDisastersModBlocks.SOLID_LAVA.get());
 
 	private SolidLavaFluid() {

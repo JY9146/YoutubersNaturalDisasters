@@ -17,11 +17,13 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
@@ -76,6 +78,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<DapperMrTomEntity>of(DapperMrTomEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DapperMrTomEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TestOfSinkholeEntityEntity>> TEST_OF_SINKHOLE_ENTITY = register("test_of_sinkhole_entity", EntityType.Builder.<TestOfSinkholeEntityEntity>of(TestOfSinkholeEntityEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TestOfSinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LavaBallEntity>> LAVA_BALL = register("lava_ball",
+			EntityType.Builder.<LavaBallEntity>of(LavaBallEntity::new, MobCategory.MISC).setCustomClientFactory(LavaBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -98,6 +104,7 @@ public class YoutubersNaturalDisastersModEntities {
 			Zachary95Entity.init();
 			CosmicEntity.init();
 			DapperMrTomEntity.init();
+			TestOfSinkholeEntityEntity.init();
 		});
 	}
 
@@ -115,5 +122,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(ZACHARY_95.get(), Zachary95Entity.createAttributes().build());
 		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
 		event.put(DAPPER_MR_TOM.get(), DapperMrTomEntity.createAttributes().build());
+		event.put(TEST_OF_SINKHOLE_ENTITY.get(), TestOfSinkholeEntityEntity.createAttributes().build());
 	}
 }

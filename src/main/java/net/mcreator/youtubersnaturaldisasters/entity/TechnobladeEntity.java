@@ -176,7 +176,7 @@ public class TechnobladeEntity extends Monster {
 		Entity sourceentity = damagesource.getEntity();
 		Entity immediatesourceentity = damagesource.getDirectEntity();
 
-		TechnobladeEntityIsHurtProcedure.execute(world, sourceentity);
+		TechnobladeEntityIsHurtProcedure.execute(world, x, y, z, damagesource, entity, sourceentity);
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)

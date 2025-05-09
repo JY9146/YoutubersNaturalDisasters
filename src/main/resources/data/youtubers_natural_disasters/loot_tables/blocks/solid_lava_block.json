@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "youtubers_natural_disasters:blocks/solid_lava_block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "youtubers_natural_disasters:solid_lava_block"
+        }
+      ]
+    }
+  ]
+}

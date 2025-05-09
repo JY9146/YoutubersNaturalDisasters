@@ -25,6 +25,7 @@ import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
+import net.mcreator.youtubersnaturaldisasters.item.TestSinkholeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TechnosEndOfWorldMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.TechnoItemDefeatingItem;
 import net.mcreator.youtubersnaturaldisasters.item.SolidLavaItem;
@@ -71,6 +72,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> COIN = REGISTRY.register("coin", () -> new CoinItem());
 	public static final RegistryObject<Item> TECHNOS_END_OF_WORLD_METEOR = REGISTRY.register("technos_end_of_world_meteor", () -> new TechnosEndOfWorldMeteorItem());
 	public static final RegistryObject<Item> TECHNO_ITEM_DEFEATING = REGISTRY.register("techno_item_defeating", () -> new TechnoItemDefeatingItem());
+	public static final RegistryObject<Item> TEST_SINKHOLE_SUMMONER = REGISTRY.register("test_sinkhole_summoner", () -> new TestSinkholeSummonerItem());
+	public static final RegistryObject<Item> SOLID_LAVA_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

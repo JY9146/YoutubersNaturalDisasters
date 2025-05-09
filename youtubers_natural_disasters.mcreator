@@ -1352,44 +1352,6 @@
       }
     },
     {
-      "name": "TechnoDoesntDie",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "techno_doesnt_die",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnoDoesntDieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "TechnobladeOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
@@ -1601,8 +1563,28 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -1730,6 +1712,242 @@
           "src/main/resources/assets/youtubers_natural_disasters/models/item/techno_item_defeating.json"
         ]
       }
+    },
+    {
+      "name": "TestOfSinkhole",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_of_sinkhole",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TestOfSinkholeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestOfSinkholeEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_of_sinkhole_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TestOfSinkholeEntityEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TestOfSinkholeEntityRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TestSinkholeOnInitialSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_sinkhole_on_initial_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TestSinkholeOnInitialSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestSinkholeSummoner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_sinkhole_summoner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/test_sinkhole_summoner.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/TestSinkholeSummonerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TestSinkholeSummonerRIghtClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_sinkhole_summoner_r_ight_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TestSinkholeSummonerRIghtClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BedrockStopperNBT",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bedrock_stopper_nbt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/BedrockStopperNBTProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LavaBall",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_ball",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/LavaBallEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "LavaBallWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_ball_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/LavaBallWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SolidLavaOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_lava_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SolidLavaOnTickUpdateProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "SolidLavaBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_lava_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/solid_lava_block.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/SolidLavaBlockBlock.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/SolidLavaBlockBlockEntity.java",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/solid_lava_block.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/solid_lava_block.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/solid_lava_block.json"
+        ]
+      }
+    },
+    {
+      "name": "SolidLavaBlockEntityCollidesInTheBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_lava_block_entity_collides_in_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SolidLavaBlockEntityCollidesInTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1738,6 +1956,12 @@
       "type": "logic",
       "scope": "world",
       "value": "true"
+    },
+    {
+      "name": "V1",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1795,6 +2019,7 @@
       "~CUSTOM:SolidLava"
     ],
     "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:TechnoItemDefeating",
       "~CUSTOM:TechnosEndOfWorldMeteor",
       "~CUSTOM:EndOfWorldMeteor",
       "~CUSTOM:MusicDisc"
@@ -1815,11 +2040,12 @@
       "death.attack.tooth_pick_cleaning_teeth.player": "%1$s died whilst trying to escape Techno using Toothpick and %2$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
-      "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
       "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
+      "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
       "entity.youtubers_natural_disasters.cosmic": "Cosmic",
+      "item.youtubers_natural_disasters.test_sinkhole_summoner": "Sinkhole Summoner",
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
       "death.attack.tooth_pick_cleaning_teeth": "%1$s had their teeth cleaned by Toothpick",
       "item.youtubers_natural_disasters.tornado_summoner": "Tornado Summoner",
@@ -1837,9 +2063,11 @@
       "death.attack.blood_god_kill": "%1$s was slain by the Blood God",
       "entity.youtubers_natural_disasters.mr_coosh": "Mr_Coosh",
       "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
+      "block.youtubers_natural_disasters.solid_lava_block": "Solid Lava Block",
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
       "death.attack.techno_bullied_you.item": "%1$s was killed by Techno with %2$s using %3$s",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
+      "item.youtubers_natural_disasters.techno_item_defeating.desc": "The only way to defeat Techno, you must deal a crit to defeat him",
       "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
       "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
@@ -1870,6 +2098,7 @@
       "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
       "block.youtubers_natural_disasters.solid_lava": "Solid Lava",
       "entity.youtubers_natural_disasters.meteor": "Meteor",
+      "entity.youtubers_natural_disasters.test_of_sinkhole_entity": "Test Sinkhole Entity",
       "death.attack.tooth_pick_cleaning_teeth.item": "%1$s was killed by Techno with Toothpick and %2$s using %3$s",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "death.attack.blood_god_kill.player": "%1$s died whilst trying to escape the Blood God and %2$s",

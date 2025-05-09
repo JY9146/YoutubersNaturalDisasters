@@ -8,16 +8,26 @@ import net.minecraft.network.chat.Component;
 public class TechnobladeRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world) {
 		double TechnoSaysChance = 0;
-		TechnoSaysChance = Mth.nextInt(RandomSource.create(), 1, 66);
+		TechnoSaysChance = Mth.nextInt(RandomSource.create(), 1, 68);
 		if (TechnoSaysChance == 1) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies."), false);
+		} else if (TechnoSaysChance == 67) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Hello I'm here to talk to you about your car's extended warranty"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Also SUBSCRIBE TO TECHNOBLADE"), false);
+		} else if (TechnoSaysChance == 66) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I hope Phill learned to read while I've been gone"), false);
 		} else if (TechnoSaysChance == 65) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Heloooooo."), false);
 		} else if (TechnoSaysChance == 62) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Easy."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies"), false);
 		} else if (TechnoSaysChance == 63) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("JY, you seriously brought me back for this?"), false);
@@ -87,6 +97,8 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 23) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("All men can see the tactics whereby I conquer, but what none can see is the strategy out of which victory is evolved."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 24) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("They say that history is written by the winners, but I can't help notice him writing over there"), false);
@@ -102,6 +114,8 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 28) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("If you wish to defeat me, train for another 100 years."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 29) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("To get a refrigerator, I immediately headed to the safest place I knew, Afghanistan"), false);
@@ -123,12 +137,16 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 35) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I think my strategy of having ten hired goons was really better than your strategy of not having ten hired goons"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 36) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("My philosophy in life is: ignore everyone, acquire money"), false);
 		} else if (TechnoSaysChance == 37) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("WE WIN THESE!"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies"), false);
 		} else if (TechnoSaysChance == 38) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Let your plans be dark and impenetrable as night, and when you move fall like a thunderbolt"), false);
@@ -162,6 +180,8 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 46) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("GG."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 47) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Well I just killed a small child."), false);
@@ -174,6 +194,8 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 50) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Give me content."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Because Technoblade never dies"), false);
 		} else if (TechnoSaysChance == 51) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("After consulting countless theologians, philosophers, and a therapist, I have finally discovered the cure to being introverted. Watch my YouTube videos."),
@@ -187,6 +209,8 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 54) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Your telling me I got in a movie? What do you mean I was only in it for two seconds?! Cringe."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 55) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Cringe"), false);
@@ -199,18 +223,26 @@ public class TechnobladeRightClickedOnEntityProcedure {
 		} else if (TechnoSaysChance == 58) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Donate to the Sarcoma Foundation. This is a threat"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		} else if (TechnoSaysChance == 59) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("What do you mean you don't believe me? I'm a trustworthy man."), false);
 		} else if (TechnoSaysChance == 60) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You will never defeat the Techno army!"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies"), false);
 		} else if (TechnoSaysChance == 61) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Floof"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies"), false);
 		} else {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("The Antarctic Empire shall rise again..."), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("ALSO SUBSCRIBE TO TECHNOBLADE"), false);
 		}
 	}
 }
