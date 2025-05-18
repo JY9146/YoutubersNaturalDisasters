@@ -14,7 +14,7 @@ import net.mcreator.youtubersnaturaldisasters.procedures.TechnoItemDefeatingLivi
 
 public class TechnoItemDefeatingItem extends RecordItem {
 	public TechnoItemDefeatingItem() {
-		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ui.toast.challenge_complete")), new Item.Properties().stacksTo(64).rarity(Rarity.EPIC), 100);
+		super(0, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ui.toast.challenge_complete")), new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.EPIC), 100);
 	}
 
 	@Override

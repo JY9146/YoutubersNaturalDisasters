@@ -22,8 +22,6 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModS
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModParticleTypes;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModMobEffects;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
-import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModFluids;
-import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModFluidTypes;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlocks;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlockEntities;
@@ -58,9 +56,6 @@ public class YoutubersNaturalDisastersMod {
 		YoutubersNaturalDisastersModMobEffects.REGISTRY.register(bus);
 
 		YoutubersNaturalDisastersModParticleTypes.REGISTRY.register(bus);
-
-		YoutubersNaturalDisastersModFluids.REGISTRY.register(bus);
-		YoutubersNaturalDisastersModFluidTypes.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

@@ -36,6 +36,9 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedOnBlock": {
+      "name": "VolcanoSummonerRightclickedOnBlock"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

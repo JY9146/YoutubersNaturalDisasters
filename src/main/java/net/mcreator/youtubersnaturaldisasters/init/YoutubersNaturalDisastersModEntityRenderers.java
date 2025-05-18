@@ -12,11 +12,15 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.MadPiglinRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
@@ -44,5 +48,11 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.DAPPER_MR_TOM.get(), DapperMrTomRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TEST_OF_SINKHOLE_ENTITY.get(), TestOfSinkholeEntityRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.LAVA_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR.get(), VolcanoGeneratorRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.PIGLIN_SPAWNER.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MAD_PIGLIN.get(), MadPiglinRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ORPHAN.get(), OrphanRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_POTION_OF_GAS.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_GAS_PERSON.get(), TechnosGasPersonRenderer::new);
 	}
 }

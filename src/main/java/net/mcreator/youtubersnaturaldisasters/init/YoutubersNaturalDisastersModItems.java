@@ -26,9 +26,9 @@ import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
 import net.mcreator.youtubersnaturaldisasters.item.TestSinkholeSummonerItem;
+import net.mcreator.youtubersnaturaldisasters.item.TechnosSplashPotionOfGasItem;
 import net.mcreator.youtubersnaturaldisasters.item.TechnosEndOfWorldMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.TechnoItemDefeatingItem;
-import net.mcreator.youtubersnaturaldisasters.item.SolidLavaItem;
 import net.mcreator.youtubersnaturaldisasters.item.SmokeEmitterItem;
 import net.mcreator.youtubersnaturaldisasters.item.SinkholeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.SaturationFillerItem;
@@ -52,7 +52,6 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> GOLDEN_APPLE_GIVER = REGISTRY.register("golden_apple_giver", () -> new GoldenAppleGiverItem());
 	public static final RegistryObject<Item> SATURATION_FILLER = REGISTRY.register("saturation_filler", () -> new SaturationFillerItem());
 	public static final RegistryObject<Item> CRAG_DYNA_SPAWN_EGG = REGISTRY.register("crag_dyna_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.CRAG_DYNA, -6750208, -16777216, new Item.Properties()));
-	public static final RegistryObject<Item> SOLID_LAVA_BUCKET = REGISTRY.register("solid_lava_bucket", () -> new SolidLavaItem());
 	public static final RegistryObject<Item> SPLASH_POTION_OF_GAS = REGISTRY.register("splash_potion_of_gas", () -> new PotionOfGasItem());
 	public static final RegistryObject<Item> APPLE_OF_WISDOM = REGISTRY.register("apple_of_wisdom", () -> new AppleOfWisdomItem());
 	public static final RegistryObject<Item> SMOKE_EMITTER = REGISTRY.register("smoke_emitter", () -> new SmokeEmitterItem());
@@ -74,6 +73,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> TECHNO_ITEM_DEFEATING = REGISTRY.register("techno_item_defeating", () -> new TechnoItemDefeatingItem());
 	public static final RegistryObject<Item> TEST_SINKHOLE_SUMMONER = REGISTRY.register("test_sinkhole_summoner", () -> new TestSinkholeSummonerItem());
 	public static final RegistryObject<Item> SOLID_LAVA_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK);
+	public static final RegistryObject<Item> SOLID_WATER_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK);
+	public static final RegistryObject<Item> TECHNOS_SPLASH_POTION_OF_GAS = REGISTRY.register("technos_splash_potion_of_gas", () -> new TechnosSplashPotionOfGasItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

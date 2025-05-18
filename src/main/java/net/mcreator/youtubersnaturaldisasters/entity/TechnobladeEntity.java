@@ -61,6 +61,7 @@ public class TechnobladeEntity extends Monster {
 		setMaxUpStep(0.6f);
 		xpReward = 30;
 		setNoAi(false);
+		setPersistenceRequired();
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_AXE));
 		this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(Items.SHIELD));
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.DIAMOND_HELMET));
@@ -139,6 +140,11 @@ public class TechnobladeEntity extends Monster {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override

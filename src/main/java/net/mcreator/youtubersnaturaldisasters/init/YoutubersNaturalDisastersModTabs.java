@@ -31,7 +31,6 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.GOLDEN_APPLE_GIVER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SATURATION_FILLER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.CRAG_DYNA_SPAWN_EGG.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.SOLID_LAVA_BUCKET.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.APPLE_OF_WISDOM.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_METEOR.get());

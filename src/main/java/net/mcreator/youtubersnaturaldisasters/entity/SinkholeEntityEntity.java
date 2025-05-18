@@ -76,6 +76,8 @@ public class SinkholeEntityEntity extends Monster {
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
+		if (damagesource.is(DamageTypes.CACTUS))
+			return false;
 		if (damagesource.is(DamageTypes.DROWN))
 			return false;
 		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))

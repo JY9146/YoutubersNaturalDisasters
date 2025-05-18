@@ -87,7 +87,7 @@
     "immuneToFire": true,
     "immuneToArrows": true,
     "immuneToFallDamage": true,
-    "immuneToCactus": false,
+    "immuneToCactus": true,
     "immuneToDrowning": true,
     "immuneToLightning": true,
     "immuneToPotions": true,

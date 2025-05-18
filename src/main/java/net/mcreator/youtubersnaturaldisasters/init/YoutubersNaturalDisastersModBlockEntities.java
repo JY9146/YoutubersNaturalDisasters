@@ -11,12 +11,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.youtubersnaturaldisasters.block.entity.SolidWaterBlockBlockEntity;
 import net.mcreator.youtubersnaturaldisasters.block.entity.SolidLavaBlockBlockEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 public class YoutubersNaturalDisastersModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, YoutubersNaturalDisastersMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> SOLID_LAVA_BLOCK = register("solid_lava_block", YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK, SolidLavaBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> SOLID_WATER_BLOCK = register("solid_water_block", YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK, SolidWaterBlockBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

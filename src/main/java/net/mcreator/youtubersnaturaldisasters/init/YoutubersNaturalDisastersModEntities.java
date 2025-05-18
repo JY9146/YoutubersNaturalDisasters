@@ -17,12 +17,18 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TechnosGasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.PiglinSpawnerEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.MadPiglinEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
@@ -82,6 +88,20 @@ public class YoutubersNaturalDisastersModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TestOfSinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<LavaBallEntity>> LAVA_BALL = register("lava_ball",
 			EntityType.Builder.<LavaBallEntity>of(LavaBallEntity::new, MobCategory.MISC).setCustomClientFactory(LavaBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<VolcanoGeneratorEntity>> VOLCANO_GENERATOR = register("volcano_generator", EntityType.Builder.<VolcanoGeneratorEntity>of(VolcanoGeneratorEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PiglinSpawnerEntity>> PIGLIN_SPAWNER = register("piglin_spawner",
+			EntityType.Builder.<PiglinSpawnerEntity>of(PiglinSpawnerEntity::new, MobCategory.MISC).setCustomClientFactory(PiglinSpawnerEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MadPiglinEntity>> MAD_PIGLIN = register("mad_piglin",
+			EntityType.Builder.<MadPiglinEntity>of(MadPiglinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MadPiglinEntity::new)
+
+					.sized(0.6f, 1.95f));
+	public static final RegistryObject<EntityType<OrphanEntity>> ORPHAN = register("orphan",
+			EntityType.Builder.<OrphanEntity>of(OrphanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OrphanEntity::new).fireImmune().sized(0.6f, 1.95f));
+	public static final RegistryObject<EntityType<TechnosPotionOfGasEntity>> TECHNOS_POTION_OF_GAS = register("technos_potion_of_gas", EntityType.Builder.<TechnosPotionOfGasEntity>of(TechnosPotionOfGasEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TechnosPotionOfGasEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TechnosGasPersonEntity>> TECHNOS_GAS_PERSON = register("technos_gas_person", EntityType.Builder.<TechnosGasPersonEntity>of(TechnosGasPersonEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TechnosGasPersonEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -105,6 +125,10 @@ public class YoutubersNaturalDisastersModEntities {
 			CosmicEntity.init();
 			DapperMrTomEntity.init();
 			TestOfSinkholeEntityEntity.init();
+			VolcanoGeneratorEntity.init();
+			MadPiglinEntity.init();
+			OrphanEntity.init();
+			TechnosGasPersonEntity.init();
 		});
 	}
 
@@ -123,5 +147,9 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
 		event.put(DAPPER_MR_TOM.get(), DapperMrTomEntity.createAttributes().build());
 		event.put(TEST_OF_SINKHOLE_ENTITY.get(), TestOfSinkholeEntityEntity.createAttributes().build());
+		event.put(VOLCANO_GENERATOR.get(), VolcanoGeneratorEntity.createAttributes().build());
+		event.put(MAD_PIGLIN.get(), MadPiglinEntity.createAttributes().build());
+		event.put(ORPHAN.get(), OrphanEntity.createAttributes().build());
+		event.put(TECHNOS_GAS_PERSON.get(), TechnosGasPersonEntity.createAttributes().build());
 	}
 }

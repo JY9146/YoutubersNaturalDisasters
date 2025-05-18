@@ -22,6 +22,10 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class YoutubersNaturalDisastersModVariables {
+	public static double Number1 = 0.0;
+	public static double Number2 = 0;
+	public static double Number3 = 0;
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		YoutubersNaturalDisastersMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
@@ -55,6 +59,8 @@ public class YoutubersNaturalDisastersModVariables {
 		public static final String DATA_NAME = "youtubers_natural_disasters_worldvars";
 		public boolean Logic_Variable = true;
 		public boolean V1 = false;
+		public boolean LavaBallVariableStopper = false;
+		public boolean Orphan = false;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -65,12 +71,16 @@ public class YoutubersNaturalDisastersModVariables {
 		public void read(CompoundTag nbt) {
 			Logic_Variable = nbt.getBoolean("Logic_Variable");
 			V1 = nbt.getBoolean("V1");
+			LavaBallVariableStopper = nbt.getBoolean("LavaBallVariableStopper");
+			Orphan = nbt.getBoolean("Orphan");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("Logic_Variable", Logic_Variable);
 			nbt.putBoolean("V1", V1);
+			nbt.putBoolean("LavaBallVariableStopper", LavaBallVariableStopper);
+			nbt.putBoolean("Orphan", Orphan);
 			return nbt;
 		}
 

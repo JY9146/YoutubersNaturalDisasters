@@ -40,10 +40,6 @@ public class TechnobladeEntityIsHurtProcedure {
 				}
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You can never defeat me. Prepare to die. I am the final boss, and this is my final phase!"), false);
-				entity.getPersistentData().putBoolean("loop", true);
-				entity.getPersistentData().putBoolean("v1", true);
-				entity.getPersistentData().putBoolean("v2", false);
-				entity.getPersistentData().putDouble("timer", 0);
 			}
 		}
 		if (world instanceof ServerLevel _origLevel) {

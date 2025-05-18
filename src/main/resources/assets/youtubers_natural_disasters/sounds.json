@@ -52,5 +52,14 @@
         "stream": false
       }
     ]
+  },
+  "technoboss": {
+    "subtitle": "subtitles.technoboss",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:bossmusic__-_music_",
+        "stream": false
+      }
+    ]
   }
 }
