@@ -22,7 +22,7 @@ public class VolcanoGeneratorOnEntityTickUpdateProcedure {
 		double Every__PerUptdate = 0;
 		double Fall_Chance = 0;
 		entity.setInvulnerable(true);
-		if (entity.getPersistentData().getDouble("BlockCount") <= 50) {
+		if (entity.getPersistentData().getDouble("BlockCount") <= 40) {
 			Every__PerUptdate = 8;
 			if (entity.getPersistentData().getDouble("digtick") == 0) {
 				entity.getPersistentData().putDouble("digtick", Every__PerUptdate);
@@ -45,13 +45,14 @@ public class VolcanoGeneratorOnEntityTickUpdateProcedure {
 										+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 								if (distanceSq <= 1.0) {
 									if (!(Blocks.BEDROCK == (world.getBlockState(BlockPos.containing(x + xi, y + yi - 1, z + zi))).getBlock())) {
-										Block_ = (world.getBlockState(BlockPos.containing(x + xi, y + yi - 1, z + zi)));
+										Block_ = (world.getBlockState(BlockPos.containing(x + xi, y + yi - 2, z + zi)));
 									}
 									world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Block_, 3);
 								}
 							}
 						}
 					}
+					VolcanoHollowerProcedure.execute(world, x, y, z, entity);
 				} else {
 					entity.getPersistentData().putDouble("WAIT", 0);
 					entity.getPersistentData().putDouble("BlockCount", (entity.getPersistentData().getDouble("BlockCount") + 1));

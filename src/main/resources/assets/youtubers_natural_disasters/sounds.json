@@ -61,5 +61,77 @@
         "stream": false
       }
     ]
+  },
+  "bossbattle2music": {
+    "subtitle": "subtitles.bossbattle2music",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:derivakat-voicesworld-language-cover_-technoblade-tribute-_music_",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound1": {
+    "subtitle": "subtitles.knarfysound1",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_1",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound2": {
+    "subtitle": "subtitles.knarfysound2",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_2",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound3": {
+    "subtitle": "subtitles.knarfysound3",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_3",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound4": {
+    "subtitle": "subtitles.knarfysound4",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_4",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound5": {
+    "subtitle": "subtitles.knarfysound5",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_5",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound6": {
+    "subtitle": "subtitles.knarfysound6",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_6",
+        "stream": false
+      }
+    ]
+  },
+  "knarfysound7": {
+    "subtitle": "subtitles.knarfysound7",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:knarfy_sound_7",
+        "stream": false
+      }
+    ]
   }
 }

@@ -19,9 +19,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 public class TechnobladeEntityIsHurtProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity sourceentity) {
+	public static boolean execute(LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity sourceentity) {
 		if (damagesource == null || entity == null || sourceentity == null)
-			return;
+			return false;
 		boolean V = false;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 20) {
 			if (!damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:techno_killing_dmg_type"))) || !damagesource.is(DamageTypes.GENERIC_KILL)) {
@@ -79,5 +79,6 @@ public class TechnobladeEntityIsHurtProcedure {
 			}
 			world = _worldorig;
 		}
+		return !damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:techno_killing_dmg_type")));
 	}
 }

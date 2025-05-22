@@ -1572,7 +1572,8 @@
             "name": "world",
             "type": "world"
           }
-        ]
+        ],
+        "return_type": "logic"
       }
     },
     {
@@ -2441,6 +2442,99 @@
           }
         ]
       }
+    },
+    {
+      "name": "MadPiglinEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mad_piglin_entity_is_hurt",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MadPiglinEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Knarfy",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knarfy",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/knarfy_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/KnarfyRenderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/KnarfyEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "KnarfyOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knarfy_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/KnarfyOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KnarfyRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knarfy_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/KnarfyRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2543,6 +2637,70 @@
       ],
       "category": "neutral",
       "subtitle": "You\u0027re In Trouble Now"
+    },
+    {
+      "name": "bossbattle2music",
+      "files": [
+        "derivakat-voicesworld-language-cover_-technoblade-tribute-_music_"
+      ],
+      "category": "neutral",
+      "subtitle": "Chat We\u0027re Gaming"
+    },
+    {
+      "name": "knarfysound1",
+      "files": [
+        "knarfy_sound_1"
+      ],
+      "category": "neutral",
+      "subtitle": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas"
+    },
+    {
+      "name": "knarfysound2",
+      "files": [
+        "knarfy_sound_2"
+      ],
+      "category": "neutral",
+      "subtitle": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!"
+    },
+    {
+      "name": "knarfysound3",
+      "files": [
+        "knarfy_sound_3"
+      ],
+      "category": "neutral",
+      "subtitle": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!"
+    },
+    {
+      "name": "knarfysound4",
+      "files": [
+        "knarfy_sound_4"
+      ],
+      "category": "neutral",
+      "subtitle": "TODAY I\u0027M BREAKING MINECRAFT WITH YOUR DUMB IDEAS"
+    },
+    {
+      "name": "knarfysound5",
+      "files": [
+        "knarfy_sound_5"
+      ],
+      "category": "neutral",
+      "subtitle": "ToDaY i\u0027M BrEaKiNg MiNeCrAfT WiTh YoUr dUmB iDEaS"
+    },
+    {
+      "name": "knarfysound6",
+      "files": [
+        "knarfy_sound_6"
+      ],
+      "category": "neutral",
+      "subtitle": "Today will be... BREAKING MINECRAFT WITH YOUR DUMB IDEAS!!!"
+    },
+    {
+      "name": "knarfysound7",
+      "files": [
+        "knarfy_sound_7"
+      ],
+      "category": "neutral",
+      "subtitle": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas"
     }
   ],
   "tag_elements": {
@@ -2557,22 +2715,60 @@
   "language_map": {
     "en_us": {
       "item.youtubers_natural_disasters.saturation_filler": "Saturation Filler",
-      "entity.youtubers_natural_disasters.sinkhole_entity": "Sinkhole Entity",
       "death.attack.techno_bullied_you": "%1$s got bullied by Technoblade in Skywars",
+      "entity.youtubers_natural_disasters.sinkhole_entity": "Sinkhole Entity",
       "entity.youtubers_natural_disasters.technoblade": "Technoblade",
-      "death.attack.axe_of_peace_wasnt_peaceful": "The Axe of Peace wasn\u0027t peaceful to %1$s ",
+      "subtitles.knarfysound6": "Today will be... BREAKING MINECRAFT WITH YOUR DUMB IDEAS!!!",
       "item.youtubers_natural_disasters.techno_item_defeating": "Techno\u0027s Old Videos",
+      "death.attack.axe_of_peace_wasnt_peaceful": "The Axe of Peace wasn\u0027t peaceful to %1$s ",
+      "subtitles.knarfysound5": "ToDaY i\u0027M BrEaKiNg MiNeCrAfT WiTh YoUr dUmB iDEaS",
       "subtitles.defnotarickrollatall": "Definently not a rickroll...",
-      "item.youtubers_natural_disasters.coin": "Coin",
-      "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
+      "subtitles.knarfysound7": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas",
       "death.attack.tooth_pick_cleaning_teeth.player": "%1$s died whilst trying to escape Techno using Toothpick and %2$s",
       "death.attack.technos_inhailed_too_much_gas": "%1$s Inhaled Too Much Gas",
-      "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
-      "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
-      "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
+      "death.attack.axe_of_peace_wasnt_peaceful.item": "%1$s was killed by Techno with the Axe Of Peace and %2$s using %3$s",
+      "death.attack.meteor_hit": "%1$s had a meteor hit their head",
+      "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
+      "death.attack.orphan_obliterator_damage": "%1$s was destroyed by the Orphan Obliterator",
+      "death.attack.blood_god_kill": "%1$s was slain by the Blood God",
+      "subtitles.knarfysound2": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!",
+      "subtitles.knarfysound1": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas",
+      "subtitles.knarfysound4": "TODAY I\u0027M BREAKING MINECRAFT WITH YOUR DUMB IDEAS",
+      "block.youtubers_natural_disasters.solid_lava_block": "Solid Lava Block",
+      "subtitles.knarfysound3": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!",
+      "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
+      "death.attack.techno_bullied_you.item": "%1$s was killed by Techno with %2$s using %3$s",
+      "item.youtubers_natural_disasters.techno_item_defeating.desc": "The only way to defeat Techno, you must deal a crit to defeat him",
+      "death.attack.technos_inhailed_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
+      "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
+      "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
+      "entity.youtubers_natural_disasters.knarfy": "Knarfy",
+      "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
+      "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
+      "death.attack.blood_god_kill.item": "%1$s was killed by the Blood God with %2$s using %3$s",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
+      "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
+      "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
+      "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
+      "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+      "death.attack.techno_bullied_you.player": "%1$s died whilst trying to escape Techno and %2$s",
+      "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
+      "death.attack.technos_inhailed_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
+      "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
+      "entity.youtubers_natural_disasters.mad_piglin": "Piglin Brute",
+      "entity.youtubers_natural_disasters.meteor": "Meteor",
+      "entity.youtubers_natural_disasters.test_of_sinkhole_entity": "Test Sinkhole Entity",
+      "entity.youtubers_natural_disasters.orphan": "Orphan^2",
+      "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
+      "death.attack.orphan_obliterator_damage.player": "%1$s died whilst trying to escape the Orphan Obliterator and %2$s",
+      "item.youtubers_natural_disasters.coin": "Coin",
+      "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
+      "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
+      "subtitles.defnotrickroll": "Definently not a rickroll...",
+      "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "entity.youtubers_natural_disasters.cosmic": "Cosmic",
       "item.youtubers_natural_disasters.test_sinkhole_summoner": "Test Sinkhole Summoner",
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
@@ -2581,59 +2777,33 @@
       "death.attack.techno_killing_dmg_type.player": "%1$s died whilst trying to escape %2$s from old cringe videos belonging to Technoblade",
       "subtitles.technoboss": "You\u0027re In Trouble Now",
       "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
-      "death.attack.axe_of_peace_wasnt_peaceful.item": "%1$s was killed by Techno with the Axe Of Peace and %2$s using %3$s",
-      "death.attack.meteor_hit": "%1$s had a meteor hit their head",
       "item.youtubers_natural_disasters.sinkhole_summoner": "Sinkhole Summoner",
       "item.youtubers_natural_disasters.technos_end_of_world_meteor.desc": "THE END IS NIGH",
       "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
-      "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
-      "death.attack.orphan_obliterator_damage": "%1$s was destroyed by the Orphan Obliterator",
       "entity.youtubers_natural_disasters.crag_dyna": "CragDyna",
       "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
-      "death.attack.blood_god_kill": "%1$s was slain by the Blood God",
       "entity.youtubers_natural_disasters.mr_coosh": "Mr_Coosh",
       "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
-      "block.youtubers_natural_disasters.solid_lava_block": "Solid Lava Block",
-      "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
-      "death.attack.techno_bullied_you.item": "%1$s was killed by Techno with %2$s using %3$s",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
-      "item.youtubers_natural_disasters.techno_item_defeating.desc": "The only way to defeat Techno, you must deal a crit to defeat him",
-      "death.attack.technos_inhailed_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
-      "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
-      "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "item.youtubers_natural_disasters.technos_splash_potion_of_gas": "Splash Potion Of Gas",
-      "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
       "death.attack.techno_killing_dmg_type": "%1$s died by Techno\u0027s old cringe videos",
       "death.attack.inhaled_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
       "item.youtubers_natural_disasters.earthquake_summoner": "Earthquake Summoner",
-      "death.attack.blood_god_kill.item": "%1$s was killed by the Blood God with %2$s using %3$s",
-      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
-      "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
       "entity.youtubers_natural_disasters.volcano_generator": "Volcano",
+      "item.youtubers_natural_disasters.knarfy_spawn_egg": "Knarfy Spawn Egg",
       "death.attack.orphan_obliterator_damage.item": "%1$s was killed by Techno with the Orphan Obliterator with  %2$s using %3$s",
       "subtitles.cragdynadeath": "RIP Crag",
-      "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "item.youtubers_natural_disasters.volcano_summoner": "Volcano Summoner",
-      "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
-      "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "subtitles.technobladeneverdies": "Technoblade Never Dies",
       "entity.youtubers_natural_disasters.dapper_mr_tom": "Dapper Mr Tom",
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
-      "item.youtubers_natural_disasters.music_disc": "Music Disc",
       "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
-      "death.attack.techno_bullied_you.player": "%1$s died whilst trying to escape Techno and %2$s",
+      "item.youtubers_natural_disasters.music_disc": "Music Disc",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
-      "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
-      "death.attack.technos_inhailed_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
       "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
       "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
-      "subtitles.thatswhatiliketommy": "JUMP IN THE CADILLAC",
-      "entity.youtubers_natural_disasters.mad_piglin": "Piglin Brute",
-      "entity.youtubers_natural_disasters.meteor": "Meteor",
-      "entity.youtubers_natural_disasters.test_of_sinkhole_entity": "Test Sinkhole Entity",
-      "entity.youtubers_natural_disasters.orphan": "Orphan^2",
       "death.attack.tooth_pick_cleaning_teeth.item": "%1$s was killed by Techno with Toothpick and %2$s using %3$s",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "death.attack.blood_god_kill.player": "%1$s died whilst trying to escape the Blood God and %2$s",
@@ -2642,8 +2812,6 @@
       "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
       "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",
       "block.youtubers_natural_disasters.solid_water_block": "Solid Water Block",
-      "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
-      "death.attack.orphan_obliterator_damage.player": "%1$s died whilst trying to escape the Orphan Obliterator and %2$s",
       "item.youtubers_natural_disasters.throw_tnt": "Throw TNT",
       "item.youtubers_natural_disasters.technos_end_of_world_meteor": "Techno\u0027s End Of World Meteor"
     }

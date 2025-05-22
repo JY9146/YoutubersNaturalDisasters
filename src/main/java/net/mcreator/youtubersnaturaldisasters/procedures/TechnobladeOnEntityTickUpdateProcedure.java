@@ -60,12 +60,14 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 			return;
 		Entity Item_ = null;
 		ItemStack Item_item = ItemStack.EMPTY;
+		boolean MusicWait = false;
 		double Grab_Distance = 0;
 		double Look_Timmer = 0;
 		double Number12 = 0;
 		double X = 0;
 		double Z = 0;
 		double Yaw = 0;
+		double Musicmusic = 0;
 		Grab_Distance = 4;
 		Look_Timmer = 20;
 		if (entity instanceof Mob _mobEnt0 && _mobEnt0.isAggressive() && !((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 180)) {
@@ -105,6 +107,9 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You have earned my trust for now, since you have provided me with these important materials. But don't attack me again."), false);
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"stopsound @a");
 					}
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 0) {
 						if (entity instanceof LivingEntity _entity) {
@@ -131,6 +136,9 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You have earned my trust for now, since you have provided me with these important materials. But don't attack me again."), false);
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"stopsound @a");
 					}
 				}
 			}
@@ -175,6 +183,9 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					});
 					if (!world.isClientSide() && world.getServer() != null)
 						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"stopsound @a");
 				}
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 0) {
 					if (entity instanceof LivingEntity _entity) {
@@ -201,6 +212,9 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					});
 					if (!world.isClientSide() && world.getServer() != null)
 						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								"stopsound @a");
 				}
 			}
 			YoutubersNaturalDisastersMod.queueServerWork(40, () -> {
@@ -255,6 +269,50 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 						if (_entity instanceof Player _player)
 							_player.getInventory().setChanged();
+					}
+					if (MusicWait == false) {
+						Musicmusic = Mth.nextInt(RandomSource.create(), 0, 1);
+						if (Musicmusic == 1) {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1, false);
+								}
+							}
+							MusicWait = true;
+						} else {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1, false);
+								}
+							}
+							MusicWait = true;
+						}
+					} else {
+						if (Musicmusic == 1) {
+							YoutubersNaturalDisastersMod.queueServerWork(3260, () -> {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1);
+									} else {
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1, false);
+									}
+								}
+							});
+						} else {
+							YoutubersNaturalDisastersMod.queueServerWork(4200, () -> {
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1);
+									} else {
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1, false);
+									}
+								}
+							});
+						}
 					}
 				} else {
 					entity.getPersistentData().putDouble("MODID:TechnoBossTick", (entity.getPersistentData().getDouble("MODID:TechnoBossTick") - 1));

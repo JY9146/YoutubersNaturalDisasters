@@ -21,6 +21,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MadPiglinRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.KnarfyRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
@@ -54,5 +55,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ORPHAN.get(), OrphanRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_POTION_OF_GAS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_GAS_PERSON.get(), TechnosGasPersonRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.KNARFY.get(), KnarfyRenderer::new);
 	}
 }

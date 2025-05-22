@@ -30,6 +30,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MadPiglinEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.KnarfyEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
@@ -102,6 +103,10 @@ public class YoutubersNaturalDisastersModEntities {
 			.setCustomClientFactory(TechnosPotionOfGasEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<TechnosGasPersonEntity>> TECHNOS_GAS_PERSON = register("technos_gas_person", EntityType.Builder.<TechnosGasPersonEntity>of(TechnosGasPersonEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TechnosGasPersonEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<KnarfyEntity>> KNARFY = register("knarfy",
+			EntityType.Builder.<KnarfyEntity>of(KnarfyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KnarfyEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -129,6 +134,7 @@ public class YoutubersNaturalDisastersModEntities {
 			MadPiglinEntity.init();
 			OrphanEntity.init();
 			TechnosGasPersonEntity.init();
+			KnarfyEntity.init();
 		});
 	}
 
@@ -151,5 +157,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(MAD_PIGLIN.get(), MadPiglinEntity.createAttributes().build());
 		event.put(ORPHAN.get(), OrphanEntity.createAttributes().build());
 		event.put(TECHNOS_GAS_PERSON.get(), TechnosGasPersonEntity.createAttributes().build());
+		event.put(KNARFY.get(), KnarfyEntity.createAttributes().build());
 	}
 }
