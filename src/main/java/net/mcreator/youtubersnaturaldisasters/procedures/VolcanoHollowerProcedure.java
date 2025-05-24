@@ -10,8 +10,8 @@ public class VolcanoHollowerProcedure {
 		if (entity == null)
 			return;
 		double Multiplier = 0;
-		Multiplier = 35;
-		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("SizeWidthV") - Multiplier * 0.95) - 1;
+		Multiplier = 1;
+		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("SizeWidthV") - Multiplier * 1.1) - 1;
 		int verticalRadiusHemiTop = (int) 1;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int yi = 0; yi < yIterationsHemiTop; yi++) {

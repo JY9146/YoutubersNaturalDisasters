@@ -2556,6 +2556,57 @@
           }
         ]
       }
+    },
+    {
+      "name": "TommyinnitItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommyinnit_item",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/tommyinnit_item.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/TommyinnitItemItem.java"
+        ]
+      }
+    },
+    {
+      "name": "TommyinnitBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tommyinnit_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/TommyinnitBlockBlock.java",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/tommyinnit_block.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/tommyinnit_block.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/tommyinnit_block.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/tommyinnit_block.json"
+        ]
+      }
+    },
+    {
+      "name": "MusicDiscRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_disc_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MusicDiscRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2791,6 +2842,7 @@
       "item.youtubers_natural_disasters.coin": "Coin",
       "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
+      "item.youtubers_natural_disasters.tommyinnit_item": "Tommyinnit Item",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
       "entity.youtubers_natural_disasters.cosmic": "Cosmic",
@@ -2828,6 +2880,7 @@
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
       "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
       "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
+      "block.youtubers_natural_disasters.tommyinnit_block": "Tommyinnit Block",
       "death.attack.tooth_pick_cleaning_teeth.item": "%1$s was killed by Techno with Toothpick and %2$s using %3$s",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "death.attack.blood_god_kill.player": "%1$s died whilst trying to escape the Blood God and %2$s",

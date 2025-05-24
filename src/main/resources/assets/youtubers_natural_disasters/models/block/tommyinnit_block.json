@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "youtubers_natural_disasters:block/tommyinnitblock",
+    "particle": "youtubers_natural_disasters:block/tommyinnitblock"
+  },
+  "render_type": "solid"
+}

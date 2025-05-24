@@ -22,6 +22,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
+import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
@@ -76,6 +77,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SOLID_WATER_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK);
 	public static final RegistryObject<Item> TECHNOS_SPLASH_POTION_OF_GAS = REGISTRY.register("technos_splash_potion_of_gas", () -> new TechnosSplashPotionOfGasItem());
 	public static final RegistryObject<Item> KNARFY_SPAWN_EGG = REGISTRY.register("knarfy_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.KNARFY, -1, -13434778, new Item.Properties()));
+	public static final RegistryObject<Item> TOMMYINNIT_ITEM = REGISTRY.register("tommyinnit_item", () -> new TommyinnitItemItem());
+	public static final RegistryObject<Item> TOMMYINNIT_BLOCK = block(YoutubersNaturalDisastersModBlocks.TOMMYINNIT_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items
