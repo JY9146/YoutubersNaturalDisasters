@@ -74,7 +74,7 @@
     "stepHeight": 0.6,
     "armorBaseValue": 3.0,
     "trackingRange": 80,
-    "followRange": 30,
+    "followRange": 64,
     "health": 200,
     "xpAmount": 30,
     "waterMob": false,
@@ -131,9 +131,6 @@
     ],
     "whenMobDies": {
       "name": "TechnobladeEntityDies"
-    },
-    "whenMobIsHurt": {
-      "name": "TechnobladeEntityIsHurt"
     },
     "onRightClickedOn": {
       "name": "TechnobladeRightClickedOnEntity"

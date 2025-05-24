@@ -23,7 +23,7 @@ public class VolcanoHollowerProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 					if (distanceSq <= 1.0) {
-						world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.CAVE_AIR.defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 					}
 				}
 			}

@@ -147,80 +147,82 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					_datEntSetL.getEntityData().set(TechnobladeEntity.DATA_Hostilty, true);
 			});
 		}
-		if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).isEmpty()) {
-			Item_ = (Entity) world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 20.5, 20.5, 20.5), e -> true).stream().sorted(new Object() {
-				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-				}
-			}.compareDistOf(x, y, z)).findFirst().orElse(null);
-			Item_item = (Item_ instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
-			if (Item_item.getItem() == YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get() || Item_item.getItem() == YoutubersNaturalDisastersModItems.END_OF_WORLD_METEOR.get()
-					|| Item_item.getItem() == YoutubersNaturalDisastersModItems.COIN.get()) {
-				if (entity instanceof TechnobladeEntity _datEntSetL)
-					_datEntSetL.getEntityData().set(TechnobladeEntity.DATA_Hostilty, false);
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 1) {
-					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = Item_item.copy();
-						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
+		if (!((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 180)) {
+			if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).isEmpty()) {
+				Item_ = (Entity) world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 20.5, 20.5, 20.5), e -> true).stream().sorted(new Object() {
+					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+						return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 					}
-					if (!Item_.level().isClientSide())
-						Item_.discard();
-					if (entity instanceof Mob) {
-						try {
-							((Mob) entity).setTarget(null);
-						} catch (Exception e) {
-							e.printStackTrace();
+				}.compareDistOf(x, y, z)).findFirst().orElse(null);
+				Item_item = (Item_ instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
+				if (Item_item.getItem() == YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get() || Item_item.getItem() == YoutubersNaturalDisastersModItems.END_OF_WORLD_METEOR.get()
+						|| Item_item.getItem() == YoutubersNaturalDisastersModItems.COIN.get()) {
+					if (entity instanceof TechnobladeEntity _datEntSetL)
+						_datEntSetL.getEntityData().set(TechnobladeEntity.DATA_Hostilty, false);
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 1) {
+						if (entity instanceof LivingEntity _entity) {
+							ItemStack _setstack = Item_item.copy();
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
 						}
-					}
-					YoutubersNaturalDisastersMod.queueServerWork((int) Look_Timmer, () -> {
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setCount(0);
-						if (entity instanceof LivingEntity _entity)
-							_entity.swing(InteractionHand.MAIN_HAND, true);
-						TechnoTradeProcedure.execute(world, x, y, z);
-					});
-					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								"stopsound @a");
-				}
-				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 0) {
-					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = Item_item.copy();
-						_setstack.setCount(1);
-						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-						if (_entity instanceof Player _player)
-							_player.getInventory().setChanged();
-					}
-					if (!Item_.level().isClientSide())
-						Item_.discard();
-					if (entity instanceof Mob) {
-						try {
-							((Mob) entity).setTarget(null);
-						} catch (Exception e) {
-							e.printStackTrace();
+						if (!Item_.level().isClientSide())
+							Item_.discard();
+						if (entity instanceof Mob) {
+							try {
+								((Mob) entity).setTarget(null);
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
 						}
+						YoutubersNaturalDisastersMod.queueServerWork((int) Look_Timmer, () -> {
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setCount(0);
+							if (entity instanceof LivingEntity _entity)
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							TechnoTradeProcedure.execute(world, x, y, z);
+						});
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"stopsound @a");
 					}
-					YoutubersNaturalDisastersMod.queueServerWork((int) Look_Timmer, () -> {
-						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setCount(0);
-						if (entity instanceof LivingEntity _entity)
-							_entity.swing(InteractionHand.MAIN_HAND, true);
-						TechnoTradeProcedure.execute(world, x, y, z);
-					});
-					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								"stopsound @a");
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() == 0) {
+						if (entity instanceof LivingEntity _entity) {
+							ItemStack _setstack = Item_item.copy();
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+						if (!Item_.level().isClientSide())
+							Item_.discard();
+						if (entity instanceof Mob) {
+							try {
+								((Mob) entity).setTarget(null);
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}
+						YoutubersNaturalDisastersMod.queueServerWork((int) Look_Timmer, () -> {
+							(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setCount(0);
+							if (entity instanceof LivingEntity _entity)
+								_entity.swing(InteractionHand.MAIN_HAND, true);
+							TechnoTradeProcedure.execute(world, x, y, z);
+						});
+						if (!world.isClientSide() && world.getServer() != null)
+							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"stopsound @a");
+					}
 				}
+				YoutubersNaturalDisastersMod.queueServerWork(40, () -> {
+					if (entity instanceof TechnobladeEntity _datEntSetL)
+						_datEntSetL.getEntityData().set(TechnobladeEntity.DATA_Hostilty, true);
+				});
 			}
-			YoutubersNaturalDisastersMod.queueServerWork(40, () -> {
-				if (entity instanceof TechnobladeEntity _datEntSetL)
-					_datEntSetL.getEntityData().set(TechnobladeEntity.DATA_Hostilty, true);
-			});
 		}
 		entity.fallDistance = 0;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
@@ -235,7 +237,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					if (entity instanceof Mob _entity)
 						_entity.getNavigation().stop();
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -257,7 +259,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 				if (entity.getPersistentData().getDouble("MODID:TechnoBossTick") == 0) {
 					entity.getPersistentData().putDouble("MODID:TechnoBossTick", 300);
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -270,8 +272,8 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						if (_entity instanceof Player _player)
 							_player.getInventory().setChanged();
 					}
+					Musicmusic = Mth.nextInt(RandomSource.create(), 0, 1);
 					if (MusicWait == false) {
-						Musicmusic = Mth.nextInt(RandomSource.create(), 0, 1);
 						if (Musicmusic == 1) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -293,7 +295,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						}
 					} else {
 						if (Musicmusic == 1) {
-							YoutubersNaturalDisastersMod.queueServerWork(3260, () -> {
+							YoutubersNaturalDisastersMod.queueServerWork(4000, () -> {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
 										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1);
@@ -303,7 +305,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 								}
 							});
 						} else {
-							YoutubersNaturalDisastersMod.queueServerWork(4200, () -> {
+							YoutubersNaturalDisastersMod.queueServerWork(5000, () -> {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
 										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1);
@@ -603,7 +605,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					}
 				} else if (entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 20) {
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -645,7 +647,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 				if (entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 38 || entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 32 || entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 26
 						|| entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 20 || entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 14) {
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -708,7 +710,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"summon potion ~ ~1.5 ~ {Item:{id:splash_potion,tag:{CustomPotionColor:16383998}},Motion:[0d,0.3d,0d]}");
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -755,13 +757,23 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_entity.swing(InteractionHand.MAIN_HAND, true);
 					if (entity instanceof LivingEntity _entity)
 						_entity.swing(InteractionHand.OFF_HAND, true);
+					if (world instanceof ServerLevel _serverLevel) {
+						Entity entityinstance = EntityType.POLAR_BEAR.create(_serverLevel, null, null, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED, false, false);
+						if (entityinstance != null) {
+							entityinstance.setYRot(world.getRandom().nextFloat() * 360.0F);
+							if (entityinstance instanceof Mob _entity && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _ent)
+								_entity.setTarget(_ent);
+							entityinstance.setCustomName(Component.literal("Steve"));
+							_serverLevel.addFreshEntity(entityinstance);
+						}
+					}
 				} else if (entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 3) {
-					if (!world.getEntitiesOfClass(MadPiglinEntity.class, AABB.ofSize(new Vec3(x, y, z), 64, 64, 64), e -> true).isEmpty()) {
+					if (!world.getEntitiesOfClass(MadPiglinEntity.class, AABB.ofSize(new Vec3(x, y, z), 36, 36, 36), e -> true).isEmpty()) {
 						entity.getPersistentData().putDouble("MODID:TechnoBossPatternTick", 9);
 						entity.getPersistentData().putDouble("MODID:TechnoBossTick", 149);
 					} else {
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+							ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 							_setstack.setCount(1);
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 							if (_entity instanceof Player _player)
@@ -798,7 +810,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"summon potion ~ ~1.5 ~ {Item:{id:splash_potion,tag:{CustomPotionColor:16383998}},Motion:[0d,0.3d,0d]}");
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -821,7 +833,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"summon potion ~ ~1.5 ~ {Item:{id:splash_potion,tag:{CustomPotionColor:16383998}},Motion:[0d,0.3d,0d]}");
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -844,7 +856,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 								"summon potion ~ ~1.5 ~ {Item:{id:splash_potion,tag:{CustomPotionColor:16383998}},Motion:[0d,0.3d,0d]}");
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -867,7 +879,7 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 					entity.getPersistentData().putBoolean("MODID:TechnoAttackingMelee", true);
 				} else if (entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 0) {
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+						ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)

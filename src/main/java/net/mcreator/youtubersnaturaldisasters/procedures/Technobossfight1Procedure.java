@@ -56,12 +56,13 @@ public class Technobossfight1Procedure {
 						entity.getPersistentData().putDouble("MODID:TechnoBossTick", (-12));
 						entity.getPersistentData().putBoolean("MODID:TechnoAttackingMelee", true);
 						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+							ItemStack _setstack = new ItemStack(Items.NETHERITE_AXE).copy();
 							_setstack.setCount(1);
 							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 							if (_entity instanceof Player _player)
 								_player.getInventory().setChanged();
 						}
+						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.SHARPNESS, 5);
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
 							_setstack.setCount(1);

@@ -42,7 +42,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeThisEntityKillsAnotherOneProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeRightClickedOnEntityProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeOnEntityTickUpdateProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityIsHurtProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnobladeEntityDiesProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TechnoTrade2Procedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
@@ -174,15 +173,6 @@ public class TechnobladeEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Level world = this.level();
-		Entity entity = this;
-		Entity sourceentity = damagesource.getEntity();
-		Entity immediatesourceentity = damagesource.getDirectEntity();
-
-		TechnobladeEntityIsHurtProcedure.execute(world, x, y, z, damagesource, entity, sourceentity);
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -296,7 +286,7 @@ public class TechnobladeEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 200);
 		builder = builder.add(Attributes.ARMOR, 3);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 30);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 64);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.4);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		return builder;

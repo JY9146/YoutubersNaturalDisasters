@@ -60,7 +60,7 @@ public class TechnoItemDefeatingLivingEntityIsHitWithItemProcedure {
 			}
 			entity.setInvulnerable(false);
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:techno_killing_dmg_type")))),
-					20000000);
+					10000000);
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("NOOOOO. It can't be! You found the only thing able to defeat me, my old cringe videos!"), false);
 		}
