@@ -17,6 +17,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
@@ -29,6 +31,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MadPiglinEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.LavaBallShooterEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.KnarfyEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
@@ -88,7 +91,7 @@ public class YoutubersNaturalDisastersModEntities {
 	public static final RegistryObject<EntityType<TestOfSinkholeEntityEntity>> TEST_OF_SINKHOLE_ENTITY = register("test_of_sinkhole_entity", EntityType.Builder.<TestOfSinkholeEntityEntity>of(TestOfSinkholeEntityEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TestOfSinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<LavaBallEntity>> LAVA_BALL = register("lava_ball",
-			EntityType.Builder.<LavaBallEntity>of(LavaBallEntity::new, MobCategory.MISC).setCustomClientFactory(LavaBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+			EntityType.Builder.<LavaBallEntity>of(LavaBallEntity::new, MobCategory.MISC).setCustomClientFactory(LavaBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0f, 0f));
 	public static final RegistryObject<EntityType<VolcanoGeneratorEntity>> VOLCANO_GENERATOR = register("volcano_generator", EntityType.Builder.<VolcanoGeneratorEntity>of(VolcanoGeneratorEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<PiglinSpawnerEntity>> PIGLIN_SPAWNER = register("piglin_spawner",
@@ -107,6 +110,12 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<KnarfyEntity>of(KnarfyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KnarfyEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoHollowerrEntity>> VOLCANO_HOLLOWERR = register("volcano_hollowerr", EntityType.Builder.<VolcanoHollowerrEntity>of(VolcanoHollowerrEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoHollowerrEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LavaBallShooterEntity>> LAVA_BALL_SHOOTER = register("lava_ball_shooter", EntityType.Builder.<LavaBallShooterEntity>of(LavaBallShooterEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(LavaBallShooterEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoLAVAEntity>> VOLCANO_LAVA = register("volcano_lava", EntityType.Builder.<VolcanoLAVAEntity>of(VolcanoLAVAEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoLAVAEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -135,6 +144,9 @@ public class YoutubersNaturalDisastersModEntities {
 			OrphanEntity.init();
 			TechnosGasPersonEntity.init();
 			KnarfyEntity.init();
+			VolcanoHollowerrEntity.init();
+			LavaBallShooterEntity.init();
+			VolcanoLAVAEntity.init();
 		});
 	}
 
@@ -158,5 +170,8 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(ORPHAN.get(), OrphanEntity.createAttributes().build());
 		event.put(TECHNOS_GAS_PERSON.get(), TechnosGasPersonEntity.createAttributes().build());
 		event.put(KNARFY.get(), KnarfyEntity.createAttributes().build());
+		event.put(VOLCANO_HOLLOWERR.get(), VolcanoHollowerrEntity.createAttributes().build());
+		event.put(LAVA_BALL_SHOOTER.get(), LavaBallShooterEntity.createAttributes().build());
+		event.put(VOLCANO_LAVA.get(), VolcanoLAVAEntity.createAttributes().build());
 	}
 }

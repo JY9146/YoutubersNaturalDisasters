@@ -27,7 +27,11 @@ public class LavaBallWhileProjectileFlyingTickProcedure {
 						Workworkwork = true;
 						if (Workworkwork == true) {
 							if (!((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get())
-									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.AIR)) {
+									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.AIR)
+									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.LAVA)
+									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.STONE)
+									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.DIRT)
+									&& !((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == Blocks.LAVA)) {
 								WORKpls = true;
 								if (!immediatesourceentity.level().isClientSide())
 									immediatesourceentity.discard();

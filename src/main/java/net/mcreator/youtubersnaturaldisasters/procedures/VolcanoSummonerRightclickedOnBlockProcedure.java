@@ -15,5 +15,15 @@ public class VolcanoSummonerRightclickedOnBlockProcedure {
 			if (entityToSpawn != null) {
 			}
 		}
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_HOLLOWERR.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			if (entityToSpawn != null) {
+			}
+		}
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_LAVA.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			if (entityToSpawn != null) {
+			}
+		}
 	}
 }

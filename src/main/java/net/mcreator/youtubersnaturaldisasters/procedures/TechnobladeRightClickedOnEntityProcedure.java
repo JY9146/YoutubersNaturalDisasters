@@ -219,7 +219,9 @@ public class TechnobladeRightClickedOnEntityProcedure {
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("100%. DON'T YOU DARE SNEEZE ON IT"), false);
 		} else if (TechnoSaysChance == 57) {
 			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Nearly 20 million people have hit a button."), false);
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("20 million people have hit a button. 200%"), false);
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("BUT STILL SUBSCRIBE TO TECHNOBLADE!!! I gotta get more"), false);
 		} else if (TechnoSaysChance == 58) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Donate to the Sarcoma Foundation. This is a threat"), false);

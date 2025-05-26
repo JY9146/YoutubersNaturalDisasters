@@ -8,13 +8,17 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.nbt.NbtUtils;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -103,6 +107,7 @@ public class YoutubersNaturalDisastersModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "youtubers_natural_disasters_mapvars";
+		public BlockState VolcanoBlock = Blocks.AIR.defaultBlockState();
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -111,10 +116,12 @@ public class YoutubersNaturalDisastersModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
+			VolcanoBlock = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("VolcanoBlock"));
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
+			nbt.put("VolcanoBlock", NbtUtils.writeBlockState(VolcanoBlock));
 			return nbt;
 		}
 

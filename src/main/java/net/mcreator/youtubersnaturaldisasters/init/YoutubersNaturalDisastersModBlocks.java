@@ -14,6 +14,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.youtubersnaturaldisasters.block.VolcanoAirBlock;
 import net.mcreator.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
@@ -28,6 +29,7 @@ public class YoutubersNaturalDisastersModBlocks {
 	public static final RegistryObject<Block> SOLID_LAVA_BLOCK = REGISTRY.register("solid_lava_block", () -> new SolidLavaBlockBlock());
 	public static final RegistryObject<Block> SOLID_WATER_BLOCK = REGISTRY.register("solid_water_block", () -> new SolidWaterBlockBlock());
 	public static final RegistryObject<Block> TOMMYINNIT_BLOCK = REGISTRY.register("tommyinnit_block", () -> new TommyinnitBlockBlock());
+	public static final RegistryObject<Block> VOLCANO_AIR = REGISTRY.register("volcano_air", () -> new VolcanoAirBlock());
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

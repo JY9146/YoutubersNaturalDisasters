@@ -35,10 +35,12 @@ import net.mcreator.youtubersnaturaldisasters.item.SinkholeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.SaturationFillerItem;
 import net.mcreator.youtubersnaturaldisasters.item.PotionOfGasItem;
 import net.mcreator.youtubersnaturaldisasters.item.MusicDiscItem;
+import net.mcreator.youtubersnaturaldisasters.item.MaceItem;
 import net.mcreator.youtubersnaturaldisasters.item.GoldenAppleGiverItem;
 import net.mcreator.youtubersnaturaldisasters.item.EndOfWorldMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.EarthquakeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.CoinItem;
+import net.mcreator.youtubersnaturaldisasters.item.BredItem;
 import net.mcreator.youtubersnaturaldisasters.item.AppleOfWisdomItem;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -76,9 +78,12 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SOLID_LAVA_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK);
 	public static final RegistryObject<Item> SOLID_WATER_BLOCK = block(YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK);
 	public static final RegistryObject<Item> TECHNOS_SPLASH_POTION_OF_GAS = REGISTRY.register("technos_splash_potion_of_gas", () -> new TechnosSplashPotionOfGasItem());
-	public static final RegistryObject<Item> KNARFY_SPAWN_EGG = REGISTRY.register("knarfy_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.KNARFY, -1, -13434778, new Item.Properties()));
+	public static final RegistryObject<Item> KNARFY_SPAWN_EGG = REGISTRY.register("knarfy_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.KNARFY, -1, -11466344, new Item.Properties()));
 	public static final RegistryObject<Item> TOMMYINNIT_ITEM = REGISTRY.register("tommyinnit_item", () -> new TommyinnitItemItem());
 	public static final RegistryObject<Item> TOMMYINNIT_BLOCK = block(YoutubersNaturalDisastersModBlocks.TOMMYINNIT_BLOCK);
+	public static final RegistryObject<Item> VOLCANO_AIR = block(YoutubersNaturalDisastersModBlocks.VOLCANO_AIR);
+	public static final RegistryObject<Item> BRED = REGISTRY.register("bred", () -> new BredItem());
+	public static final RegistryObject<Item> MACE = REGISTRY.register("mace", () -> new MaceItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

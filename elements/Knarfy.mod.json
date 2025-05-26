@@ -33,7 +33,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -13434778,
+      "value": -11466344,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -123,6 +123,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "KnarfyEntityDies"
+    },
     "onRightClickedOn": {
       "name": "KnarfyRightClickedOnEntity"
     },

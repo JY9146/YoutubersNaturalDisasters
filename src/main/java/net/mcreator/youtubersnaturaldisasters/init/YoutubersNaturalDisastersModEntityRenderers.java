@@ -12,6 +12,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
@@ -21,6 +23,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MadPiglinRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.LavaBallShooterRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.KnarfyRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
@@ -56,5 +59,8 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_POTION_OF_GAS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TECHNOS_GAS_PERSON.get(), TechnosGasPersonRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.KNARFY.get(), KnarfyRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_HOLLOWERR.get(), VolcanoHollowerrRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.LAVA_BALL_SHOOTER.get(), LavaBallShooterRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA.get(), VolcanoLAVARenderer::new);
 	}
 }

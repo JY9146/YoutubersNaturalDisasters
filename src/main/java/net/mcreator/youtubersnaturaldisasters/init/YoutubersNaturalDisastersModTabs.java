@@ -50,6 +50,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.TECHNO_ITEM_DEFEATING.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TEST_SINKHOLE_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.KNARFY_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.BRED.get());
 			}).build());
 
 	@SubscribeEvent

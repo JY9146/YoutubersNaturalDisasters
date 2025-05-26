@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -55,6 +56,7 @@ public class CosmicEntity extends Monster {
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(4, new FloatGoal(this));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, InsaneFlameEntity.class, false, false));
 	}
 
 	@Override

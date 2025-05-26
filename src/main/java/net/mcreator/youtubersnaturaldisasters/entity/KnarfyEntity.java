@@ -36,6 +36,7 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.KnarfyRightClickedOnEntityProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.KnarfyOnInitialEntitySpawnProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.KnarfyEntityDiesProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 import javax.annotation.Nullable;
@@ -88,6 +89,12 @@ public class KnarfyEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		KnarfyEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
