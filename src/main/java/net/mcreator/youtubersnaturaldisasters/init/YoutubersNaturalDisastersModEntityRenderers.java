@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
@@ -62,5 +63,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_HOLLOWERR.get(), VolcanoHollowerrRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.LAVA_BALL_SHOOTER.get(), LavaBallShooterRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA.get(), VolcanoLAVARenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserRenderer::new);
 	}
 }

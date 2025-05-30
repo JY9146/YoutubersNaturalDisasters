@@ -9,7 +9,7 @@ public class VolcanoLavaGen2Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("SizeWidthVH") - 1) - 1;
+		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("SizeWidthVH") - 2) - 1;
 		int verticalRadiusHemiTop = (int) 1;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int yi = 0; yi < yIterationsHemiTop; yi++) {

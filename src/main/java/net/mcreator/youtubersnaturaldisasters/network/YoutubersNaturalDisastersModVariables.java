@@ -65,6 +65,7 @@ public class YoutubersNaturalDisastersModVariables {
 		public boolean V1 = false;
 		public boolean LavaBallVariableStopper = false;
 		public boolean Orphan = false;
+		public boolean MessUpGround = false;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -77,6 +78,7 @@ public class YoutubersNaturalDisastersModVariables {
 			V1 = nbt.getBoolean("V1");
 			LavaBallVariableStopper = nbt.getBoolean("LavaBallVariableStopper");
 			Orphan = nbt.getBoolean("Orphan");
+			MessUpGround = nbt.getBoolean("MessUpGround");
 		}
 
 		@Override
@@ -85,6 +87,7 @@ public class YoutubersNaturalDisastersModVariables {
 			nbt.putBoolean("V1", V1);
 			nbt.putBoolean("LavaBallVariableStopper", LavaBallVariableStopper);
 			nbt.putBoolean("Orphan", Orphan);
+			nbt.putBoolean("MessUpGround", MessUpGround);
 			return nbt;
 		}
 

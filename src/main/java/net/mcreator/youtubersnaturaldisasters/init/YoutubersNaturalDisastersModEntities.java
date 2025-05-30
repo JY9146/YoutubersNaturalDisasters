@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
@@ -116,6 +117,8 @@ public class YoutubersNaturalDisastersModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(300).setUpdateInterval(3).setCustomClientFactory(LavaBallShooterEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VolcanoLAVAEntity>> VOLCANO_LAVA = register("volcano_lava", EntityType.Builder.<VolcanoLAVAEntity>of(VolcanoLAVAEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoLAVAEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoGroundMesserEntity>> VOLCANO_GROUND_MESSER = register("volcano_ground_messer", EntityType.Builder.<VolcanoGroundMesserEntity>of(VolcanoGroundMesserEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGroundMesserEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -147,6 +150,7 @@ public class YoutubersNaturalDisastersModEntities {
 			VolcanoHollowerrEntity.init();
 			LavaBallShooterEntity.init();
 			VolcanoLAVAEntity.init();
+			VolcanoGroundMesserEntity.init();
 		});
 	}
 
@@ -173,5 +177,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(VOLCANO_HOLLOWERR.get(), VolcanoHollowerrEntity.createAttributes().build());
 		event.put(LAVA_BALL_SHOOTER.get(), LavaBallShooterEntity.createAttributes().build());
 		event.put(VOLCANO_LAVA.get(), VolcanoLAVAEntity.createAttributes().build());
+		event.put(VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserEntity.createAttributes().build());
 	}
 }
