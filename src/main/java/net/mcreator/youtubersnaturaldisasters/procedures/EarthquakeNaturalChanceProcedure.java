@@ -31,7 +31,7 @@ public class EarthquakeNaturalChanceProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
-			if (Math.random() < 0.0005) {
+			if (Math.random() < 0.000005) {
 				if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(YoutubersNaturalDisastersModMobEffects.EARTHQUAKEEFFECT.get(), 100, 0, false, false));
 			}

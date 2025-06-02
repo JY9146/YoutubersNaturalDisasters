@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.WildFireEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
@@ -119,6 +120,8 @@ public class YoutubersNaturalDisastersModEntities {
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoLAVAEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VolcanoGroundMesserEntity>> VOLCANO_GROUND_MESSER = register("volcano_ground_messer", EntityType.Builder.<VolcanoGroundMesserEntity>of(VolcanoGroundMesserEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGroundMesserEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<WildFireEntity>> WILD_FIRE = register("wild_fire",
+			EntityType.Builder.<WildFireEntity>of(WildFireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WildFireEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -151,6 +154,7 @@ public class YoutubersNaturalDisastersModEntities {
 			LavaBallShooterEntity.init();
 			VolcanoLAVAEntity.init();
 			VolcanoGroundMesserEntity.init();
+			WildFireEntity.init();
 		});
 	}
 
@@ -178,5 +182,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(LAVA_BALL_SHOOTER.get(), LavaBallShooterEntity.createAttributes().build());
 		event.put(VOLCANO_LAVA.get(), VolcanoLAVAEntity.createAttributes().build());
 		event.put(VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserEntity.createAttributes().build());
+		event.put(WILD_FIRE.get(), WildFireEntity.createAttributes().build());
 	}
 }

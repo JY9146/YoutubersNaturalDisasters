@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.WildFireRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserRenderer;
@@ -64,5 +65,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.LAVA_BALL_SHOOTER.get(), LavaBallShooterRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA.get(), VolcanoLAVARenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.WILD_FIRE.get(), WildFireRenderer::new);
 	}
 }
