@@ -3107,6 +3107,253 @@
           }
         ]
       }
+    },
+    {
+      "name": "DrownFast",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drown_fast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/potion/DrownFastMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "DrownFastEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drown_fast_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DrownFastEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DrownFastOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drown_fast_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DrownFastOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TsunamiGenerator",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tsunami_generator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TsunamiGeneratorEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TsunamiGeneratorRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TsunamiGeneratorOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tsunami_generator_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TsunamiGeneratorOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "ALLPOWERFULBREDDDDDD",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "allpowerfulbredddddd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ALLPOWERFULBREDDDDDDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimeStick",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/TimeStickItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/time_stick.json"
+        ]
+      }
+    },
+    {
+      "name": "TimeStickRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stick_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TimeStickRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TickSlow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick_slow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TickSlowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrashEr",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crash_er",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/CrashErItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/crash_er.json"
+        ]
+      }
+    },
+    {
+      "name": "CrashErRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crash_er_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/CrashErRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Timephoon",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timephoon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TimephoonRenderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TimephoonEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "TimephoonOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timephoon_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TimephoonOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3163,6 +3410,36 @@
       "type": "logic",
       "scope": "world",
       "value": "false"
+    },
+    {
+      "name": "DrownFaster",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "300.0"
+    },
+    {
+      "name": "VolcanoXoffset",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "VolcanoZoffset",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "RandomNum",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "JustPickONE",
+      "type": "number",
+      "scope": "world",
+      "value": "1.0"
     }
   ],
   "sound_elements": [
@@ -3335,6 +3612,7 @@
       "block.youtubers_natural_disasters.solid_lava_block": "Solid Lava Block",
       "subtitles.knarfysound3": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!",
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
+      "item.youtubers_natural_disasters.time_stick": "Time Stick",
       "death.attack.techno_bullied_you.item": "%1$s was killed by Techno with %2$s using %3$s",
       "item.youtubers_natural_disasters.techno_item_defeating.desc": "The only way to defeat Techno, you must deal a crit to defeat him",
       "death.attack.technos_inhailed_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
@@ -3346,6 +3624,7 @@
       "death.attack.blood_god_kill.item": "%1$s was killed by the Blood God with %2$s using %3$s",
       "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
+      "effect.youtubers_natural_disasters.drown_fast": "Drown Fast",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
@@ -3359,6 +3638,7 @@
       "entity.youtubers_natural_disasters.orphan": "Orphan^2",
       "entity.youtubers_natural_disasters.volcano_ground_messer": "Volcano",
       "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
+      "item.youtubers_natural_disasters.crash_er": "CrAsHeR",
       "death.attack.orphan_obliterator_damage.player": "%1$s died whilst trying to escape the Orphan Obliterator and %2$s",
       "item.youtubers_natural_disasters.coin": "Coin",
       "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
@@ -3366,6 +3646,7 @@
       "item.youtubers_natural_disasters.tommyinnit_item": "Tommyinnit Item",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
+      "entity.youtubers_natural_disasters.timephoon": "Timephoon",
       "entity.youtubers_natural_disasters.cosmic": "Cosmic",
       "item.youtubers_natural_disasters.test_sinkhole_summoner": "Test Sinkhole Summoner",
       "block.youtubers_natural_disasters.hot_meteor": "Hot Meteor",
@@ -3385,6 +3666,7 @@
       "block.youtubers_natural_disasters.volcano_air": "Volcano Air",
       "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
+      "entity.youtubers_natural_disasters.tsunami_generator": "Tsunami ",
       "item.youtubers_natural_disasters.technos_splash_potion_of_gas": "Splash Potion Of Gas",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
       "death.attack.techno_killing_dmg_type": "%1$s died by Techno\u0027s old cringe videos",

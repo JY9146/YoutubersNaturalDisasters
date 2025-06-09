@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "macetexture",
+    "texture": "minecraft_missing_texture_block",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Mace",
-    "rarity": "EPIC",
+    "name": "CrAsHeR",
+    "rarity": "COMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:NaturalDisasters"
@@ -26,8 +26,8 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "enableMeleeDamage": true,
-    "damageVsEntity": 6.0,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": []
     },
@@ -36,8 +36,11 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onEntityHitWith": {
-      "name": "MaceLivingEntityIsHitWithItem"
+    "onRightClickedInAir": {
+      "name": "CrashErRightclickedOnBlock"
+    },
+    "onRightClickedOnBlock": {
+      "name": "CrashErRightclickedOnBlock"
     },
     "enableRanged": false,
     "shootConstantly": false,

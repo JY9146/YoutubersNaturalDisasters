@@ -23,7 +23,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class BredItem extends Item {
 	public BredItem() {
-		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(999).saturationMod(999f).alwaysEat().build()));
+		super(new Item.Properties().stacksTo(64).fireResistant().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(1000).saturationMod(1000f).alwaysEat().build()));
 	}
 
 	@Override

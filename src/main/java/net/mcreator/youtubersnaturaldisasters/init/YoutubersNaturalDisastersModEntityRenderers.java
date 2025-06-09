@@ -17,6 +17,8 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.TsunamiGeneratorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.TimephoonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
@@ -66,5 +68,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA.get(), VolcanoLAVARenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.WILD_FIRE.get(), WildFireRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TSUNAMI_GENERATOR.get(), TsunamiGeneratorRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TIMEPHOON.get(), TimephoonRenderer::new);
 	}
 }

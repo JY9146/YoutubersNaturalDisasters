@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "macetexture",
+    "texture": "minecraft:stick",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Mace",
+    "name": "Time Stick",
     "rarity": "EPIC",
     "creativeTabs": [
       {
@@ -16,28 +16,28 @@
     ],
     "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 0,
+    "useDuration": 10,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "enableMeleeDamage": true,
-    "damageVsEntity": 6.0,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": []
     },
     "glowCondition": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onEntityHitWith": {
-      "name": "MaceLivingEntityIsHitWithItem"
+    "onRightClickedInAir": {
+      "name": "TimeStickRightclickedOnBlock"
     },
     "enableRanged": false,
     "shootConstantly": false,

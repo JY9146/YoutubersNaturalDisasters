@@ -1,8 +1,6 @@
 
 package net.mcreator.youtubersnaturaldisasters.block;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,7 +23,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
-import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.BiomeColors;
 
@@ -34,8 +31,8 @@ import net.mcreator.youtubersnaturaldisasters.block.entity.SolidWaterBlockBlockE
 
 public class SolidWaterBlockBlock extends Block implements EntityBlock {
 	public SolidWaterBlockBlock() {
-		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.EMPTY).strength(-1, 3600000).lightLevel(s -> 4).noCollission().speedFactor(0.1f).jumpFactor(0.4f).noOcclusion().pushReaction(PushReaction.BLOCK)
-				.hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true).isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.EMPTY).strength(-1, 3600000).noCollission().speedFactor(0.3f).jumpFactor(0.4f).noOcclusion().pushReaction(PushReaction.BLOCK)
+				.isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override
@@ -51,11 +48,6 @@ public class SolidWaterBlockBlock extends Block implements EntityBlock {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
-	}
-
-	@Override
-	public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-		return 5;
 	}
 
 	@Override

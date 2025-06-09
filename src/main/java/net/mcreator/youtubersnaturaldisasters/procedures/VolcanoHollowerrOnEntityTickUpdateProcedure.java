@@ -20,7 +20,7 @@ public class VolcanoHollowerrOnEntityTickUpdateProcedure {
 			return;
 		double Every__PerUptdate = 0;
 		entity.setInvulnerable(true);
-		if (entity.getPersistentData().getDouble("BlockCount") <= 51) {
+		if (entity.getPersistentData().getDouble("BlockCount") <= 52) {
 			Every__PerUptdate = 2;
 			if (entity.getPersistentData().getDouble("digtick") == 0) {
 				entity.getPersistentData().putDouble("digtick", Every__PerUptdate);

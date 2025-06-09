@@ -22,6 +22,8 @@ import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TsunamiGeneratorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TimephoonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosGasPersonEntity;
@@ -122,6 +124,10 @@ public class YoutubersNaturalDisastersModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGroundMesserEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WildFireEntity>> WILD_FIRE = register("wild_fire",
 			EntityType.Builder.<WildFireEntity>of(WildFireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WildFireEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TsunamiGeneratorEntity>> TSUNAMI_GENERATOR = register("tsunami_generator", EntityType.Builder.<TsunamiGeneratorEntity>of(TsunamiGeneratorEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TsunamiGeneratorEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TimephoonEntity>> TIMEPHOON = register("timephoon", EntityType.Builder.<TimephoonEntity>of(TimephoonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(TimephoonEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -155,6 +161,8 @@ public class YoutubersNaturalDisastersModEntities {
 			VolcanoLAVAEntity.init();
 			VolcanoGroundMesserEntity.init();
 			WildFireEntity.init();
+			TsunamiGeneratorEntity.init();
+			TimephoonEntity.init();
 		});
 	}
 
@@ -183,5 +191,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(VOLCANO_LAVA.get(), VolcanoLAVAEntity.createAttributes().build());
 		event.put(VOLCANO_GROUND_MESSER.get(), VolcanoGroundMesserEntity.createAttributes().build());
 		event.put(WILD_FIRE.get(), WildFireEntity.createAttributes().build());
+		event.put(TSUNAMI_GENERATOR.get(), TsunamiGeneratorEntity.createAttributes().build());
+		event.put(TIMEPHOON.get(), TimephoonEntity.createAttributes().build());
 	}
 }

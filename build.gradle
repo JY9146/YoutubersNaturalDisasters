@@ -60,6 +60,7 @@ dependencies {
     
     implementation fg.deobf('curse.maven:weather-storms-tornadoes-237746:5244118')
     implementation fg.deobf('curse.maven:coroutil-237749:5096038')
+    implementation fg.deobf("curse.maven:tickrate-api-969702:6542697")
 }
 
 tasks.withType(JavaCompile).configureEach {

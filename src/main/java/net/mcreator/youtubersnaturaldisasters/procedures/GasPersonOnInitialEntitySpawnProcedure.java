@@ -2,13 +2,16 @@ package net.mcreator.youtubersnaturaldisasters.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -33,6 +36,25 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 			for (Entity entityiterator : _entfound) {
 				entityiterator
 						.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:inhaled_too_much_gas")))), 1);
+			}
+		}
+		int horizontalRadiusSphere = (int) 52 - 1;
+		int verticalRadiusSphere = (int) 5 - 1;
+		int yIterationsSphere = verticalRadiusSphere;
+		for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
+			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+					if (distanceSq <= 1.0) {
+						if ((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == Blocks.FIRE) {
+							if (world instanceof Level _level && !_level.isClientSide())
+								_level.explode(null, x + xi, y + yi, z + zi, 52, Level.ExplosionInteraction.TNT);
+							if (!entity.level().isClientSide())
+								entity.discard();
+						}
+					}
+				}
 			}
 		}
 		if (entity.getPersistentData().getDouble("tagName") >= 1200) {

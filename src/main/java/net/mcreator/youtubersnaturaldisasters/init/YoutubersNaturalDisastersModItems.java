@@ -23,6 +23,7 @@ import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProvid
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
+import net.mcreator.youtubersnaturaldisasters.item.TimeStickItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
@@ -39,6 +40,7 @@ import net.mcreator.youtubersnaturaldisasters.item.MaceItem;
 import net.mcreator.youtubersnaturaldisasters.item.GoldenAppleGiverItem;
 import net.mcreator.youtubersnaturaldisasters.item.EndOfWorldMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.EarthquakeSummonerItem;
+import net.mcreator.youtubersnaturaldisasters.item.CrashErItem;
 import net.mcreator.youtubersnaturaldisasters.item.CoinItem;
 import net.mcreator.youtubersnaturaldisasters.item.BredItem;
 import net.mcreator.youtubersnaturaldisasters.item.AppleOfWisdomItem;
@@ -84,6 +86,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> VOLCANO_AIR = block(YoutubersNaturalDisastersModBlocks.VOLCANO_AIR);
 	public static final RegistryObject<Item> BRED = REGISTRY.register("bred", () -> new BredItem());
 	public static final RegistryObject<Item> MACE = REGISTRY.register("mace", () -> new MaceItem());
+	public static final RegistryObject<Item> TIME_STICK = REGISTRY.register("time_stick", () -> new TimeStickItem());
+	public static final RegistryObject<Item> CRASH_ER = REGISTRY.register("crash_er", () -> new CrashErItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -26,5 +26,8 @@ public class VolcanoLavaGen2Procedure {
 				}
 			}
 		}
+		if (entity.getPersistentData().getDouble("SizeWidthVH") - 2 <= 3) {
+			entity.getPersistentData().putDouble("SizeWidthVH", 5);
+		}
 	}
 }
