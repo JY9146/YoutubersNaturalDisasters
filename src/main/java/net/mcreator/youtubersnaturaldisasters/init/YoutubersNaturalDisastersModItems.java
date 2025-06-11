@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
+import net.mcreator.youtubersnaturaldisasters.item.WildFireSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
@@ -43,6 +44,7 @@ import net.mcreator.youtubersnaturaldisasters.item.EarthquakeSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.CrashErItem;
 import net.mcreator.youtubersnaturaldisasters.item.CoinItem;
 import net.mcreator.youtubersnaturaldisasters.item.BredItem;
+import net.mcreator.youtubersnaturaldisasters.item.BlackHoleSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.AppleOfWisdomItem;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -88,6 +90,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> MACE = REGISTRY.register("mace", () -> new MaceItem());
 	public static final RegistryObject<Item> TIME_STICK = REGISTRY.register("time_stick", () -> new TimeStickItem());
 	public static final RegistryObject<Item> CRASH_ER = REGISTRY.register("crash_er", () -> new CrashErItem());
+	public static final RegistryObject<Item> BLACK_HOLE_SUMMONER = REGISTRY.register("black_hole_summoner", () -> new BlackHoleSummonerItem());
+	public static final RegistryObject<Item> WILD_FIRE_SUMMONER = REGISTRY.register("wild_fire_summoner", () -> new WildFireSummonerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

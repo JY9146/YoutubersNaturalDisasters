@@ -45,6 +45,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -128,6 +129,8 @@ public class YoutubersNaturalDisastersModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TsunamiGeneratorEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TimephoonEntity>> TIMEPHOON = register("timephoon", EntityType.Builder.<TimephoonEntity>of(TimephoonEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(TimephoonEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole", EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(BlackHoleEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -163,6 +166,7 @@ public class YoutubersNaturalDisastersModEntities {
 			WildFireEntity.init();
 			TsunamiGeneratorEntity.init();
 			TimephoonEntity.init();
+			BlackHoleEntity.init();
 		});
 	}
 
@@ -193,5 +197,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(WILD_FIRE.get(), WildFireEntity.createAttributes().build());
 		event.put(TSUNAMI_GENERATOR.get(), TsunamiGeneratorEntity.createAttributes().build());
 		event.put(TIMEPHOON.get(), TimephoonEntity.createAttributes().build());
+		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 	}
 }

@@ -36,6 +36,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.DapperMrTomRendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CosmicRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class YoutubersNaturalDisastersModEntityRenderers {
@@ -70,5 +71,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.WILD_FIRE.get(), WildFireRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TSUNAMI_GENERATOR.get(), TsunamiGeneratorRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TIMEPHOON.get(), TimephoonRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 	}
 }

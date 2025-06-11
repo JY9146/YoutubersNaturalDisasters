@@ -54,6 +54,8 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.MACE.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TIME_STICK.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.CRASH_ER.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.BLACK_HOLE_SUMMONER.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.WILD_FIRE_SUMMONER.get());
 			}).build());
 
 	@SubscribeEvent
