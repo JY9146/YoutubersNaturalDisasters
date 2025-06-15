@@ -45,6 +45,8 @@ import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV3Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -131,6 +133,10 @@ public class YoutubersNaturalDisastersModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(TimephoonEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole", EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(BlackHoleEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlackHoleV2Entity>> BLACK_HOLE_V_2 = register("black_hole_v_2", EntityType.Builder.<BlackHoleV2Entity>of(BlackHoleV2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackHoleV2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BlackHoleV3Entity>> BLACK_HOLE_V_3 = register("black_hole_v_3", EntityType.Builder.<BlackHoleV3Entity>of(BlackHoleV3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackHoleV3Entity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -167,6 +173,8 @@ public class YoutubersNaturalDisastersModEntities {
 			TsunamiGeneratorEntity.init();
 			TimephoonEntity.init();
 			BlackHoleEntity.init();
+			BlackHoleV2Entity.init();
+			BlackHoleV3Entity.init();
 		});
 	}
 
@@ -198,5 +206,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(TSUNAMI_GENERATOR.get(), TsunamiGeneratorEntity.createAttributes().build());
 		event.put(TIMEPHOON.get(), TimephoonEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
+		event.put(BLACK_HOLE_V_2.get(), BlackHoleV2Entity.createAttributes().build());
+		event.put(BLACK_HOLE_V_3.get(), BlackHoleV3Entity.createAttributes().build());
 	}
 }

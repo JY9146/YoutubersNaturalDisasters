@@ -117,7 +117,7 @@
     },
     "entityDataEntries": [],
     "onMobTickUpdate": {
-      "name": "BlackHoleOnEntityTickUpdate"
+      "name": "BlackHoleV3OnEntityTickUpdate"
     },
     "hasAI": false,
     "aiBase": "(none)",

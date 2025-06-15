@@ -3499,6 +3499,100 @@
           }
         ]
       }
+    },
+    {
+      "name": "BlackHoleV2",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_v_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/BlackHoleV2Renderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/BlackHoleV2Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleV2OnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_v_2_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/BlackHoleV2OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleV3",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_v_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/BlackHoleV3Renderer.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/BlackHoleV3Entity.java"
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleV3OnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_v_3_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/BlackHoleV3OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3835,6 +3929,8 @@
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
+      "entity.youtubers_natural_disasters.black_hole_v_2": "Black Hole",
+      "entity.youtubers_natural_disasters.black_hole_v_3": "Black Hole",
       "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
       "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
       "item.youtubers_natural_disasters.bred": "Bred",

@@ -28,7 +28,7 @@ import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 import java.util.List;
 import java.util.Comparator;
 
-public class BlackHoleOnEntityTickUpdateProcedure {
+public class BlackHoleV3OnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -37,8 +37,8 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 		entity.setInvulnerable(true);
 		entity.getPersistentData().putDouble("TIMER", (entity.getPersistentData().getDouble("TIMER") - 1));
 		if (entity.getPersistentData().getDouble("TIMER") <= 0) {
-			entity.getPersistentData().putDouble("TIMER", 40);
-			if (20 >= entity.getPersistentData().getDouble("radius")) {
+			entity.getPersistentData().putDouble("TIMER", 10);
+			if (10 >= entity.getPersistentData().getDouble("radius")) {
 				entity.getPersistentData().putDouble("radius", (entity.getPersistentData().getDouble("radius") + 1));
 			}
 			int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("radius")) - 1;
@@ -50,22 +50,20 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
-							rand = Mth.nextInt(RandomSource.create(), 1, 2);
+							rand = Mth.nextInt(RandomSource.create(), 1, 5);
 							if (rand == 1) {
 								block = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
 								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
-								if (Math.random() < 0.3) {
-									if (!(block.getBlock() == Blocks.AIR)) {
-										if (world instanceof ServerLevel _serverLevel) {
-											Entity entityinstance = EntityType.FALLING_BLOCK.create(_serverLevel);
-											if (entityinstance != null) {
-												CompoundTag _compoundTag = entityinstance.saveWithoutId(new CompoundTag());
-												_compoundTag.put("BlockState", NbtUtils.writeBlockState(block));
-												entityinstance.load(_compoundTag);
-												entityinstance.setPos(x + xi, y + yi, z + zi);
-												entityinstance.setNoGravity(true);
-												_serverLevel.addFreshEntity(entityinstance);
-											}
+								if (!(block.getBlock() == Blocks.AIR)) {
+									if (world instanceof ServerLevel _serverLevel) {
+										Entity entityinstance = EntityType.FALLING_BLOCK.create(_serverLevel);
+										if (entityinstance != null) {
+											CompoundTag _compoundTag = entityinstance.saveWithoutId(new CompoundTag());
+											_compoundTag.put("BlockState", NbtUtils.writeBlockState(block));
+											entityinstance.load(_compoundTag);
+											entityinstance.setPos(x + xi, y + yi, z + zi);
+											entityinstance.setNoGravity(true);
+											_serverLevel.addFreshEntity(entityinstance);
 										}
 									}
 								}
@@ -77,19 +75,7 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator)) {
-					entityiterator.getPersistentData().putBoolean("path", true);
-				}
-				if (entityiterator.getPersistentData().getBoolean("path")) {
-					entityiterator.setDeltaMovement(new Vec3(((entity.getX() - entityiterator.getX()) / 50), (((entity.getY() + 2) - entityiterator.getY()) / 50), ((entity.getZ() - entityiterator.getZ()) / 50)));
-				}
-			}
-		}
-		{
-			final Vec3 _center = new Vec3(x, (y - 2), z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(40 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					entityiterator.getPersistentData().putBoolean("path", true);
@@ -101,15 +87,15 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, (entity.getY() + 2), z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator.getPersistentData().getBoolean("path")) {
 					if (!(entityiterator instanceof LivingEntity)) {
 						if (!entityiterator.level().isClientSide())
 							entityiterator.discard();
 					} else {
-						entityiterator.hurt(
-								new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:spaghettified")))), 99999);
+						entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:spaghettified")))),
+								99999);
 						YoutubersNaturalDisastersMod.queueServerWork(10, () -> {
 							entityiterator.kill();
 						});
@@ -117,7 +103,7 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 				}
 			}
 		}
-		YoutubersNaturalDisastersMod.queueServerWork(1600, () -> {
+		YoutubersNaturalDisastersMod.queueServerWork(760, () -> {
 			for (int index0 = 0; index0 < 3; index0++) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

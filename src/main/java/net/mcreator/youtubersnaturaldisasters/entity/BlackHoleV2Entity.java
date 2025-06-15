@@ -26,15 +26,15 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleOnEntityTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleV2OnEntityTickUpdateProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
-public class BlackHoleEntity extends Monster {
-	public BlackHoleEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(YoutubersNaturalDisastersModEntities.BLACK_HOLE.get(), world);
+public class BlackHoleV2Entity extends Monster {
+	public BlackHoleV2Entity(PlayMessages.SpawnEntity packet, Level world) {
+		this(YoutubersNaturalDisastersModEntities.BLACK_HOLE_V_2.get(), world);
 	}
 
-	public BlackHoleEntity(EntityType<BlackHoleEntity> type, Level world) {
+	public BlackHoleV2Entity(EntityType<BlackHoleV2Entity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
@@ -117,7 +117,7 @@ public class BlackHoleEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		BlackHoleOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		BlackHoleV2OnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
