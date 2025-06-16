@@ -24,6 +24,7 @@ import net.mcreator.youtubersnaturaldisasters.item.WildFireSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
+import net.mcreator.youtubersnaturaldisasters.item.TimephoonSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimeStickItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
@@ -92,6 +93,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> CRASH_ER = REGISTRY.register("crash_er", () -> new CrashErItem());
 	public static final RegistryObject<Item> BLACK_HOLE_SUMMONER = REGISTRY.register("black_hole_summoner", () -> new BlackHoleSummonerItem());
 	public static final RegistryObject<Item> WILD_FIRE_SUMMONER = REGISTRY.register("wild_fire_summoner", () -> new WildFireSummonerItem());
+	public static final RegistryObject<Item> TIMEPHOON_SUMMONER = REGISTRY.register("timephoon_summoner", () -> new TimephoonSummonerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
