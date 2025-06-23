@@ -18,9 +18,11 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.WildFireEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLavaV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TsunamiGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TimephoonEntity;
@@ -137,6 +139,10 @@ public class YoutubersNaturalDisastersModEntities {
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackHoleV2Entity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<BlackHoleV3Entity>> BLACK_HOLE_V_3 = register("black_hole_v_3", EntityType.Builder.<BlackHoleV3Entity>of(BlackHoleV3Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BlackHoleV3Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoGeneratorV2Entity>> VOLCANO_GENERATOR_V_2 = register("volcano_generator_v_2", EntityType.Builder.<VolcanoGeneratorV2Entity>of(VolcanoGeneratorV2Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorV2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoLavaV2Entity>> VOLCANO_LAVA_V_2 = register("volcano_lava_v_2", EntityType.Builder.<VolcanoLavaV2Entity>of(VolcanoLavaV2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoLavaV2Entity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -175,6 +181,8 @@ public class YoutubersNaturalDisastersModEntities {
 			BlackHoleEntity.init();
 			BlackHoleV2Entity.init();
 			BlackHoleV3Entity.init();
+			VolcanoGeneratorV2Entity.init();
+			VolcanoLavaV2Entity.init();
 		});
 	}
 
@@ -208,5 +216,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(BLACK_HOLE_V_2.get(), BlackHoleV2Entity.createAttributes().build());
 		event.put(BLACK_HOLE_V_3.get(), BlackHoleV3Entity.createAttributes().build());
+		event.put(VOLCANO_GENERATOR_V_2.get(), VolcanoGeneratorV2Entity.createAttributes().build());
+		event.put(VOLCANO_LAVA_V_2.get(), VolcanoLavaV2Entity.createAttributes().build());
 	}
 }

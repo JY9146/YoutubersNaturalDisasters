@@ -13,9 +13,11 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.WildFireRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLavaV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TsunamiGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TimephoonRenderer;
@@ -76,5 +78,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.BLACK_HOLE_V_2.get(), BlackHoleV2Renderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.BLACK_HOLE_V_3.get(), BlackHoleV3Renderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR_V_2.get(), VolcanoGeneratorV2Renderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA_V_2.get(), VolcanoLavaV2Renderer::new);
 	}
 }
