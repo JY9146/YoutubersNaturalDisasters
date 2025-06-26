@@ -1,10 +1,10 @@
 package net.mcreator.youtubersnaturaldisasters.procedures;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlocks;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorV2Entity;
 
 public class VolcanoV2HollowProcedure {
@@ -24,7 +24,7 @@ public class VolcanoV2HollowProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 								+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 						if (distanceSq <= 1.0) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), YoutubersNaturalDisastersModBlocks.VOLCANO_AIR.get().defaultBlockState(), 3);
+							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 						}
 					}
 				}

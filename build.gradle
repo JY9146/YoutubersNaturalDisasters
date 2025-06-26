@@ -3,11 +3,6 @@ plugins {
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
 }
 
-repositories {
-    maven { url = "https://cursemaven.com" }
-    mavenCentral()
-}
-
 version = '1.0'
 group = 'com.yourname.modid'
 archivesBaseName = 'modid'
@@ -27,24 +22,16 @@ minecraft {
             if (mcreatorJvmOptions) {
                 jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
             }
-            
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
-            
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
         }
 
         server {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
-            
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
         }
 
         configureEach {
             workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
 
             mods {
                 examplemod {
@@ -57,14 +44,15 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
-    
+
     implementation fg.deobf('curse.maven:weather-storms-tornadoes-237746:5244118')
     implementation fg.deobf('curse.maven:coroutil-237749:5096038')
     implementation fg.deobf("curse.maven:tickrate-api-969702:6542697")
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
 apply from: 'mcreator.gradle'
+

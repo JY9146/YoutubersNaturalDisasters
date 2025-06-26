@@ -26,24 +26,45 @@ public class VolcanoV2GenProcedure {
 					if (distanceSq <= 1.0) {
 						if (Math.random() < 0.7) {
 							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.BASALT.defaultBlockState(), 3);
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null)
+									_blockEntity.getPersistentData().putBoolean("LavaFlowing", true);
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
+							LavaFlowNBTTrueProcedure.execute(world, x, y, z);
 						} else if (Math.random() < 0.6) {
 							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.STONE.defaultBlockState(), 3);
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null)
+									_blockEntity.getPersistentData().putBoolean("LavaFlowing", true);
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
+							LavaFlowNBTTrueProcedure.execute(world, x, y, z);
 						} else {
 							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
+							if (!world.isClientSide()) {
+								BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+								BlockEntity _blockEntity = world.getBlockEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_blockEntity != null)
+									_blockEntity.getPersistentData().putBoolean("LavaFlowing", true);
+								if (world instanceof Level _level)
+									_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+							}
+							LavaFlowNBTTrueProcedure.execute(world, x, y, z);
 						}
-						if (!world.isClientSide()) {
-							BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-							BlockEntity _blockEntity = world.getBlockEntity(_bp);
-							BlockState _bs = world.getBlockState(_bp);
-							if (_blockEntity != null)
-								_blockEntity.getPersistentData().putBoolean("tagName", true);
-							if (world instanceof Level _level)
-								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-						}
+						VolcanoV2HollowProcedure.execute(world, x, y, z, entity);
 					}
 				}
 			}
 		}
-		VolcanoV2HollowProcedure.execute(world, x, y, z, entity);
 	}
 }

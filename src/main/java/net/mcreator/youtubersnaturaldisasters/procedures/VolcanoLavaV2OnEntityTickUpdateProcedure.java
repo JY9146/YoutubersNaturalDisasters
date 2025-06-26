@@ -17,7 +17,7 @@ public class VolcanoLavaV2OnEntityTickUpdateProcedure {
 		double Every__PerUptdate = 0;
 		entity.setInvulnerable(true);
 		if (entity.getPersistentData().getDouble("BlockCount") <= 60) {
-			Every__PerUptdate = 1;
+			Every__PerUptdate = 3;
 			if (entity.getPersistentData().getDouble("digtick") == 0) {
 				entity.getPersistentData().putDouble("digtick", Every__PerUptdate);
 			} else {
