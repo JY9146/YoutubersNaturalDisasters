@@ -94,6 +94,9 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> BLACK_HOLE_SUMMONER = REGISTRY.register("black_hole_summoner", () -> new BlackHoleSummonerItem());
 	public static final RegistryObject<Item> WILD_FIRE_SUMMONER = REGISTRY.register("wild_fire_summoner", () -> new WildFireSummonerItem());
 	public static final RegistryObject<Item> TIMEPHOON_SUMMONER = REGISTRY.register("timephoon_summoner", () -> new TimephoonSummonerItem());
+	public static final RegistryObject<Item> BASALT = block(YoutubersNaturalDisastersModBlocks.BASALT);
+	public static final RegistryObject<Item> MAGMA = block(YoutubersNaturalDisastersModBlocks.MAGMA);
+	public static final RegistryObject<Item> STONE = block(YoutubersNaturalDisastersModBlocks.STONE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

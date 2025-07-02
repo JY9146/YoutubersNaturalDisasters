@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "youtubers_natural_disasters:apple_of_wisdom",
+    "count": 1
+  }
+}

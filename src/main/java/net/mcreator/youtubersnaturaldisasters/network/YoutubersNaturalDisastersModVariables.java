@@ -118,6 +118,7 @@ public class YoutubersNaturalDisastersModVariables {
 		public boolean VolcanoZoffset = false;
 		public double RandomNum = 0;
 		public double JustPickONE = 1.0;
+		public double VH = 0;
 
 		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
@@ -135,6 +136,7 @@ public class YoutubersNaturalDisastersModVariables {
 			VolcanoZoffset = nbt.getBoolean("VolcanoZoffset");
 			RandomNum = nbt.getDouble("RandomNum");
 			JustPickONE = nbt.getDouble("JustPickONE");
+			VH = nbt.getDouble("VH");
 		}
 
 		@Override
@@ -148,6 +150,7 @@ public class YoutubersNaturalDisastersModVariables {
 			nbt.putBoolean("VolcanoZoffset", VolcanoZoffset);
 			nbt.putDouble("RandomNum", RandomNum);
 			nbt.putDouble("JustPickONE", JustPickONE);
+			nbt.putDouble("VH", VH);
 			return nbt;
 		}
 
@@ -171,6 +174,7 @@ public class YoutubersNaturalDisastersModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "youtubers_natural_disasters_mapvars";
 		public BlockState VolcanoBlock = Blocks.AIR.defaultBlockState();
+		public double Consistant = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -180,11 +184,13 @@ public class YoutubersNaturalDisastersModVariables {
 
 		public void read(CompoundTag nbt) {
 			VolcanoBlock = NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), nbt.getCompound("VolcanoBlock"));
+			Consistant = nbt.getDouble("Consistant");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.put("VolcanoBlock", NbtUtils.writeBlockState(VolcanoBlock));
+			nbt.putDouble("Consistant", Consistant);
 			return nbt;
 		}
 

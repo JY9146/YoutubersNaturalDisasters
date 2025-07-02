@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
+import net.mcreator.youtubersnaturaldisasters.procedures.ThrowMeteorRightclickedProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.ThrowMeteorRightclickedOnBlockProcedure;
 
 public class ThrowMeteorItem extends Item {
@@ -21,7 +22,7 @@ public class ThrowMeteorItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		ThrowMeteorRightclickedOnBlockProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+		ThrowMeteorRightclickedProcedure.execute(world, entity);
 		return ar;
 	}
 

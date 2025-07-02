@@ -27,12 +27,12 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-public class VolcanoAirBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class StoneBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public VolcanoAirBlockEntity(BlockPos position, BlockState state) {
-		super(YoutubersNaturalDisastersModBlockEntities.VOLCANO_AIR.get(), position, state);
+	public StoneBlockEntity(BlockPos position, BlockState state) {
+		super(YoutubersNaturalDisastersModBlockEntities.STONE.get(), position, state);
 	}
 
 	@Override
@@ -76,7 +76,7 @@ public class VolcanoAirBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("volcano_air");
+		return Component.literal("stone");
 	}
 
 	@Override
@@ -91,7 +91,7 @@ public class VolcanoAirBlockEntity extends RandomizableContainerBlockEntity impl
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Volcano Air");
+		return Component.literal("Stone");
 	}
 
 	@Override

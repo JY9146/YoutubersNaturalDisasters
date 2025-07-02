@@ -13,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -60,8 +59,7 @@ public class GasPersonEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(2, new FloatGoal(this));
+		this.goalSelector.addGoal(1, new FloatGoal(this));
 	}
 
 	@Override

@@ -10,13 +10,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
+
 public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double Every__PerUptdate = 0;
 		entity.setInvulnerable(true);
-		if (entity.getPersistentData().getDouble("BlockCount") <= 60) {
+		if (entity.getPersistentData().getDouble("BlockCount") <= YoutubersNaturalDisastersModVariables.WorldVariables.get(world).VH) {
 			Every__PerUptdate = 1;
 			if (entity.getPersistentData().getDouble("digtick") == 0) {
 				entity.getPersistentData().putDouble("digtick", Every__PerUptdate);
@@ -28,6 +30,7 @@ public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
 					entity.getPersistentData().putDouble("WAIT", (entity.getPersistentData().getDouble("WAIT") + 1));
 					if (entity.getPersistentData().getBoolean("VolcanoHollowerWork")) {
 						VolcanoV2GenProcedure.execute(world, x, y, z, entity);
+						VolcanoLavaFLOWProcedure.execute(world, x, y, z, entity);
 					}
 				} else {
 					entity.getPersistentData().putDouble("WAIT", 0);

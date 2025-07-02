@@ -66,8 +66,6 @@ public class TechnobladeEntityIsHurtProcedure {
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You can never defeat me. Prepare to die. I am the final boss, and this is my final phase!"), false);
 						if (event != null && event.isCancelable()) {
 							event.setCanceled(true);
-						} else if (event != null && event.hasResult()) {
-							event.setResult(Event.Result.DENY);
 						}
 					}
 				}

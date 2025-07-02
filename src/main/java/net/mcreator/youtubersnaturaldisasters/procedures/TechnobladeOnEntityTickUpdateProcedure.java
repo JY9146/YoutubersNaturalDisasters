@@ -104,6 +104,13 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 							if (entity instanceof LivingEntity _entity)
 								_entity.swing(InteractionHand.MAIN_HAND, true);
 							TechnoTradeProcedure.execute(world, x, y, z);
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You have earned my trust for now, since you have provided me with these important materials. But don't attack me again."), false);
@@ -133,6 +140,13 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 							if (entity instanceof LivingEntity _entity)
 								_entity.swing(InteractionHand.MAIN_HAND, true);
 							TechnoTradeProcedure.execute(world, x, y, z);
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You have earned my trust for now, since you have provided me with these important materials. But don't attack me again."), false);
@@ -181,6 +195,13 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 							if (entity instanceof LivingEntity _entity)
 								_entity.swing(InteractionHand.MAIN_HAND, true);
 							TechnoTradeProcedure.execute(world, x, y, z);
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);
@@ -210,6 +231,13 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 							if (entity instanceof LivingEntity _entity)
 								_entity.swing(InteractionHand.MAIN_HAND, true);
 							TechnoTradeProcedure.execute(world, x, y, z);
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
 						});
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Pleasure doing buisness with you."), false);

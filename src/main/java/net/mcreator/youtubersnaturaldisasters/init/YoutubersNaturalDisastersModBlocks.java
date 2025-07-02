@@ -16,10 +16,13 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.youtubersnaturaldisasters.block.VolcanoAirBlock;
 import net.mcreator.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.StoneBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.MagmaBlock;
 import net.mcreator.youtubersnaturaldisasters.block.HotMeteorBlock;
 import net.mcreator.youtubersnaturaldisasters.block.ColdMeteorBlock;
+import net.mcreator.youtubersnaturaldisasters.block.BasaltBlock;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 public class YoutubersNaturalDisastersModBlocks {
@@ -30,6 +33,9 @@ public class YoutubersNaturalDisastersModBlocks {
 	public static final RegistryObject<Block> SOLID_WATER_BLOCK = REGISTRY.register("solid_water_block", () -> new SolidWaterBlockBlock());
 	public static final RegistryObject<Block> TOMMYINNIT_BLOCK = REGISTRY.register("tommyinnit_block", () -> new TommyinnitBlockBlock());
 	public static final RegistryObject<Block> VOLCANO_AIR = REGISTRY.register("volcano_air", () -> new VolcanoAirBlock());
+	public static final RegistryObject<Block> BASALT = REGISTRY.register("basalt", () -> new BasaltBlock());
+	public static final RegistryObject<Block> MAGMA = REGISTRY.register("magma", () -> new MagmaBlock());
+	public static final RegistryObject<Block> STONE = REGISTRY.register("stone", () -> new StoneBlock());
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Natural Disaster Spawning",
+    "description": "Having natural disasters spawn in your game naturally",
+    "category": "MISC",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

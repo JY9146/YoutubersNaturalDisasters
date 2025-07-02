@@ -80,7 +80,7 @@
     "flyingMob": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "disableCollisions": false,
+    "disableCollisions": true,
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
@@ -120,7 +120,7 @@
       "name": "VolcanoLavaV2OnEntityTickUpdate"
     },
     "onInitialSpawn": {
-      "name": "VolcanoV2GenInitalSpawn"
+      "name": "VolcanoLavaV2OnInitialEntitySpawn"
     },
     "hasAI": false,
     "aiBase": "(none)",

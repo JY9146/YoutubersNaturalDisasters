@@ -37,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "ThrowMeteorRightclickedOnBlock"
+      "name": "ThrowMeteorRightclicked"
     },
     "onRightClickedOnBlock": {
       "name": "ThrowMeteorRightclickedOnBlock"

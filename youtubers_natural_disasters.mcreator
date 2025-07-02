@@ -481,6 +481,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2586,8 +2590,7 @@
           "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/volcano_air.json",
           "src/main/java/net/mcreator/youtubersnaturaldisasters/block/VolcanoAirBlock.java",
           "src/main/resources/assets/youtubers_natural_disasters/blockstates/volcano_air.json",
-          "src/main/resources/assets/youtubers_natural_disasters/models/block/volcano_air.json",
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/VolcanoAirBlockEntity.java"
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/volcano_air.json"
         ]
       }
     },
@@ -3302,6 +3305,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3732,6 +3739,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -3880,6 +3891,250 @@
           }
         ]
       }
+    },
+    {
+      "name": "VolcanoLavaFLOW",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "volcano_lava_flow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/VolcanoLavaFLOWProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteorRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowMeteorRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VolcanoLavaV2OnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "volcano_lava_v_2_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/VolcanoLavaV2OnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Basalt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basalt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/BasaltBlock.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/BasaltBlockEntity.java",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/basalt.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/basalt.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/basalt.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/basalt.json"
+        ]
+      }
+    },
+    {
+      "name": "Magma",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/magma.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/magma.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/MagmaBlockEntity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/magma.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/magma.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/MagmaBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "MagmaEntityWalksOnTheBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_entity_walks_on_the_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MagmaEntityWalksOnTheBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/stone.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/stone.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/StoneBlock.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/StoneBlockEntity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/stone.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/stone.json"
+        ]
+      }
+    },
+    {
+      "name": "MagmaOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MagmaOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AppleOfWisdomRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apple_of_wisdom_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/recipes/apple_of_wisdom_recipe.json"
+        ]
+      }
+    },
+    {
+      "name": "AppleOfWisdomRecipeGiver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apple_of_wisdom_recipe_giver",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/AppleOfWisdomRecipeGiverProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NaturalDisasterSpawning",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "natural_disaster_spawning",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      }
+    },
+    {
+      "name": "EATTHEAPPLE",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eattheapple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/EATTHEAPPLEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3966,6 +4221,18 @@
       "type": "number",
       "scope": "world",
       "value": "1.0"
+    },
+    {
+      "name": "VH",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "Consistant",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -4097,6 +4364,11 @@
     "BLOCKS:mod:volcanoair": [
       "CUSTOM:VolcanoAir"
     ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Stone",
+      "~CUSTOM:Magma",
+      "~CUSTOM:Basalt"
+    ],
     "ITEMS:minecraft:music_discs": [
       "~CUSTOM:TechnoItemDefeating",
       "~CUSTOM:TechnosEndOfWorldMeteor",
@@ -4126,8 +4398,10 @@
       "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
       "death.attack.mace_smash.player": "%1$s was smashed whilst trying to escape %2$s",
+      "gamerule.naturalDisasterSpawning": "Natural Disaster Spawning",
       "death.attack.axe_of_peace_wasnt_peaceful.item": "%1$s was killed by Techno with the Axe Of Peace and %2$s using %3$s",
       "death.attack.meteor_hit": "%1$s had a meteor hit their head",
+      "block.youtubers_natural_disasters.basalt": "Basalt",
       "death.attack.spaghettified.player": "%1$s got spaghettified whilst trying to escape %2$s",
       "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
       "death.attack.orphan_obliterator_damage": "%1$s was destroyed by the Orphan Obliterator",
@@ -4157,6 +4431,7 @@
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
+      "block.youtubers_natural_disasters.magma": "Magma",
       "death.attack.techno_bullied_you.player": "%1$s died whilst trying to escape Techno and %2$s",
       "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
       "death.attack.technos_inhailed_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
@@ -4187,6 +4462,7 @@
       "subtitles.technoboss": "You\u0027re In Trouble Now",
       "item.youtubers_natural_disasters.insane_flame_spawn_egg": "Insaneflame Spawn Egg",
       "entity.youtubers_natural_disasters.volcano_hollowerr": "Volcano",
+      "gamerule.naturalDisasterSpawning.description": "Having natural disasters spawn in your game naturally",
       "item.youtubers_natural_disasters.sinkhole_summoner": "Sinkhole Summoner",
       "item.youtubers_natural_disasters.technos_end_of_world_meteor.desc": "THE END IS NIGH",
       "entity.youtubers_natural_disasters.volcano_generator_v_2": "Volcano",
@@ -4202,6 +4478,7 @@
       "item.youtubers_natural_disasters.technos_splash_potion_of_gas": "Splash Potion Of Gas",
       "item.youtubers_natural_disasters.apple_of_wisdom": "Apple Of Wisdom",
       "death.attack.techno_killing_dmg_type": "%1$s died by Techno\u0027s old cringe videos",
+      "block.youtubers_natural_disasters.stone": "Stone",
       "death.attack.inhaled_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
       "item.youtubers_natural_disasters.earthquake_summoner": "Earthquake Summoner",
       "entity.youtubers_natural_disasters.volcano_generator": "Volcano",

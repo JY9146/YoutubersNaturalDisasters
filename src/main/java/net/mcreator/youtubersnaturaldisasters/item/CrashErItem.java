@@ -21,14 +21,14 @@ public class CrashErItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		CrashErRightclickedOnBlockProcedure.execute(world);
+		CrashErRightclickedOnBlockProcedure.execute(world, entity);
 		return ar;
 	}
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		CrashErRightclickedOnBlockProcedure.execute(context.getLevel());
+		CrashErRightclickedOnBlockProcedure.execute(context.getLevel(), context.getPlayer());
 		return InteractionResult.SUCCESS;
 	}
 }

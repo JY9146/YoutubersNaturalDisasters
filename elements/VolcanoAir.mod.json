@@ -101,7 +101,7 @@
     "unbreakable": true,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
-    "hasInventory": true,
+    "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,

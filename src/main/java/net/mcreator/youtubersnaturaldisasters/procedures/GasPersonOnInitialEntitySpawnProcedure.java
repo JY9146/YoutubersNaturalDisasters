@@ -23,6 +23,7 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
+		entity.setDeltaMovement(new Vec3(0, 0, 0));
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {

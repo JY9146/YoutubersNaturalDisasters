@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "youtubers_natural_disasters:block/basalt",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "youtubers_natural_disasters:block/basalt"
+    },
+    "axis=z": {
+      "model": "youtubers_natural_disasters:block/basalt",
+      "x": 90
+    }
+  }
+}

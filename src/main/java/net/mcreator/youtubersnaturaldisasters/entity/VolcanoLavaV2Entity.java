@@ -31,7 +31,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoV2GenInitalSpawnProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoLavaV2OnInitialEntitySpawnProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoLavaV2OnEntityTickUpdateProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
@@ -125,7 +125,7 @@ public class VolcanoLavaV2Entity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		VolcanoV2GenInitalSpawnProcedure.execute(this);
+		VolcanoLavaV2OnInitialEntitySpawnProcedure.execute(world, this);
 		return retval;
 	}
 
@@ -143,6 +143,19 @@ public class VolcanoLavaV2Entity extends Monster {
 		Level world = this.level();
 		Entity entity = this;
 		return false;
+	}
+
+	@Override
+	public boolean isPushable() {
+		return false;
+	}
+
+	@Override
+	protected void doPush(Entity entityIn) {
+	}
+
+	@Override
+	protected void pushEntities() {
 	}
 
 	@Override
