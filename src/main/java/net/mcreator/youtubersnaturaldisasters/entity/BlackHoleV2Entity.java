@@ -5,6 +5,7 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -15,21 +16,40 @@ import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleV2PlaybackConditionProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleV2OnInitialEntitySpawnProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleV2OnEntityTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.BlackHoleV2AniPlaybackConditionProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
+import javax.annotation.Nullable;
+
 public class BlackHoleV2Entity extends Monster {
+	public static final EntityDataAccessor<Boolean> DATA_DisapearAnimation = SynchedEntityData.defineId(BlackHoleV2Entity.class, EntityDataSerializers.BOOLEAN);
+	public final AnimationState animationState0 = new AnimationState();
+	public final AnimationState animationState1 = new AnimationState();
+
 	public BlackHoleV2Entity(PlayMessages.SpawnEntity packet, Level world) {
 		this(YoutubersNaturalDisastersModEntities.BLACK_HOLE_V_2.get(), world);
 	}
@@ -41,11 +61,18 @@ public class BlackHoleV2Entity extends Monster {
 		setNoAi(true);
 		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
+		refreshDimensions();
 	}
 
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_DisapearAnimation, false);
 	}
 
 	@Override
@@ -61,11 +88,6 @@ public class BlackHoleV2Entity extends Monster {
 	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
-	}
-
-	@Override
-	public double getMyRidingOffset() {
-		return -0.35D;
 	}
 
 	@Override
@@ -115,6 +137,35 @@ public class BlackHoleV2Entity extends Monster {
 	}
 
 	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		BlackHoleV2OnInitialEntitySpawnProcedure.execute(this);
+		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putBoolean("DataDisapearAnimation", this.entityData.get(DATA_DisapearAnimation));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataDisapearAnimation"))
+			this.entityData.set(DATA_DisapearAnimation, compound.getBoolean("DataDisapearAnimation"));
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(BlackHoleV2PlaybackConditionProcedure.execute(this), this.tickCount);
+			this.animationState1.animateWhen(BlackHoleV2AniPlaybackConditionProcedure.execute(this), this.tickCount);
+		}
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
 		BlackHoleV2OnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
@@ -141,6 +192,11 @@ public class BlackHoleV2Entity extends Monster {
 
 	@Override
 	protected void pushEntities() {
+	}
+
+	@Override
+	public EntityDimensions getDimensions(Pose pose) {
+		return super.getDimensions(pose).scale(10f);
 	}
 
 	@Override

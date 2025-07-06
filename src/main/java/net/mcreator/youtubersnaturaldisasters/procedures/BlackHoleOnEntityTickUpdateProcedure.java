@@ -27,6 +27,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 import java.util.List;
@@ -170,9 +171,15 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"kill @e[type=item]");
+				if (entity instanceof BlackHoleEntity _datEntSetL)
+					_datEntSetL.getEntityData().set(BlackHoleEntity.DATA_DisapearAnimation, true);
 			}
-			if (!entity.level().isClientSide())
-				entity.discard();
+			if (entity instanceof BlackHoleEntity _datEntSetL)
+				_datEntSetL.getEntityData().set(BlackHoleEntity.DATA_DisapearAnimation, true);
+			YoutubersNaturalDisastersMod.queueServerWork(60, () -> {
+				if (!entity.level().isClientSide())
+					entity.discard();
+			});
 		});
 	}
 }

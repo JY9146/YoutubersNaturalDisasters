@@ -27,7 +27,6 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoGroundMesserOnInitialEntitySpawnProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoGroundMesserOnEntityTickUpdateProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 import javax.annotation.Nullable;
@@ -111,12 +110,6 @@ public class VolcanoGroundMesserEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		VolcanoGroundMesserOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		VolcanoGroundMesserOnEntityTickUpdateProcedure.execute();
 	}
 
 	@Override

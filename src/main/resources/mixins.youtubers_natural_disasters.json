@@ -3,7 +3,9 @@
   "package": "net.mcreator.youtubersnaturaldisasters.mixins",
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.youtubers_natural_disasters.refmap.json",
-  "mixins": [],
+  "mixins": [
+    "FallingBlockMixin"
+  ],
   "client": [],
   "minVersion": "0.8"
 }

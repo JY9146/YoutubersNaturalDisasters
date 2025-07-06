@@ -1,6 +1,7 @@
 plugins {
     id 'eclipse'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+	id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+	id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = '1.0'
@@ -44,10 +45,19 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
 
-    implementation fg.deobf('curse.maven:weather-storms-tornadoes-237746:5244118')
-    implementation fg.deobf('curse.maven:coroutil-237749:5096038')
-    implementation fg.deobf("curse.maven:tickrate-api-969702:6542697")
+mixin {
+    add sourceSets.main, 'mixins.youtubers_natural_disasters.refmap.json'
+
+    config 'mixins.youtubers_natural_disasters.json'
+
+    debug.verbose = true
+    debug.export = true
+    dumpTargetOnFailure = true
+
+    quiet
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -55,4 +65,3 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 apply from: 'mcreator.gradle'
-

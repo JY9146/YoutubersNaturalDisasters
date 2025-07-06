@@ -1,6 +1,6 @@
 package net.mcreator.youtubersnaturaldisasters.procedures;
 
-public class TechnoBossBattleProcedure {
+public class VolcanoGroundMesserV2OnEntityTickUpdateProcedure {
 	public static void execute() {
 	}
 }

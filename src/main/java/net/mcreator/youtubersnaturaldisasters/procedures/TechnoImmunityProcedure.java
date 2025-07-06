@@ -35,8 +35,6 @@ public class TechnoImmunityProcedure {
 			if (damagesource.is(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:technos_inhailed_too_much_gas")))) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
-				} else if (event != null && event.hasResult()) {
-					event.setResult(Event.Result.DENY);
 				}
 			}
 		}

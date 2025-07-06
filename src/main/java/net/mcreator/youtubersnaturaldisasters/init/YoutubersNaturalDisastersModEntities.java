@@ -18,9 +18,11 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.WildFireEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoV2ErupterEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLavaV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
@@ -143,6 +145,11 @@ public class YoutubersNaturalDisastersModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorV2Entity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VolcanoLavaV2Entity>> VOLCANO_LAVA_V_2 = register("volcano_lava_v_2", EntityType.Builder.<VolcanoLavaV2Entity>of(VolcanoLavaV2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoLavaV2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoV2ErupterEntity>> VOLCANO_V_2_ERUPTER = register("volcano_v_2_erupter", EntityType.Builder.<VolcanoV2ErupterEntity>of(VolcanoV2ErupterEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoV2ErupterEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoGroundMesserV2Entity>> VOLCANO_GROUND_MESSER_V_2 = register("volcano_ground_messer_v_2",
+			EntityType.Builder.<VolcanoGroundMesserV2Entity>of(VolcanoGroundMesserV2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(VolcanoGroundMesserV2Entity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -183,6 +190,8 @@ public class YoutubersNaturalDisastersModEntities {
 			BlackHoleV3Entity.init();
 			VolcanoGeneratorV2Entity.init();
 			VolcanoLavaV2Entity.init();
+			VolcanoV2ErupterEntity.init();
+			VolcanoGroundMesserV2Entity.init();
 		});
 	}
 
@@ -218,5 +227,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(BLACK_HOLE_V_3.get(), BlackHoleV3Entity.createAttributes().build());
 		event.put(VOLCANO_GENERATOR_V_2.get(), VolcanoGeneratorV2Entity.createAttributes().build());
 		event.put(VOLCANO_LAVA_V_2.get(), VolcanoLavaV2Entity.createAttributes().build());
+		event.put(VOLCANO_V_2_ERUPTER.get(), VolcanoV2ErupterEntity.createAttributes().build());
+		event.put(VOLCANO_GROUND_MESSER_V_2.get(), VolcanoGroundMesserV2Entity.createAttributes().build());
 	}
 }

@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -61,20 +62,8 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
-											BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
-											}
-											world.setBlock(_bp, _bs, 3);
-										}
+										if (world instanceof ServerLevel _level)
+											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState());
 									} else if (Math.random() <= 0.4) {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
@@ -90,20 +79,8 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
-											BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
-											}
-											world.setBlock(_bp, _bs, 3);
-										}
+										if (world instanceof ServerLevel _level)
+											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState());
 									} else if (Math.random() <= 0.4) {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
@@ -148,20 +125,8 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
-											BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
-											}
-											world.setBlock(_bp, _bs, 3);
-										}
+										if (world instanceof ServerLevel _level)
+											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), Blocks.OBSIDIAN.defaultBlockState());
 									} else {
 										{
 											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);

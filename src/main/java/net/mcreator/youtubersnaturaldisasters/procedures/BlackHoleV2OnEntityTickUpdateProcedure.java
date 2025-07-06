@@ -22,6 +22,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV2Entity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 import java.util.List;
@@ -57,7 +58,7 @@ public class BlackHoleV2OnEntityTickUpdateProcedure {
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(35 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(50 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					if (!(new Object() {
@@ -108,13 +109,19 @@ public class BlackHoleV2OnEntityTickUpdateProcedure {
 			}
 		}
 		YoutubersNaturalDisastersMod.queueServerWork(360, () -> {
-			if (!entity.level().isClientSide())
-				entity.discard();
 			for (int index0 = 0; index0 < 3; index0++) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"kill @e[type=item]");
+				if (entity instanceof BlackHoleV2Entity _datEntSetL)
+					_datEntSetL.getEntityData().set(BlackHoleV2Entity.DATA_DisapearAnimation, true);
 			}
+			if (entity instanceof BlackHoleV2Entity _datEntSetL)
+				_datEntSetL.getEntityData().set(BlackHoleV2Entity.DATA_DisapearAnimation, true);
+			YoutubersNaturalDisastersMod.queueServerWork(60, () -> {
+				if (!entity.level().isClientSide())
+					entity.discard();
+			});
 		});
 	}
 }

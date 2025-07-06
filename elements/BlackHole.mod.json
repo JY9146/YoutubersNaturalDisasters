@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Black Hole",
     "mobLabel": "",
-    "mobModelName": "Biped",
-    "mobModelTexture": "super-invisible.png",
+    "mobModelName": "Modelblackhole",
+    "mobModelTexture": "north.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -16,13 +16,36 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 5.0
     },
     "boundingBoxScale": {
-      "fixedValue": 1.0
+      "fixedValue": 5.0
     },
     "modelLayers": [],
-    "animations": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:blackholeanAnimation.animation"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "BlackHolePlaybackCondition"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:blackholeAnimation.animation"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "BlackHoleAniPlaybackCondition"
+        },
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
     "modelShadowSize": 0.5,
@@ -115,9 +138,18 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "name": "DisapearAnimation",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "onMobTickUpdate": {
       "name": "BlackHoleOnEntityTickUpdate"
+    },
+    "onInitialSpawn": {
+      "name": "BlackHoleOnInitialEntitySpawn"
     },
     "hasAI": false,
     "aiBase": "(none)",
