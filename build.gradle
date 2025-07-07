@@ -44,8 +44,11 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.0'
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf('curse.maven:weather-storms-tornadoes-237746:5244118')
+    implementation fg.deobf('curse.maven:coroutil-237749:5096038')
+    implementation fg.deobf("curse.maven:tickrate-api-969702:6542697")
 }
 
 mixin {
