@@ -20,7 +20,7 @@ public class VolcanoGroundMesserV2OnInitialEntitySpawnProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 					if (distanceSq <= 1.0) {
-						if (Math.random() < 0.1) {
+						if (Math.random() < 0.01) {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x + xi, y + yi + 1, z + zi);
 								BlockEntity _blockEntity = world.getBlockEntity(_bp);

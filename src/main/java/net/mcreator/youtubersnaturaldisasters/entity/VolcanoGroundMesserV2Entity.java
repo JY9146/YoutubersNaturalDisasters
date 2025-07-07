@@ -116,7 +116,7 @@ public class VolcanoGroundMesserV2Entity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		VolcanoGroundMesserV2OnEntityTickUpdateProcedure.execute();
+		VolcanoGroundMesserV2OnEntityTickUpdateProcedure.execute(this.level(), this);
 	}
 
 	@Override
