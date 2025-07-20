@@ -97,6 +97,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> BASALT = block(YoutubersNaturalDisastersModBlocks.BASALT);
 	public static final RegistryObject<Item> MAGMA = block(YoutubersNaturalDisastersModBlocks.MAGMA);
 	public static final RegistryObject<Item> STONE = block(YoutubersNaturalDisastersModBlocks.STONE);
+	public static final RegistryObject<Item> CAMMAGANZA_SPAWN_EGG = REGISTRY.register("cammaganza_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.CAMMAGANZA, -7910598, -2524612, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

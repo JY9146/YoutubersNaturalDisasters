@@ -19,7 +19,7 @@ import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 public class VolcanoSummonerRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Chance = 0;
-		Chance = Mth.nextInt(RandomSource.create(), 2, 2);
+		Chance = Mth.nextInt(RandomSource.create(), 1, 2);
 		if (Chance == 1) {
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR.get().spawn(_level, BlockPos.containing(x, y - 1, z), MobSpawnType.MOB_SUMMONED);
@@ -40,6 +40,16 @@ public class VolcanoSummonerRightclickedOnBlockProcedure {
 				}
 			}
 		} else {
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER_V_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR_V_2P_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR_V_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {

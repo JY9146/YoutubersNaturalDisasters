@@ -19,6 +19,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLAVARendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoHollowerrRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGroundMesserRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorV2p2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoGeneratorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TsunamiGeneratorRenderer;
@@ -40,6 +41,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.DapperMrTomRendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CosmicRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.CammaganzaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleV3Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleRenderer;
@@ -84,5 +86,7 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_LAVA_V_2.get(), VolcanoLavaV2Renderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_V_2_ERUPTER.get(), VolcanoV2ErupterRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER_V_2.get(), VolcanoGroundMesserV2Renderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.CAMMAGANZA.get(), CammaganzaRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR_V_2P_2.get(), VolcanoGeneratorV2p2Renderer::new);
 	}
 }

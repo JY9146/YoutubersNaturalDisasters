@@ -9,7 +9,11 @@
     "states": [],
     "name": "Smoke Emitter",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:NaturalDisasters"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

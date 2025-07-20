@@ -33,6 +33,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.CRAG_DYNA_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SPLASH_POTION_OF_GAS.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.APPLE_OF_WISDOM.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.SMOKE_EMITTER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_METEOR.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
@@ -73,6 +74,7 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.DAPPER_MR_TOM_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.KNARFY_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.CAMMAGANZA_SPAWN_EGG.get());
 		}
 	}
 }

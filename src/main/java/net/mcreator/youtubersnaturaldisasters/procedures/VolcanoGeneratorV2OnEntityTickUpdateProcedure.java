@@ -3,14 +3,17 @@ package net.mcreator.youtubersnaturaldisasters.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -51,6 +54,12 @@ public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
 		} else {
 			if (!entity.level().isClientSide())
 				entity.discard();
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_V_2_ERUPTER.get().spawn(_level, BlockPos.containing(x, y + 10, z), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+				}
+			}
 		}
 	}
 }

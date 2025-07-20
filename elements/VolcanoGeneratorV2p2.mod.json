@@ -77,7 +77,7 @@
     "pushedByFluids": {
       "fixedValue": false
     },
-    "flyingMob": false,
+    "flyingMob": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": true,
@@ -117,10 +117,7 @@
     },
     "entityDataEntries": [],
     "onMobTickUpdate": {
-      "name": "VolcanoGroundMesserV2OnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "VolcanoGroundMesserV2OnInitialEntitySpawn"
+      "name": "VolcanoGeneratorV2p2OnEntityTickUpdate"
     },
     "hasAI": false,
     "aiBase": "(none)",

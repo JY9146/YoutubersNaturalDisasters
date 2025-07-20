@@ -10,11 +10,13 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.youtubersnaturaldisasters.client.particle.GasParticle;
+import net.mcreator.youtubersnaturaldisasters.client.particle.BlockAshParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class YoutubersNaturalDisastersModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(YoutubersNaturalDisastersModParticleTypes.GAS.get(), GasParticle::provider);
+		event.registerSpriteSet(YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get(), BlockAshParticle::provider);
 	}
 }

@@ -24,6 +24,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLAVAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoHollowerrEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGroundMesserEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorV2p2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoGeneratorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TsunamiGeneratorEntity;
@@ -49,6 +50,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.CammaganzaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV3Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
@@ -150,6 +152,12 @@ public class YoutubersNaturalDisastersModEntities {
 	public static final RegistryObject<EntityType<VolcanoGroundMesserV2Entity>> VOLCANO_GROUND_MESSER_V_2 = register("volcano_ground_messer_v_2",
 			EntityType.Builder.<VolcanoGroundMesserV2Entity>of(VolcanoGroundMesserV2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(VolcanoGroundMesserV2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CammaganzaEntity>> CAMMAGANZA = register("cammaganza",
+			EntityType.Builder.<CammaganzaEntity>of(CammaganzaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CammaganzaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<VolcanoGeneratorV2p2Entity>> VOLCANO_GENERATOR_V_2P_2 = register("volcano_generator_v_2p_2", EntityType.Builder.<VolcanoGeneratorV2p2Entity>of(VolcanoGeneratorV2p2Entity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorV2p2Entity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -192,6 +200,8 @@ public class YoutubersNaturalDisastersModEntities {
 			VolcanoLavaV2Entity.init();
 			VolcanoV2ErupterEntity.init();
 			VolcanoGroundMesserV2Entity.init();
+			CammaganzaEntity.init();
+			VolcanoGeneratorV2p2Entity.init();
 		});
 	}
 
@@ -229,5 +239,7 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(VOLCANO_LAVA_V_2.get(), VolcanoLavaV2Entity.createAttributes().build());
 		event.put(VOLCANO_V_2_ERUPTER.get(), VolcanoV2ErupterEntity.createAttributes().build());
 		event.put(VOLCANO_GROUND_MESSER_V_2.get(), VolcanoGroundMesserV2Entity.createAttributes().build());
+		event.put(CAMMAGANZA.get(), CammaganzaEntity.createAttributes().build());
+		event.put(VOLCANO_GENERATOR_V_2P_2.get(), VolcanoGeneratorV2p2Entity.createAttributes().build());
 	}
 }

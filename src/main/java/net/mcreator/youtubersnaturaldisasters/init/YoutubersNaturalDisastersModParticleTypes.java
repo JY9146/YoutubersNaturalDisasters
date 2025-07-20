@@ -16,4 +16,5 @@ import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 public class YoutubersNaturalDisastersModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, YoutubersNaturalDisastersMod.MODID);
 	public static final RegistryObject<SimpleParticleType> GAS = REGISTRY.register("gas", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> BLOCK_ASH = REGISTRY.register("block_ash", () -> new SimpleParticleType(true));
 }

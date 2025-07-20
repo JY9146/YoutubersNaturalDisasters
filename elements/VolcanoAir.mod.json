@@ -117,9 +117,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "VolcanoAirOnTickUpdate"
-    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
