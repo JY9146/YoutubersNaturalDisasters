@@ -19,11 +19,11 @@ public class CoinRightclickedOnBlockProcedure {
 				itemstack.getOrCreateTag().putDouble("heads", heads);
 				if (heads == 0) {
 					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A7eA coin flip resulted in... \u00A7l\u00A76Tails\u00A7r\u00A7e!"), false);
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A7e\u00A7lA coin flip resulted in... \u00A7r\u00A7r\u00A76\u00A7lTails\u00A7r\u00A7r\u00A7e\u00A7l!\u00A7r\u00A7r"), false);
 				}
 				if (heads == 1) {
 					if (!world.isClientSide() && world.getServer() != null)
-						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A7eA coin flip resulted in... \u00A7l\u00A76Heads\u00A7r\u00A7e!"), false);
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A7e\u00A7lA coin flip resulted in... \u00A7r\u00A7r\u00A76\u00A7lHeads\u00A7r\u00A7r\u00A7e\u00A7l!\u00A7r\u00A7r"), false);
 				}
 			}
 			world = _worldorig;

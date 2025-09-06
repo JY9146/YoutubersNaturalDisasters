@@ -22,17 +22,7 @@
     "connectedSides": false,
     "transparencyType": "SOLID",
     "disableOffset": false,
-    "boundingBoxes": [
-      {
-        "mx": 0.0,
-        "my": 0.0,
-        "mz": 0.0,
-        "Mx": 16.0,
-        "My": 16.0,
-        "Mz": 16.0,
-        "subtract": false
-      }
-    ],
+    "boundingBoxes": [],
     "customProperties": [],
     "name": "Solid Lava Block",
     "specialInformation": {
@@ -64,7 +54,7 @@
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "RED",
+    "colorOnMap": "TNT",
     "creativePickItem": {
       "value": ""
     },
@@ -98,15 +88,15 @@
       "value": ""
     },
     "luminance": 4,
-    "unbreakable": true,
+    "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": true,
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,

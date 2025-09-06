@@ -18,7 +18,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "TRANSLUCENT",
     "disableOffset": false,
@@ -55,7 +55,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 0,
     "material": {
-      "value": "AIR"
+      "value": "STRUCTURE_VOID"
     },
     "tickRate": 1,
     "tickRandomly": false,

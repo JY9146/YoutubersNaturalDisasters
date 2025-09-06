@@ -24,7 +24,7 @@ public class VolcanoHollower2Procedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 								+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 						if (distanceSq <= 1.0) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), YoutubersNaturalDisastersModBlocks.VOLCANO_AIR.get().defaultBlockState(), 3);
+							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
 						}
 					}
 				}

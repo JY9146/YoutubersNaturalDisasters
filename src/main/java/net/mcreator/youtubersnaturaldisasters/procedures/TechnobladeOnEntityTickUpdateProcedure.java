@@ -300,50 +300,6 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						if (_entity instanceof Player _player)
 							_player.getInventory().setChanged();
 					}
-					Musicmusic = Mth.nextInt(RandomSource.create(), 0, 1);
-					if (MusicWait == false) {
-						if (Musicmusic == 1) {
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1, false);
-								}
-							}
-							MusicWait = true;
-						} else {
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1, false);
-								}
-							}
-							MusicWait = true;
-						}
-					} else {
-						if (Musicmusic == 1) {
-							YoutubersNaturalDisastersMod.queueServerWork(4000, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technoboss")), SoundSource.MASTER, 10, 1, false);
-									}
-								}
-							});
-						} else {
-							YoutubersNaturalDisastersMod.queueServerWork(5000, () -> {
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1);
-									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:bossbattle2music")), SoundSource.MASTER, 10, 1, false);
-									}
-								}
-							});
-						}
-					}
 				} else {
 					entity.getPersistentData().putDouble("MODID:TechnoBossTick", (entity.getPersistentData().getDouble("MODID:TechnoBossTick") - 1));
 				}
@@ -480,7 +436,70 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 			}
 			if (entity.getPersistentData().getDouble("MODID:TechnoBossTick") == 199) {
 				if (entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 46 || entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 30 || entity.getPersistentData().getDouble("MODID:TechnoBossPatternTick") == 10) {
-					if (Mth.nextInt(RandomSource.create(), 1, 2) == 1) {
+					if (Mth.nextInt(RandomSource.create(), 1, 3) == 1) {
+						if (entity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(YoutubersNaturalDisastersModItems.TECHNOS_SPLASH_POTION_OF_GAS.get()).copy();
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+						entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()),
+								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + entity.getBbHeight() + 1), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
+						Yaw = entity.getYRot();
+						{
+							Entity _ent = entity;
+							_ent.setYRot((float) (entity.getYRot() - 30));
+							_ent.setXRot((float) (entity.getXRot() + 2));
+							_ent.setYBodyRot(_ent.getYRot());
+							_ent.setYHeadRot(_ent.getYRot());
+							_ent.yRotO = _ent.getYRot();
+							_ent.xRotO = _ent.getXRot();
+							if (_ent instanceof LivingEntity _entity) {
+								_entity.yBodyRotO = _entity.getYRot();
+								_entity.yHeadRotO = _entity.getYRot();
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.splash_potion.throw")), SoundSource.HOSTILE, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.splash_potion.throw")), SoundSource.HOSTILE, 1, 1, false);
+							}
+						}
+						{
+							Entity _shootFrom = entity;
+							Level projectileLevel = _shootFrom.level();
+							if (!projectileLevel.isClientSide()) {
+								Projectile _entityToSpawn = new Object() {
+									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+										AbstractArrow entityToSpawn = new TechnosPotionOfGasEntity(YoutubersNaturalDisastersModEntities.TECHNOS_POTION_OF_GAS.get(), level);
+										entityToSpawn.setOwner(shooter);
+										entityToSpawn.setBaseDamage(damage);
+										entityToSpawn.setKnockback(knockback);
+										entityToSpawn.setSilent(true);
+										return entityToSpawn;
+									}
+								}.getArrow(projectileLevel, entity, 0, 1);
+								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 1);
+								projectileLevel.addFreshEntity(_entityToSpawn);
+							}
+						}
+						{
+							Entity _ent = entity;
+							_ent.setYRot((float) (entity.getYRot() + 30));
+							_ent.setXRot(entity.getXRot());
+							_ent.setYBodyRot(_ent.getYRot());
+							_ent.setYHeadRot(_ent.getYRot());
+							_ent.yRotO = _ent.getYRot();
+							_ent.xRotO = _ent.getXRot();
+							if (_ent instanceof LivingEntity _entity) {
+								_entity.yBodyRotO = _entity.getYRot();
+								_entity.yHeadRotO = _entity.getYRot();
+							}
+						}
+					} else {
 						if (entity instanceof LivingEntity _entity) {
 							ItemStack _setstack = new ItemStack(Items.CROSSBOW).copy();
 							_setstack.setCount(1);
@@ -550,69 +569,6 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 							Entity _ent = entity;
 							_ent.setYRot((float) Yaw);
 							_ent.setXRot((float) (entity.getXRot() + 2));
-							_ent.setYBodyRot(_ent.getYRot());
-							_ent.setYHeadRot(_ent.getYRot());
-							_ent.yRotO = _ent.getYRot();
-							_ent.xRotO = _ent.getXRot();
-							if (_ent instanceof LivingEntity _entity) {
-								_entity.yBodyRotO = _entity.getYRot();
-								_entity.yHeadRotO = _entity.getYRot();
-							}
-						}
-					} else {
-						if (entity instanceof LivingEntity _entity) {
-							ItemStack _setstack = new ItemStack(YoutubersNaturalDisastersModItems.TECHNOS_SPLASH_POTION_OF_GAS.get()).copy();
-							_setstack.setCount(1);
-							_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-							if (_entity instanceof Player _player)
-								_player.getInventory().setChanged();
-						}
-						entity.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getX()),
-								((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + entity.getBbHeight() + 1), ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
-						Yaw = entity.getYRot();
-						{
-							Entity _ent = entity;
-							_ent.setYRot((float) (entity.getYRot() - 30));
-							_ent.setXRot((float) (entity.getXRot() + 2));
-							_ent.setYBodyRot(_ent.getYRot());
-							_ent.setYHeadRot(_ent.getYRot());
-							_ent.yRotO = _ent.getYRot();
-							_ent.xRotO = _ent.getXRot();
-							if (_ent instanceof LivingEntity _entity) {
-								_entity.yBodyRotO = _entity.getYRot();
-								_entity.yHeadRotO = _entity.getYRot();
-							}
-						}
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.splash_potion.throw")), SoundSource.HOSTILE, 1, 1);
-							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.splash_potion.throw")), SoundSource.HOSTILE, 1, 1, false);
-							}
-						}
-						{
-							Entity _shootFrom = entity;
-							Level projectileLevel = _shootFrom.level();
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new TechnosPotionOfGasEntity(YoutubersNaturalDisastersModEntities.TECHNOS_POTION_OF_GAS.get(), level);
-										entityToSpawn.setOwner(shooter);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, entity, 0, 1);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 1);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
-						{
-							Entity _ent = entity;
-							_ent.setYRot((float) (entity.getYRot() + 30));
-							_ent.setXRot(entity.getXRot());
 							_ent.setYBodyRot(_ent.getYRot());
 							_ent.setYHeadRot(_ent.getYRot());
 							_ent.yRotO = _ent.getYRot();
@@ -789,8 +745,12 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 						Entity entityinstance = EntityType.POLAR_BEAR.create(_serverLevel, null, null, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED, false, false);
 						if (entityinstance != null) {
 							entityinstance.setYRot(world.getRandom().nextFloat() * 360.0F);
-							if (entityinstance instanceof Mob _entity && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _ent)
-								_entity.setTarget(_ent);
+							for (int index1 = 0; index1 < 9; index1++) {
+								if (entityinstance instanceof Mob _entity && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _ent)
+									_entity.setTarget(_ent);
+								if (entityinstance instanceof Mob _entity && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity _ent)
+									_entity.setTarget(_ent);
+							}
 							entityinstance.setCustomName(Component.literal("Steve"));
 							_serverLevel.addFreshEntity(entityinstance);
 						}
@@ -815,7 +775,33 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 								_player.getInventory().setChanged();
 						}
 						entity.setShiftKeyDown(false);
-						entity.setNoGravity(false);
+						for (int index2 = 0; index2 < 9; index2++) {
+							entity.setNoGravity(false);
+							entity.setNoGravity(false);
+						}
+					}
+					for (int index3 = 0; index3 < 200; index3++) {
+						if (!(!world.getEntitiesOfClass(MadPiglinEntity.class, AABB.ofSize(new Vec3(x, y, z), 36, 36, 36), e -> true).isEmpty())) {
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Items.DIAMOND_AXE).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
+							if (entity instanceof LivingEntity _entity) {
+								ItemStack _setstack = new ItemStack(Blocks.AIR).copy();
+								_setstack.setCount(1);
+								_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+								if (_entity instanceof Player _player)
+									_player.getInventory().setChanged();
+							}
+							entity.setShiftKeyDown(false);
+							for (int index4 = 0; index4 < 9; index4++) {
+								entity.setNoGravity(false);
+								entity.setNoGravity(false);
+							}
+						}
 					}
 				}
 			}

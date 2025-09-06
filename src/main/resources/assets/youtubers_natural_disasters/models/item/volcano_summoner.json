@@ -2,5 +2,19 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "youtubers_natural_disasters:item/volcanosummoner"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "youtubers_natural_disasters:volcano_summoner_state1": 1
+      },
+      "model": "youtubers_natural_disasters:item/volcano_summoner_0"
+    },
+    {
+      "predicate": {
+        "youtubers_natural_disasters:volcano_summoner_state1": 2
+      },
+      "model": "youtubers_natural_disasters:item/volcano_summoner_1"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "pixil-frame-0",
+    "texture": "gas_splash_potion",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

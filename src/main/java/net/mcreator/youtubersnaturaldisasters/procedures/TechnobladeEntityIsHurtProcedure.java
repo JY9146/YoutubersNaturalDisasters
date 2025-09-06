@@ -55,13 +55,8 @@ public class TechnobladeEntityIsHurtProcedure {
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("NOOOOO. It can't be! You found the only thing able to defeat me, my old cringe videos!"), false);
 					} else {
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technobladeneverdies")), SoundSource.AMBIENT, 10, 1);
-							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technobladeneverdies")), SoundSource.AMBIENT, 10, 1, false);
-							}
-						}
+						if (world instanceof Level)
+							((Level) world).playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("youtubers_natural_disasters:technobladeneverdies")), SoundSource.AMBIENT, 10, 1);
 						if (!world.isClientSide() && world.getServer() != null)
 							world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("You can never defeat me. Prepare to die. I am the final boss, and this is my final phase!"), false);
 						if (event != null && event.isCancelable()) {

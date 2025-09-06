@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.Zachary95Entity;
+import net.mcreator.youtubersnaturaldisasters.entity.YeahJaronEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.WildFireEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoV2ErupterEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.VolcanoLavaV2Entity;
@@ -33,9 +34,12 @@ import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosGasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TalonMCEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.ReddoonsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.PiglinSpawnerEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.Ph1LzAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
@@ -158,6 +162,20 @@ public class YoutubersNaturalDisastersModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<VolcanoGeneratorV2p2Entity>> VOLCANO_GENERATOR_V_2P_2 = register("volcano_generator_v_2p_2", EntityType.Builder.<VolcanoGeneratorV2p2Entity>of(VolcanoGeneratorV2p2Entity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VolcanoGeneratorV2p2Entity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<Ph1LzAEntity>> PH_1_LZ_A = register("ph_1_lz_a",
+			EntityType.Builder.<Ph1LzAEntity>of(Ph1LzAEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(Ph1LzAEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<YeahJaronEntity>> YEAH_JARON = register("yeah_jaron",
+			EntityType.Builder.<YeahJaronEntity>of(YeahJaronEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YeahJaronEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ReddoonsEntity>> REDDOONS = register("reddoons",
+			EntityType.Builder.<ReddoonsEntity>of(ReddoonsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReddoonsEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TalonMCEntity>> TALON_MC = register("talon_mc",
+			EntityType.Builder.<TalonMCEntity>of(TalonMCEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TalonMCEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -202,6 +220,10 @@ public class YoutubersNaturalDisastersModEntities {
 			VolcanoGroundMesserV2Entity.init();
 			CammaganzaEntity.init();
 			VolcanoGeneratorV2p2Entity.init();
+			Ph1LzAEntity.init();
+			YeahJaronEntity.init();
+			ReddoonsEntity.init();
+			TalonMCEntity.init();
 		});
 	}
 
@@ -241,5 +263,9 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(VOLCANO_GROUND_MESSER_V_2.get(), VolcanoGroundMesserV2Entity.createAttributes().build());
 		event.put(CAMMAGANZA.get(), CammaganzaEntity.createAttributes().build());
 		event.put(VOLCANO_GENERATOR_V_2P_2.get(), VolcanoGeneratorV2p2Entity.createAttributes().build());
+		event.put(PH_1_LZ_A.get(), Ph1LzAEntity.createAttributes().build());
+		event.put(YEAH_JARON.get(), YeahJaronEntity.createAttributes().build());
+		event.put(REDDOONS.get(), ReddoonsEntity.createAttributes().build());
+		event.put(TALON_MC.get(), TalonMCEntity.createAttributes().build());
 	}
 }

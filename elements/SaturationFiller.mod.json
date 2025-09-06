@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "pixil-frame-0_2",
+    "texture": "fast_starvation",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

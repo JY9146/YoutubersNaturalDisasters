@@ -19,9 +19,13 @@ import net.mcreator.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.StoneBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SmokeBlock;
 import net.mcreator.youtubersnaturaldisasters.block.MagmaBlock;
 import net.mcreator.youtubersnaturaldisasters.block.HotMeteorBlock;
+import net.mcreator.youtubersnaturaldisasters.block.HotMeteor2Block;
 import net.mcreator.youtubersnaturaldisasters.block.ColdMeteorBlock;
+import net.mcreator.youtubersnaturaldisasters.block.ColdMeteor2Block;
+import net.mcreator.youtubersnaturaldisasters.block.BasalttBlock;
 import net.mcreator.youtubersnaturaldisasters.block.BasaltBlock;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -32,10 +36,14 @@ public class YoutubersNaturalDisastersModBlocks {
 	public static final RegistryObject<Block> SOLID_LAVA_BLOCK = REGISTRY.register("solid_lava_block", () -> new SolidLavaBlockBlock());
 	public static final RegistryObject<Block> SOLID_WATER_BLOCK = REGISTRY.register("solid_water_block", () -> new SolidWaterBlockBlock());
 	public static final RegistryObject<Block> TOMMYINNIT_BLOCK = REGISTRY.register("tommyinnit_block", () -> new TommyinnitBlockBlock());
-	public static final RegistryObject<Block> VOLCANO_AIR = REGISTRY.register("volcano_air", () -> new VolcanoAirBlock());
+	public static final RegistryObject<Block> EMPTY = REGISTRY.register("empty", () -> new VolcanoAirBlock());
 	public static final RegistryObject<Block> BASALT = REGISTRY.register("basalt", () -> new BasaltBlock());
 	public static final RegistryObject<Block> MAGMA = REGISTRY.register("magma", () -> new MagmaBlock());
 	public static final RegistryObject<Block> STONE = REGISTRY.register("stone", () -> new StoneBlock());
+	public static final RegistryObject<Block> BASALTT = REGISTRY.register("basaltt", () -> new BasalttBlock());
+	public static final RegistryObject<Block> HOT_METEOR_2 = REGISTRY.register("hot_meteor_2", () -> new HotMeteor2Block());
+	public static final RegistryObject<Block> COLD_METEOR_2 = REGISTRY.register("cold_meteor_2", () -> new ColdMeteor2Block());
+	public static final RegistryObject<Block> SMOKE = REGISTRY.register("smoke", () -> new SmokeBlock());
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

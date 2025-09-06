@@ -86,6 +86,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -235,28 +239,6 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/CragDynaEntity.java",
           "src/main/resources/assets/youtubers_natural_disasters/models/item/crag_dyna_spawn_egg.json",
           "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/CragDynaRenderer.java"
-        ]
-      }
-    },
-    {
-      "name": "SolidLavaMobplayerCollidesBlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "solid_lava_mobplayer_collides_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SolidLavaMobplayerCollidesBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       }
     },
@@ -1176,8 +1158,10 @@
       "registry_name": "volcano_summoner",
       "metadata": {
         "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/volcano_summoner_0.json",
           "src/main/resources/assets/youtubers_natural_disasters/models/item/volcano_summoner.json",
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/VolcanoSummonerItem.java"
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/VolcanoSummonerItem.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/volcano_summoner_1.json"
         ]
       }
     },
@@ -1646,6 +1630,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -1678,6 +1666,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -2583,14 +2583,14 @@
       "type": "block",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "volcano_air",
+      "registry_name": "empty",
       "metadata": {
         "files": [
-          "src/main/resources/assets/youtubers_natural_disasters/models/item/volcano_air.json",
-          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/volcano_air.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/empty.json",
           "src/main/java/net/mcreator/youtubersnaturaldisasters/block/VolcanoAirBlock.java",
-          "src/main/resources/assets/youtubers_natural_disasters/blockstates/volcano_air.json",
-          "src/main/resources/assets/youtubers_natural_disasters/models/block/volcano_air.json"
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/empty.json",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/empty.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/empty.json"
         ]
       }
     },
@@ -3156,7 +3156,28 @@
         "files": [
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TsunamiGeneratorOnInitialEntitySpawnProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -4872,6 +4893,543 @@
           }
         ]
       }
+    },
+    {
+      "name": "StructureVoidUnbreakable",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "structure_void_unbreakable",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/StructureVoidUnbreakableProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SolidWaterBlockOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solid_water_block_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SolidWaterBlockOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TechnobladeEntityIsHurtMusic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technoblade_entity_is_hurt_music",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnobladeEntityIsHurtMusicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusicP2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_p_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MusicP2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TechnobladeOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technoblade_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnobladeOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InvincibilityActiveTickCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincibility_active_tick_condition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/InvincibilityActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Invincibility",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/potion/InvincibilityMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "InvincibilityEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincibility_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/InvincibilityEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MusicP2B",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_p_2_b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MusicP2BProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TsunamiP2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tsunami_p_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TsunamiP2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ph1LzA",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ph_1_lz_a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/Ph1LzAEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/Ph1LzARenderer.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/ph_1_lz_a_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "YeahJaron",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yeah_jaron",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/yeah_jaron_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/YeahJaronEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/YeahJaronRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "VolcanoSummonerPropertyValueProvider",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "volcano_summoner_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/VolcanoSummonerPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Basaltt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basaltt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/basaltt.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/BasalttBlock.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/BasalttBlockEntity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/basaltt.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/basaltt.json",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/basaltt.json"
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteorShower",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor_shower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_meteor_shower.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowMeteorShowerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HotMeteor2",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hot_meteor_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/hot_meteor_2.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/hot_meteor_2.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/HotMeteor2Block.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/hot_meteor_2.json",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/hot_meteor_2.json"
+        ]
+      }
+    },
+    {
+      "name": "ColdMeteor2",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cold_meteor_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/cold_meteor_2.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/cold_meteor_2.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/ColdMeteor2Block.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/cold_meteor_2.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/cold_meteor_2.json"
+        ]
+      }
+    },
+    {
+      "name": "SmokeBlockOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_block_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SmokeBlockOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Smoke",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/SmokeBlock.java",
+          "src/main/resources/data/youtubers_natural_disasters/loot_tables/blocks/smoke.json",
+          "src/main/resources/assets/youtubers_natural_disasters/blockstates/smoke.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/block/entity/SmokeBlockEntity.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/smoke.json",
+          "src/main/resources/assets/youtubers_natural_disasters/models/block/smoke.json"
+        ]
+      }
+    },
+    {
+      "name": "Reddoons",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reddoons",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/reddoons_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/ReddoonsEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/ReddoonsRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "ReddoonsOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reddoons_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ReddoonsOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TalonMC",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talon_mc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TalonMCEntity.java",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TalonMCRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "TalonMCLands",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talon_mc_lands",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TalonMCLandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TalonMeteorHit",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talon_meteor_hit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/youtubers_natural_disasters/damage_type/talon_meteor_hit.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -4970,6 +5528,24 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "MusicWait",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "PleaseWorkMusic",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "VolcanoItemTexture",
+      "type": "number",
+      "scope": "world",
+      "value": "1.0"
     }
   ],
   "sound_elements": [
@@ -5092,16 +5668,30 @@
       ],
       "category": "neutral",
       "subtitle": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas"
+    },
+    {
+      "name": "talonmcscream",
+      "files": [
+        "he_invited_us_to_his_minecraft_tournament...-veed"
+      ],
+      "category": "neutral",
+      "subtitle": "AHHHHHHHHH"
     }
   ],
   "tag_elements": {
+    "BLOCKS:minecraft:small_flowers": [
+      "Blocks.TALLGRASS#1",
+      "Blocks.DOUBLE_PLANT#2"
+    ],
     "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:Smoke",
       "~CUSTOM:VolcanoAir"
     ],
     "BLOCKS:mod:volcanoair": [
       "CUSTOM:VolcanoAir"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:Basaltt",
       "~CUSTOM:Stone",
       "~CUSTOM:Magma",
       "~CUSTOM:Basalt"
@@ -5287,8 +5877,8 @@
   "language_map": {
     "en_us": {
       "item.youtubers_natural_disasters.saturation_filler": "Saturation Filler",
-      "death.attack.techno_bullied_you": "%1$s got bullied by Technoblade in Skywars",
       "entity.youtubers_natural_disasters.sinkhole_entity": "Sinkhole Entity",
+      "death.attack.techno_bullied_you": "%1$s got bullied by Technoblade in Skywars",
       "entity.youtubers_natural_disasters.technoblade": "Technoblade",
       "subtitles.knarfysound6": "Today will be... BREAKING MINECRAFT WITH YOUR DUMB IDEAS!!!",
       "item.youtubers_natural_disasters.techno_item_defeating": "Techno\u0027s Old Videos",
@@ -5296,16 +5886,20 @@
       "subtitles.knarfysound5": "ToDaY i\u0027M BrEaKiNg MiNeCrAfT WiTh YoUr dUmB iDEaS",
       "subtitles.defnotarickrollatall": "Definently not a rickroll...",
       "subtitles.knarfysound7": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas",
-      "death.attack.tooth_pick_cleaning_teeth.player": "%1$s died whilst trying to escape Techno using Toothpick and %2$s",
       "death.attack.technos_inhailed_too_much_gas": "%1$s Inhaled Too Much Gas",
-      "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
+      "death.attack.tooth_pick_cleaning_teeth.player": "%1$s died whilst trying to escape Techno using Toothpick and %2$s",
+      "block.youtubers_natural_disasters.basaltt": "Basalt",
       "item.youtubers_natural_disasters.splash_potion_of_gas": "Splash Potion Of Gas",
+      "item.youtubers_natural_disasters.cosmic_spawn_egg": "Cosmic Spawn Egg",
       "subtitles.thatswhatilike": "JUMP IN THE CADILLAC",
-      "gamerule.naturalDisasterSpawning": "Natural Disaster Spawning",
+      "block.youtubers_natural_disasters.cold_meteor_2": "Cold Meteor",
       "death.attack.mace_smash.player": "%1$s was smashed whilst trying to escape %2$s",
+      "gamerule.naturalDisasterSpawning": "Natural Disaster Spawning",
+      "item.youtubers_natural_disasters.reddoons_spawn_egg": "Reddoons Spawn Egg",
       "death.attack.axe_of_peace_wasnt_peaceful.item": "%1$s was killed by Techno with the Axe Of Peace and %2$s using %3$s",
       "death.attack.meteor_hit": "%1$s had a meteor hit their head",
       "block.youtubers_natural_disasters.basalt": "Basalt",
+      "entity.youtubers_natural_disasters.ph_1_lz_a": "Ph1LzA",
       "death.attack.spaghettified.player": "%1$s got spaghettified whilst trying to escape %2$s",
       "item.youtubers_natural_disasters.technoblade_spawn_egg": "Technoblade Spawn Egg",
       "death.attack.orphan_obliterator_damage": "%1$s was destroyed by the Orphan Obliterator",
@@ -5326,6 +5920,8 @@
       "subtitles.cavemanfilmswhateveryouwant": "Whatever you want!",
       "item.youtubers_natural_disasters.end_of_world_meteor": "End Of World Meteor",
       "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
+      "entity.youtubers_natural_disasters.yeah_jaron": "Yeah_Jaron",
+      "effect.youtubers_natural_disasters.invincibility": "Invincibility",
       "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
       "item.youtubers_natural_disasters.timephoon_summoner": "Timephoon Summoner",
       "item.youtubers_natural_disasters.black_hole_summoner": "Black Hole Summoner",
@@ -5336,10 +5932,12 @@
       "effect.youtubers_natural_disasters.drown_fast": "Drown Fast",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
+      "item.youtubers_natural_disasters.yeah_jaron_spawn_egg": "Yeah_Jaron Spawn Egg",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "block.youtubers_natural_disasters.magma": "Magma",
       "death.attack.techno_bullied_you.player": "%1$s died whilst trying to escape Techno and %2$s",
       "entity.youtubers_natural_disasters.volcano_generator_v_2p_2": "Volcano",
+      "item.youtubers_natural_disasters.ph_1_lz_a_spawn_egg": "Ph1LzA Spawn Egg",
       "entity.youtubers_natural_disasters.caveman_films": "CavemanFilms",
       "entity.youtubers_natural_disasters.volcano_v_2_erupter": "Volcano V 2 Erupter",
       "death.attack.technos_inhailed_too_much_gas.item": "%1$s was killed by %2$s using %3$s",
@@ -5348,14 +5946,17 @@
       "entity.youtubers_natural_disasters.meteor": "Meteor",
       "entity.youtubers_natural_disasters.test_of_sinkhole_entity": "Test Sinkhole Entity",
       "entity.youtubers_natural_disasters.orphan": "Orphan^2",
+      "subtitles.talonmcscream": "AHHHHHHHHH",
       "entity.youtubers_natural_disasters.volcano_ground_messer": "Volcano",
       "item.youtubers_natural_disasters.dapper_mr_tom_spawn_egg": "Dapper Mr Tom Spawn Egg",
       "item.youtubers_natural_disasters.crash_er": "CrAsHeR",
       "death.attack.orphan_obliterator_damage.player": "%1$s died whilst trying to escape the Orphan Obliterator and %2$s",
       "entity.youtubers_natural_disasters.cammaganza": "Cammaganza",
       "item.youtubers_natural_disasters.coin": "Coin",
+      "block.youtubers_natural_disasters.hot_meteor_2": "Hot Meteor",
       "death.attack.meteor_hit.player": "%1$s died from a meteor whilst trying to escape %2$s",
       "entity.youtubers_natural_disasters.end_of_world_meteor_meteor": "End Of World Meteor Meteor",
+      "entity.youtubers_natural_disasters.reddoons": "Reddoons",
       "item.youtubers_natural_disasters.tommyinnit_item": "Tommyinnit Item",
       "subtitles.defnotrickroll": "Definently not a rickroll...",
       "item_group.youtubers_natural_disasters.natural_disasters": "Natural Disasters",
@@ -5376,11 +5977,13 @@
       "item.youtubers_natural_disasters.technos_end_of_world_meteor.desc": "THE END IS NIGH",
       "entity.youtubers_natural_disasters.volcano_generator_v_2": "Volcano",
       "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
+      "entity.youtubers_natural_disasters.talon_mc": "Talon_MC",
+      "death.attack.talon_meteor_hit.item": "%1$s was killed by a Talon meteor from %2$s using %3$s",
       "entity.youtubers_natural_disasters.crag_dyna": "CragDyna",
       "entity.youtubers_natural_disasters.volcano_lava_v_2": "Volcano",
       "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
+      "death.attack.talon_meteor_hit.player": "%1$s died from a Talon meteor whilst trying to escape %2$s",
       "entity.youtubers_natural_disasters.mr_coosh": "Mr_Coosh",
-      "block.youtubers_natural_disasters.volcano_air": "Volcano Air",
       "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
       "entity.youtubers_natural_disasters.tsunami_generator": "Tsunami ",
@@ -5403,6 +6006,7 @@
       "entity.youtubers_natural_disasters.gas_person": "Gas Person",
       "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
       "item.youtubers_natural_disasters.music_disc": "Music Disc",
+      "item.youtubers_natural_disasters.throw_meteor_shower": "Throw Meteor Shower",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
       "entity.youtubers_natural_disasters.black_hole_v_2": "Black Hole",
@@ -5410,11 +6014,13 @@
       "item.youtubers_natural_disasters.mr_coosh_spawn_egg": "Mr_Coosh Spawn Egg",
       "item.youtubers_natural_disasters.throw_lightning": "Throw Lightning",
       "item.youtubers_natural_disasters.bred": "Bred",
+      "block.youtubers_natural_disasters.empty": "Volcano Air",
       "death.attack.mace_smash.item": "%1$s was smashed by %2$s using %3$s",
       "death.attack.spaghettified": "%1$s got spaghettified",
       "block.youtubers_natural_disasters.tommyinnit_block": "Tommyinnit Block",
       "entity.youtubers_natural_disasters.volcano_lava": "Volcano",
       "death.attack.tooth_pick_cleaning_teeth.item": "%1$s was killed by Techno with Toothpick and %2$s using %3$s",
+      "death.attack.talon_meteor_hit": "%1$s had a Talon meteor hit their head",
       "item.youtubers_natural_disasters.crag_dyna_spawn_egg": "CragDyna Spawn Egg",
       "death.attack.blood_god_kill.player": "%1$s died whilst trying to escape the Blood God and %2$s",
       "death.attack.techno_killing_dmg_type.item": "%1$s was killed by %2$s using %3$s from Techno\u0027s old cringe videos",
@@ -5424,6 +6030,7 @@
       "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",
       "block.youtubers_natural_disasters.solid_water_block": "Solid Water Block",
       "item.youtubers_natural_disasters.throw_tnt": "Throw TNT",
+      "block.youtubers_natural_disasters.smoke": "Smoke",
       "item.youtubers_natural_disasters.technos_end_of_world_meteor": "Techno\u0027s End Of World Meteor"
     }
   },

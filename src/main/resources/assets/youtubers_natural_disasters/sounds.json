@@ -133,5 +133,14 @@
         "stream": false
       }
     ]
+  },
+  "talonmcscream": {
+    "subtitle": "subtitles.talonmcscream",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:he_invited_us_to_his_minecraft_tournament...-veed",
+        "stream": false
+      }
+    ]
   }
 }

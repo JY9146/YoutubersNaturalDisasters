@@ -39,6 +39,9 @@
     "creativeTabs": [
       {
         "value": "MISC"
+      },
+      {
+        "value": "CUSTOM:NaturalDisasters"
       }
     ],
     "isBoss": false,

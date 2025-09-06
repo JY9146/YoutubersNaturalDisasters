@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "tornado",
+    "texture": "tornado_",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

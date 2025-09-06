@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Zachary95Renderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.YeahJaronRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.WildFireRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoV2ErupterRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.VolcanoLavaV2Renderer;
@@ -27,7 +28,10 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.TimephoonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.TalonMCRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.ReddoonsRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.Ph1LzARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
@@ -88,5 +92,9 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER_V_2.get(), VolcanoGroundMesserV2Renderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.CAMMAGANZA.get(), CammaganzaRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.VOLCANO_GENERATOR_V_2P_2.get(), VolcanoGeneratorV2p2Renderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.PH_1_LZ_A.get(), Ph1LzARenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.YEAH_JARON.get(), YeahJaronRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.REDDOONS.get(), ReddoonsRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TALON_MC.get(), TalonMCRenderer::new);
 	}
 }

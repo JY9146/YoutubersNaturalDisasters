@@ -31,4 +31,5 @@ public class YoutubersNaturalDisastersModSounds {
 	public static final RegistryObject<SoundEvent> KNARFYSOUND5 = REGISTRY.register("knarfysound5", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "knarfysound5")));
 	public static final RegistryObject<SoundEvent> KNARFYSOUND6 = REGISTRY.register("knarfysound6", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "knarfysound6")));
 	public static final RegistryObject<SoundEvent> KNARFYSOUND7 = REGISTRY.register("knarfysound7", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "knarfysound7")));
+	public static final RegistryObject<SoundEvent> TALONMCSCREAM = REGISTRY.register("talonmcscream", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "talonmcscream")));
 }

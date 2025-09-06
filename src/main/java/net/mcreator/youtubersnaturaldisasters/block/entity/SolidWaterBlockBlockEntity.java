@@ -2,10 +2,12 @@ package net.mcreator.youtubersnaturaldisasters.block.entity;
 
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.item.ItemStack;
@@ -41,6 +43,8 @@ public class SolidWaterBlockBlockEntity extends RandomizableContainerBlockEntity
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
 		ContainerHelper.loadAllItems(compound, this.stacks);
+		if (compound.get("fluidTank") instanceof CompoundTag compoundTag)
+			fluidTank.readFromNBT(compoundTag);
 	}
 
 	@Override
@@ -49,6 +53,7 @@ public class SolidWaterBlockBlockEntity extends RandomizableContainerBlockEntity
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
+		compound.put("fluidTank", fluidTank.writeToNBT(new CompoundTag()));
 	}
 
 	@Override
@@ -124,10 +129,27 @@ public class SolidWaterBlockBlockEntity extends RandomizableContainerBlockEntity
 		return true;
 	}
 
+	private final FluidTank fluidTank = new FluidTank(10000, fs -> {
+		if (fs.getFluid() == Fluids.FLOWING_WATER)
+			return true;
+		if (fs.getFluid() == Fluids.WATER)
+			return true;
+		return false;
+	}) {
+		@Override
+		protected void onContentsChanged() {
+			super.onContentsChanged();
+			setChanged();
+			level.sendBlockUpdated(worldPosition, level.getBlockState(worldPosition), level.getBlockState(worldPosition), 2);
+		}
+	};
+
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 		if (!this.remove && facing != null && capability == ForgeCapabilities.ITEM_HANDLER)
 			return handlers[facing.ordinal()].cast();
+		if (!this.remove && capability == ForgeCapabilities.FLUID_HANDLER)
+			return LazyOptional.of(() -> fluidTank).cast();
 		return super.getCapability(capability, facing);
 	}
 

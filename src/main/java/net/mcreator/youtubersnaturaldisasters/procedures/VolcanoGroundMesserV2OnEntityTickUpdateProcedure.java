@@ -18,7 +18,7 @@ public class VolcanoGroundMesserV2OnEntityTickUpdateProcedure {
 		BlockState Blok = Blocks.AIR.defaultBlockState();
 		double OneoutOf12 = 0;
 		entity.setInvulnerable(true);
-		int horizontalRadiusSphere = (int) 200 - 1;
+		int horizontalRadiusSphere = (int) 120 - 1;
 		int verticalRadiusSphere = (int) 5 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {

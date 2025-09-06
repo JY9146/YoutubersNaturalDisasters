@@ -68,7 +68,7 @@ public class SinkholeGeneratorProcedure {
 										if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude() == true) {
 											Block_DstroyChance = Mth.nextInt(RandomSource.create(), 1, 2);
 											if (Block_DstroyChance == 1) {
-												Fall_Chance = Mth.nextInt(RandomSource.create(), 1, 6);
+												Fall_Chance = Mth.nextInt(RandomSource.create(), 1, 15);
 												if (Fall_Chance == 1) {
 													Block_ = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
 												}

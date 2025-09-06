@@ -8,7 +8,7 @@ import net.minecraft.network.chat.Component;
 public class TechnobladeRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world) {
 		double TechnoSaysChance = 0;
-		TechnoSaysChance = Mth.nextInt(RandomSource.create(), 1, 68);
+		TechnoSaysChance = Mth.nextInt(RandomSource.create(), 1, 69);
 		if (TechnoSaysChance == 1) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Technoblade never dies."), false);
@@ -17,6 +17,9 @@ public class TechnobladeRightClickedOnEntityProcedure {
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Hello I'm here to talk to you about your car's extended warranty"), false);
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Also SUBSCRIBE TO TECHNOBLADE"), false);
+		} else if (TechnoSaysChance == 68) {
+			if (!world.isClientSide() && world.getServer() != null)
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I sometimes regret being here because for some reason I can't swim. Thank you Hypixel."), false);
 		} else if (TechnoSaysChance == 66) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("I hope Phill learned to read while I've been gone"), false);

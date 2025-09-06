@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "youtubers_natural_disasters:block/meteor_cool",
+    "particle": "youtubers_natural_disasters:block/meteor_cool"
+  },
+  "render_type": "solid"
+}

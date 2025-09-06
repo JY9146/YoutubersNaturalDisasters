@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "youtubers_natural_disasters:volcano_air"
+    "youtubers_natural_disasters:smoke",
+    "youtubers_natural_disasters:empty"
   ]
 }

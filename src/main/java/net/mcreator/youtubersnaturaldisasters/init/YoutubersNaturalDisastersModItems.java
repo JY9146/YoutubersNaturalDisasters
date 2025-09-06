@@ -19,6 +19,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoSummonerPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.item.WildFireSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
@@ -27,6 +28,7 @@ import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimephoonSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimeStickItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
+import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorShowerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowLightningItem;
 import net.mcreator.youtubersnaturaldisasters.item.TestSinkholeSummonerItem;
@@ -86,7 +88,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> KNARFY_SPAWN_EGG = REGISTRY.register("knarfy_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.KNARFY, -1, -11466344, new Item.Properties()));
 	public static final RegistryObject<Item> TOMMYINNIT_ITEM = REGISTRY.register("tommyinnit_item", () -> new TommyinnitItemItem());
 	public static final RegistryObject<Item> TOMMYINNIT_BLOCK = block(YoutubersNaturalDisastersModBlocks.TOMMYINNIT_BLOCK);
-	public static final RegistryObject<Item> VOLCANO_AIR = block(YoutubersNaturalDisastersModBlocks.VOLCANO_AIR);
+	public static final RegistryObject<Item> EMPTY = block(YoutubersNaturalDisastersModBlocks.EMPTY);
 	public static final RegistryObject<Item> BRED = REGISTRY.register("bred", () -> new BredItem());
 	public static final RegistryObject<Item> MACE = REGISTRY.register("mace", () -> new MaceItem());
 	public static final RegistryObject<Item> TIME_STICK = REGISTRY.register("time_stick", () -> new TimeStickItem());
@@ -98,6 +100,14 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> MAGMA = block(YoutubersNaturalDisastersModBlocks.MAGMA);
 	public static final RegistryObject<Item> STONE = block(YoutubersNaturalDisastersModBlocks.STONE);
 	public static final RegistryObject<Item> CAMMAGANZA_SPAWN_EGG = REGISTRY.register("cammaganza_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.CAMMAGANZA, -7910598, -2524612, new Item.Properties()));
+	public static final RegistryObject<Item> PH_1_LZ_A_SPAWN_EGG = REGISTRY.register("ph_1_lz_a_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.PH_1_LZ_A, -16751104, -799571, new Item.Properties()));
+	public static final RegistryObject<Item> YEAH_JARON_SPAWN_EGG = REGISTRY.register("yeah_jaron_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.YEAH_JARON, -13159, -6856664, new Item.Properties()));
+	public static final RegistryObject<Item> BASALTT = block(YoutubersNaturalDisastersModBlocks.BASALTT);
+	public static final RegistryObject<Item> THROW_METEOR_SHOWER = REGISTRY.register("throw_meteor_shower", () -> new ThrowMeteorShowerItem());
+	public static final RegistryObject<Item> HOT_METEOR_2 = block(YoutubersNaturalDisastersModBlocks.HOT_METEOR_2);
+	public static final RegistryObject<Item> COLD_METEOR_2 = block(YoutubersNaturalDisastersModBlocks.COLD_METEOR_2);
+	public static final RegistryObject<Item> SMOKE = block(YoutubersNaturalDisastersModBlocks.SMOKE);
+	public static final RegistryObject<Item> REDDOONS_SPAWN_EGG = REGISTRY.register("reddoons_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.REDDOONS, -3407872, -10092544, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -108,6 +118,8 @@ public class YoutubersNaturalDisastersModItems {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
+			ItemProperties.register(VOLCANO_SUMMONER.get(), new ResourceLocation("youtubers_natural_disasters:volcano_summoner_state1"),
+					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) VolcanoSummonerPropertyValueProviderProcedure.execute(entity != null ? entity.level() : clientWorld, itemStackToRender));
 			ItemProperties.register(COIN.get(), new ResourceLocation("youtubers_natural_disasters:coin_heads"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) CoinPropertyValueProviderProcedure.execute(itemStackToRender));
 		});
 	}
