@@ -30,12 +30,12 @@ import net.minecraft.network.protocol.Packet;
 import net.mcreator.youtubersnaturaldisasters.procedures.TalonMCLandsProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
-public class TalonMCEntity extends Monster {
-	public TalonMCEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(YoutubersNaturalDisastersModEntities.TALON_MC.get(), world);
+public class BadBoyHaloEntity extends Monster {
+	public BadBoyHaloEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(YoutubersNaturalDisastersModEntities.BAD_BOY_HALO.get(), world);
 	}
 
-	public TalonMCEntity(EntityType<TalonMCEntity> type, Level world) {
+	public BadBoyHaloEntity(EntityType<BadBoyHaloEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;

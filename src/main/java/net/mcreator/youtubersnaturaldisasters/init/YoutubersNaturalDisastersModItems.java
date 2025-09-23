@@ -21,6 +21,7 @@ import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoSummonerPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
+import net.mcreator.youtubersnaturaldisasters.item.WinCookieItem;
 import net.mcreator.youtubersnaturaldisasters.item.WildFireSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
@@ -108,6 +109,11 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> COLD_METEOR_2 = block(YoutubersNaturalDisastersModBlocks.COLD_METEOR_2);
 	public static final RegistryObject<Item> SMOKE = block(YoutubersNaturalDisastersModBlocks.SMOKE);
 	public static final RegistryObject<Item> REDDOONS_SPAWN_EGG = REGISTRY.register("reddoons_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.REDDOONS, -3407872, -10092544, new Item.Properties()));
+	public static final RegistryObject<Item> WIN_COOKIE = REGISTRY.register("win_cookie", () -> new WinCookieItem());
+	public static final RegistryObject<Item> JUST_KABOODLE_SPAWN_EGG = REGISTRY.register("just_kaboodle_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.JUST_KABOODLE, -16750849, -1, new Item.Properties()));
+	public static final RegistryObject<Item> IMASQUIDKID_SPAWN_EGG = REGISTRY.register("imasquidkid_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.IMASQUIDKID, -14402225, -16777216, new Item.Properties()));
+	public static final RegistryObject<Item> GARRETT_THE_CARROT_SPAWN_EGG = REGISTRY.register("garrett_the_carrot_spawn_egg",
+			() -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT, -39424, -16738048, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

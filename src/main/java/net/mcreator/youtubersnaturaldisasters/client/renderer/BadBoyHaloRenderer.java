@@ -8,16 +8,16 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.model.HumanoidModel;
 
-import net.mcreator.youtubersnaturaldisasters.entity.TalonMCEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.BadBoyHaloEntity;
 
-public class TalonMCRenderer extends HumanoidMobRenderer<TalonMCEntity, HumanoidModel<TalonMCEntity>> {
-	public TalonMCRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel<TalonMCEntity>(context.bakeLayer(ModelLayers.PLAYER)), 0f);
+public class BadBoyHaloRenderer extends HumanoidMobRenderer<BadBoyHaloEntity, HumanoidModel<BadBoyHaloEntity>> {
+	public BadBoyHaloRenderer(EntityRendererProvider.Context context) {
+		super(context, new HumanoidModel<BadBoyHaloEntity>(context.bakeLayer(ModelLayers.PLAYER)), 0f);
 		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(TalonMCEntity entity) {
+	public ResourceLocation getTextureLocation(BadBoyHaloEntity entity) {
 		return new ResourceLocation("youtubers_natural_disasters:textures/entities/895c87fdb34d28b4.png");
 	}
 }

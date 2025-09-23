@@ -2,10 +2,10 @@
   "_fv": 73,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Talon_MC",
+    "mobName": "JustKaboodle",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "895c87fdb34d28b4.png",
+    "mobModelTexture": "537a9ed72bc9d500.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -27,16 +27,23 @@
     "modelHeight": 1.8,
     "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": false,
+    "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -16750849,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
       "value": -1,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:NaturalDisasters"
+      },
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -47,16 +54,16 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "Items.IRON_HELMET"
     },
     "equipmentBody": {
-      "value": ""
+      "value": "Items.IRON_CHESTPLATE"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "Items.IRON_LEGGINGS"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.IRON_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
@@ -84,19 +91,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": true,
-    "immuneToCactus": true,
-    "immuneToDrowning": true,
-    "immuneToLightning": true,
-    "immuneToPotions": true,
-    "immuneToPlayer": true,
-    "immuneToExplosion": true,
-    "immuneToTrident": true,
-    "immuneToAnvil": true,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -116,9 +123,6 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onMobTickUpdate": {
-      "name": "TalonMCLands"
-    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"42\" y=\"-8\"><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Ph1LzA</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block><block type=\"attack_on_collide\" x=\"182\" y=\"166\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></xml>",

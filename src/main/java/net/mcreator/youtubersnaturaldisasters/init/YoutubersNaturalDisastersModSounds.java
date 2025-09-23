@@ -32,4 +32,9 @@ public class YoutubersNaturalDisastersModSounds {
 	public static final RegistryObject<SoundEvent> KNARFYSOUND6 = REGISTRY.register("knarfysound6", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "knarfysound6")));
 	public static final RegistryObject<SoundEvent> KNARFYSOUND7 = REGISTRY.register("knarfysound7", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "knarfysound7")));
 	public static final RegistryObject<SoundEvent> TALONMCSCREAM = REGISTRY.register("talonmcscream", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "talonmcscream")));
+	public static final RegistryObject<SoundEvent> YOUJUSTLOSTTHEGAME = REGISTRY.register("youjustlostthegame", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "youjustlostthegame")));
+	public static final RegistryObject<SoundEvent> BEAUTIFULBEAUTIFULBEAUTIFUL = REGISTRY.register("beautifulbeautifulbeautiful",
+			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "beautifulbeautifulbeautiful")));
+	public static final RegistryObject<SoundEvent> YOUEATCOWS = REGISTRY.register("youeatcows", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "youeatcows")));
+	public static final RegistryObject<SoundEvent> GARRETTFNAF = REGISTRY.register("garrettfnaf", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "garrettfnaf")));
 }
