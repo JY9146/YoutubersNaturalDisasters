@@ -39,6 +39,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.Ph1LzARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.MaxGGsRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MadPiglinRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.LavaBallShooterRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.KnarfyRenderer;
@@ -112,5 +113,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.RANBOO.get(), RanbooRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SQUIDDO.get(), SquiddoRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT.get(), GarrettTheCarrotRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MAX_G_GS.get(), MaxGGsRenderer::new);
 	}
 }

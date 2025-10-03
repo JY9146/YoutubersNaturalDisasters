@@ -178,5 +178,50 @@
         "stream": false
       }
     ]
+  },
+  "maxggsintro": {
+    "subtitle": "subtitles.maxggsintro",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:maxggsintro",
+        "stream": false
+      }
+    ]
+  },
+  "maxggsadvicep1": {
+    "subtitle": "subtitles.maxggsadvicep1",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:maxggsadvicep1",
+        "stream": false
+      }
+    ]
+  },
+  "maxggsadvicep2": {
+    "subtitle": "subtitles.maxggsadvicep2",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:maxggsadvicep2",
+        "stream": false
+      }
+    ]
+  },
+  "maxggssad": {
+    "subtitle": "subtitles.maxggssad",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:maxggssad",
+        "stream": false
+      }
+    ]
+  },
+  "maxggslaugh": {
+    "subtitle": "subtitles.maxggslaugh",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:maxggslaugh",
+        "stream": false
+      }
+    ]
   }
 }

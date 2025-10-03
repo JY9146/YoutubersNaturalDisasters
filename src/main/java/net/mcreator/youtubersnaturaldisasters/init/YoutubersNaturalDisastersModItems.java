@@ -114,6 +114,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> IMASQUIDKID_SPAWN_EGG = REGISTRY.register("imasquidkid_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.IMASQUIDKID, -14402225, -16777216, new Item.Properties()));
 	public static final RegistryObject<Item> GARRETT_THE_CARROT_SPAWN_EGG = REGISTRY.register("garrett_the_carrot_spawn_egg",
 			() -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT, -39424, -16738048, new Item.Properties()));
+	public static final RegistryObject<Item> MAX_G_GS_SPAWN_EGG = REGISTRY.register("max_g_gs_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MAX_G_GS, -13395457, -13108, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

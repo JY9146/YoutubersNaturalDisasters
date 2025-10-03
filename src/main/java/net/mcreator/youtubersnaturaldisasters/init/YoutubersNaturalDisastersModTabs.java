@@ -69,6 +69,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.JUST_KABOODLE_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.IMASQUIDKID_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -92,6 +93,7 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.JUST_KABOODLE_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.IMASQUIDKID_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
 		}
 	}
 }

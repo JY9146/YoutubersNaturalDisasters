@@ -27,7 +27,7 @@
     "modelHeight": 1.8,
     "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": false,
+    "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -13395457,
       "falpha": 0.0
@@ -36,7 +36,14 @@
       "value": -13108,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:NaturalDisasters"
+      },
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -47,23 +54,23 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": ""
+      "value": "Items.IRON_HELMET"
     },
     "equipmentBody": {
-      "value": ""
+      "value": "Items.IRON_CHESTPLATE"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "Items.IRON_LEGGINGS"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "Items.IRON_BOOTS"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 3,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.6,
+    "movementSpeed": 0.25,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
@@ -116,6 +123,15 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "whenMobDies": {
+      "name": "MaxGGsEntityDies"
+    },
+    "onMobTickUpdate": {
+      "name": "MaxGGsOnEntityTickUpdate"
+    },
+    "onInitialSpawn": {
+      "name": "MaxGGsOnInitialEntitySpawn"
+    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"42\" y=\"-8\"><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block><block type=\"attack_entity\" x=\"448\" y=\"104\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Ph1LzA</field><field name=\"condition\">null,null</field></block><block type=\"attack_on_collide\" x=\"182\" y=\"166\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></xml>",

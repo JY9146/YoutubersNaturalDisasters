@@ -47,6 +47,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.Ph1LzAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.MaxGGsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MadPiglinEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallShooterEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
@@ -191,7 +192,9 @@ public class YoutubersNaturalDisastersModEntities {
 	public static final RegistryObject<EntityType<WinsweepEntity>> WINSWEEP = register("winsweep",
 			EntityType.Builder.<WinsweepEntity>of(WinsweepEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WinsweepEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TubboEntity>> TUBBO = register("tubbo",
-			EntityType.Builder.<TubboEntity>of(TubboEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TubboEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<TubboEntity>of(TubboEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TubboEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ImasquidkidEntity>> IMASQUIDKID = register("imasquidkid",
 			EntityType.Builder.<ImasquidkidEntity>of(ImasquidkidEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ImasquidkidEntity::new)
 
@@ -204,6 +207,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<SquiddoEntity>of(SquiddoEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SquiddoEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GarrettTheCarrotEntity>> GARRETT_THE_CARROT = register("garrett_the_carrot",
 			EntityType.Builder.<GarrettTheCarrotEntity>of(GarrettTheCarrotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GarrettTheCarrotEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MaxGGsEntity>> MAX_G_GS = register("max_g_gs",
+			EntityType.Builder.<MaxGGsEntity>of(MaxGGsEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaxGGsEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -262,6 +269,7 @@ public class YoutubersNaturalDisastersModEntities {
 			RanbooEntity.init();
 			SquiddoEntity.init();
 			GarrettTheCarrotEntity.init();
+			MaxGGsEntity.init();
 		});
 	}
 
@@ -313,5 +321,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(RANBOO.get(), RanbooEntity.createAttributes().build());
 		event.put(SQUIDDO.get(), SquiddoEntity.createAttributes().build());
 		event.put(GARRETT_THE_CARROT.get(), GarrettTheCarrotEntity.createAttributes().build());
+		event.put(MAX_G_GS.get(), MaxGGsEntity.createAttributes().build());
 	}
 }
