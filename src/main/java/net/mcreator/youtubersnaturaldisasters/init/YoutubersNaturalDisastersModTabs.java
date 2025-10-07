@@ -70,6 +70,8 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.IMASQUIDKID_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR_SHOWER.get());
 			}).build());
 
 	@SubscribeEvent

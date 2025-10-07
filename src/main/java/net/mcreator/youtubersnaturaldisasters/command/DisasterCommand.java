@@ -24,6 +24,8 @@ import net.mcreator.youtubersnaturaldisasters.procedures.RandomDisasterSummonPro
 import net.mcreator.youtubersnaturaldisasters.procedures.EndOfWorldMeteorRightclickedProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterVolcanoV2SpawnProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterVolcanoV1SummonProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerP2Procedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterMeteorShowerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterMeteorShower2Procedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterGasSpawnProcedure;
@@ -161,6 +163,34 @@ public class DisasterCommand {
 				direction = entity.getDirection();
 
 			DisasterMeteorShower2Procedure.execute(world, x, y, z, entity);
+			return 0;
+		})))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("talonmeteorshower").then(Commands.literal("head").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			DisasterTalonMeteorShowerProcedure.execute(world, x, y, z);
+			return 0;
+		})).then(Commands.literal("looking").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			DisasterTalonMeteorShowerP2Procedure.execute(world, x, y, z, entity);
 			return 0;
 		})))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("sinkholev1").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();

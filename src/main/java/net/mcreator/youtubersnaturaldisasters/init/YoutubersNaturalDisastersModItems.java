@@ -28,6 +28,8 @@ import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimephoonSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimeStickItem;
+import net.mcreator.youtubersnaturaldisasters.item.ThrowTalonMeteorShowerItem;
+import net.mcreator.youtubersnaturaldisasters.item.ThrowTalonMeteorItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowTNTItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorShowerItem;
 import net.mcreator.youtubersnaturaldisasters.item.ThrowMeteorItem;
@@ -115,6 +117,8 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> GARRETT_THE_CARROT_SPAWN_EGG = REGISTRY.register("garrett_the_carrot_spawn_egg",
 			() -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT, -39424, -16738048, new Item.Properties()));
 	public static final RegistryObject<Item> MAX_G_GS_SPAWN_EGG = REGISTRY.register("max_g_gs_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MAX_G_GS, -13395457, -13108, new Item.Properties()));
+	public static final RegistryObject<Item> THROW_TALON_METEOR = REGISTRY.register("throw_talon_meteor", () -> new ThrowTalonMeteorItem());
+	public static final RegistryObject<Item> THROW_TALON_METEOR_SHOWER = REGISTRY.register("throw_talon_meteor_shower", () -> new ThrowTalonMeteorShowerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
