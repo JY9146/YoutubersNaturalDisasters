@@ -1,0 +1,26 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "youtubers_natural_disasters:item/pixil-frame-0_6"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "youtubers_natural_disasters:tsunami_summoner_biome": 0
+      },
+      "model": "youtubers_natural_disasters:item/tsunami_summoner_0"
+    },
+    {
+      "predicate": {
+        "youtubers_natural_disasters:tsunami_summoner_biome": 1
+      },
+      "model": "youtubers_natural_disasters:item/tsunami_summoner_1"
+    },
+    {
+      "predicate": {
+        "youtubers_natural_disasters:tsunami_summoner_biome": 2
+      },
+      "model": "youtubers_natural_disasters:item/tsunami_summoner_2"
+    }
+  ]
+}

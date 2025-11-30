@@ -1,9 +1,16 @@
 
 package net.mcreator.youtubersnaturaldisasters.block;
 
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -21,18 +28,23 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.renderer.BiomeColors;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoAirOnTickUpdateProcedure;
-import net.mcreator.youtubersnaturaldisasters.block.entity.VolcanoAirBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.procedures.SolidWaterBlockkTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlocks;
+import net.mcreator.youtubersnaturaldisasters.block.entity.SolidWaterBlockkBlockEntity;
 
-public class VolcanoAirBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
+public class SolidWaterBlockkBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-	public VolcanoAirBlock() {
-		super(BlockBehaviour.Properties.of().air().sound(SoundType.EMPTY).strength(-1, 3600000).noCollission().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+	public SolidWaterBlockkBlock() {
+		super(BlockBehaviour.Properties.of().liquid().mapColor(MapColor.WATER).sound(SoundType.EMPTY).strength(-1, 3600000).noCollission().noOcclusion().pushReaction(PushReaction.BLOCK).isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
 	}
 
@@ -87,9 +99,24 @@ public class VolcanoAirBlock extends Block implements SimpleWaterloggedBlock, En
 	}
 
 	@Override
+	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
+		return BlockPathTypes.WATER;
+	}
+
+	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		VolcanoAirOnTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		world.scheduleTick(pos, this, 1);
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		SolidWaterBlockkTickUpdateProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
@@ -100,7 +127,7 @@ public class VolcanoAirBlock extends Block implements SimpleWaterloggedBlock, En
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return new VolcanoAirBlockEntity(pos, state);
+		return new SolidWaterBlockkBlockEntity(pos, state);
 	}
 
 	@Override
@@ -108,5 +135,19 @@ public class VolcanoAirBlock extends Block implements SimpleWaterloggedBlock, En
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
 		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
+		event.getBlockColors().register((bs, world, pos, index) -> {
+			return world != null && pos != null ? BiomeColors.getAverageWaterColor(world, pos) : -1;
+		}, YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get());
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
+		event.getItemColors().register((stack, index) -> {
+			return 3694022;
+		}, YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get());
 	}
 }

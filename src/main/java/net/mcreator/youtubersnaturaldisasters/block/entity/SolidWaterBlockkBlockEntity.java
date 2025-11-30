@@ -29,12 +29,12 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-public class SolidWaterBlockBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public class SolidWaterBlockkBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
-	public SolidWaterBlockBlockEntity(BlockPos position, BlockState state) {
-		super(YoutubersNaturalDisastersModBlockEntities.SOLID_WATER_BLOCK.get(), position, state);
+	public SolidWaterBlockkBlockEntity(BlockPos position, BlockState state) {
+		super(YoutubersNaturalDisastersModBlockEntities.SOLID_WATER_BLOCKK.get(), position, state);
 	}
 
 	@Override
@@ -81,7 +81,7 @@ public class SolidWaterBlockBlockEntity extends RandomizableContainerBlockEntity
 
 	@Override
 	public Component getDefaultName() {
-		return Component.literal("solid_water_block");
+		return Component.literal("solid_water_blockk");
 	}
 
 	@Override

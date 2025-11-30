@@ -1,6 +1,5 @@
 package net.mcreator.youtubersnaturaldisasters.procedures;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
@@ -12,7 +11,7 @@ public class TsunamiP2Procedure {
 		if (entity == null)
 			return;
 		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("RT")) - 1;
-		int verticalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("HT") - 2);
+		int verticalRadiusHemiTop = (int) 1;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int yi = 0; yi < yIterationsHemiTop; yi++) {
 			if (yi == verticalRadiusHemiTop) {
@@ -23,11 +22,11 @@ public class TsunamiP2Procedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi - 19))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get()) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi - 19), Blocks.STRUCTURE_VOID.defaultBlockState(), 3);
-						}
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + yi - 25, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get()) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi - 25, z + zi), Blocks.STRUCTURE_VOID.defaultBlockState(), 3);
+						if ((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi - 19))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get()
+								|| (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi - 19))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get()) {
+							for (int index0 = 0; index0 < 3; index0++) {
+								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi - 19), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+							}
 						}
 					}
 				}

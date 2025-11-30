@@ -20,10 +20,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.VolcanoSummonerPropertyValueProviderProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TsunamiSummonerPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.CoinPropertyValueProviderProcedure;
 import net.mcreator.youtubersnaturaldisasters.item.WinCookieItem;
 import net.mcreator.youtubersnaturaldisasters.item.WildFireSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.VolcanoSummonerItem;
+import net.mcreator.youtubersnaturaldisasters.item.TsunamiSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TornadoSummonerItem;
 import net.mcreator.youtubersnaturaldisasters.item.TommyinnitItemItem;
 import net.mcreator.youtubersnaturaldisasters.item.TimephoonSummonerItem;
@@ -119,6 +121,9 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> MAX_G_GS_SPAWN_EGG = REGISTRY.register("max_g_gs_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MAX_G_GS, -13395457, -13108, new Item.Properties()));
 	public static final RegistryObject<Item> THROW_TALON_METEOR = REGISTRY.register("throw_talon_meteor", () -> new ThrowTalonMeteorItem());
 	public static final RegistryObject<Item> THROW_TALON_METEOR_SHOWER = REGISTRY.register("throw_talon_meteor_shower", () -> new ThrowTalonMeteorShowerItem());
+	public static final RegistryObject<Item> SOLID_WATER_BLOCKK = block(YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK);
+	public static final RegistryObject<Item> TSUNAMI_SUMMONER = REGISTRY.register("tsunami_summoner", () -> new TsunamiSummonerItem());
+	public static final RegistryObject<Item> PIKALODON_SPAWN_EGG = REGISTRY.register("pikalodon_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.PIKALODON, -256, -65485, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
@@ -132,6 +137,8 @@ public class YoutubersNaturalDisastersModItems {
 			ItemProperties.register(VOLCANO_SUMMONER.get(), new ResourceLocation("youtubers_natural_disasters:volcano_summoner_state1"),
 					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) VolcanoSummonerPropertyValueProviderProcedure.execute(entity != null ? entity.level() : clientWorld, itemStackToRender));
 			ItemProperties.register(COIN.get(), new ResourceLocation("youtubers_natural_disasters:coin_heads"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) CoinPropertyValueProviderProcedure.execute(itemStackToRender));
+			ItemProperties.register(TSUNAMI_SUMMONER.get(), new ResourceLocation("youtubers_natural_disasters:tsunami_summoner_biome"),
+					(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) TsunamiSummonerPropertyValueProviderProcedure.execute(itemStackToRender));
 		});
 	}
 }

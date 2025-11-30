@@ -35,6 +35,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.SquiddoRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.ReddoonsRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.RanbooRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.PikalodonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Ph1LzARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
@@ -114,5 +115,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.SQUIDDO.get(), SquiddoRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT.get(), GarrettTheCarrotRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MAX_G_GS.get(), MaxGGsRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.PIKALODON.get(), PikalodonRenderer::new);
 	}
 }

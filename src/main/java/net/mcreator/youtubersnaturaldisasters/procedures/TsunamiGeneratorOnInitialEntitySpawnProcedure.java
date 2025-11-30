@@ -14,7 +14,7 @@ public class TsunamiGeneratorOnInitialEntitySpawnProcedure {
 		entity.getPersistentData().putDouble("RT", 70);
 		entity.getPersistentData().putDouble("HT", 18);
 		int horizontalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("RT")) - 1;
-		int verticalRadiusHemiTop = (int) (entity.getPersistentData().getDouble("HT"));
+		int verticalRadiusHemiTop = (int) 1;
 		int yIterationsHemiTop = verticalRadiusHemiTop;
 		for (int yi = 0; yi < yIterationsHemiTop; yi++) {
 			if (yi == verticalRadiusHemiTop) {

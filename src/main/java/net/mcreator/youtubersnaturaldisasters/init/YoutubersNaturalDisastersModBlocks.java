@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.youtubersnaturaldisasters.block.VolcanoAirBlock;
 import net.mcreator.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.StoneBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockkBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
 import net.mcreator.youtubersnaturaldisasters.block.SmokeBlock;
@@ -44,6 +45,7 @@ public class YoutubersNaturalDisastersModBlocks {
 	public static final RegistryObject<Block> HOT_METEOR_2 = REGISTRY.register("hot_meteor_2", () -> new HotMeteor2Block());
 	public static final RegistryObject<Block> COLD_METEOR_2 = REGISTRY.register("cold_meteor_2", () -> new ColdMeteor2Block());
 	public static final RegistryObject<Block> SMOKE = REGISTRY.register("smoke", () -> new SmokeBlock());
+	public static final RegistryObject<Block> SOLID_WATER_BLOCKK = REGISTRY.register("solid_water_blockk", () -> new SolidWaterBlockkBlock());
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
@@ -52,11 +54,13 @@ public class YoutubersNaturalDisastersModBlocks {
 		@SubscribeEvent
 		public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
 			SolidWaterBlockBlock.blockColorLoad(event);
+			SolidWaterBlockkBlock.blockColorLoad(event);
 		}
 
 		@SubscribeEvent
 		public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
 			SolidWaterBlockBlock.itemColorLoad(event);
+			SolidWaterBlockkBlock.itemColorLoad(event);
 		}
 	}
 }

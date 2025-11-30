@@ -13,7 +13,7 @@
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
-    "displayFluidOverlay": false,
+    "displayFluidOverlay": true,
     "itemTexture": "",
     "particleTexture": "",
     "tintType": "Water",
@@ -107,9 +107,6 @@
     "isFluidTank": true,
     "fluidCapacity": 10000,
     "fluidRestrictions": [
-      {
-        "value": "FLOWING_WATER"
-      },
       {
         "value": "WATER"
       }

@@ -9,8 +9,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModBlocks;
+import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
-public class SolidWaterBlockOnTickUpdateProcedure {
+public class SolidWaterBlockkTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		{
 			BlockPos _pos = BlockPos.containing(x, y, z);
@@ -31,27 +32,33 @@ public class SolidWaterBlockOnTickUpdateProcedure {
 				|| (world.getBlockState(BlockPos.containing(x + 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
 						&& !((world.getBlockState(BlockPos.containing(x + 1, y, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())) {
 			world.setBlock(BlockPos.containing(x + 1, y, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			YoutubersNaturalDisastersMod.queueServerWork(1, () -> {
+				world.setBlock(BlockPos.containing(x + 1, y, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			});
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("minecraft:small_flowers")))
 				|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == Blocks.WATER
 				|| (world.getBlockState(BlockPos.containing(x, y, z + 1))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
 						&& !((world.getBlockState(BlockPos.containing(x, y, z + 1))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())) {
 			world.setBlock(BlockPos.containing(x, y, z + 1), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
-		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:small_flowers")))
-				|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.WATER
-				|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
-						&& !((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())) {
-			world.setBlock(BlockPos.containing(x - 1, y, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
-		} else if ((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation("minecraft:small_flowers")))
-				|| (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == Blocks.WATER
-				|| (world.getBlockState(BlockPos.containing(x, y - 1, z))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
-						&& (!((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())
-								|| !((world.getBlockState(BlockPos.containing(x, y - 1, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get()))) {
-			world.setBlock(BlockPos.containing(x, y - 1, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			YoutubersNaturalDisastersMod.queueServerWork(1, () -> {
+				world.setBlock(BlockPos.containing(x, y, z + 1), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			});
 		} else if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.AIR
 				|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("minecraft:small_flowers"))) || (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.WATER
 				|| (world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
 						&& !((world.getBlockState(BlockPos.containing(x, y, z - 1))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())) {
 			world.setBlock(BlockPos.containing(x, y, z - 1), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			YoutubersNaturalDisastersMod.queueServerWork(1, () -> {
+				world.setBlock(BlockPos.containing(x, y, z - 1), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			});
+		} else if ((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.AIR || (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:small_flowers")))
+				|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.WATER || (world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == Blocks.WATER
+				|| (world.getBlockState(BlockPos.containing(x - 1, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:large_flowers")))
+						&& !((world.getBlockState(BlockPos.containing(x - 1, y, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get())) {
+			world.setBlock(BlockPos.containing(x - 1, y, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			YoutubersNaturalDisastersMod.queueServerWork(1, () -> {
+				world.setBlock(BlockPos.containing(x - 1, y, z), YoutubersNaturalDisastersModBlocks.EMPTY.get().defaultBlockState(), 3);
+			});
 		}
 	}
 }

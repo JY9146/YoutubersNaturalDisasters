@@ -42,6 +42,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectile
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.ReddoonsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.RanbooEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.PikalodonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.PiglinSpawnerEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.Ph1LzAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
@@ -213,6 +214,8 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<MaxGGsEntity>of(MaxGGsEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MaxGGsEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PikalodonEntity>> PIKALODON = register("pikalodon",
+			EntityType.Builder.<PikalodonEntity>of(PikalodonEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PikalodonEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -270,6 +273,7 @@ public class YoutubersNaturalDisastersModEntities {
 			SquiddoEntity.init();
 			GarrettTheCarrotEntity.init();
 			MaxGGsEntity.init();
+			PikalodonEntity.init();
 		});
 	}
 
@@ -322,5 +326,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(SQUIDDO.get(), SquiddoEntity.createAttributes().build());
 		event.put(GARRETT_THE_CARROT.get(), GarrettTheCarrotEntity.createAttributes().build());
 		event.put(MAX_G_GS.get(), MaxGGsEntity.createAttributes().build());
+		event.put(PIKALODON.get(), PikalodonEntity.createAttributes().build());
 	}
 }
