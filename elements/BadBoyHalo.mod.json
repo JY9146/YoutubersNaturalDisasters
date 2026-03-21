@@ -2,10 +2,10 @@
   "_fv": 73,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Tubbo",
+    "mobName": "BadBoyHalo",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "895c87fdb34d28b4.png",
+    "mobModelTexture": "pmcskin3d-steve_1.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -27,16 +27,23 @@
     "modelHeight": 1.8,
     "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
-    "hasSpawnEgg": false,
+    "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -16777216,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -10092544,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:NaturalDisasters"
+      },
+      {
+        "value": "MISC"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -60,10 +67,10 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 1,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.6,
+    "movementSpeed": 0.25,
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
@@ -84,19 +91,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
-    "immuneToArrows": true,
-    "immuneToFallDamage": true,
-    "immuneToCactus": true,
-    "immuneToDrowning": true,
-    "immuneToLightning": true,
-    "immuneToPotions": true,
-    "immuneToPlayer": true,
-    "immuneToExplosion": true,
-    "immuneToTrident": true,
-    "immuneToAnvil": true,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -116,12 +123,9 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onMobTickUpdate": {
-      "name": "TalonMCLands"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"42\" y=\"-8\"><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Ph1LzA</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block><block type=\"attack_on_collide\" x=\"182\" y=\"166\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"42\" y=\"-8\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block><block type=\"attack_entity\" x=\"712\" y=\"4\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:Ph1LzA</field><field name=\"condition\">null,null</field></block><block type=\"attack_on_collide\" x=\"404\" y=\"144\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field></block><block type=\"look_around\" x=\"419\" y=\"206\"><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

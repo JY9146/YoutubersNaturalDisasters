@@ -30,14 +30,18 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.TimephoonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.TapLRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TalonMCRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SquiddoRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.ReyablipblopRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.ReddoonsRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.RanbooRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.QuackityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.PikalodonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.Ph1LzARenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.OrphanRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.MysticatRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MrCooshRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.MaxGGsRenderer;
@@ -49,10 +53,12 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.ImasquidkidRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GarrettTheCarrotRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.FreshiRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.EndOfWorldMeteorMeteorRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.DapperMrTomRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CragDynaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CosmicRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.CoolmentRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CavemanFilmsRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.CammaganzaRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleV3Renderer;
@@ -116,5 +122,11 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT.get(), GarrettTheCarrotRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MAX_G_GS.get(), MaxGGsRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.PIKALODON.get(), PikalodonRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.FRESHI.get(), FreshiRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.QUACKITY.get(), QuackityRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.COOLMENT.get(), CoolmentRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MYSTICAT.get(), MysticatRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TAP_L.get(), TapLRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.REYABLIPBLOP.get(), ReyablipblopRenderer::new);
 	}
 }

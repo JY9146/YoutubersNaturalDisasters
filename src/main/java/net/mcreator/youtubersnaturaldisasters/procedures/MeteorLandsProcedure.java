@@ -29,12 +29,18 @@ public class MeteorLandsProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		double r = 0;
+		boolean fallin = false;
+		double num = 0;
 		if (world instanceof ServerLevel _origLevel) {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
 			if (world != null) {
 				if (entity.onGround()) {
+					if (Math.random() <= 0.5) {
+						fallin = true;
+					} else {
+						fallin = false;
+					}
 					int horizontalRadiusHemiTop = (int) 5 - 1;
 					int verticalRadiusHemiTop = (int) 1;
 					int yIterationsHemiTop = verticalRadiusHemiTop;
@@ -48,38 +54,76 @@ public class MeteorLandsProcedure {
 										+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 								if (distanceSq <= 1.0) {
 									if (Math.random() <= 0.5) {
-										if (world instanceof ServerLevel _level)
-											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState());
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.FIRE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+										if (fallin == true) {
+											if (world instanceof ServerLevel _level)
+												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState());
+										} else {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
+												BlockState _bs = YoutubersNaturalDisastersModBlocks.HOT_METEOR.get().defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
 											}
-											world.setBlock(_bp, _bs, 3);
+										}
+										if (Math.random() <= 0.9) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.FIRE.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
+											}
 										}
 									} else if (Math.random() <= 0.4) {
-										if (world instanceof ServerLevel _level)
-											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState());
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.FIRE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+										if (fallin == true) {
+											if (world instanceof ServerLevel _level)
+												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState());
+										} else {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
+												BlockState _bs = YoutubersNaturalDisastersModBlocks.COLD_METEOR.get().defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
 											}
-											world.setBlock(_bp, _bs, 3);
+										}
+										if (Math.random() <= 0.9) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.FIRE.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
+											}
 										}
 									} else if (Math.random() <= 0.4) {
 										{
@@ -96,36 +140,57 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.FIRE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+										if (Math.random() <= 0.9) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.FIRE.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
 											}
-											world.setBlock(_bp, _bs, 3);
 										}
 									} else if (Math.random() <= 0.3) {
-										if (world instanceof ServerLevel _level)
-											FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), Blocks.OBSIDIAN.defaultBlockState());
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.FIRE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+										if (fallin == true) {
+											if (world instanceof ServerLevel _level)
+												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi - 1, z + zi), Blocks.OBSIDIAN.defaultBlockState());
+										} else {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi - 1, z + zi);
+												BlockState _bs = Blocks.OBSIDIAN.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
 											}
-											world.setBlock(_bp, _bs, 3);
+										}
+										if (Math.random() <= 0.9) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.FIRE.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
+											}
 										}
 									} else {
 										{
@@ -142,19 +207,21 @@ public class MeteorLandsProcedure {
 											}
 											world.setBlock(_bp, _bs, 3);
 										}
-										{
-											BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
-											BlockState _bs = Blocks.FIRE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
+										if (Math.random() <= 0.9) {
+											{
+												BlockPos _bp = BlockPos.containing(x + xi, y + yi, z + zi);
+												BlockState _bs = Blocks.FIRE.defaultBlockState();
+												BlockState _bso = world.getBlockState(_bp);
+												for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+													Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+													if (_property != null && _bs.getValue(_property) != null)
+														try {
+															_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+														} catch (Exception e) {
+														}
+												}
+												world.setBlock(_bp, _bs, 3);
 											}
-											world.setBlock(_bp, _bs, 3);
 										}
 									}
 								}

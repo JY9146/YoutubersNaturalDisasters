@@ -18,6 +18,6 @@ public class RanbooRenderer extends HumanoidMobRenderer<RanbooEntity, HumanoidMo
 
 	@Override
 	public ResourceLocation getTextureLocation(RanbooEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/895c87fdb34d28b4.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/a4a1b31faaab4dc7.png");
 	}
 }

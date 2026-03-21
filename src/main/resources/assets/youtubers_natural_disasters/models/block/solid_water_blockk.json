@@ -4,5 +4,5 @@
     "all": "minecraft:block/water_still",
     "particle": "minecraft:block/water_still"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

@@ -223,5 +223,14 @@
         "stream": false
       }
     ]
+  },
+  "freshiexisting": {
+    "subtitle": "subtitles.freshiexisting",
+    "sounds": [
+      {
+        "name": "youtubers_natural_disasters:freshi-voiceline",
+        "stream": false
+      }
+    ]
   }
 }

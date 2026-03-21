@@ -42,4 +42,5 @@ public class YoutubersNaturalDisastersModSounds {
 	public static final RegistryObject<SoundEvent> MAXGGSADVICEP2 = REGISTRY.register("maxggsadvicep2", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "maxggsadvicep2")));
 	public static final RegistryObject<SoundEvent> MAXGGSSAD = REGISTRY.register("maxggssad", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "maxggssad")));
 	public static final RegistryObject<SoundEvent> MAXGGSLAUGH = REGISTRY.register("maxggslaugh", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "maxggslaugh")));
+	public static final RegistryObject<SoundEvent> FRESHIEXISTING = REGISTRY.register("freshiexisting", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("youtubers_natural_disasters", "freshiexisting")));
 }

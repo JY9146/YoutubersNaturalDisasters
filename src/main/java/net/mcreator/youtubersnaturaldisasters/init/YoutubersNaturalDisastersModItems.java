@@ -115,7 +115,12 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> REDDOONS_SPAWN_EGG = REGISTRY.register("reddoons_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.REDDOONS, -3407872, -10092544, new Item.Properties()));
 	public static final RegistryObject<Item> WIN_COOKIE = REGISTRY.register("win_cookie", () -> new WinCookieItem());
 	public static final RegistryObject<Item> JUST_KABOODLE_SPAWN_EGG = REGISTRY.register("just_kaboodle_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.JUST_KABOODLE, -16750849, -1, new Item.Properties()));
+	public static final RegistryObject<Item> WINSWEEP_SPAWN_EGG = REGISTRY.register("winsweep_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.WINSWEEP, -1, -10092442, new Item.Properties()));
+	public static final RegistryObject<Item> TUBBO_SPAWN_EGG = REGISTRY.register("tubbo_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.TUBBO, -10053376, -992092, new Item.Properties()));
 	public static final RegistryObject<Item> IMASQUIDKID_SPAWN_EGG = REGISTRY.register("imasquidkid_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.IMASQUIDKID, -14402225, -16777216, new Item.Properties()));
+	public static final RegistryObject<Item> BAD_BOY_HALO_SPAWN_EGG = REGISTRY.register("bad_boy_halo_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.BAD_BOY_HALO, -16777216, -10092544, new Item.Properties()));
+	public static final RegistryObject<Item> RANBOO_SPAWN_EGG = REGISTRY.register("ranboo_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.RANBOO, -16777216, -1, new Item.Properties()));
+	public static final RegistryObject<Item> SQUIDDO_SPAWN_EGG = REGISTRY.register("squiddo_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.SQUIDDO, -26317, -39322, new Item.Properties()));
 	public static final RegistryObject<Item> GARRETT_THE_CARROT_SPAWN_EGG = REGISTRY.register("garrett_the_carrot_spawn_egg",
 			() -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.GARRETT_THE_CARROT, -39424, -16738048, new Item.Properties()));
 	public static final RegistryObject<Item> MAX_G_GS_SPAWN_EGG = REGISTRY.register("max_g_gs_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MAX_G_GS, -13395457, -13108, new Item.Properties()));
@@ -124,6 +129,11 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SOLID_WATER_BLOCKK = block(YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK);
 	public static final RegistryObject<Item> TSUNAMI_SUMMONER = REGISTRY.register("tsunami_summoner", () -> new TsunamiSummonerItem());
 	public static final RegistryObject<Item> PIKALODON_SPAWN_EGG = REGISTRY.register("pikalodon_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.PIKALODON, -256, -65485, new Item.Properties()));
+	public static final RegistryObject<Item> FRESHI_SPAWN_EGG = REGISTRY.register("freshi_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.FRESHI, -1, -13108, new Item.Properties()));
+	public static final RegistryObject<Item> COOLMENT_SPAWN_EGG = REGISTRY.register("coolment_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.COOLMENT, -16711732, -26266, new Item.Properties()));
+	public static final RegistryObject<Item> MYSTICAT_SPAWN_EGG = REGISTRY.register("mysticat_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MYSTICAT, -1, -16711681, new Item.Properties()));
+	public static final RegistryObject<Item> TAP_L_SPAWN_EGG = REGISTRY.register("tap_l_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.TAP_L, -3407872, -10027162, new Item.Properties()));
+	public static final RegistryObject<Item> REYABLIPBLOP_SPAWN_EGG = REGISTRY.register("reyablipblop_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.REYABLIPBLOP, -26266, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

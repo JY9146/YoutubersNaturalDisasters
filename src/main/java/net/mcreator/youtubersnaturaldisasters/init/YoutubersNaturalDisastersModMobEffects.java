@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.youtubersnaturaldisasters.potion.XrayPowersMobEffect;
 import net.mcreator.youtubersnaturaldisasters.potion.InvincibilityMobEffect;
 import net.mcreator.youtubersnaturaldisasters.potion.EarthquakeeffectMobEffect;
 import net.mcreator.youtubersnaturaldisasters.potion.DrownFastMobEffect;
@@ -20,4 +21,5 @@ public class YoutubersNaturalDisastersModMobEffects {
 	public static final RegistryObject<MobEffect> EARTHQUAKEEFFECT = REGISTRY.register("earthquakeeffect", () -> new EarthquakeeffectMobEffect());
 	public static final RegistryObject<MobEffect> DROWN_FAST = REGISTRY.register("drown_fast", () -> new DrownFastMobEffect());
 	public static final RegistryObject<MobEffect> INVINCIBILITY = REGISTRY.register("invincibility", () -> new InvincibilityMobEffect());
+	public static final RegistryObject<MobEffect> XRAY_POWERS = REGISTRY.register("xray_powers", () -> new XrayPowersMobEffect());
 }

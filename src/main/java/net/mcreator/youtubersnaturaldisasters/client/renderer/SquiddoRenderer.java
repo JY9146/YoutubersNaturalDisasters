@@ -18,6 +18,6 @@ public class SquiddoRenderer extends HumanoidMobRenderer<SquiddoEntity, Humanoid
 
 	@Override
 	public ResourceLocation getTextureLocation(SquiddoEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/895c87fdb34d28b4.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/28f59b07645a4f03.png");
 	}
 }

@@ -18,6 +18,6 @@ public class TubboRenderer extends HumanoidMobRenderer<TubboEntity, HumanoidMode
 
 	@Override
 	public ResourceLocation getTextureLocation(TubboEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/maxggs.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/545b84de2e1bfa09.png");
 	}
 }

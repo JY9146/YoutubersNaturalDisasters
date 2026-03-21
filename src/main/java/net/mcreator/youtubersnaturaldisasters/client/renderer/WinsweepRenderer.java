@@ -18,6 +18,6 @@ public class WinsweepRenderer extends HumanoidMobRenderer<WinsweepEntity, Humano
 
 	@Override
 	public ResourceLocation getTextureLocation(WinsweepEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/895c87fdb34d28b4.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/fe5f4f239b40af9d.png");
 	}
 }

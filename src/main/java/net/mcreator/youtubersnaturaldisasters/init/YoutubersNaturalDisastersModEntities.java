@@ -36,16 +36,20 @@ import net.mcreator.youtubersnaturaldisasters.entity.TestOfSinkholeEntityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosGasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.TapLEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TalonMCEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SquiddoEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.ReyablipblopEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.ReddoonsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.RanbooEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.QuackityEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.PikalodonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.PiglinSpawnerEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.Ph1LzAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.MysticatEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MaxGGsEntity;
@@ -58,10 +62,12 @@ import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.ImasquidkidEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GarrettTheCarrotEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.FreshiEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.CoolmentEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CammaganzaEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV3Entity;
@@ -191,7 +197,9 @@ public class YoutubersNaturalDisastersModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<WinsweepEntity>> WINSWEEP = register("winsweep",
-			EntityType.Builder.<WinsweepEntity>of(WinsweepEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WinsweepEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<WinsweepEntity>of(WinsweepEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WinsweepEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TubboEntity>> TUBBO = register("tubbo",
 			EntityType.Builder.<TubboEntity>of(TubboEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TubboEntity::new)
 
@@ -200,12 +208,18 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<ImasquidkidEntity>of(ImasquidkidEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ImasquidkidEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<BadBoyHaloEntity>> BAD_BOY_HALO = register("bad_boy_halo", EntityType.Builder.<BadBoyHaloEntity>of(BadBoyHaloEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-			.setUpdateInterval(3).setCustomClientFactory(BadBoyHaloEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BadBoyHaloEntity>> BAD_BOY_HALO = register("bad_boy_halo",
+			EntityType.Builder.<BadBoyHaloEntity>of(BadBoyHaloEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BadBoyHaloEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<RanbooEntity>> RANBOO = register("ranboo",
-			EntityType.Builder.<RanbooEntity>of(RanbooEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RanbooEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<RanbooEntity>of(RanbooEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RanbooEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SquiddoEntity>> SQUIDDO = register("squiddo",
-			EntityType.Builder.<SquiddoEntity>of(SquiddoEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SquiddoEntity::new).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<SquiddoEntity>of(SquiddoEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SquiddoEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<GarrettTheCarrotEntity>> GARRETT_THE_CARROT = register("garrett_the_carrot",
 			EntityType.Builder.<GarrettTheCarrotEntity>of(GarrettTheCarrotEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GarrettTheCarrotEntity::new)
 
@@ -216,6 +230,30 @@ public class YoutubersNaturalDisastersModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<PikalodonEntity>> PIKALODON = register("pikalodon",
 			EntityType.Builder.<PikalodonEntity>of(PikalodonEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PikalodonEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FreshiEntity>> FRESHI = register("freshi",
+			EntityType.Builder.<FreshiEntity>of(FreshiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FreshiEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<QuackityEntity>> QUACKITY = register("quackity",
+			EntityType.Builder.<QuackityEntity>of(QuackityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(QuackityEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CoolmentEntity>> COOLMENT = register("coolment",
+			EntityType.Builder.<CoolmentEntity>of(CoolmentEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CoolmentEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MysticatEntity>> MYSTICAT = register("mysticat",
+			EntityType.Builder.<MysticatEntity>of(MysticatEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MysticatEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TapLEntity>> TAP_L = register("tap_l",
+			EntityType.Builder.<TapLEntity>of(TapLEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TapLEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ReyablipblopEntity>> REYABLIPBLOP = register("reyablipblop",
+			EntityType.Builder.<ReyablipblopEntity>of(ReyablipblopEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReyablipblopEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -274,6 +312,12 @@ public class YoutubersNaturalDisastersModEntities {
 			GarrettTheCarrotEntity.init();
 			MaxGGsEntity.init();
 			PikalodonEntity.init();
+			FreshiEntity.init();
+			QuackityEntity.init();
+			CoolmentEntity.init();
+			MysticatEntity.init();
+			TapLEntity.init();
+			ReyablipblopEntity.init();
 		});
 	}
 
@@ -327,5 +371,11 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(GARRETT_THE_CARROT.get(), GarrettTheCarrotEntity.createAttributes().build());
 		event.put(MAX_G_GS.get(), MaxGGsEntity.createAttributes().build());
 		event.put(PIKALODON.get(), PikalodonEntity.createAttributes().build());
+		event.put(FRESHI.get(), FreshiEntity.createAttributes().build());
+		event.put(QUACKITY.get(), QuackityEntity.createAttributes().build());
+		event.put(COOLMENT.get(), CoolmentEntity.createAttributes().build());
+		event.put(MYSTICAT.get(), MysticatEntity.createAttributes().build());
+		event.put(TAP_L.get(), TapLEntity.createAttributes().build());
+		event.put(REYABLIPBLOP.get(), ReyablipblopEntity.createAttributes().build());
 	}
 }

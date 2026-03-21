@@ -18,6 +18,6 @@ public class BadBoyHaloRenderer extends HumanoidMobRenderer<BadBoyHaloEntity, Hu
 
 	@Override
 	public ResourceLocation getTextureLocation(BadBoyHaloEntity entity) {
-		return new ResourceLocation("youtubers_natural_disasters:textures/entities/895c87fdb34d28b4.png");
+		return new ResourceLocation("youtubers_natural_disasters:textures/entities/pmcskin3d-steve_1.png");
 	}
 }

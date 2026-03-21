@@ -1,11 +1,7 @@
 plugins {
     id 'eclipse'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
-}
-
-repositories {
-    maven { url = "https://cursemaven.com" }
-    mavenCentral()
+	id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+	id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = '1.0'
@@ -26,25 +22,18 @@ minecraft {
             def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
             if (mcreatorJvmOptions) {
                 jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
+                args '--username', 'JY9146', '--uuid', 'fa2a9545-001f-44e8-b883-ca621aa1d799'
             }
-            
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
-            
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
         }
 
         server {
-            property 'mixin.env.remapRefMap', 'true'
-            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
-            
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
         }
 
         configureEach {
             workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
 
             mods {
                 examplemod {
@@ -56,15 +45,27 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
-    
-    implementation fg.deobf('curse.maven:weather-storms-tornadoes-237746:5244118')
-    implementation fg.deobf('curse.maven:coroutil-237749:5096038')
-    implementation fg.deobf("curse.maven:tickrate-api-969702:6542697")
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.10'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("curse.maven:weather-storms-tornadoes-237746:5244118")
+    implementation fg.deobf("curse.maven:coroutil-237749:5096038")
+    implementation fg.deobf("curse.maven:tickrate-api-969702:7448809")
+}
+
+mixin {
+    add sourceSets.main, 'mixins.youtubers_natural_disasters.refmap.json'
+
+    config 'mixins.youtubers_natural_disasters.json'
+
+    debug.verbose = true
+    debug.export = true
+    dumpTargetOnFailure = true
+
+    quiet
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
 apply from: 'mcreator.gradle'

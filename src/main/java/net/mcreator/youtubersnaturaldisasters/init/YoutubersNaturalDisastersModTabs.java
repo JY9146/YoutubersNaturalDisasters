@@ -67,13 +67,22 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.REDDOONS_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.WIN_COOKIE.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.JUST_KABOODLE_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.WINSWEEP_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.TUBBO_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.IMASQUIDKID_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.BAD_BOY_HALO_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.RANBOO_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR_SHOWER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TSUNAMI_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.PIKALODON_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.FRESHI_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.COOLMENT_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.MYSTICAT_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.TAP_L_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.REYABLIPBLOP_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -95,9 +104,18 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.YEAH_JARON_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.REDDOONS_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.JUST_KABOODLE_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.WINSWEEP_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.TUBBO_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.IMASQUIDKID_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.BAD_BOY_HALO_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.RANBOO_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.FRESHI_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.COOLMENT_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.MYSTICAT_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.TAP_L_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.REYABLIPBLOP_SPAWN_EGG.get());
 		}
 	}
 }
