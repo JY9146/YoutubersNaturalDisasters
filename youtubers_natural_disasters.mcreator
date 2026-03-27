@@ -6301,6 +6301,88 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/ReyablipblopRenderer.java"
         ]
       }
+    },
+    {
+      "name": "Jojosolos",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jojosolos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/JojosolosRenderer.java",
+          "src/main/resources/assets/youtubers_natural_disasters/models/item/jojosolos_spawn_egg.json",
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/JojosolosEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "ManualSizeEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manual_size_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ManualSizeEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JojosolosShrinker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jojosolos_shrinker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/JojosolosShrinkerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -6856,12 +6938,13 @@
       "effect.youtubers_natural_disasters.earthquakeeffect": "Earthquakeeffect",
       "entity.youtubers_natural_disasters.yeah_jaron": "Yeah_Jaron",
       "item.youtubers_natural_disasters.imasquidkid_spawn_egg": "im_a_squid_kid Spawn Egg",
+      "item.youtubers_natural_disasters.jojosolos_spawn_egg": "Jojosolos Spawn Egg",
       "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
       "item.youtubers_natural_disasters.black_hole_summoner": "Black Hole Summoner",
-      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
-      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "item.youtubers_natural_disasters.max_g_gs_spawn_egg": "MaxGGs Spawn Egg",
+      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "item.youtubers_natural_disasters.yeah_jaron_spawn_egg": "Yeah_Jaron Spawn Egg",
@@ -6953,6 +7036,7 @@
       "item.youtubers_natural_disasters.cammaganza_spawn_egg": "Cammaganza Spawn Egg",
       "effect.youtubers_natural_disasters.drown_fast": "Drown Fast",
       "block.youtubers_natural_disasters.solid_water_blockk": "Solid Water Block",
+      "entity.youtubers_natural_disasters.jojosolos": "Jojosolos",
       "death.attack.inhaled_too_much_gas": "%1$s Inhaled Too Much Gas",
       "item.youtubers_natural_disasters.garrett_the_carrot_spawn_egg": "Garrett The Carrot Spawn Egg",
       "block.youtubers_natural_disasters.magma": "Magma",

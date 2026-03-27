@@ -49,6 +49,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.MadPiglinRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.LavaBallShooterRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.KnarfyRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.JustKaboodleRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.JojosolosRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.InsaneFlameRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.ImasquidkidRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.GasPersonRenderer;
@@ -128,5 +129,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.MYSTICAT.get(), MysticatRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TAP_L.get(), TapLRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.REYABLIPBLOP.get(), ReyablipblopRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.JOJOSOLOS.get(), JojosolosRenderer::new);
 	}
 }

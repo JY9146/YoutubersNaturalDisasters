@@ -83,6 +83,7 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.MYSTICAT_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TAP_L_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.REYABLIPBLOP_SPAWN_EGG.get());
+				tabData.accept(YoutubersNaturalDisastersModItems.JOJOSOLOS_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -116,6 +117,7 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.MYSTICAT_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.TAP_L_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.REYABLIPBLOP_SPAWN_EGG.get());
+			tabData.accept(YoutubersNaturalDisastersModItems.JOJOSOLOS_SPAWN_EGG.get());
 		}
 	}
 }

@@ -58,6 +58,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.LavaBallShooterEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.KnarfyEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.JustKaboodleEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.JojosolosEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.ImasquidkidEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
@@ -254,6 +255,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<ReyablipblopEntity>of(ReyablipblopEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReyablipblopEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<JojosolosEntity>> JOJOSOLOS = register("jojosolos",
+			EntityType.Builder.<JojosolosEntity>of(JojosolosEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JojosolosEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -318,6 +323,7 @@ public class YoutubersNaturalDisastersModEntities {
 			MysticatEntity.init();
 			TapLEntity.init();
 			ReyablipblopEntity.init();
+			JojosolosEntity.init();
 		});
 	}
 
@@ -377,5 +383,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(MYSTICAT.get(), MysticatEntity.createAttributes().build());
 		event.put(TAP_L.get(), TapLEntity.createAttributes().build());
 		event.put(REYABLIPBLOP.get(), ReyablipblopEntity.createAttributes().build());
+		event.put(JOJOSOLOS.get(), JojosolosEntity.createAttributes().build());
 	}
 }

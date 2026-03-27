@@ -134,6 +134,7 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> MYSTICAT_SPAWN_EGG = REGISTRY.register("mysticat_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MYSTICAT, -1, -16711681, new Item.Properties()));
 	public static final RegistryObject<Item> TAP_L_SPAWN_EGG = REGISTRY.register("tap_l_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.TAP_L, -3407872, -10027162, new Item.Properties()));
 	public static final RegistryObject<Item> REYABLIPBLOP_SPAWN_EGG = REGISTRY.register("reyablipblop_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.REYABLIPBLOP, -26266, -1, new Item.Properties()));
+	public static final RegistryObject<Item> JOJOSOLOS_SPAWN_EGG = REGISTRY.register("jojosolos_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.JOJOSOLOS, -39322, -10027162, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
