@@ -13,7 +13,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.mcreator.youtubersnaturaldisasters.entity.JojosolosEntity;
-import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 import javax.annotation.Nullable;
 
@@ -42,11 +41,20 @@ public class ManualSizeEventProcedure {
 		} else {
 			Num2 = Mth.nextDouble(RandomSource.create(), 1, 4);
 		}
-		if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true).isEmpty()) {
-			_sizeEvt.setNewEyeHeight((float) Num);
-			_sizeEvt.setNewSize(new EntityDimensions((float) Num2, (float) Num, false));
-			YoutubersNaturalDisastersMod.LOGGER.info(Num);
-			YoutubersNaturalDisastersMod.LOGGER.info(Num2);
+		int horizontalRadiusSquare = (int) 3 - 1;
+		int verticalRadiusSquare = (int) 3 - 1;
+		int yIterationsSquare = verticalRadiusSquare;
+		for (int yi = -yIterationsSquare; yi <= yIterationsSquare; yi++) {
+			for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
+				for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
+					// Execute the desired statements within the square/cube
+					if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x + xi, y + yi, z + zi), 3, 3, 3), e -> true).isEmpty() && !entity.isShiftKeyDown()) {
+						_sizeEvt.setNewEyeHeight((float) Num);
+						_sizeEvt.setNewSize(new EntityDimensions((float) Num2, (float) Num, false));
+						entity.getPersistentData().putDouble("Shrinktimer", 0);
+					}
+				}
+			}
 		}
 	}
 }

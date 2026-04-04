@@ -70,7 +70,10 @@ public class TechnobladeOnEntityTickUpdateProcedure {
 		double Musicmusic = 0;
 		Grab_Distance = 4;
 		Look_Timmer = 20;
-		if (entity instanceof Mob _mobEnt0 && _mobEnt0.isAggressive() && !((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 180)) {
+		if (entity.isPassenger()) {
+			entity.stopRiding();
+		}
+		if (entity instanceof Mob _mobEnt2 && _mobEnt2.isAggressive() && !((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 180)) {
 			if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 10, 10, 10), e -> true).isEmpty()) {
 				Item_ = (Entity) world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, z), 20.5, 20.5, 20.5), e -> true).stream().sorted(new Object() {
 					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
