@@ -51,8 +51,8 @@ public class ManualSizeEventProcedure {
 					if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x + xi, y + yi, z + zi), 3, 3, 3), e -> true).isEmpty() && !entity.isShiftKeyDown()) {
 						_sizeEvt.setNewEyeHeight((float) Num);
 						_sizeEvt.setNewSize(new EntityDimensions((float) Num2, (float) Num, false));
-						entity.getPersistentData().putDouble("Shrinktimer", 0);
 					}
+					entity.getPersistentData().putDouble("Shrinktimer", 0);
 				}
 			}
 		}
