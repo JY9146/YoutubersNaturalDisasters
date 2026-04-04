@@ -45,6 +45,7 @@ public class JojosolosShrinkerProcedure {
 						YoutubersNaturalDisastersMod.LOGGER.info(entity.getPersistentData().getDouble("Shrinktimer"));
 						if (entity.getPersistentData().getDouble("Shrinktimer") > 200) {
 							entity.refreshDimensions();
+							entity.getPersistentData().putDouble("Shrinktimer", 0);
 						}
 					}
 				}

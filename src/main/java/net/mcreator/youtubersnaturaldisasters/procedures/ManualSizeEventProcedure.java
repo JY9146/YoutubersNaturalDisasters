@@ -55,6 +55,5 @@ public class ManualSizeEventProcedure {
 				}
 			}
 		}
-		entity.getPersistentData().putDouble("Shrinktimer", 0);
 	}
 }
