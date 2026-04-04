@@ -52,9 +52,9 @@ public class ManualSizeEventProcedure {
 						_sizeEvt.setNewEyeHeight((float) Num);
 						_sizeEvt.setNewSize(new EntityDimensions((float) Num2, (float) Num, false));
 					}
-					entity.getPersistentData().putDouble("Shrinktimer", 0);
 				}
 			}
 		}
+		entity.getPersistentData().putDouble("Shrinktimer", 0);
 	}
 }
