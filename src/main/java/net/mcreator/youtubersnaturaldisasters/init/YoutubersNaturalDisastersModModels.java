@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.youtubersnaturaldisasters.client.model.Modelmeteor2;
 import net.mcreator.youtubersnaturaldisasters.client.model.Modeldappertom;
+import net.mcreator.youtubersnaturaldisasters.client.model.Modelblackhole;
 import net.mcreator.youtubersnaturaldisasters.client.model.ModelMeteor;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
