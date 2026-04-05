@@ -36,7 +36,7 @@ public class VolcanoGeneratorV2p2OnEntityTickUpdateProcedure {
 						if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude()) {
 							if (!world.isClientSide()) {
 								if (!((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.MAGMA.get())) {
-									OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 1000);
+									OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 10000);
 									if (OneoutOf12 == 2) {
 										Blok = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
 										particleAmount = 2;

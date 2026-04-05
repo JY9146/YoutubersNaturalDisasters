@@ -66,6 +66,7 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleV3Rendere
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleV2Renderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BlackHoleRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.BadBoyHaloRenderer;
+import net.mcreator.youtubersnaturaldisasters.client.renderer.AstralSpiffRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class YoutubersNaturalDisastersModEntityRenderers {
@@ -130,5 +131,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TAP_L.get(), TapLRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.REYABLIPBLOP.get(), ReyablipblopRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.JOJOSOLOS.get(), JojosolosRenderer::new);
+		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.ASTRAL_SPIFF.get(), AstralSpiffRenderer::new);
 	}
 }

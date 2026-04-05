@@ -75,6 +75,7 @@ import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV3Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV2Entity;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.BadBoyHaloEntity;
+import net.mcreator.youtubersnaturaldisasters.entity.AstralSpiffEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -259,6 +260,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<JojosolosEntity>of(JojosolosEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JojosolosEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AstralSpiffEntity>> ASTRAL_SPIFF = register("astral_spiff",
+			EntityType.Builder.<AstralSpiffEntity>of(AstralSpiffEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AstralSpiffEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -324,6 +329,7 @@ public class YoutubersNaturalDisastersModEntities {
 			TapLEntity.init();
 			ReyablipblopEntity.init();
 			JojosolosEntity.init();
+			AstralSpiffEntity.init();
 		});
 	}
 
@@ -384,5 +390,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(TAP_L.get(), TapLEntity.createAttributes().build());
 		event.put(REYABLIPBLOP.get(), ReyablipblopEntity.createAttributes().build());
 		event.put(JOJOSOLOS.get(), JojosolosEntity.createAttributes().build());
+		event.put(ASTRAL_SPIFF.get(), AstralSpiffEntity.createAttributes().build());
 	}
 }
