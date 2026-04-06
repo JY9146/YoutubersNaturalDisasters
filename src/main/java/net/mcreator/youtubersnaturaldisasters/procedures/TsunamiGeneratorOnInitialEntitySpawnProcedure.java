@@ -25,24 +25,34 @@ public class TsunamiGeneratorOnInitialEntitySpawnProcedure {
 							+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 					if (distanceSq <= 1.0) {
 						if ((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == Blocks.AIR) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get().defaultBlockState(), 3);
-							TsunamiP2Procedure.execute(world, x, y, z);
+							if (entity.getPersistentData().getDouble("Timer1") == 20) {
+								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCK.get().defaultBlockState(), 3);
+								TsunamiP2Procedure.execute(world, x, y, z);
+							}
 						}
 						if ((world.getBlockState(BlockPos.containing(x + xi - 1, y + yi + 1, z + zi))).getBlock() == Blocks.AIR) {
-							world.setBlock(BlockPos.containing(x + xi - 1, y + yi + 1, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
-							TsunamiP2Procedure.execute(world, x, y, z);
+							if (entity.getPersistentData().getDouble("Timer1") == 40) {
+								world.setBlock(BlockPos.containing(x + xi - 1, y + yi + 1, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
+								TsunamiP2Procedure.execute(world, x, y, z);
+							}
 						}
 						if ((world.getBlockState(BlockPos.containing(x + xi - 2, y + yi + 2, z + zi))).getBlock() == Blocks.AIR) {
-							world.setBlock(BlockPos.containing(x + xi - 2, y + yi + 2, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
-							TsunamiP2Procedure.execute(world, x, y, z);
+							if (entity.getPersistentData().getDouble("Timer1") == 60) {
+								world.setBlock(BlockPos.containing(x + xi - 2, y + yi + 2, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
+								TsunamiP2Procedure.execute(world, x, y, z);
+							}
 						}
 						if ((world.getBlockState(BlockPos.containing(x + xi - 3, y + yi + 3, z + zi))).getBlock() == Blocks.AIR) {
-							world.setBlock(BlockPos.containing(x + xi - 3, y + yi + 3, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
-							TsunamiP2Procedure.execute(world, x, y, z);
+							if (entity.getPersistentData().getDouble("Timer1") == 80) {
+								world.setBlock(BlockPos.containing(x + xi - 3, y + yi + 3, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
+								TsunamiP2Procedure.execute(world, x, y, z);
+							}
 						}
 						if ((world.getBlockState(BlockPos.containing(x + xi - 4, y + yi + 4, z + zi))).getBlock() == Blocks.AIR) {
-							world.setBlock(BlockPos.containing(x + xi - 4, y + yi + 4, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
-							TsunamiP2Procedure.execute(world, x, y, z);
+							if (entity.getPersistentData().getDouble("Timer1") == 100) {
+								world.setBlock(BlockPos.containing(x + xi - 4, y + yi + 4, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_WATER_BLOCKK.get().defaultBlockState(), 3);
+								TsunamiP2Procedure.execute(world, x, y, z);
+							}
 						}
 					}
 				}
