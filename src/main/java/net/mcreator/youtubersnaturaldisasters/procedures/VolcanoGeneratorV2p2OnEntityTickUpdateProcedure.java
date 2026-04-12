@@ -23,38 +23,42 @@ public class VolcanoGeneratorV2p2OnEntityTickUpdateProcedure {
 		double OneoutOf12 = 0;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		entity.setInvulnerable(true);
-		int horizontalRadiusSphere = (int) 125 - 1;
-		int verticalRadiusSphere = (int) 5 - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude()) {
-							if (!world.isClientSide()) {
-								if (!((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.MAGMA.get())) {
-									OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 10000);
-									if (OneoutOf12 == 2) {
-										Blok = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
-										particleAmount = 2;
-										for (int index0 = 0; index0 < (int) particleAmount; index0++) {
-											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + -1), (y + yi - 1), (z + zi + -1), 3, 0, 0, 0, 1);
-											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + -1), (y + yi - 1), (z + zi + 1), 3, 0, 0, 0, 1);
-											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + 1), (y + yi - 1), (z + zi + 1), 3, 0, 0, 0, 1);
-											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + 1), (y + yi - 1), (z + zi + -1), 3, 0, 0, 0, 1);
-										}
-										entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-										if (entity.getPersistentData().getDouble("tagName") >= Mth.nextInt(RandomSource.create(), 200, 1000)) {
-											world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
-											if (world instanceof ServerLevel _level)
-												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi, z + zi), Blok);
+		if (entity.tickCount % 200 == 0) {
+			entity.setInvulnerable(true);
+			for (int index0 = 0; index0 < 10; index0++) {
+				int horizontalRadiusSphere = (int) 125 - 1;
+				int verticalRadiusSphere = (int) 5 - 1;
+				int yIterationsSphere = verticalRadiusSphere;
+				for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
+					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+							if (distanceSq <= 1.0) {
+								if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude()) {
+									if (!world.isClientSide()) {
+										if (!((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.MAGMA.get())) {
+											OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 10000);
+											if (OneoutOf12 == 2) {
+												Blok = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
+												particleAmount = 2;
+												for (int index1 = 0; index1 < (int) particleAmount; index1++) {
+													if (world instanceof ServerLevel)
+														((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + -1), (y + yi - 1), (z + zi + -1), 3, 0, 0, 0, 1);
+													if (world instanceof ServerLevel)
+														((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + -1), (y + yi - 1), (z + zi + 1), 3, 0, 0, 0, 1);
+													if (world instanceof ServerLevel)
+														((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + 1), (y + yi - 1), (z + zi + 1), 3, 0, 0, 0, 1);
+													if (world instanceof ServerLevel)
+														((ServerLevel) world).sendParticles(((SimpleParticleType) (YoutubersNaturalDisastersModParticleTypes.BLOCK_ASH.get())), (x + xi + 1), (y + yi - 1), (z + zi + -1), 3, 0, 0, 0, 1);
+												}
+												YoutubersNaturalDisastersMod.queueServerWork(5, () -> {
+													entity.setInvulnerable(true);
+												});
+												world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
+												if (world instanceof ServerLevel _level)
+													FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi, z + zi), Blok);
+											}
 										}
 									}
 								}
@@ -63,10 +67,10 @@ public class VolcanoGeneratorV2p2OnEntityTickUpdateProcedure {
 					}
 				}
 			}
+			YoutubersNaturalDisastersMod.queueServerWork(1000, () -> {
+				if (!entity.level().isClientSide())
+					entity.discard();
+			});
 		}
-		YoutubersNaturalDisastersMod.queueServerWork(1000, () -> {
-			if (!entity.level().isClientSide())
-				entity.discard();
-		});
 	}
 }

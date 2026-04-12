@@ -17,24 +17,25 @@ public class VolcanoGroundMesserV2OnEntityTickUpdateProcedure {
 			return;
 		BlockState Blok = Blocks.AIR.defaultBlockState();
 		double OneoutOf12 = 0;
-		entity.setInvulnerable(true);
-		int horizontalRadiusSphere = (int) 120 - 1;
-		int verticalRadiusSphere = (int) 5 - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude()) {
-							if (!world.isClientSide()) {
-								if (!((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.MAGMA.get())) {
-									OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 10000);
-									if (OneoutOf12 == 1) {
-										entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-										if (entity.getPersistentData().getDouble("tagName") >= Mth.nextInt(RandomSource.create(), 400, 1000)) {
-											world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.LAVA.defaultBlockState(), 3);
+		if (entity.tickCount % 400 == 0) {
+			entity.setInvulnerable(true);
+			for (int index0 = 0; index0 < 5; index0++) {
+				int horizontalRadiusSphere = (int) 120 - 1;
+				int verticalRadiusSphere = (int) 5 - 1;
+				int yIterationsSphere = verticalRadiusSphere;
+				for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
+					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+							if (distanceSq <= 1.0) {
+								if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude()) {
+									if (!world.isClientSide()) {
+										if (!((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == YoutubersNaturalDisastersModBlocks.MAGMA.get())) {
+											OneoutOf12 = Mth.nextInt(RandomSource.create(), 1, 10000);
+											if (OneoutOf12 == 1) {
+												world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.LAVA.defaultBlockState(), 3);
+											}
 										}
 									}
 								}
@@ -43,10 +44,10 @@ public class VolcanoGroundMesserV2OnEntityTickUpdateProcedure {
 					}
 				}
 			}
+			YoutubersNaturalDisastersMod.queueServerWork(1000, () -> {
+				if (!entity.level().isClientSide())
+					entity.discard();
+			});
 		}
-		YoutubersNaturalDisastersMod.queueServerWork(1000, () -> {
-			if (!entity.level().isClientSide())
-				entity.discard();
-		});
 	}
 }

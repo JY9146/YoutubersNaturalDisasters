@@ -57,7 +57,7 @@
     "material": {
       "value": "NONE"
     },
-    "tickRate": 1,
+    "tickRate": 50,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,

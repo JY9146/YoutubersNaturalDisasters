@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "particle",
   "definition": {
-    "texture": "gassygas",
+    "texture": "gas_cloud",
     "animate": false,
     "frameDuration": 1,
     "width": 0.2,
