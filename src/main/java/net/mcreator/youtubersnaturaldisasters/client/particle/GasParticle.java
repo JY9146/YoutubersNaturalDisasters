@@ -35,14 +35,14 @@ public class GasParticle extends TextureSheetParticle {
 	protected GasParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 10f;
-		this.lifetime = 10;
+		this.setSize(6f, 6f);
+		this.quadSize *= 6f;
+		this.lifetime = 1200;
 		this.gravity = 0f;
-		this.hasPhysics = true;
-		this.xd = vx * 1;
-		this.yd = vy * 1;
-		this.zd = vz * 1;
+		this.hasPhysics = false;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
 		this.pickSprite(spriteSet);
 	}
 
