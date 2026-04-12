@@ -24,7 +24,7 @@ public class VolcanoGeneratorV2p2OnEntityTickUpdateProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		entity.setInvulnerable(true);
-		int horizontalRadiusSphere = (int) 200 - 1;
+		int horizontalRadiusSphere = (int) 125 - 1;
 		int verticalRadiusSphere = (int) 5 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
@@ -52,9 +52,9 @@ public class VolcanoGeneratorV2p2OnEntityTickUpdateProcedure {
 										}
 										entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
 										if (entity.getPersistentData().getDouble("tagName") >= Mth.nextInt(RandomSource.create(), 200, 1000)) {
+											world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 											if (world instanceof ServerLevel _level)
 												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + yi, z + zi), Blok);
-											world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 										}
 									}
 								}

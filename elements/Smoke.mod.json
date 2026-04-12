@@ -47,7 +47,7 @@
     "material": {
       "value": "STRUCTURE_VOID"
     },
-    "tickRate": 1,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": true,
     "canProvidePower": false,
