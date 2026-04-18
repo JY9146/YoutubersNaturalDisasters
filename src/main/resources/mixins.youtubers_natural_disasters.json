@@ -5,6 +5,7 @@
   "refmap": "mixins.youtubers_natural_disasters.refmap.json",
   "mixins": [
     "FalingBlockMixin"
+    "ParticleMixin"
   ],
   "client": [],
   "minVersion": "0.8"
