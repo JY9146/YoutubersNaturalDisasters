@@ -10,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModItems;
+import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class ALLPOWERFULBREDDDDDDProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == YoutubersNaturalDisastersModItems.BRED.get()) {
+		if (!(entity instanceof TechnobladeEntity) && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == YoutubersNaturalDisastersModItems.BRED.get()) {
 			entity.kill();
 		}
 	}

@@ -9,5 +9,12 @@ import org.spongepowered.asm.mixin.Mixin;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleRenderType;
-import net.minecraft.client.renderer.RenderStateShard.TransparencyStateShard;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.client.Camera;
 import net.minecraft.client.particle.ParticleEngine;
+
+@Mixin(ParticleEngine.class)
+public class ParticleMixin {
+
+	
+}
