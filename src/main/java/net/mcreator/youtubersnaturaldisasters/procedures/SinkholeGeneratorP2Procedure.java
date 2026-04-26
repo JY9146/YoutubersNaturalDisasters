@@ -52,21 +52,21 @@ public class SinkholeGeneratorP2Procedure {
 		double Block_DstroyChance = 0;
 		double Fall_Chance = 0;
 		if (entity.tickCount % 40 == 0 && entity instanceof SinkholeEntityEntity && entity.getPersistentData().getBoolean("Waiter")) {
-			for (int index0 = 0; index0 < 2; index0++) {
-				int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("SizeWidth")) - 1;
-				int verticalRadiusSphere = (int) 6 - 1;
-				int yIterationsSphere = verticalRadiusSphere;
-				for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
-					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-							if (distanceSq <= 1.0) {
-								if (entity.getPersistentData().getDouble("BlockCount") > 10) {
-									if (y + yi < entity.getY()) {
-										world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.LAVA.defaultBlockState(), 3);
-									}
-								} else {
+			int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("SizeWidth")) - 1;
+			int verticalRadiusSphere = (int) 6 - 1;
+			int yIterationsSphere = verticalRadiusSphere;
+			for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
+				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+					for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+						if (distanceSq <= 1.0) {
+							if (entity.getPersistentData().getDouble("BlockCount") > 10) {
+								if (y + yi < entity.getY()) {
+									world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.LAVA.defaultBlockState(), 3);
+								}
+							} else {
+								for (int index0 = 0; index0 < 3; index0++) {
 									if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude() == true) {
 										Block_DstroyChance = Mth.nextInt(RandomSource.create(), 1, 2);
 										if (Block_DstroyChance == 1) {
