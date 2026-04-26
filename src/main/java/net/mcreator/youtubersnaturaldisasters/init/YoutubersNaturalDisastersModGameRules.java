@@ -11,4 +11,5 @@ import net.minecraft.world.level.GameRules;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class YoutubersNaturalDisastersModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> NATURAL_DISASTER_SPAWNING = GameRules.register("naturalDisasterSpawning", GameRules.Category.MISC, GameRules.BooleanValue.create(true));
+	public static final GameRules.Key<GameRules.BooleanValue> NATURAL_DISASTERS_ANTI_LAG = GameRules.register("naturalDisastersAntiLag", GameRules.Category.MISC, GameRules.BooleanValue.create(false));
 }

@@ -12,7 +12,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.youtubersnaturaldisasters.entity.JojosolosEntity;
-import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
 import javax.annotation.Nullable;
 
@@ -42,7 +41,6 @@ public class JojosolosShrinkerProcedure {
 					// Execute the desired statements within the square/cube
 					if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x + xi, y + yi, z + zi), 3, 3, 3), e -> true).isEmpty() && entity instanceof Player && !entity.isShiftKeyDown()) {
 						entity.getPersistentData().putDouble("Shrinktimer", (entity.getPersistentData().getDouble("Shrinktimer") + 1));
-						YoutubersNaturalDisastersMod.LOGGER.info(entity.getPersistentData().getDouble("Shrinktimer"));
 						if (entity.getPersistentData().getDouble("Shrinktimer") > 300) {
 							entity.refreshDimensions();
 							entity.getPersistentData().putDouble("Shrinktimer", 0);

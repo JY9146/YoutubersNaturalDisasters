@@ -16,7 +16,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
@@ -68,43 +67,6 @@ public class TechnobladeEntityIsHurtProcedure {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) < 10) {
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("<Mr Technodad> Are you winning son?"), false);
-			}
-			if (world instanceof ServerLevel _origLevel) {
-				LevelAccessor _worldorig = world;
-				world = _origLevel.getServer().getLevel(Level.OVERWORLD);
-				if (world != null) {
-					if (!world.isClientSide()) {
-						if (Math.random() < 0.001) {
-							sourceentity.hurt(
-									new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:techno_bullied_you")))),
-									20000000);
-						}
-						if (Math.random() < 0.001) {
-							sourceentity.hurt(
-									new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:blood_god_kill")))),
-									20000000);
-						}
-						if (Math.random() < 0.001) {
-							sourceentity.hurt(
-									new DamageSource(
-											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:orphan_obliterator_damage")))),
-									20000000);
-						}
-						if (Math.random() < 0.001) {
-							sourceentity.hurt(
-									new DamageSource(
-											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:axe_of_peace_wasnt_peaceful")))),
-									20000000);
-						}
-						if (Math.random() < 0.001) {
-							sourceentity.hurt(
-									new DamageSource(
-											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("youtubers_natural_disasters:tooth_pick_cleaning_teeth")))),
-									20000000);
-						}
-					}
-				}
-				world = _worldorig;
 			}
 		}
 	}

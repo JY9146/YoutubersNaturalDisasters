@@ -6460,6 +6460,89 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/ParticleMixin.java"
         ]
       }
+    },
+    {
+      "name": "Gun",
+      "type": "gun_maker_setup",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/gun_maker/GunMaker.java"
+        ]
+      }
+    },
+    {
+      "name": "NaturalDisastersAntiLag",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "natural_disasters_anti_lag",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      }
+    },
+    {
+      "name": "TechnoHurtsEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_hurts_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TechnoHurtsEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SinkholeGeneratorP2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sinkhole_generator_p_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/SinkholeGeneratorP2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7053,6 +7136,7 @@
       "entity.youtubers_natural_disasters.volcano_hollowerr": "Volcano",
       "gamerule.naturalDisasterSpawning.description": "Having natural disasters spawn in your game naturally",
       "item.youtubers_natural_disasters.sinkhole_summoner": "Sinkhole Summoner",
+      "gamerule.naturalDisastersAntiLag": "Natural Disasters AntiLag",
       "entity.youtubers_natural_disasters.pikalodon": "Pikalodon",
       "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
       "item.youtubers_natural_disasters.reyablipblop_spawn_egg": "Reyablipblop Spawn Egg",
@@ -7188,6 +7272,7 @@
       "death.attack.techno_killing_dmg_type.item": "%1$s was killed by %2$s using %3$s from Techno\u0027s old cringe videos",
       "subtitles.youjustlostthegame": "You Just Lost The Game",
       "entity.youtubers_natural_disasters.black_hole": "Black Hole",
+      "gamerule.naturalDisastersAntiLag.description": "Optimizes disasters as much as possible, may be at the cost of the amount of destruction caused.",
       "item.youtubers_natural_disasters.throw_meteor": "Throw Meteor",
       "item.youtubers_natural_disasters.end_of_world_meteor.desc": "THE END IS NIGH",
       "death.attack.meteor_hit.item": "%1$s was killed by a meteor from %2$s using %3$s",

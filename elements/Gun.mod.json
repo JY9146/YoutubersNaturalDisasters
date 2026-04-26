@@ -1,0 +1,7 @@
+{
+  "_fv": 73,
+  "_type": "gun_maker_setup",
+  "definition": {
+    "BACKUP": "gun_pose:boolean:true|gun_pose_active:boolean:false|no_swing:boolean:false"
+  }
+}
