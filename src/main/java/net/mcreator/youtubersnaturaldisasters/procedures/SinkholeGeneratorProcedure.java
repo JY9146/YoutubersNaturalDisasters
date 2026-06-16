@@ -19,7 +19,7 @@ public class SinkholeGeneratorProcedure {
 		double Fall_Chance = 0;
 		double Random_Number = 0;
 		Entity Entity_Variable = null;
-		if (entity.tickCount % 70 == 0) {
+		if (entity.tickCount % 40 == 0) {
 			entity.setInvulnerable(true);
 			if (world.getBlockState(BlockPos.containing(x, y, z)).canOcclude()) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);

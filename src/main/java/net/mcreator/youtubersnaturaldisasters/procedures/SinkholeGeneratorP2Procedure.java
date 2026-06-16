@@ -7,16 +7,11 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerPlayer;
@@ -26,13 +21,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
 
 import javax.annotation.Nullable;
-
-import java.util.List;
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class SinkholeGeneratorP2Procedure {
@@ -51,9 +42,9 @@ public class SinkholeGeneratorP2Procedure {
 		BlockState Block_ = Blocks.AIR.defaultBlockState();
 		double Block_DstroyChance = 0;
 		double Fall_Chance = 0;
-		if (entity.tickCount % 40 == 0 && entity instanceof SinkholeEntityEntity && entity.getPersistentData().getBoolean("Waiter")) {
+		if (entity.tickCount % 60 == 0 && entity instanceof SinkholeEntityEntity && entity.getPersistentData().getBoolean("Waiter")) {
 			int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("SizeWidth")) - 1;
-			int verticalRadiusSphere = (int) 6 - 1;
+			int verticalRadiusSphere = (int) 5 - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int yi = -yIterationsSphere; yi <= yIterationsSphere; yi++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -66,14 +57,14 @@ public class SinkholeGeneratorP2Procedure {
 									world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.LAVA.defaultBlockState(), 3);
 								}
 							} else {
-								for (int index0 = 0; index0 < 3; index0++) {
-									if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude() == true) {
+								if (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)).canOcclude() == true) {
+									for (int index0 = 0; index0 < 3; index0++) {
 										Block_DstroyChance = Mth.nextInt(RandomSource.create(), 1, 2);
 										if (Block_DstroyChance == 1) {
-											Fall_Chance = Mth.nextInt(RandomSource.create(), 1, 15);
 											if (Fall_Chance == 1) {
 												Block_ = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
 											}
+											Fall_Chance = Mth.nextInt(RandomSource.create(), 1, 17);
 											if (!world.isClientSide()) {
 												world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 											}
@@ -97,28 +88,6 @@ public class SinkholeGeneratorP2Procedure {
 				_ent.teleportTo(x, (Math.round(entity.getY()) - 3), z);
 				if (_ent instanceof ServerPlayer _serverPlayer)
 					_serverPlayer.connection.teleport(x, (Math.round(entity.getY()) - 3), z, _ent.getYRot(), _ent.getXRot());
-			}
-			{
-				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((entity.getPersistentData().getDouble("SizeWidth")) / 2d), e -> true).stream()
-						.sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-				for (Entity entityiterator : _entfound) {
-					if (entityiterator instanceof Player) {
-						if (YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable == true) {
-							if (Math.random() < 0.5) {
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2000, 5, false, false));
-								YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
-								YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
-							} else {
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2000, 20, false, false));
-								YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
-								YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
-							}
-						}
-					}
-				}
 			}
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

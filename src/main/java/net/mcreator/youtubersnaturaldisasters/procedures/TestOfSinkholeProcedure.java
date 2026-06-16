@@ -2,27 +2,15 @@ package net.mcreator.youtubersnaturaldisasters.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
-
-import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
-
-import java.util.Map;
-import java.util.List;
-import java.util.Comparator;
 
 public class TestOfSinkholeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -35,11 +23,7 @@ public class TestOfSinkholeProcedure {
 		double Fall_Chance = 0;
 		double Random_Number = 0;
 		Entity Entity_Variable = null;
-		entity.fallDistance = 0;
-		entity.setInvulnerable(true);
-		entity.getPersistentData().putDouble("LagPre", (entity.getPersistentData().getDouble("LagPre") + 1));
-		if (entity.getPersistentData().getDouble("LagPre") > 23) {
-			entity.getPersistentData().putDouble("LagPre", 0);
+		if (entity.tickCount % 38 == 0) {
 			if (entity.getPersistentData().getBoolean("Bedrockstopper") == false) {
 				if (entity.onGround()) {
 					int horizontalRadiusSphere = (int) 36 - 1;
@@ -54,47 +38,11 @@ public class TestOfSinkholeProcedure {
 									world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 									if ((world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi))).getBlock() == Blocks.BEDROCK) {
 										entity.getPersistentData().putBoolean("Bedrockstopper", true);
-									} else {
-										entity.getPersistentData().putBoolean("Bedrockstopper", false);
 									}
 									if (entity.getY() <= entity.getPersistentData().getDouble("YtillDespawn") - 110) {
 										if (!entity.level().isClientSide())
 											entity.discard();
-										{
-											BlockPos _bp = BlockPos.containing(x, y - 10, z);
-											BlockState _bs = Blocks.DEEPSLATE.defaultBlockState();
-											BlockState _bso = world.getBlockState(_bp);
-											for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-												Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-												if (_property != null && _bs.getValue(_property) != null)
-													try {
-														_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-													} catch (Exception e) {
-													}
-											}
-											world.setBlock(_bp, _bs, 3);
-										}
-									}
-								}
-							}
-						}
-					}
-					{
-						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(36 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
-							if (entityiterator instanceof Player) {
-								if (YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable == true) {
-									if (Math.random() < 0.5) {
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2000, 5, false, false));
-										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
-										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
-									} else {
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2000, 20, false, false));
-										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).Logic_Variable = false;
-										YoutubersNaturalDisastersModVariables.WorldVariables.get(world).syncData(world);
+										world.setBlock(BlockPos.containing(x, y - 10, z), Blocks.DEEPSLATE.defaultBlockState(), 3);
 									}
 								}
 							}
