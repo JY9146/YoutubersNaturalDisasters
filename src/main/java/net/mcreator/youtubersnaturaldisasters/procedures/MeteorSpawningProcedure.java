@@ -42,57 +42,32 @@ public class MeteorSpawningProcedure {
 		if (entity == null)
 			return;
 		double Chance = 0;
-		if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTER_SPAWNING)) {
-			if (world instanceof ServerLevel _origLevel) {
-				LevelAccessor _worldorig = world;
-				world = _origLevel.getServer().getLevel(Level.OVERWORLD);
-				if (world != null) {
-					if (Math.random() < 0.0001) {
-						Chance = Mth.nextInt(RandomSource.create(), 1, 2);
-						if (Chance == 1) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-									entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-								}
-							}
-						}
-						if (Chance == 2) {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos()
-												.getX(),
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getY()
-												+ 20,
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos()
-												.getZ()),
-										MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-									entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-								}
-							}
-						}
-					}
-					entity.getPersistentData().putDouble("tagName1", (entity.getPersistentData().getDouble("tagName1") + 1));
-					if (entity.getPersistentData().getDouble("tagName1") > 5) {
-						for (int index0 = 0; index0 < 100; index0++) {
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:hot_meteor\"}}]");
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:cold_meteor\"}}]");
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"minecraft:obsidian\"}}]");
-						}
-					}
-					if (Math.random() < 0.00005) {
-						Chance = Mth.nextInt(RandomSource.create(), 1, 2);
-						if (Chance == 1) {
-							for (int index1 = 0; index1 < 4; index1++) {
+		if (entity.tickCount % 100 == 0) {
+			if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTER_SPAWNING)) {
+				if (world instanceof ServerLevel _origLevel) {
+					LevelAccessor _worldorig = world;
+					world = _origLevel.getServer().getLevel(Level.OVERWORLD);
+					if (world != null) {
+						if (Math.random() < 0.0001) {
+							Chance = Mth.nextInt(RandomSource.create(), 1, 2);
+							if (Chance == 1) {
 								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x + Mth.nextInt(RandomSource.create(), -20, 20), y + 20, z + Mth.nextInt(RandomSource.create(), -20, 20)),
+									Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing(x, y + 20, z), MobSpawnType.MOB_SUMMONED);
+									if (entityToSpawn != null) {
+										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+									}
+								}
+							}
+							if (Chance == 2) {
+								if (world instanceof ServerLevel _level) {
+									Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level,
+											BlockPos.containing(
+													entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
+															.getBlockPos().getX(),
+													entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
+															.getBlockPos().getY() + 20,
+													entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
+															.getBlockPos().getZ()),
 											MobSpawnType.MOB_SUMMONED);
 									if (entityToSpawn != null) {
 										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
@@ -100,48 +75,82 @@ public class MeteorSpawningProcedure {
 								}
 							}
 						}
-						if (Chance == 2) {
-							for (int index2 = 0; index2 < 4; index2++) {
-								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR
-											.get().spawn(
-													_level, BlockPos
-															.containing(
-																	entity.level()
-																			.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY,
-																					entity))
-																			.getBlockPos().getX() + Mth.nextInt(RandomSource.create(), -20, 20),
-																	entity.level()
-																			.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY,
-																					entity))
-																			.getBlockPos().getY() + 20,
-																	entity.level().clip(
-																			new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
-																			.getBlockPos().getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
-													MobSpawnType.MOB_SUMMONED);
-									if (entityToSpawn != null) {
-										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+						entity.getPersistentData().putDouble("tagName1", (entity.getPersistentData().getDouble("tagName1") + 1));
+						if (entity.getPersistentData().getDouble("tagName1") > 5) {
+							for (int index0 = 0; index0 < 100; index0++) {
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:hot_meteor\"}}]");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:cold_meteor\"}}]");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"minecraft:obsidian\"}}]");
+							}
+						}
+						if (Math.random() < 0.00005) {
+							Chance = Mth.nextInt(RandomSource.create(), 1, 2);
+							if (Chance == 1) {
+								for (int index1 = 0; index1 < 4; index1++) {
+									if (world instanceof ServerLevel _level) {
+										Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level,
+												BlockPos.containing(x + Mth.nextInt(RandomSource.create(), -20, 20), y + 20, z + Mth.nextInt(RandomSource.create(), -20, 20)), MobSpawnType.MOB_SUMMONED);
+										if (entityToSpawn != null) {
+											entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+										}
+									}
+								}
+							}
+							if (Chance == 2) {
+								for (int index2 = 0; index2 < 4; index2++) {
+									if (world instanceof ServerLevel _level) {
+										Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR
+												.get().spawn(
+														_level, BlockPos
+																.containing(
+																		entity.level()
+																				.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY,
+																						entity))
+																				.getBlockPos().getX() + Mth.nextInt(RandomSource.create(), -20, 20),
+																		entity.level()
+																				.clip(new ClipContext(
+																						entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
+																				.getBlockPos().getY() + 20,
+																		entity.level().clip(
+																				new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity))
+																				.getBlockPos().getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+														MobSpawnType.MOB_SUMMONED);
+										if (entityToSpawn != null) {
+											entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+										}
 									}
 								}
 							}
 						}
-					}
-					entity.getPersistentData().putDouble("tagName2", (entity.getPersistentData().getDouble("tagName2") + 1));
-					if (entity.getPersistentData().getDouble("tagName2") > 5) {
-						for (int index3 = 0; index3 < 100; index3++) {
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:hot_meteor\"}}]");
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:cold_meteor\"}}]");
-							if (world instanceof ServerLevel _level)
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"kill @e[type=item,nbt={Item:{id:\"minecraft:obsidian\"}}]");
+						entity.getPersistentData().putDouble("tagName2", (entity.getPersistentData().getDouble("tagName2") + 1));
+						if (entity.getPersistentData().getDouble("tagName2") > 5) {
+							for (int index3 = 0; index3 < 100; index3++) {
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:hot_meteor\"}}]");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"youtubers_natural_disasters:cold_meteor\"}}]");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											"kill @e[type=item,nbt={Item:{id:\"minecraft:obsidian\"}}]");
+							}
 						}
 					}
+					world = _worldorig;
 				}
-				world = _worldorig;
 			}
 		}
 	}

@@ -32,18 +32,16 @@ public class JojosolosShrinkerProcedure {
 		if (entity == null)
 			return;
 		boolean logic = false;
-		int horizontalRadiusSquare = (int) 3 - 1;
-		int verticalRadiusSquare = (int) 3 - 1;
-		int yIterationsSquare = verticalRadiusSquare;
-		for (int yi = -yIterationsSquare; yi <= yIterationsSquare; yi++) {
-			for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
-				for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
-					// Execute the desired statements within the square/cube
-					if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x + xi, y + yi, z + zi), 3, 3, 3), e -> true).isEmpty() && entity instanceof Player && !entity.isShiftKeyDown()) {
-						entity.getPersistentData().putDouble("Shrinktimer", (entity.getPersistentData().getDouble("Shrinktimer") + 1));
-						if (entity.getPersistentData().getDouble("Shrinktimer") > 300) {
+		if (entity.tickCount % 300 == 0) {
+			int horizontalRadiusSquare = (int) 3 - 1;
+			int verticalRadiusSquare = (int) 3 - 1;
+			int yIterationsSquare = verticalRadiusSquare;
+			for (int yi = -yIterationsSquare; yi <= yIterationsSquare; yi++) {
+				for (int xi = -horizontalRadiusSquare; xi <= horizontalRadiusSquare; xi++) {
+					for (int zi = -horizontalRadiusSquare; zi <= horizontalRadiusSquare; zi++) {
+						// Execute the desired statements within the square/cube
+						if (!world.getEntitiesOfClass(JojosolosEntity.class, AABB.ofSize(new Vec3(x + xi, y + yi, z + zi), 3, 3, 3), e -> true).isEmpty() && entity instanceof Player && !entity.isShiftKeyDown()) {
 							entity.refreshDimensions();
-							entity.getPersistentData().putDouble("Shrinktimer", 0);
 						}
 					}
 				}

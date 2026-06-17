@@ -14,12 +14,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 public class ImasquidkidOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double Chance = 0;
-		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-		if (entity.getPersistentData().getDouble("tagName") == 100) {
+		if (entity.tickCount % 100 == 0) {
 			Chance = Mth.nextInt(RandomSource.create(), 1, 4);
 			if (Chance == 1) {
 				if (!world.isClientSide() && world.getServer() != null)
@@ -62,7 +59,6 @@ public class ImasquidkidOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-			entity.getPersistentData().putDouble("tagName", 0);
 		}
 	}
 }
