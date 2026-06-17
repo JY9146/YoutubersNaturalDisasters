@@ -13,6 +13,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModGameRules;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
@@ -54,10 +55,12 @@ public class VolcanoGeneratorV2OnEntityTickUpdateProcedure {
 		} else {
 			if (!entity.level().isClientSide())
 				entity.discard();
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_V_2_ERUPTER.get().spawn(_level, BlockPos.containing(x, y + 10, z), MobSpawnType.MOB_SUMMONED);
-				if (entityToSpawn != null) {
-					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+			if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_V_2_ERUPTER.get().spawn(_level, BlockPos.containing(x, y + 10, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+					}
 				}
 			}
 		}

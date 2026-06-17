@@ -14,6 +14,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.youtubersnaturaldisasters.network.YoutubersNaturalDisastersModVariables;
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModGameRules;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -28,9 +29,11 @@ public class VolcanoSummonerRightclickedOnBlockProcedure {
 				if (entityToSpawn != null) {
 				}
 			}
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"summon youtubers_natural_disasters:volcano_ground_messer");
+			if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"summon youtubers_natural_disasters:volcano_ground_messer");
+			}
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_HOLLOWERR.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
@@ -42,9 +45,11 @@ public class VolcanoSummonerRightclickedOnBlockProcedure {
 				}
 			}
 		} else {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER_V_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-				if (entityToSpawn != null) {
+			if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = YoutubersNaturalDisastersModEntities.VOLCANO_GROUND_MESSER_V_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+					}
 				}
 			}
 			if (world instanceof ServerLevel _level) {
