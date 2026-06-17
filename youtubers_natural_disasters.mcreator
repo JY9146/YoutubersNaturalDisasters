@@ -5307,6 +5307,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5498,6 +5502,10 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ImasquidkidOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -7045,8 +7053,8 @@
       "death.attack.mace_smash": "%1$s was smashed",
       "subtitles.knarfysound2": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!",
       "subtitles.knarfysound1": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas",
-      "entity.youtubers_natural_disasters.astral_spiff": "AstralSpiff",
       "subtitles.knarfysound4": "TODAY I\u0027M BREAKING MINECRAFT WITH YOUR DUMB IDEAS",
+      "entity.youtubers_natural_disasters.astral_spiff": "AstralSpiff",
       "subtitles.knarfysound3": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!",
       "item.youtubers_natural_disasters.pikalodon_spawn_egg": "Pikalodon Spawn Egg",
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
@@ -7062,10 +7070,10 @@
       "item.youtubers_natural_disasters.jojosolos_spawn_egg": "Jojosolos Spawn Egg",
       "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
       "item.youtubers_natural_disasters.black_hole_summoner": "Black Hole Summoner",
-      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
-      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "item.youtubers_natural_disasters.max_g_gs_spawn_egg": "MaxGGs Spawn Egg",
+      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "item.youtubers_natural_disasters.yeah_jaron_spawn_egg": "Yeah_Jaron Spawn Egg",

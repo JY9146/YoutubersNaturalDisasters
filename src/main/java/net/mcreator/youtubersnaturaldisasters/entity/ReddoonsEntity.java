@@ -89,7 +89,7 @@ public class ReddoonsEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ReddoonsOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		ReddoonsOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

@@ -4,11 +4,16 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
+import net.mcreator.youtubersnaturaldisasters.entity.ReddoonsEntity;
+
 public class ReddoonsOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (entity.tickCount % 40 == 0) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		if (entity.tickCount % 40 == 0 && entity instanceof ReddoonsEntity) {
 			int horizontalRadiusSquare = (int) 20 - 1;
 			int verticalRadiusSquare = (int) 1 - 1;
 			int yIterationsSquare = verticalRadiusSquare;

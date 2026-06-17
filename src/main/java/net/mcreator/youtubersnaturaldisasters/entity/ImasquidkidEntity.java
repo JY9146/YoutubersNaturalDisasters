@@ -89,7 +89,7 @@ public class ImasquidkidEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ImasquidkidOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		ImasquidkidOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

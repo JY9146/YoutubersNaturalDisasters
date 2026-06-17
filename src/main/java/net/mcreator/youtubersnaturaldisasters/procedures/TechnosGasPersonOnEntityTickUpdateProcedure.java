@@ -13,6 +13,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -24,7 +26,6 @@ public class TechnosGasPersonOnEntityTickUpdateProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(Level.OVERWORLD);
 			if (world != null) {
-				entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
@@ -42,13 +43,12 @@ public class TechnosGasPersonOnEntityTickUpdateProcedure {
 								1);
 					}
 				}
-				if (entity.getPersistentData().getDouble("tagName") >= 1200) {
-					if (!entity.level().isClientSide())
-						entity.discard();
-					entity.getPersistentData().putDouble("tagName", 0);
-				}
 			}
 			world = _worldorig;
 		}
+		YoutubersNaturalDisastersMod.queueServerWork(1200, () -> {
+			if (!entity.level().isClientSide())
+				entity.discard();
+		});
 	}
 }

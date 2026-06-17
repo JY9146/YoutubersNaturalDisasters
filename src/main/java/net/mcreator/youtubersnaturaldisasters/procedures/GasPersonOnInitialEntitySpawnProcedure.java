@@ -15,6 +15,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
+
 import java.util.List;
 import java.util.Comparator;
 
@@ -22,7 +24,6 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
 		entity.setDeltaMovement(new Vec3(0, 0, 0));
 		{
 			Entity _ent = entity;
@@ -58,10 +59,9 @@ public class GasPersonOnInitialEntitySpawnProcedure {
 				}
 			}
 		}
-		if (entity.getPersistentData().getDouble("tagName") >= 1200) {
+		YoutubersNaturalDisastersMod.queueServerWork(1200, () -> {
 			if (!entity.level().isClientSide())
 				entity.discard();
-			entity.getPersistentData().putDouble("tagName", 0);
-		}
+		});
 	}
 }

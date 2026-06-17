@@ -13,10 +13,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.youtubersnaturaldisasters.entity.ImasquidkidEntity;
+
 public class ImasquidkidOnEntityTickUpdateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
 		double Chance = 0;
-		if (entity.tickCount % 100 == 0) {
+		if (entity.tickCount % 100 == 0 && entity instanceof ImasquidkidEntity) {
 			Chance = Mth.nextInt(RandomSource.create(), 1, 4);
 			if (Chance == 1) {
 				if (!world.isClientSide() && world.getServer() != null)
