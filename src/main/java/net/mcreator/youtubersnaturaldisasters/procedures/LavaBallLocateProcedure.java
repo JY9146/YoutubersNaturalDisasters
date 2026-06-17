@@ -33,8 +33,7 @@ public class LavaBallLocateProcedure {
 					Wait = true;
 				}
 				if (Wait == true) {
-					entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
-					if (entity.getPersistentData().getDouble("tagName") > 400) {
+					if (entity.tickCount % 400 == 0) {
 						TheTargetOfDeath = (Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 150, 150, 150), e -> true).stream().sorted(new Object() {
 							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
@@ -42,7 +41,6 @@ public class LavaBallLocateProcedure {
 						}.compareDistOf(x, y, z)).findFirst().orElse(null);
 						if (entity instanceof Mob _entity && TheTargetOfDeath instanceof LivingEntity _ent)
 							_entity.setTarget(_ent);
-						entity.getPersistentData().putDouble("tagName", 0);
 					}
 				}
 			}

@@ -15,7 +15,7 @@ public class SolidLavaBlockOnTickUpdateProcedure {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 		});
 		YoutubersNaturalDisastersMod.queueServerWork(7, () -> {
-			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get()) {
+			while ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get()) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			}
 		});

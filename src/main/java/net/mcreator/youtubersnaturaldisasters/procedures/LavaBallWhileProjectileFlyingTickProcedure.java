@@ -23,7 +23,9 @@ public class LavaBallWhileProjectileFlyingTickProcedure {
 					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
-						world.setBlock(BlockPos.containing(x + xi, y + yi + 2, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get().defaultBlockState(), 3);
+						if (!world.isClientSide()) {
+							world.setBlock(BlockPos.containing(x + xi, y + yi + 2, z + zi), YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get().defaultBlockState(), 3);
+						}
 						Workworkwork = true;
 						if (Workworkwork == true) {
 							if (!((world.getBlockState(BlockPos.containing(x + xi + 1, y + yi + 1, z + zi + 1))).getBlock() == YoutubersNaturalDisastersModBlocks.SOLID_LAVA_BLOCK.get())
@@ -54,7 +56,9 @@ public class LavaBallWhileProjectileFlyingTickProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (yi * yi) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
 								+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 						if (distanceSq <= 1.0) {
-							world.setBlock(BlockPos.containing(x + xi, y + yi - 2, z + zi), Blocks.LAVA.defaultBlockState(), 3);
+							if (!world.isClientSide()) {
+								world.setBlock(BlockPos.containing(x + xi, y + yi - 2, z + zi), Blocks.LAVA.defaultBlockState(), 3);
+							}
 						}
 					}
 				}

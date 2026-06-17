@@ -21,7 +21,7 @@ public class VolcanoHollowerrOnEntityTickUpdateProcedure {
 		double Every__PerUptdate = 0;
 		entity.setInvulnerable(true);
 		if (entity.getPersistentData().getDouble("BlockCount") <= 52) {
-			if (entity.tickCount % 2 == 0) {
+			if (entity.tickCount % 10 == 0) {
 				if (entity.getPersistentData().getBoolean("VolcanoHollowerWork")) {
 					VolcanoHollower2Procedure.execute(world, x, y, z, entity);
 				}

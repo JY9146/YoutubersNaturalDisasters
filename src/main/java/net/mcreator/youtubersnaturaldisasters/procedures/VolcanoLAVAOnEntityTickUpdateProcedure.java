@@ -21,30 +21,19 @@ public class VolcanoLAVAOnEntityTickUpdateProcedure {
 		entity.setInvulnerable(true);
 		if (!(!world.getEntitiesOfClass(VolcanoHollowerrEntity.class, AABB.ofSize(new Vec3(x, y, z), 40, 40, 40), e -> true).isEmpty())) {
 			if (entity.getPersistentData().getDouble("BlockCount") <= 52) {
-				Every__PerUptdate = 2;
-				if (entity.getPersistentData().getDouble("digtick") == 0) {
-					entity.getPersistentData().putDouble("digtick", Every__PerUptdate);
-				} else {
-					entity.getPersistentData().putDouble("digtick", (entity.getPersistentData().getDouble("digtick") - 1));
-				}
-				if (entity.getPersistentData().getDouble("digtick") == 1) {
-					if (!(entity.getPersistentData().getDouble("WAIT") == 2)) {
-						entity.getPersistentData().putDouble("WAIT", (entity.getPersistentData().getDouble("WAIT") + 1));
-						if (entity.getPersistentData().getBoolean("VolcanoHollowerWork")) {
-							VolcanoLavaGen2Procedure.execute(world, x, y, z, entity);
-						}
-					} else {
-						entity.getPersistentData().putDouble("WAIT", 0);
-						entity.getPersistentData().putDouble("BlockCount", (entity.getPersistentData().getDouble("BlockCount") + 1));
-						entity.getPersistentData().putDouble("SizeWidthVH", (entity.getPersistentData().getDouble("SizeWidthVH") * 0.95));
-						{
-							Entity _ent = entity;
-							_ent.teleportTo(x, (Math.round(entity.getY()) + 1), z);
-							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport(x, (Math.round(entity.getY()) + 1), z, _ent.getYRot(), _ent.getXRot());
-						}
-						entity.getPersistentData().putBoolean("VolcanoHollowerWork", true);
+				if (entity.tickCount % 10 == 0) {
+					if (entity.getPersistentData().getBoolean("VolcanoHollowerWork")) {
+						VolcanoLavaGen2Procedure.execute(world, x, y, z, entity);
 					}
+					entity.getPersistentData().putDouble("BlockCount", (entity.getPersistentData().getDouble("BlockCount") + 1));
+					entity.getPersistentData().putDouble("SizeWidthVH", (entity.getPersistentData().getDouble("SizeWidthVH") * 0.95));
+					{
+						Entity _ent = entity;
+						_ent.teleportTo(x, (Math.round(entity.getY()) + 1), z);
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport(x, (Math.round(entity.getY()) + 1), z, _ent.getYRot(), _ent.getXRot());
+					}
+					entity.getPersistentData().putBoolean("VolcanoHollowerWork", true);
 				}
 			} else {
 				if (!entity.level().isClientSide())
