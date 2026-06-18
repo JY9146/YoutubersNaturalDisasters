@@ -89,7 +89,7 @@ public class TubboEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		TubboOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		TubboOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

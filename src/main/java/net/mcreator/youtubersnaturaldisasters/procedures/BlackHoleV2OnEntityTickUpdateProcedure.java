@@ -35,9 +35,7 @@ public class BlackHoleV2OnEntityTickUpdateProcedure {
 		double rand = 0;
 		BlockState block = Blocks.AIR.defaultBlockState();
 		entity.setInvulnerable(true);
-		entity.getPersistentData().putDouble("TIMER", (entity.getPersistentData().getDouble("TIMER") - 1));
-		if (entity.getPersistentData().getDouble("TIMER") <= 0) {
-			entity.getPersistentData().putDouble("TIMER", 5);
+		if (entity.tickCount % 10 == 0) {
 			if (30 >= entity.getPersistentData().getDouble("radius")) {
 				entity.getPersistentData().putDouble("radius", (entity.getPersistentData().getDouble("radius") + 1));
 			}
