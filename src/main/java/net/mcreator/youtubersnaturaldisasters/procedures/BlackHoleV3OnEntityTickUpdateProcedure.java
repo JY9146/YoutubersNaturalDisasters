@@ -27,6 +27,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModGameRules;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleV3Entity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -40,9 +41,7 @@ public class BlackHoleV3OnEntityTickUpdateProcedure {
 		double rand = 0;
 		BlockState block = Blocks.AIR.defaultBlockState();
 		entity.setInvulnerable(true);
-		entity.getPersistentData().putDouble("TIMER", (entity.getPersistentData().getDouble("TIMER") - 1));
-		if (entity.getPersistentData().getDouble("TIMER") <= 0) {
-			entity.getPersistentData().putDouble("TIMER", 10);
+		if (entity.tickCount % 20 == 0) {
 			if (10 >= entity.getPersistentData().getDouble("radius")) {
 				entity.getPersistentData().putDouble("radius", (entity.getPersistentData().getDouble("radius") + 1));
 			}
@@ -55,7 +54,11 @@ public class BlackHoleV3OnEntityTickUpdateProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
-							rand = Mth.nextInt(RandomSource.create(), 1, 5);
+							if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
+								rand = Mth.nextInt(RandomSource.create(), 1, 5);
+							} else {
+								rand = Mth.nextInt(RandomSource.create(), 1, 20);
+							}
 							if (rand == 1) {
 								block = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
 								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
@@ -130,7 +133,7 @@ public class BlackHoleV3OnEntityTickUpdateProcedure {
 				}
 			}
 		}
-		YoutubersNaturalDisastersMod.queueServerWork(760, () -> {
+		YoutubersNaturalDisastersMod.queueServerWork(1520, () -> {
 			for (int index0 = 0; index0 < 3; index0++) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
