@@ -15,20 +15,20 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.WildFireSummonerRightclickedProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.TornadoSummonerRightclickedOnBlockProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.TimephoonSummonerRightclickedProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.TestSinkholeSummonerRIghtClickProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.SinkholeSummonerRightclickedOnBlockProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.RandomDisasterSummonProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.EndOfWorldMeteorRightclickedProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterWildFireSummonerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterVolcanoV2SpawnProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterVolcanoV1SummonProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTornadoSummonerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerP2Procedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterSinkholeV2SummonerProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterSinkholeV1SummonerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterMeteorShowerProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterMeteorShower2Procedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterGasSpawnProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.DisasterEndOfWorldMeteorSummonProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterEarthquakeSpawnProcedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterBlackHoleV2Procedure;
 import net.mcreator.youtubersnaturaldisasters.procedures.DisasterBlackHoleSpawnV3Procedure;
@@ -50,7 +50,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			RandomDisasterSummonProcedure.execute(world, x, y, z, arguments, entity);
+			RandomDisasterSummonProcedure.execute(world, x, y, z, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("blackholev1").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -64,7 +64,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterBlackHoleSpawnV1Procedure.execute(world, x, y, z);
+			DisasterBlackHoleSpawnV1Procedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("blackholev2").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -78,7 +78,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterBlackHoleV2Procedure.execute(world, x, y, z);
+			DisasterBlackHoleV2Procedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("blackholev3").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -92,7 +92,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterBlackHoleSpawnV3Procedure.execute(world, x, y, z);
+			DisasterBlackHoleSpawnV3Procedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("targets", EntityArgument.entities()).then(Commands.literal("earthquake").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -120,7 +120,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			EndOfWorldMeteorRightclickedProcedure.execute(world, x, y, z);
+			DisasterEndOfWorldMeteorSummonProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("gas").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -134,7 +134,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterGasSpawnProcedure.execute(world, x, y, z);
+			DisasterGasSpawnProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("meteorshower").then(Commands.literal("head").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -148,7 +148,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterMeteorShowerProcedure.execute(world, x, y, z);
+			DisasterMeteorShowerProcedure.execute(world, arguments);
 			return 0;
 		})).then(Commands.literal("looking").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -162,7 +162,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterMeteorShower2Procedure.execute(world, x, y, z, entity);
+			DisasterMeteorShower2Procedure.execute(world, x, y, z, arguments);
 			return 0;
 		})))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("talonmeteorshower").then(Commands.literal("head").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -176,7 +176,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterTalonMeteorShowerProcedure.execute(world, x, y, z);
+			DisasterTalonMeteorShowerProcedure.execute(world, x, y, z, arguments);
 			return 0;
 		})).then(Commands.literal("looking").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -190,7 +190,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterTalonMeteorShowerP2Procedure.execute(world, x, y, z, entity);
+			DisasterTalonMeteorShowerP2Procedure.execute(world, x, y, z, arguments);
 			return 0;
 		})))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("sinkholev1").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -204,7 +204,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			SinkholeSummonerRightclickedOnBlockProcedure.execute(world, x, y, z);
+			DisasterSinkholeV1SummonerProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("sinkholev2").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -218,7 +218,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			TestSinkholeSummonerRIghtClickProcedure.execute(world, x, y, z);
+			DisasterSinkholeV2SummonerProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("timephoon").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -246,7 +246,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			TornadoSummonerRightclickedOnBlockProcedure.execute(world, x, y, z);
+			DisasterTornadoSummonerProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("volcanov1").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -260,7 +260,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterVolcanoV1SummonProcedure.execute(world, x, y, z);
+			DisasterVolcanoV1SummonProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("volcanov2").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -274,7 +274,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			DisasterVolcanoV2SpawnProcedure.execute(world, x, y, z);
+			DisasterVolcanoV2SpawnProcedure.execute(world, arguments);
 			return 0;
 		}))).then(Commands.argument("target", EntityArgument.entity()).then(Commands.literal("wildfire").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -288,7 +288,7 @@ public class DisasterCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			WildFireSummonerRightclickedProcedure.execute(world, x, y, z);
+			DisasterWildFireSummonerProcedure.execute(world, arguments);
 			return 0;
 		}))));
 	}

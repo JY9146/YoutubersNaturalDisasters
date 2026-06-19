@@ -11,27 +11,157 @@ import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.context.CommandContext;
+
 public class DisasterMeteorShower2Procedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
 		double Chance = 0;
 		for (int index0 = 0; index0 < 2; index0++) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level,
-						BlockPos.containing(
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getX()
-										+ Mth.nextInt(RandomSource.create(), 5, 20),
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getY() + 20,
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getZ()
-										+ Mth.nextInt(RandomSource.create(), 5, 20)),
-						MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getX() + Mth.nextInt(RandomSource.create(), 5, 20), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getY() + 20, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getZ() + Mth.nextInt(RandomSource.create(), 5, 20)), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
@@ -39,14 +169,142 @@ public class DisasterMeteorShower2Procedure {
 		}
 		for (int index1 = 0; index1 < 2; index1++) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level,
-						BlockPos.containing(
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getX()
-										- Mth.nextInt(RandomSource.create(), 5, 20),
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getY() + 20,
-								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, entity)).getBlockPos().getZ()
-										- Mth.nextInt(RandomSource.create(), 5, 20)),
-						MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = YoutubersNaturalDisastersModEntities.METEOR.get().spawn(_level, BlockPos.containing((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getX() - Mth.nextInt(RandomSource.create(), 5, 20), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getY() + 20, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).level().clip(new ClipContext((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f), (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getEyePosition(1f).add((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getViewVector(1f).scale(100)), ClipContext.Block.OUTLINE, ClipContext.Fluid.ANY, (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "target");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()))).getBlockPos().getZ() - Mth.nextInt(RandomSource.create(), 5, 20)), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}

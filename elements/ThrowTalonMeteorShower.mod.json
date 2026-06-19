@@ -37,10 +37,10 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "DisasterTalonMeteorShowerP2"
+      "name": "ThrowTalonMeteorShowerRightClick"
     },
     "onRightClickedOnBlock": {
-      "name": "DisasterTalonMeteorShower"
+      "name": "ThrowTalonMeteorShowerRightClickOnBlock"
     },
     "enableRanged": false,
     "shootConstantly": false,

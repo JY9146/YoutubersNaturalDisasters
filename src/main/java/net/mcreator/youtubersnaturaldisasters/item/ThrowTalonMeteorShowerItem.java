@@ -11,8 +11,8 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerProcedure;
-import net.mcreator.youtubersnaturaldisasters.procedures.DisasterTalonMeteorShowerP2Procedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.ThrowTalonMeteorShowerRightClickProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.ThrowTalonMeteorShowerRightClickOnBlockProcedure;
 
 public class ThrowTalonMeteorShowerItem extends Item {
 	public ThrowTalonMeteorShowerItem() {
@@ -22,14 +22,14 @@ public class ThrowTalonMeteorShowerItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		DisasterTalonMeteorShowerP2Procedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		ThrowTalonMeteorShowerRightClickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 
 	@Override
 	public InteractionResult useOn(UseOnContext context) {
 		super.useOn(context);
-		DisasterTalonMeteorShowerProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ());
+		ThrowTalonMeteorShowerRightClickOnBlockProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ());
 		return InteractionResult.SUCCESS;
 	}
 }

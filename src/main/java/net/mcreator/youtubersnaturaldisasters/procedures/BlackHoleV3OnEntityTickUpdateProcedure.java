@@ -57,11 +57,13 @@ public class BlackHoleV3OnEntityTickUpdateProcedure {
 							if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
 								rand = Mth.nextInt(RandomSource.create(), 1, 5);
 							} else {
-								rand = Mth.nextInt(RandomSource.create(), 1, 20);
+								rand = Mth.nextInt(RandomSource.create(), 1, 50);
+							}
+							if (Math.random() < 0.2) {
+								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 							}
 							if (rand == 1) {
 								block = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
-								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
 								if (!(block.getBlock() == Blocks.AIR)) {
 									if (world instanceof ServerLevel _serverLevel) {
 										Entity entityinstance = EntityType.FALLING_BLOCK.create(_serverLevel);
@@ -138,6 +140,9 @@ public class BlackHoleV3OnEntityTickUpdateProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"kill @e[type=item]");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"kill @e[type=falling_block]");
 				if (entity instanceof BlackHoleV3Entity _datEntSetL)
 					_datEntSetL.getEntityData().set(BlackHoleV3Entity.DATA_DisapearAnimation, true);
 			}

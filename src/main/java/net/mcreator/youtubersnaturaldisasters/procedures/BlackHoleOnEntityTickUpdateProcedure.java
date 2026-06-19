@@ -27,6 +27,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModGameRules;
 import net.mcreator.youtubersnaturaldisasters.entity.BlackHoleEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
 
@@ -40,9 +41,7 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 		double rand = 0;
 		BlockState block = Blocks.AIR.defaultBlockState();
 		entity.setInvulnerable(true);
-		entity.getPersistentData().putDouble("TIMER", (entity.getPersistentData().getDouble("TIMER") - 1));
-		if (entity.getPersistentData().getDouble("TIMER") <= 0) {
-			entity.getPersistentData().putDouble("TIMER", 40);
+		if (entity.tickCount % 40 == 0) {
 			if (20 >= entity.getPersistentData().getDouble("radius")) {
 				entity.getPersistentData().putDouble("radius", (entity.getPersistentData().getDouble("radius") + 1));
 			}
@@ -55,22 +54,26 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (yi * yi) / (double) (verticalRadiusSphere * verticalRadiusSphere)
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
-							rand = Mth.nextInt(RandomSource.create(), 1, 2);
+							if (world.getLevelData().getGameRules().getBoolean(YoutubersNaturalDisastersModGameRules.NATURAL_DISASTERS_ANTI_LAG) == false) {
+								rand = Mth.nextInt(RandomSource.create(), 1, 10);
+							} else {
+								rand = Mth.nextInt(RandomSource.create(), 1, 100);
+							}
+							if (Math.random() < 0.5) {
+								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
+							}
 							if (rand == 1) {
 								block = (world.getBlockState(BlockPos.containing(x + xi, y + yi, z + zi)));
-								world.setBlock(BlockPos.containing(x + xi, y + yi, z + zi), Blocks.AIR.defaultBlockState(), 3);
-								if (Math.random() < 0.3) {
-									if (!(block.getBlock() == Blocks.AIR)) {
-										if (world instanceof ServerLevel _serverLevel) {
-											Entity entityinstance = EntityType.FALLING_BLOCK.create(_serverLevel);
-											if (entityinstance != null) {
-												CompoundTag _compoundTag = entityinstance.saveWithoutId(new CompoundTag());
-												_compoundTag.put("BlockState", NbtUtils.writeBlockState(block));
-												entityinstance.load(_compoundTag);
-												entityinstance.setPos(x + xi, y + yi, z + zi);
-												entityinstance.setNoGravity(true);
-												_serverLevel.addFreshEntity(entityinstance);
-											}
+								if (!(block.getBlock() == Blocks.AIR)) {
+									if (world instanceof ServerLevel _serverLevel) {
+										Entity entityinstance = EntityType.FALLING_BLOCK.create(_serverLevel);
+										if (entityinstance != null) {
+											CompoundTag _compoundTag = entityinstance.saveWithoutId(new CompoundTag());
+											_compoundTag.put("BlockState", NbtUtils.writeBlockState(block));
+											entityinstance.load(_compoundTag);
+											entityinstance.setPos(x + xi, y + yi, z + zi);
+											entityinstance.setNoGravity(true);
+											_serverLevel.addFreshEntity(entityinstance);
 										}
 									}
 								}
@@ -171,6 +174,9 @@ public class BlackHoleOnEntityTickUpdateProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							"kill @e[type=item]");
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"kill @e[type=falling_block]");
 				if (entity instanceof BlackHoleEntity _datEntSetL)
 					_datEntSetL.getEntityData().set(BlackHoleEntity.DATA_DisapearAnimation, true);
 			}

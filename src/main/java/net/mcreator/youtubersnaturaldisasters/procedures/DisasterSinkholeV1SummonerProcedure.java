@@ -13,10 +13,10 @@ import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModE
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
-public class DisasterBlackHoleSpawnV1Procedure {
+public class DisasterSinkholeV1SummonerProcedure {
 	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments) {
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.BLACK_HOLE.get().spawn(_level, BlockPos.containing((new Object() {
+			Entity entityToSpawn = YoutubersNaturalDisastersModEntities.SINKHOLE_ENTITY.get().spawn(_level, BlockPos.containing((new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "target");
@@ -45,7 +45,6 @@ public class DisasterBlackHoleSpawnV1Procedure {
 				}
 			}.getEntity()).getZ()), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
-				entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 			}
 		}
 	}

@@ -246,7 +246,7 @@
       "name": "Gas",
       "type": "particle",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "gas",
       "metadata": {
         "files": [
@@ -4117,19 +4117,6 @@
       }
     },
     {
-      "name": "DisastersCommandSpawning",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "disasters_command_spawning",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisastersCommandSpawningProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "VolcanoV2Erupt",
       "type": "procedure",
       "compiles": true,
@@ -4567,16 +4554,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4597,16 +4576,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4627,8 +4598,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "x",
@@ -4679,16 +4650,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4709,16 +4672,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4739,16 +4694,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4769,16 +4716,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4799,16 +4738,8 @@
         ],
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "world",
@@ -4831,10 +4762,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           },
           {
             "name": "x",
@@ -5809,6 +5736,10 @@
         ],
         "dependencies": [
           {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5839,8 +5770,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
             "name": "x",
@@ -6515,6 +6446,244 @@
           }
         ]
       }
+    },
+    {
+      "name": "ThrowTalonMeteorShowerRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_talon_meteor_shower_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorShowerRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowTalonMeteorShowerRightClickOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_talon_meteor_shower_right_click_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorShowerRightClickOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteorShowerRightClickOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor_shower_right_click_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowMeteorShowerRightClickOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ThrowMeteorShowerRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "throw_meteor_shower_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowMeteorShowerRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisasterWildFireSummoner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_wild_fire_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterWildFireSummonerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisasterEndOfWorldMeteorSummon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_end_of_world_meteor_summon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterEndOfWorldMeteorSummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisasterTornadoSummoner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_tornado_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterTornadoSummonerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisasterSinkholeV1Summoner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_sinkhole_v_1_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterSinkholeV1SummonerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisasterSinkholeV2Summoner",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_sinkhole_v_2_summoner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterSinkholeV2SummonerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7057,8 +7226,8 @@
       "death.attack.mace_smash": "%1$s was smashed",
       "subtitles.knarfysound2": "Today... I\u0027m Breaking Minecraft With Your DUMB IDEAS!",
       "subtitles.knarfysound1": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas",
-      "entity.youtubers_natural_disasters.astral_spiff": "AstralSpiff",
       "subtitles.knarfysound4": "TODAY I\u0027M BREAKING MINECRAFT WITH YOUR DUMB IDEAS",
+      "entity.youtubers_natural_disasters.astral_spiff": "AstralSpiff",
       "subtitles.knarfysound3": "Today I\u0027m Breaking Minecraft With Your Dumb Ideas!!",
       "item.youtubers_natural_disasters.pikalodon_spawn_egg": "Pikalodon Spawn Egg",
       "item.youtubers_natural_disasters.golden_apple_giver": "Golden Apple Giver",
@@ -7074,10 +7243,10 @@
       "item.youtubers_natural_disasters.jojosolos_spawn_egg": "Jojosolos Spawn Egg",
       "subtitles.bossbattle2music": "Chat We\u0027re Gaming",
       "item.youtubers_natural_disasters.black_hole_summoner": "Black Hole Summoner",
-      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "entity.youtubers_natural_disasters.technos_gas_person": "Gas Person",
-      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
+      "subtitles.cragdynasubscribe": "Crag says... SUBSCRIBE!",
       "item.youtubers_natural_disasters.max_g_gs_spawn_egg": "MaxGGs Spawn Egg",
+      "subtitles.maxggsintro": "Ha, hey stranger! What are you doing in this big square world?",
       "item.youtubers_natural_disasters.smoke_emitter": "Smoke Emitter",
       "entity.youtubers_natural_disasters.zachary_95": "Zachary95",
       "item.youtubers_natural_disasters.yeah_jaron_spawn_egg": "Yeah_Jaron Spawn Egg",
