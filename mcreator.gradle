@@ -1,3 +1,15 @@
+repositories {
+            maven {
+                url = "https://www.cursemaven.com"
+            }
+        }
+        
+        dependencies {
+            implementation fg.deobf("curse.maven:forgified-fabric-api-889079:6289136")
+            implementation fg.deobf("curse.maven:connector-890127:5761411")
+        }
+
+
 minecraft {
 	runs {
 		client {

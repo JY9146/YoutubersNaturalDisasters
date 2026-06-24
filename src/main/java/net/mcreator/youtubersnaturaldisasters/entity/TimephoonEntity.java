@@ -21,6 +21,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.youtubersnaturaldisasters.procedures.TimephoonOnEntityTickUpdateProcedure;
+import net.mcreator.youtubersnaturaldisasters.procedures.TimephoonEntityDiesProcedure;
 import net.mcreator.youtubersnaturaldisasters.init.YoutubersNaturalDisastersModEntities;
 
 public class TimephoonEntity extends Monster {
@@ -95,6 +96,12 @@ public class TimephoonEntity extends Monster {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TimephoonEntityDiesProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

@@ -6684,6 +6684,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "TimephoonEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timephoon_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TimephoonEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -7428,8 +7458,8 @@
   "workspaceSettings": {
     "modid": "youtubers_natural_disasters",
     "modName": "100 Youtubers VS Natural Disasters",
-    "version": "1.1.5",
-    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), @blaackknight (on Discord), and @terrariandyy (on Discord).",
+    "version": "1.1.6",
+    "description": "A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters, special thanks @i_am_not_a_hater_but_i_am (on Discord).",
     "author": "JY9146",
     "websiteURL": "https://mcreator.net",
     "license": "MIT License",
@@ -7439,6 +7469,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "forgified",
       "ldlib_api",
       "photon_api"
     ],

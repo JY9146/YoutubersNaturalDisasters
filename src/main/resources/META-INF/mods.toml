@@ -4,13 +4,13 @@ license="MIT License"
 
 [[mods]]
 modId="youtubers_natural_disasters"
-version="1.1.5"
+version="1.1.6"
 displayName="100 Youtubers VS Natural Disasters"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
 credits="Special thanks to Vini2003 and CorgiTaco for creating the mods this mod is based off of, their amazing and you should check out their work! "
 authors="JY9146"
-description="A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters. Special thanks to @zsvan (on Discord), @i_am_not_a_hater_but_i_am (on Discord), @blaackknight (on Discord), and @terrariandyy (on Discord)."
+description="A faithful recreation of the Natural Disasters mod in 100 Youtubers VS Natural Disasters, special thanks @i_am_not_a_hater_but_i_am (on Discord)."
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -23,6 +23,12 @@ description="A faithful recreation of the Natural Disasters mod in 100 Youtubers
     side="BOTH"
 
 
+[[dependencies.youtubers_natural_disasters]]
+    modId="forgified"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.youtubers_natural_disasters]]
     modId="ldlib_api"
     mandatory=false
