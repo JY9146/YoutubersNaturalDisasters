@@ -116,7 +116,7 @@
       "value": ""
     },
     "entityDataEntries": [],
-    "onInitialSpawn": {
+    "onMobTickUpdate": {
       "name": "TsunamiGeneratorOnInitialEntitySpawn"
     },
     "hasAI": false,
