@@ -11,17 +11,16 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.youtubersnaturaldisasters.block.entity.VolcanoAirBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.StoneBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.SolidWaterBlockkBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.SolidWaterBlockBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.SolidLavaBlockBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.SmokeBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.MagmaBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.BasalttBlockEntity;
+import net.mcreator.youtubersnaturaldisasters.block.entity.BasaltBlockEntity;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
-
-import net.jy9146.youtubersnaturaldisasters.block.entity.VolcanoAirBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.StoneBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.SolidWaterBlockkBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.SolidWaterBlockBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.SolidLavaBlockBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.SmokeBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.MagmaBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.BasalttBlockEntity;
-import net.jy9146.youtubersnaturaldisasters.block.entity.BasaltBlockEntity;
 
 public class YoutubersNaturalDisastersModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, YoutubersNaturalDisastersMod.MODID);
