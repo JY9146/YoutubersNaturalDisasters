@@ -9,10 +9,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.jy9146.youtubersnaturaldisasters.client.model.Modelmeteor2;
-import net.jy9146.youtubersnaturaldisasters.client.model.Modeldappertom;
-import net.jy9146.youtubersnaturaldisasters.client.model.Modelblackhole;
-import net.jy9146.youtubersnaturaldisasters.client.model.ModelMeteor;
+import net.mcreator.youtubersnaturaldisasters.client.model.Modelmeteor2;
+import net.mcreator.youtubersnaturaldisasters.client.model.Modeldappertom;
+import net.mcreator.youtubersnaturaldisasters.client.model.Modelblackhole;
+import net.mcreator.youtubersnaturaldisasters.client.model.ModelMeteor;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class YoutubersNaturalDisastersModModels {

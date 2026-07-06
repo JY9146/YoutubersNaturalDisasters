@@ -12,24 +12,23 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.level.block.MagmaBlock;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.youtubersnaturaldisasters.block.VolcanoAirBlock;
+import net.mcreator.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.StoneBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockkBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
+import net.mcreator.youtubersnaturaldisasters.block.SmokeBlock;
+import net.mcreator.youtubersnaturaldisasters.block.MagmaBlock;
+import net.mcreator.youtubersnaturaldisasters.block.HotMeteorBlock;
+import net.mcreator.youtubersnaturaldisasters.block.HotMeteor2Block;
+import net.mcreator.youtubersnaturaldisasters.block.ColdMeteorBlock;
+import net.mcreator.youtubersnaturaldisasters.block.ColdMeteor2Block;
+import net.mcreator.youtubersnaturaldisasters.block.BasalttBlock;
+import net.mcreator.youtubersnaturaldisasters.block.BasaltBlock;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
-
-import net.jy9146.youtubersnaturaldisasters.block.VolcanoAirBlock;
-import net.jy9146.youtubersnaturaldisasters.block.TommyinnitBlockBlock;
-import net.jy9146.youtubersnaturaldisasters.block.StoneBlock;
-import net.jy9146.youtubersnaturaldisasters.block.SolidWaterBlockkBlock;
-import net.jy9146.youtubersnaturaldisasters.block.SolidWaterBlockBlock;
-import net.jy9146.youtubersnaturaldisasters.block.SolidLavaBlockBlock;
-import net.jy9146.youtubersnaturaldisasters.block.SmokeBlock;
-import net.jy9146.youtubersnaturaldisasters.block.HotMeteorBlock;
-import net.jy9146.youtubersnaturaldisasters.block.HotMeteor2Block;
-import net.jy9146.youtubersnaturaldisasters.block.ColdMeteorBlock;
-import net.jy9146.youtubersnaturaldisasters.block.ColdMeteor2Block;
-import net.jy9146.youtubersnaturaldisasters.block.BasalttBlock;
-import net.jy9146.youtubersnaturaldisasters.block.BasaltBlock;
 
 public class YoutubersNaturalDisastersModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, YoutubersNaturalDisastersMod.MODID);

@@ -12,30 +12,28 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import net.jy9146.youtubersnaturaldisasters.client.model.Modelmeteor2;
-
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 // Made with Blockbench 4.12.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelmeteor2<T extends Entity> extends EntityModel<T> {
+public class ModelMeteor<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("youtubers_natural_disasters", "modelmeteor_2"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("youtubers_natural_disasters", "model_meteor"), "main");
 	public final ModelPart bone;
 
-	public Modelmeteor2(ModelPart root) {
+	public ModelMeteor(ModelPart root) {
 		this.bone = root.getChild("bone");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition bone = partdefinition.addOrReplaceChild("bone", CubeListBuilder.create().texOffs(3592, 6020).addBox(-7037.0F, -6549.7404F, -7570.8159F, 14500.0F, 14000.0F, 14000.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-9265.8284F, -6488.544F, -14754.006F, 1.0036F, 0.0F, 0.0F));
-		return LayerDefinition.create(meshdefinition, 64000, 64000);
+		PartDefinition bone = partdefinition.addOrReplaceChild("bone", CubeListBuilder.create().texOffs(0, 0).addBox(-25.0F, -25.0F, -25.0F, 50.0F, 50.0F, 50.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-39.0846F, 19.7612F, -105.6079F, 1.0036F, 0.0F, 0.0F));
+		return LayerDefinition.create(meshdefinition, 256, 256);
 	}
 
 	@Override

@@ -10,12 +10,11 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.youtubersnaturaldisasters.potion.XrayPowersMobEffect;
+import net.mcreator.youtubersnaturaldisasters.potion.InvincibilityMobEffect;
+import net.mcreator.youtubersnaturaldisasters.potion.EarthquakeeffectMobEffect;
+import net.mcreator.youtubersnaturaldisasters.potion.DrownFastMobEffect;
 import net.mcreator.youtubersnaturaldisasters.YoutubersNaturalDisastersMod;
-
-import net.jy9146.youtubersnaturaldisasters.potion.XrayPowersMobEffect;
-import net.jy9146.youtubersnaturaldisasters.potion.InvincibilityMobEffect;
-import net.jy9146.youtubersnaturaldisasters.potion.EarthquakeeffectMobEffect;
-import net.jy9146.youtubersnaturaldisasters.potion.DrownFastMobEffect;
 
 public class YoutubersNaturalDisastersModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, YoutubersNaturalDisastersMod.MODID);
