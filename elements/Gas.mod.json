@@ -2,13 +2,13 @@
   "_fv": 73,
   "_type": "particle",
   "definition": {
-    "texture": "gassygas",
+    "texture": "gas_",
     "animate": false,
     "frameDuration": 1,
     "width": 6.0,
     "height": 6.0,
     "scale": {
-      "fixedValue": 6.0
+      "fixedValue": 4.0
     },
     "speedFactor": 0.0,
     "gravity": 0.0,

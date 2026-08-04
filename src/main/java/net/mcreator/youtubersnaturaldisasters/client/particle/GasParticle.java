@@ -36,7 +36,7 @@ public class GasParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(6f, 6f);
-		this.quadSize *= 6f;
+		this.quadSize *= 4f;
 		this.lifetime = 1200;
 		this.gravity = 0f;
 		this.hasPhysics = false;

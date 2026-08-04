@@ -360,7 +360,7 @@
     {
       "name": "Meteor",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "meteor",
       "metadata": {
@@ -407,7 +407,7 @@
     {
       "name": "EndOfWorldMeteorMeteor",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "end_of_world_meteor_meteor",
       "metadata": {
@@ -1168,7 +1168,7 @@
     {
       "name": "DapperMrTom",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "dapper_mr_tom",
       "metadata": {
@@ -3333,7 +3333,7 @@
     {
       "name": "BlackHole",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole",
       "metadata": {
@@ -3478,7 +3478,7 @@
     {
       "name": "BlackHoleV2",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_v_2",
       "metadata": {
@@ -3525,7 +3525,7 @@
     {
       "name": "BlackHoleV3",
       "type": "livingentity",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_v_3",
       "metadata": {
