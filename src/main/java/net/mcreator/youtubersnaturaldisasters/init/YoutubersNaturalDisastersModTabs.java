@@ -74,8 +74,6 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.RANBOO_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.GARRETT_THE_CARROT_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.MAX_G_GS_SPAWN_EGG.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TALON_METEOR_SHOWER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TSUNAMI_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.PIKALODON_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.FRESHI_SPAWN_EGG.get());

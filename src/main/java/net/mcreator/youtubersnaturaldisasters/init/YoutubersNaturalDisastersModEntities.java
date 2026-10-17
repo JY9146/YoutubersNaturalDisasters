@@ -37,7 +37,6 @@ import net.mcreator.youtubersnaturaldisasters.entity.TechnosPotionOfGasEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnosGasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TechnobladeEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.TapLEntity;
-import net.mcreator.youtubersnaturaldisasters.entity.TalonMCEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SquiddoEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SplashPotionOfGasProjectileEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.SinkholeEntityEntity;
@@ -192,8 +191,6 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<ReddoonsEntity>of(ReddoonsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReddoonsEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<TalonMCEntity>> TALON_MC = register("talon_mc",
-			EntityType.Builder.<TalonMCEntity>of(TalonMCEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TalonMCEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<JustKaboodleEntity>> JUST_KABOODLE = register("just_kaboodle",
 			EntityType.Builder.<JustKaboodleEntity>of(JustKaboodleEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JustKaboodleEntity::new)
 
@@ -311,7 +308,6 @@ public class YoutubersNaturalDisastersModEntities {
 			Ph1LzAEntity.init();
 			YeahJaronEntity.init();
 			ReddoonsEntity.init();
-			TalonMCEntity.init();
 			JustKaboodleEntity.init();
 			WinsweepEntity.init();
 			TubboEntity.init();
@@ -372,7 +368,6 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(PH_1_LZ_A.get(), Ph1LzAEntity.createAttributes().build());
 		event.put(YEAH_JARON.get(), YeahJaronEntity.createAttributes().build());
 		event.put(REDDOONS.get(), ReddoonsEntity.createAttributes().build());
-		event.put(TALON_MC.get(), TalonMCEntity.createAttributes().build());
 		event.put(JUST_KABOODLE.get(), JustKaboodleEntity.createAttributes().build());
 		event.put(WINSWEEP.get(), WinsweepEntity.createAttributes().build());
 		event.put(TUBBO.get(), TubboEntity.createAttributes().build());

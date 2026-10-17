@@ -5261,99 +5261,6 @@
       }
     },
     {
-      "name": "TalonMC",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "talon_mc",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/entity/TalonMCEntity.java",
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/client/renderer/TalonMCRenderer.java"
-        ]
-      }
-    },
-    {
-      "name": "TalonMCLands",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "talon_mc_lands",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TalonMCLandsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "TalonMeteorHit",
-      "type": "damagetype",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "talon_meteor_hit",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/youtubers_natural_disasters/damage_type/talon_meteor_hit.json"
-        ]
-      }
-    },
-    {
-      "name": "TalonDetectPhilza",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "talon_detect_philza",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/TalonDetectPhilzaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "WinCookie",
       "type": "item",
       "compiles": true,
@@ -5631,152 +5538,6 @@
           "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/MaxGGsEntityDiesProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ThrowTalonMeteor",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowTalonMeteorItem.java",
-          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_talon_meteor.json"
-        ]
-      }
-    },
-    {
-      "name": "ThrowTalonMeteorRightClick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ThrowTalonMeteorRightClickOnBlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor_right_click_on_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorRightClickOnBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ThrowTalonMeteorShower",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor_shower",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/item/ThrowTalonMeteorShowerItem.java",
-          "src/main/resources/assets/youtubers_natural_disasters/models/item/throw_talon_meteor_shower.json"
-        ]
-      }
-    },
-    {
-      "name": "DisasterTalonMeteorShower",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "disaster_talon_meteor_shower",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterTalonMeteorShowerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "DisasterTalonMeteorShowerP2",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "disaster_talon_meteor_shower_p_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/DisasterTalonMeteorShowerP2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
           {
             "name": "x",
             "type": "number"
@@ -6452,70 +6213,6 @@
       }
     },
     {
-      "name": "ThrowTalonMeteorShowerRightClick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor_shower_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorShowerRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "ThrowTalonMeteorShowerRightClickOnBlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "throw_talon_meteor_shower_right_click_on_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/youtubersnaturaldisasters/procedures/ThrowTalonMeteorShowerRightClickOnBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "ThrowMeteorShowerRightClickOnBlock",
       "type": "procedure",
       "compiles": true,
@@ -6958,38 +6655,6 @@
       "subtitle": "And Today We\u0027ll Be Breaking Minecraft With Your Dumb Ideas"
     },
     {
-      "name": "talonmcscream",
-      "files": [
-        "he_invited_us_to_his_minecraft_tournament...-veed"
-      ],
-      "category": "neutral",
-      "subtitle": "AHHHHHHHHH"
-    },
-    {
-      "name": "youjustlostthegame",
-      "files": [
-        "tricking_my_friends_with_hidden_minecraft_changes"
-      ],
-      "category": "neutral",
-      "subtitle": "You Just Lost The Game"
-    },
-    {
-      "name": "beautifulbeautifulbeautiful",
-      "files": [
-        "videoplayback"
-      ],
-      "category": "neutral",
-      "subtitle": "So Beautiful"
-    },
-    {
-      "name": "youeatcows",
-      "files": [
-        "cow"
-      ],
-      "category": "neutral",
-      "subtitle": "Y O U E A T C O W S"
-    },
-    {
       "name": "garrettfnaf",
       "files": [
         "garrettsnpc"
@@ -7293,7 +6958,6 @@
       "entity.youtubers_natural_disasters.mad_piglin": "Piglin Brute",
       "entity.youtubers_natural_disasters.orphan": "Orphan^2",
       "subtitles.talonmcscream": "AHHHHHHHHH",
-      "item.youtubers_natural_disasters.throw_talon_meteor_shower": "Throw Talon Meteor Shower",
       "entity.youtubers_natural_disasters.winsweep": "Winsweep",
       "item.youtubers_natural_disasters.crash_er": "CrAsHeR",
       "entity.youtubers_natural_disasters.cammaganza": "Cammaganza",
@@ -7316,7 +6980,6 @@
       "entity.youtubers_natural_disasters.insane_flame": "Insaneflame",
       "item.youtubers_natural_disasters.reyablipblop_spawn_egg": "Reyablipblop Spawn Egg",
       "subtitles.garrettfnaf": "Hello everybody my name\u0027s Markiplier...",
-      "death.attack.talon_meteor_hit.player": "%1$s died from a Talon meteor whilst trying to escape %2$s",
       "item.youtubers_natural_disasters.caveman_films_spawn_egg": "CavemanFilms Spawn Egg",
       "death.attack.axe_of_peace_wasnt_peaceful.player": "%1$s died whilst trying to escape Techno using the Axe of Peace and %2$s",
       "entity.youtubers_natural_disasters.bad_boy_halo": "BadBoyHalo",
@@ -7333,9 +6996,7 @@
       "item.youtubers_natural_disasters.zachary_95_spawn_egg": "Zachary95 Spawn Egg",
       "block.youtubers_natural_disasters.cold_meteor": "Cold Meteor",
       "item.youtubers_natural_disasters.music_disc.desc": "By Bruno Mars; someone may have lip-synched this song long ago...",
-      "item.youtubers_natural_disasters.throw_talon_meteor": "Throw Talon Meteor",
       "entity.youtubers_natural_disasters.tubbo": "Tubbo",
-      "death.attack.talon_meteor_hit": "%1$s had a Talon meteor hit their head",
       "effect.youtubers_natural_disasters.xray_powers": "Xray Powers",
       "item.youtubers_natural_disasters.win_cookie": "Win Cookie",
       "item.youtubers_natural_disasters.throw_tnt": "Throw TNT",
@@ -7410,9 +7071,7 @@
       "item.youtubers_natural_disasters.technos_end_of_world_meteor.desc": "THE END IS NIGH",
       "entity.youtubers_natural_disasters.volcano_generator_v_2": "Volcano",
       "death.attack.inhaled_too_much_gas.player": "%1$s Inhaled Too Much Gas whilst trying to escape %2$s",
-      "entity.youtubers_natural_disasters.talon_mc": "Talon_MC",
       "entity.youtubers_natural_disasters.tap_l": "TapL",
-      "death.attack.talon_meteor_hit.item": "%1$s was killed by a Talon meteor from %2$s using %3$s",
       "item.youtubers_natural_disasters.winsweep_spawn_egg": "Winsweep Spawn Egg",
       "entity.youtubers_natural_disasters.crag_dyna": "CragDyna",
       "entity.youtubers_natural_disasters.volcano_lava_v_2": "Volcano",

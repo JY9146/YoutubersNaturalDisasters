@@ -134,42 +134,6 @@
       }
     ]
   },
-  "talonmcscream": {
-    "subtitle": "subtitles.talonmcscream",
-    "sounds": [
-      {
-        "name": "youtubers_natural_disasters:he_invited_us_to_his_minecraft_tournament...-veed",
-        "stream": false
-      }
-    ]
-  },
-  "youjustlostthegame": {
-    "subtitle": "subtitles.youjustlostthegame",
-    "sounds": [
-      {
-        "name": "youtubers_natural_disasters:tricking_my_friends_with_hidden_minecraft_changes",
-        "stream": false
-      }
-    ]
-  },
-  "beautifulbeautifulbeautiful": {
-    "subtitle": "subtitles.beautifulbeautifulbeautiful",
-    "sounds": [
-      {
-        "name": "youtubers_natural_disasters:videoplayback",
-        "stream": false
-      }
-    ]
-  },
-  "youeatcows": {
-    "subtitle": "subtitles.youeatcows",
-    "sounds": [
-      {
-        "name": "youtubers_natural_disasters:cow",
-        "stream": false
-      }
-    ]
-  },
   "garrettfnaf": {
     "subtitle": "subtitles.garrettfnaf",
     "sounds": [

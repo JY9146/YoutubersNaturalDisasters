@@ -31,7 +31,6 @@ import net.mcreator.youtubersnaturaldisasters.client.renderer.TestOfSinkholeEnti
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnosGasPersonRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TechnobladeRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.TapLRenderer;
-import net.mcreator.youtubersnaturaldisasters.client.renderer.TalonMCRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SquiddoRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.SinkholeEntityRenderer;
 import net.mcreator.youtubersnaturaldisasters.client.renderer.ReyablipblopRenderer;
@@ -113,7 +112,6 @@ public class YoutubersNaturalDisastersModEntityRenderers {
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.PH_1_LZ_A.get(), Ph1LzARenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.YEAH_JARON.get(), YeahJaronRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.REDDOONS.get(), ReddoonsRenderer::new);
-		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TALON_MC.get(), TalonMCRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.JUST_KABOODLE.get(), JustKaboodleRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.WINSWEEP.get(), WinsweepRenderer::new);
 		event.registerEntityRenderer(YoutubersNaturalDisastersModEntities.TUBBO.get(), TubboRenderer::new);
