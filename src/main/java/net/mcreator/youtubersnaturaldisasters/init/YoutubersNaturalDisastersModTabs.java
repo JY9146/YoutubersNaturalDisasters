@@ -36,13 +36,10 @@ public class YoutubersNaturalDisastersModTabs {
 				tabData.accept(YoutubersNaturalDisastersModItems.SMOKE_EMITTER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_METEOR.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_LIGHTNING.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.THROW_TNT.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.EARTHQUAKE_SUMMONER.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.MR_COOSH_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.ZACHARY_95_SPAWN_EGG.get());
-				tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.TORNADO_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.SINKHOLE_SUMMONER.get());
 				tabData.accept(YoutubersNaturalDisastersModItems.VOLCANO_SUMMONER.get());
@@ -93,10 +90,7 @@ public class YoutubersNaturalDisastersModTabs {
 			tabData.accept(YoutubersNaturalDisastersModItems.TECHNOBLADE_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.CRAG_DYNA_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.CAVEMAN_FILMS_SPAWN_EGG.get());
-			tabData.accept(YoutubersNaturalDisastersModItems.INSANE_FLAME_SPAWN_EGG.get());
-			tabData.accept(YoutubersNaturalDisastersModItems.MR_COOSH_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.ZACHARY_95_SPAWN_EGG.get());
-			tabData.accept(YoutubersNaturalDisastersModItems.COSMIC_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.DAPPER_MR_TOM_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.KNARFY_SPAWN_EGG.get());
 			tabData.accept(YoutubersNaturalDisastersModItems.CAMMAGANZA_SPAWN_EGG.get());

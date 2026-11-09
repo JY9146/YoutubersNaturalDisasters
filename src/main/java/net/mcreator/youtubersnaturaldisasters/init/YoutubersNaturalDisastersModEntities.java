@@ -49,7 +49,6 @@ import net.mcreator.youtubersnaturaldisasters.entity.PiglinSpawnerEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.Ph1LzAEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.OrphanEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MysticatEntity;
-import net.mcreator.youtubersnaturaldisasters.entity.MrCooshEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MaxGGsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.MadPiglinEntity;
@@ -58,7 +57,6 @@ import net.mcreator.youtubersnaturaldisasters.entity.LavaBallEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.KnarfyEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.JustKaboodleEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.JojosolosEntity;
-import net.mcreator.youtubersnaturaldisasters.entity.InsaneFlameEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.ImasquidkidEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GasPersonEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.GarrettTheCarrotEntity;
@@ -66,7 +64,6 @@ import net.mcreator.youtubersnaturaldisasters.entity.FreshiEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.EndOfWorldMeteorMeteorEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.DapperMrTomEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CragDynaEntity;
-import net.mcreator.youtubersnaturaldisasters.entity.CosmicEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CoolmentEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CavemanFilmsEntity;
 import net.mcreator.youtubersnaturaldisasters.entity.CammaganzaEntity;
@@ -100,22 +97,10 @@ public class YoutubersNaturalDisastersModEntities {
 			EntityType.Builder.<CavemanFilmsEntity>of(CavemanFilmsEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CavemanFilmsEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<InsaneFlameEntity>> INSANE_FLAME = register("insane_flame",
-			EntityType.Builder.<InsaneFlameEntity>of(InsaneFlameEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InsaneFlameEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<MrCooshEntity>> MR_COOSH = register("mr_coosh",
-			EntityType.Builder.<MrCooshEntity>of(MrCooshEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MrCooshEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<SinkholeEntityEntity>> SINKHOLE_ENTITY = register("sinkhole_entity", EntityType.Builder.<SinkholeEntityEntity>of(SinkholeEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SinkholeEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<Zachary95Entity>> ZACHARY_95 = register("zachary_95",
 			EntityType.Builder.<Zachary95Entity>of(Zachary95Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(Zachary95Entity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<CosmicEntity>> COSMIC = register("cosmic",
-			EntityType.Builder.<CosmicEntity>of(CosmicEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CosmicEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DapperMrTomEntity>> DAPPER_MR_TOM = register("dapper_mr_tom",
@@ -277,11 +262,8 @@ public class YoutubersNaturalDisastersModEntities {
 			MeteorEntity.init();
 			EndOfWorldMeteorMeteorEntity.init();
 			CavemanFilmsEntity.init();
-			InsaneFlameEntity.init();
-			MrCooshEntity.init();
 			SinkholeEntityEntity.init();
 			Zachary95Entity.init();
-			CosmicEntity.init();
 			DapperMrTomEntity.init();
 			TestOfSinkholeEntityEntity.init();
 			VolcanoGeneratorEntity.init();
@@ -337,11 +319,8 @@ public class YoutubersNaturalDisastersModEntities {
 		event.put(METEOR.get(), MeteorEntity.createAttributes().build());
 		event.put(END_OF_WORLD_METEOR_METEOR.get(), EndOfWorldMeteorMeteorEntity.createAttributes().build());
 		event.put(CAVEMAN_FILMS.get(), CavemanFilmsEntity.createAttributes().build());
-		event.put(INSANE_FLAME.get(), InsaneFlameEntity.createAttributes().build());
-		event.put(MR_COOSH.get(), MrCooshEntity.createAttributes().build());
 		event.put(SINKHOLE_ENTITY.get(), SinkholeEntityEntity.createAttributes().build());
 		event.put(ZACHARY_95.get(), Zachary95Entity.createAttributes().build());
-		event.put(COSMIC.get(), CosmicEntity.createAttributes().build());
 		event.put(DAPPER_MR_TOM.get(), DapperMrTomEntity.createAttributes().build());
 		event.put(TEST_OF_SINKHOLE_ENTITY.get(), TestOfSinkholeEntityEntity.createAttributes().build());
 		event.put(VOLCANO_GENERATOR.get(), VolcanoGeneratorEntity.createAttributes().build());

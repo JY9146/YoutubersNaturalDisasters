@@ -70,13 +70,10 @@ public class YoutubersNaturalDisastersModItems {
 	public static final RegistryObject<Item> SMOKE_EMITTER = REGISTRY.register("smoke_emitter", () -> new SmokeEmitterItem());
 	public static final RegistryObject<Item> THROW_METEOR = REGISTRY.register("throw_meteor", () -> new ThrowMeteorItem());
 	public static final RegistryObject<Item> CAVEMAN_FILMS_SPAWN_EGG = REGISTRY.register("caveman_films_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.CAVEMAN_FILMS, -16777216, -14127104, new Item.Properties()));
-	public static final RegistryObject<Item> INSANE_FLAME_SPAWN_EGG = REGISTRY.register("insane_flame_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.INSANE_FLAME, -65536, -39424, new Item.Properties()));
 	public static final RegistryObject<Item> THROW_LIGHTNING = REGISTRY.register("throw_lightning", () -> new ThrowLightningItem());
 	public static final RegistryObject<Item> THROW_TNT = REGISTRY.register("throw_tnt", () -> new ThrowTNTItem());
 	public static final RegistryObject<Item> EARTHQUAKE_SUMMONER = REGISTRY.register("earthquake_summoner", () -> new EarthquakeSummonerItem());
-	public static final RegistryObject<Item> MR_COOSH_SPAWN_EGG = REGISTRY.register("mr_coosh_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.MR_COOSH, -16777216, -1, new Item.Properties()));
 	public static final RegistryObject<Item> ZACHARY_95_SPAWN_EGG = REGISTRY.register("zachary_95_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.ZACHARY_95, -6750208, -6737152, new Item.Properties()));
-	public static final RegistryObject<Item> COSMIC_SPAWN_EGG = REGISTRY.register("cosmic_spawn_egg", () -> new ForgeSpawnEggItem(YoutubersNaturalDisastersModEntities.COSMIC, -13297295, -15202245, new Item.Properties()));
 	public static final RegistryObject<Item> TORNADO_SUMMONER = REGISTRY.register("tornado_summoner", () -> new TornadoSummonerItem());
 	public static final RegistryObject<Item> SINKHOLE_SUMMONER = REGISTRY.register("sinkhole_summoner", () -> new SinkholeSummonerItem());
 	public static final RegistryObject<Item> VOLCANO_SUMMONER = REGISTRY.register("volcano_summoner", () -> new VolcanoSummonerItem());
